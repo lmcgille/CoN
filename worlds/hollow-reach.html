@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hollow Reach</title>
+<meta name="description" content="A space-war world: a star cluster cut off from the rest of humanity, fought over system by system.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root {
+    --accent: #3b2d7a; --accent-2: #6a4fd1; --display: "Orbitron", system-ui, sans-serif;
+    --bg: #f3f2f7; --bg-2: #e7e5f0; --rule: #d6d3e4;
+    --heat-1: #e6e1f7; --heat-2: #c5b9ef; --heat-3: #9b86e2; --heat-4: #6a4fd1; --heat-5: #3b2d7a;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #0d0c16; --bg-2: #17152a; --panel: #1b1930; --rule: #2e2a4a; --ink: #ecebf6; --ink-2: #c4c1dc; --ink-3: #8e8aaf;
+    --accent: #8f78f0; --accent-2: #b3a3ff; --accent-ink: #0d0c16;
+    --heat-1: #221d45; --heat-2: #352a6e; --heat-3: #4f3ca3; --heat-4: #8f78f0; --heat-5: #cfc4ff; --heat-ink-hi: #0d0c16;
+  } }
+  :root[data-theme="dark"] {
+    --bg: #0d0c16; --bg-2: #17152a; --panel: #1b1930; --rule: #2e2a4a; --ink: #ecebf6; --ink-2: #c4c1dc; --ink-3: #8e8aaf;
+    --accent: #8f78f0; --accent-2: #b3a3ff; --accent-ink: #0d0c16;
+    --heat-1: #221d45; --heat-2: #352a6e; --heat-3: #4f3ca3; --heat-4: #8f78f0; --heat-5: #cfc4ff; --heat-ink-hi: #0d0c16;
+  }
+  .hero h1 { letter-spacing: .02em; }
+  .unit .u-name { font-size: 16px; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="#world">World</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#houses">Compacts</a><a href="#roster-sec">Roster</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
+    <a href="#comps-sec">Compositions</a><a href="#chronicle">Chronicle</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">World II · Space opera</div>
+  <h1>The Hollow Reach</h1>
+  <p class="lede">When the gate network failed, forty systems were sealed inside a dust-choked cluster with no way home and no one to call. Two hundred years later, the habitats that survived have stopped waiting for rescue. They have started counting each other's ice.</p>
+  <div class="facts">
+    <span class="fact"><b>40</b> systems · <b>9</b> great habitats</span>
+    <span class="fact"><b>8</b> hit classes</span>
+    <span class="fact"><b>37</b> units</span>
+    <span class="fact">Legions of <b>9</b> · wings of <b>6</b> · squadrons of <b>3</b></span>
+    <span class="fact">Volley cycles every <b>hour</b></span>
+  </div>
+</div></div>
+
+<section id="world"><div class="wrap">
+  <h2>The world</h2>
+  <p class="sec-sub">A closed cluster, slow lanes between stars, and the one resource everybody drinks, breathes and burns.</p>
+  <div class="prose">
+    <p>The <b>Severance</b> happened in a single afternoon: every gate in the Reach went dark at once, and the forty systems inside became an island. The great habitats — rotating cylinders, hollowed asteroids, domed moons — learned to live on what was inside the dust. Two centuries later they are nations in everything but name.</p>
+    <p>Ships move between systems along <b>lanes</b>: slow, predictable gravitational corridors. Each system holds one or more <b>habitats</b> (the cities of this world) and a scatter of <b>outer bodies</b> — moons, rock fields, ice belts — that function as countryside. The spaces between systems are not empty: the Reach is full of <b>nebula</b>, thick ionised dust where sensors fail and cloaked ships hide.</p>
+    <p>Victory is <b>Dominion</b>: a daily tally of the habitats, bodies and the three <b>Relics</b> — pre-Severance gate fragments at Ossuary, Tamsin's Rest and the Hollow Gate itself — that a power (or a pact) controls.</p>
+  </div>
+  <h3>Places that decide wars</h3>
+  <div class="grid g3">
+    <div class="card"><h4>Habitat interiors</h4><p class="small">Cramped, pressurised corridors. Heavy walkers fight at a crawl and a fraction of their power; dug-in legions are nearly impossible to remove.</p></div>
+    <div class="card"><h4>The Dust Plains</h4><p class="small">The terraformed flats of Corvin IV and a few other worlds. Open ground where walker columns are at their best.</p></div>
+    <div class="card"><h4>Ice moons</h4><p class="small">Cold, broken terrain. Cryo-Rangers excel; most units fight and move badly.</p></div>
+    <div class="card"><h4>Clutter fields</h4><p class="small">Planetary rings and asteroid belts. Ringrunner craft hide inside the clutter below long-range sensor lock — only close-in flak can find them.</p></div>
+    <div class="card"><h4>Gravity wells</h4><p class="small">The space close around planets and habitats. Cutterskiffs thrive; cloaked Shroud hulls are sluggish, half-shielded and easy to find.</p></div>
+    <div class="card"><h4>Deep nebula</h4><p class="small">The dark between systems. Shroud hulls are lethal here; small ships lose shielding and stability in the ion storms.</p></div>
+  </div>
+  <h3>The powers (rename freely)</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Power</th><th>Leader</th><th>Compact</th><th>Temper</th></tr></thead>
+    <tbody>
+      <tr><td>The Ardent Host of Kesh</td><td>Warlord Hesper Vane</td><td>Ardent</td><td>Mass walkers and legions from the first day; short on strikecraft</td></tr>
+      <tr><td>The Lumen Accord</td><td>Chancellor Idris Oyelaran</td><td>Lumen</td><td>Wealthy, patient, technologically superior</td></tr>
+      <tr><td>The Freeholds of Tessaly</td><td>Commodore Sabine Achterberg</td><td>Freehold</td><td>A navy with a habitat attached</td></tr>
+      <tr><td>The Corvin Mining Collective</td><td>Foreman Dav Okonkwo</td><td>Ardent</td><td>Sits on the richest Null-salt seams; poorly defended</td></tr>
+      <tr><td>Tamsin's Rest</td><td>Abbess Ilara Quell</td><td>Lumen</td><td>Holds a Relic; small and devout</td></tr>
+      <tr><td>The Brokerage</td><td>Factor Remy Szalai</td><td>Freehold</td><td>Merchants who hire Freeblades instead of raising legions</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="economy"><div class="wrap">
+  <h2>Economy &amp; the home front</h2>
+  <p class="sec-sub">Six stocks, one of which you also drink. And why freshly seized habitats secede.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Stock</th><th>Comes from</th><th>Feeds</th></tr></thead>
+    <tbody>
+      <tr><td><b>Ice</b></td><td>Ice belts, comet catchers, cometary moons</td><td>Population (water and air), legion upkeep, <i>and</i> reaction mass for every ship and strikecraft. A big fleet literally drinks your people's water.</td></tr>
+      <tr><td><b>Ferrite</b></td><td>Rock fields, smelter habitats</td><td>Walkers, hulls, strikecraft, all construction</td></tr>
+      <tr><td><b>Weave</b></td><td>Fabricator habitats</td><td>Sensors, flak, drones, anything with a brain; most structures</td></tr>
+      <tr><td><b>Null-salt</b></td><td>Rare seams on a handful of moons</td><td>All research, cloaks, Shroud hulls, torpedoes, Cascade charges</td></tr>
+      <tr><td><b>Crew</b></td><td>Population</td><td>Every unit to raise and to sustain. Never tradable.</td></tr>
+      <tr><td><b>Writ</b></td><td>Tariffs, lane tolls, Forges</td><td>Everything; structure upkeep; the only currency at the Exchange</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>The Ice trap.</b> Ice is both food and fuel. A power that builds a huge fleet early finds its habitats rationing water by the second week — and thirsty habitats lose <b>Allegiance</b>, which shrinks every other stock.</div>
+  <h3>Holdings</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Home habitats</h4><p class="small">Full output, can raise anything. The seat-habitat raises Allegiance across its own system.</p></div>
+    <div class="card"><h4>Seized habitats</h4><p class="small">A quarter output, very low starting Allegiance. These secede.</p></div>
+    <div class="card"><h4>Bonded habitats</h4><p class="small">Seized habitats you have bound with a Covenant (costs Crew). Half output, can raise units.</p></div>
+    <div class="card"><h4>Outer bodies</h4><p class="small">Moons, belts and rocks. Little output unless you build a Rig on a seam. Never secede.</p></div>
+  </div>
+  <h3>Allegiance and secession</h3>
+  <div class="prose">
+    <p>Each holding has <b>Allegiance</b> 0–100, recalculated once per standard day toward a target. Distance (in lane-hours) from your seat, the number of active wars, enemy forces in-system, shortages of Ice or Writ, bombardment casualties and enemy agents all drag the target down; structures and a calm neighbourhood push it up.</p>
+    <p>A seized habitat under about a third Allegiance may <b>secede</b>. A newly taken habitat starts at a quarter. If it secedes with no legion aboard, it simply becomes part of <b>the Unmoored</b> — a loose free-habitat movement that arms its own militias and does not stay put. A single legion on the habitat's Core usually crushes the uprising.</p>
+  </div>
+  <h3>Structures</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Structure</th><th>Where</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr><td>Forge</td><td>Habitat</td><td>+10% to every stock per tier, plus daily Writ. The standard first build.</td></tr>
+      <tr><td>Rig</td><td>Outer body</td><td>Mines the body's seam and multiplies it.</td></tr>
+      <tr><td>Barracks Ring</td><td>Habitat</td><td>Raises legions.</td></tr>
+      <tr><td>Walker Yard</td><td>Habitat</td><td>Raises walkers and support platforms.</td></tr>
+      <tr><td>Launch Cradle</td><td>Habitat</td><td>Every strikecraft is raised at, and returns to, a Cradle. Wreck it and its wing is stranded.</td></tr>
+      <tr><td>Picket Pad</td><td>Outer body</td><td>Forward strikecraft basing.</td></tr>
+      <tr><td>Slipway</td><td>Habitat</td><td>Raises hulls; legions board barges here.</td></tr>
+      <tr><td>Redoubt</td><td>Outer body</td><td>Fortifies a body's Core.</td></tr>
+      <tr><td>Deep Vault</td><td>Habitat</td><td>Shelters population from bombardment; hardens defenders.</td></tr>
+      <tr><td>Infirmary Deck</td><td>Habitat / body</td><td>Faster recovery.</td></tr>
+      <tr><td>Lane Beacon</td><td>Outer body</td><td>Much faster movement through the system — for anyone.</td></tr>
+      <tr><td>Archive</td><td>Habitat</td><td>Research slots.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>Rules of battle</h2>
+  <p class="sec-sub">The physics of war in the Reach.</p>
+  <div class="grid g2">
+    <div class="card"><h4>Volley cycles</h4><p class="small">The first volley fires the moment forces meet; another every hour after. Each volley applies the attacker's rating for the defender's hit class. Mass drivers aimed at strikecraft do nothing; flak aimed at walkers does nothing.</p></div>
+    <div class="card"><h4>The Core</h4><p class="small">Every habitat and body has a <b>Core</b> — the reactor, the hub, the docking spine. Forces holding the Core are dug in: they take heavily reduced damage and do not fire back. Forces near it but not on it trade volleys every cycle.</p></div>
+    <div class="card"><h4>Formation limits</h4><p class="small">Ground <b>legions</b> fight at full strength to 9 units, strikecraft <b>wings</b> to 6, capital <b>squadrons</b> to 3. Beyond that, each addition is worth less, then nothing, then negative — and the whole formation moves at its slowest member.</p></div>
+    <div class="card"><h4>Shield, Core-line and Wake</h4><p class="small">Damage on a formation is split by position. <b>Shield</b> units soak the most, <b>Core-line</b> units some, <b>Wake</b> units almost none. Position is fixed by unit type.</p></div>
+    <div class="card"><h4>Stand-off fire</h4><p class="small">Mass drivers, rail mortars and broadside cruisers strike from range. Something that can't reach back can't fire back. Volley, withdraw, wait out the cycle, volley again.</p></div>
+    <div class="card"><h4>Only legions seize</h4><p class="small">A holding changes hands when a <b>seizing</b> unit reaches its Core. Walkers, hulls, strikecraft, Shade Cells and Freeblades cannot seize anything.</p></div>
+    <div class="card"><h4>Open void and clutter</h4><p class="small">Strikecraft in the open void are tracked by long-range lance batteries. <b>Ringrunners</b> hide in rings, belts and upper atmosphere, below lance-lock entirely. Only close-in <b>flak</b> — spindles, tenders, interceptors — touches them.</p></div>
+    <div class="card"><h4>Flak inside vs flak nearby</h4><p class="small">Flak <b>within</b> the targeted formation fires on every attacker and every torpedo, with no recharge. Flak merely <b>covering</b> a nearby formation fires, then recharges — saturate it and the rest get through.</p></div>
+    <div class="card"><h4>Sensors and cloaks</h4><p class="small">Sight shows contacts; unscanned formations appear as unresolved returns. Sensor spires and Lantern ships read drive signatures at range. <b>Cloaked</b> units are invisible until they fire or a matching scanner (ground, void or shroud) comes close.</p></div>
+    <div class="card"><h4>Wells and nebula</h4><p class="small">Near a planet is a <b>gravity well</b>; between systems is <b>deep nebula</b>. Cutterskiffs love wells and suffer in nebula. Shroud hulls are the opposite — sluggish and half-shielded in wells, deadly in nebula.</p></div>
+    <div class="card"><h4>Barges</h4><p class="small">Legions travelling between bodies ride <b>barges</b>, boarded at a Slipway. Barges have no weapons and thin hulls; boarding and landing leave a legion helpless for hours. Void Marines can board any station or body directly.</p></div>
+    <div class="card"><h4>Launch cradles</h4><p class="small">Strikecraft fly sorties from a home cradle and return to rearm. Docked craft are helpless. Wreck the cradle and everything docked there is stranded until it is rebuilt.</p></div>
+  </div>
+</div></section>
+
+<section id="classes-sec"><div class="wrap">
+  <h2>Hit classes</h2>
+  <p class="sec-sub">Which of the attacker's ratings applies depends on what the target is hit as.</p>
+  <div id="classes"></div>
+</div></section>
+
+<section id="houses"><div class="wrap">
+  <h2>The three compacts</h2>
+  <p class="sec-sub">Every power follows one of three engineering traditions. Roles are identical; toughness, price and research timing differ.</p>
+  <div class="grid g3">
+    <div class="card"><h4>The Ardent</h4><p class="small"><b>Cheap, early, ground-heavy.</b> Juggernauts and mass drivers at the first cycle, at a discount. Thin armour across the board and the weakest strikecraft — the Ardent rely on lance batteries for void defence, which cannot see ringrunners.</p><p class="small"><span class="tag good">Early walkers</span><span class="tag good">Cheap losses</span><span class="tag bad">Poor strikecraft</span></p></div>
+    <div class="card"><h4>The Lumen</h4><p class="small"><b>Expensive, tough, late, rules the void.</b> Dart interceptors, Wasp ringrunners, Lantern sensor ships and Bastion arrays come early and carry bonuses. The Lumen spend the first week building and the rest of the war winning.</p><p class="small"><span class="tag good">Strikecraft &amp; sensors</span><span class="tag good">Toughness</span><span class="tag bad">Slow start</span></p></div>
+    <div class="card"><h4>The Freehold</h4><p class="small"><b>Balanced, ship-minded.</b> Middle costs, middle toughness, Hammerhead bombers from the first day and the best early capital hulls. Forgiving and flexible.</p><p class="small"><span class="tag good">Early bombers</span><span class="tag good">Fleets</span><span class="tag bad">No hard edge</span></p></div>
+  </div>
+</div></section>
+
+<section id="roster-sec"><div class="wrap">
+  <h2>Unit roster</h2>
+  <p class="sec-sub">Ratings 0–5 against each hit class. "Dies to" is computed from the roster.</p>
+  <div class="filters" id="roster-filters"></div>
+  <div class="roster" id="roster"></div>
+</div></section>
+
+<section id="matrix-sec"><div class="wrap">
+  <h2>Counter matrix</h2>
+  <p class="sec-sub">Find the column for the threat; look down it for the brightest cells.</p>
+  <div id="matrix"></div>
+</div></section>
+
+<section id="synergy-sec"><div class="wrap">
+  <h2>Synergies</h2>
+  <p class="sec-sub">Pairings that close each other's blind spots.</p>
+  <div class="grid g2" id="synergies"></div>
+</div></section>
+
+<section id="comps-sec"><div class="wrap">
+  <h2>Compositions</h2>
+  <p class="sec-sub">Full builds for free-for-all and pact play.</p>
+  <div class="grid g2" id="comps"></div>
+</div></section>
+
+<section id="chronicle"><div class="wrap">
+  <h2>Chronicle: The Ice War</h2>
+  <p class="sec-sub">The thirty-day war between the Ardent Host and the Lumen–Freehold pact, as reconstructed from both sides' logs.</p>
+  <div class="chron">
+    <h3><span class="when">Cycle 1–3</span>Forges and walkers</h3>
+    <p>Warlord Hesper Vane had been waiting for this war for nine years and had the walkers to prove it. On the first standard day the Ardent Host lit its forges; on the second, the Kesh yards rolled out Juggernauts — three-legged siege walkers, fifty metres tall, with armour plates you could park a shuttle on. By the third, two full legions of them were loaded on barges and pointed at Corvin IV, whose mining collective owned the richest Null-salt seams in the Reach and the poorest army.</p>
+    <p>The Lumen Accord built three forges, an archive, and a launch cradle. Chancellor Idris Oyelaran's admirals asked when they would get ships. "When the forges have paid for them," she said, and went back to the tariff tables.</p>
+    <p>At Tessaly, Commodore Sabine Achterberg commissioned a Corsair destroyer and an Aegis tender and parked them inside her own gravity well. The tender was a fat, ugly ship with almost no guns, a shipyard's worth of flak turrets, and nothing else to recommend it.</p>
+
+    <h3><span class="when">Cycle 4–8</span>The Dust Plains</h3>
+    <p>Corvin IV's Dust Plains were made for Juggernauts: flat, firm, open to the horizon. The Collective's wardens stood in the open and were walked over. Vane took four habitats and the seams in five days, and broadcast each Core falling to every system in the Reach.</p>
+    <p>Each time a Core fell, the Juggernauts moved on. Legions were slow; walkers were glorious. No one was left aboard any of the four habitats except the people who lived there.</p>
+
+    <h3><span class="when">Cycle 9</span>Out of the rings</h3>
+    <p>Corvin IV has rings — wide, dense, and full of ice and rock. Oyelaran's first combat wing was six Wasp ringrunners: small, mean, anti-armour craft that fly <i>inside</i> clutter, where long-range lance batteries cannot get a lock.</p>
+    <p>Vane's lead legion — four Juggernauts, two mass drivers, nothing else — was halted on the Plains below the ring plane. Two Ardent lance batteries a few kilometres back watched the sky. They saw a perfectly clear sky: the Wasps were down in the ring shadow, then down in the dust, under the lance horizon the entire time.</p>
+    <p>The first volley gutted two Juggernauts. Juggernauts carry no flak — their guns cannot elevate — so the Wasps took their time. The next cycle, another volley. By the time the legion's commander understood what was happening, she was the only one left to understand it.</p>
+    <blockquote>"Lance batteries report no contacts. Repeat, no contacts." — last logged transmission from Lance Battery Kesh-14, Cycle 9</blockquote>
+
+    <h3><span class="when">Cycle 10–12</span>More lances</h3>
+    <p>Vane had a fix ready: more lance batteries, and a Bastion array — the most expensive anti-ship and anti-torpedo platform in the Ardent catalogue. None of them could see a ringrunner. The Wasps kept coming. A single Flak Spindle inside each legion, at a fraction of the price, would have ended the problem in a cycle. Ardent doctrine called spindles "defensive."</p>
+    <p>On Cycle 11, the Freeholds of Tessaly and the Lumen Accord signed a Dominion pact: their holdings would count as one.</p>
+
+    <h3><span class="when">Cycle 13</span>The tender</h3>
+    <p>Vane had one good strike wing: six Hammerhead bombers, borrowed technology, the pride of the Host. Her scouts found the Freehold squadron anchored in the Tessaly well: a Corsair, a Broadside cruiser — the single most dangerous ship in the region, and notoriously vulnerable to strikecraft — and the fat Aegis tender. It looked like the chance of the war.</p>
+    <p>The tender was <i>inside</i> the squadron. Its turrets fired on every bomber, every volley, without pausing to recharge. The first volley came before the Hammerheads reached release range. Two survived it; one made it home.</p>
+    <blockquote>"I didn't lose to the cruiser. I lost to the ship I didn't think was a ship." — Warlord Vane, to her war council</blockquote>
+
+    <h3><span class="when">Cycle 14–16</span>Secession</h3>
+    <p>The four Corvin habitats had been sitting at a quarter Allegiance since the day they fell, far from Kesh, full of miners who remembered being free. On Cycle 14 two of them seceded in the same hour. There were no legions aboard. The Unmoored had their banners up before the Ardent garrison commander received the alert — because there was no Ardent garrison commander. By Cycle 16 a rebel militia was raiding the barge lane that fed Vane's front.</p>
+
+    <h3><span class="when">Cycle 17–20</span>The long siege of Lucent</h3>
+    <p>Vane gathered everything into one immense legion — nineteen walkers, drivers and infantry — and marched it on the Lumen fortress-habitat of Lucent. Past nine units every addition made it fight worse; at nineteen it was a lumbering crowd fighting at two-thirds strength and moving at the speed of its slowest driver.</p>
+    <p>Oyelaran put Breaker Lances and Line Legions on Lucent's Core, where they dug in and simply absorbed. Two moons out she placed three mass driver batteries. Each hour the drivers slid into range, fired one volley into the column, and slid back out before the column could close. They never took a shot in return. When the Host finally reached Lucent it was bloodied and slow, and it threw itself at defenders who were taking a fraction of its damage and giving none of it back.</p>
+
+    <h3><span class="when">Cycle 22</span>The nebula crossing</h3>
+    <p>Vane's last reserve, two legions on barges, went out across the Orrin Nebula to land behind Tessaly. The Ardent's destroyers were still on the slips, so the barges went alone. In the nebula, two Freehold Shroud Hunters had been drifting for nine days with their cloaks up. Barges cannot shoot back. The barges never reached the far side.</p>
+
+    <h3><span class="when">Cycle 23–28</span>Stranded</h3>
+    <p>The pact's last blow was a single night of seeker torpedoes on the two Ardent launch cradles. Everything Vane had rebuilt since Cycle 13 was docked there. With her strikecraft stranded and her lance batteries still blind to anything in the clutter, the Host's remaining legions were simply hunted. On Cycle 28 the pact's Dominion passed the Host's, and the war ended at the next count.</p>
+
+    <div class="postmortem">
+      <h3>Why the Host fell</h3>
+      <ol>
+        <li><b>Walkers without flak.</b> Juggernauts cannot fire on ringrunners. A Flak Spindle in each legion was the whole answer.</li>
+        <li><b>Long-range defence against a short-range threat.</b> Lance batteries and Bastion arrays are blind to clutter. She bought the wrong shield, twice.</li>
+        <li><b>Bombers into a tender.</b> Flak inside a squadron fires on every attacker, every volley. The least impressive hull was the deadliest.</li>
+        <li><b>No legions aboard.</b> Seized habitats at a quarter Allegiance, left empty, seceded and attacked her rear.</li>
+        <li><b>The nineteen-walker legion.</b> Overloaded, slow, kited by drivers it could never catch.</li>
+        <li><b>Storming a held Core.</b> Defenders who don't fire back also barely bleed.</li>
+        <li><b>Unescorted barges in the nebula.</b> Shroud hulls are built for exactly that.</li>
+        <li><b>Craft in the cradle.</b> A docked wing is a target list.</li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · The Hollow Reach · An original setting. <a href="../index.html">All worlds</a></div></footer>
+
+<script>
+window.WORLD = {
+  lines: { front: "Shield", middle: "Core-line", rear: "Wake" },
+  tiers: ["First cycles", "Mid-war", "Late-war"],
+  reach: ["Boarding", "Close", "Stand-off", "System"],
+  classes: [
+    { id: "flesh", name: "Crew", short: "Crew", desc: "Legions, crews and anything without plate — including towed rail mortars." },
+    { id: "plate", name: "Plate", short: "Plate", desc: "Walkers, armoured platforms and mobile batteries." },
+    { id: "void", name: "Void craft", short: "Void", desc: "Strikecraft and sensor ships flying in open void — visible to lance batteries." },
+    { id: "clutter", name: "Clutter craft", short: "Clutter", desc: "Ringrunners hugging rings, belts and upper atmosphere. Below lance lock." },
+    { id: "mote", name: "Motes", short: "Mote", desc: "Tiny drones: scouting motes and explosive swarms." },
+    { id: "hull", name: "Hull", short: "Hull", desc: "Capital ships, escorts and barges." },
+    { id: "shroud", name: "Shroud", short: "Shroud", desc: "Cloaked nebula hulls. Only hit once revealed." },
+    { id: "ord", name: "Ordnance", short: "Ord", desc: "Incoming torpedoes and kinetic rods. Interceptable." }
+  ],
+  branches: [
+    { id: "leg", name: "Legions" }, { id: "walk", name: "Walkers" }, { id: "sup", name: "Platforms" },
+    { id: "craft", name: "Strikecraft" }, { id: "fleet", name: "Fleet" }, { id: "ord", name: "Ordnance" }
+  ],
+  units: [
+    { id: "line", name: "Line Legion", branch: "leg", hitAs: "flesh", line: "rear", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Low", claims: true,
+      role: "Standard void-suited infantry. Seizes and holds Cores.", atk: { flesh: 2, plate: 1, clutter: 1, mote: 1 },
+      traits: ["Can shuttle between friendly cradles from the first cycle"], strong: "Garrisons, holding Cores, cheap bodies.", weak: "Walkers, mass drivers, Scythes." },
+    { id: "breacher", name: "Breacher Legion", branch: "leg", hitAs: "flesh", line: "front", tier: 1, reach: 0, speed: 2, tough: 3, cost: "Medium", claims: true,
+      role: "Heavy exo-armoured assault infantry.", atk: { flesh: 3, plate: 3, mote: 1 },
+      traits: ["Shield position — protects a legion's support", "Slowed badly on ice moons and in clutter fields"], strong: "Escorting walkers; cracking plate at close range.", weak: "Bombardment; Scythe ringrunners." },
+    { id: "voidmarine", name: "Void Marines", branch: "leg", hitAs: "flesh", line: "middle", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: true,
+      role: "Boarding troops.", atk: { flesh: 3, plate: 2, clutter: 1 },
+      traits: ["Board any station or body directly from a hull — no slipway needed", "Can seize bodies with no dock"], strong: "Beachheads on enemy bodies; seizing docks for the heavy units.", weak: "Walkers once landed; interception en route." },
+    { id: "drop", name: "Drop Legion", branch: "leg", hitAs: "flesh", line: "middle", tier: 2, reach: 0, speed: 4, tough: 2, cost: "Medium", claims: true,
+      role: "Orbital drop-pod infantry.", atk: { flesh: 3, plate: 1 },
+      traits: ["Drops onto any body in range of a friendly cradle", "First volley on landing is fought as Void craft", "Needs an hour to dig out of the pods before seizing"], strong: "Grabbing empty habitats deep behind the front.", weak: "Flak on the drop zone; counter-attack during the first hour." },
+    { id: "shade", name: "Shade Cell", branch: "leg", hitAs: "flesh", line: "rear", tier: 2, reach: 0, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Cloaked commandos.", atk: { flesh: 4, plate: 2 },
+      traits: ["Cloaked on the ground until it strikes", "Reveals ground cloaks", "Ignores Core and Vault protection"], strong: "Killing drivers and spires; breaking dug-in Cores.", weak: "Cannot seize. Fragile once found." },
+    { id: "warden", name: "Habitat Wardens", branch: "leg", hitAs: "flesh", line: "middle", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Very low", claims: true,
+      role: "Civil militia.", atk: { flesh: 1, plate: 1 },
+      traits: ["Strength depends on the raising habitat's Allegiance", "Very slow outside friendly space"], strong: "Emergency garrisons.", weak: "Any offensive." },
+    { id: "freeblade", name: "Freeblades", branch: "leg", hitAs: "flesh", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Writ only", claims: false,
+      role: "Mercenary companies.", atk: { flesh: 3, plate: 2, clutter: 1 },
+      traits: ["Cost no Crew", "Cannot seize"], strong: "Lets a rich, small habitat field a Shield line.", weak: "Never converts a win into territory." },
+    { id: "cryo", name: "Cryo-Rangers", branch: "leg", hitAs: "flesh", line: "rear", tier: 2, reach: 0, speed: 2, tough: 2, cost: "Medium", claims: true,
+      role: "Ice-moon specialists.", atk: { flesh: 3, plate: 1 },
+      traits: ["Strong bonuses on ice moons", "Penalties on plains and in habitats"], strong: "Holding the ice belts.", weak: "Everywhere warm." },
+
+    { id: "skitter", name: "Skitter", branch: "walk", hitAs: "plate", line: "rear", tier: 1, reach: 0, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Fast scout walker.", atk: { flesh: 2, plate: 1 },
+      traits: ["Resolves unresolved returns", "Reveals ground cloaks", "Hastens its legion in hostile space"], strong: "Eyes; hunting Shade Cells.", weak: "Any real fight." },
+    { id: "hoplite", name: "Hoplite", branch: "walk", hitAs: "plate", line: "front", tier: 1, reach: 0, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Medium battle walker.", atk: { flesh: 3, plate: 2, clutter: 1, mote: 1 },
+      traits: ["Handles most terrain"], strong: "Flexible infantry-killer.", weak: "Breaker Lances; Wasps." },
+    { id: "jugger", name: "Juggernaut", branch: "walk", hitAs: "plate", line: "front", tier: 1, reach: 0, speed: 3, tough: 5, cost: "High", claims: false,
+      role: "Heavy siege walker.", atk: { flesh: 3, plate: 4 },
+      traits: ["Full strength on the Plains", "Crippled inside habitats, on ice, in clutter", "Guns cannot elevate — zero anti-craft"], strong: "Open-ground battles; soaking.", weak: "Ringrunners. Habitat corridors. Breaker Lances." },
+    { id: "breaker", name: "Breaker Lance", branch: "walk", hitAs: "plate", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Anti-walker lance platform.", atk: { flesh: 1, plate: 5 },
+      traits: ["Best plated defender inside habitats"], strong: "Killing walkers; holding Cores.", weak: "Infantry waves; Scythes; bombardment." },
+
+    { id: "spindle", name: "Flak Spindle", branch: "sup", hitAs: "plate", line: "middle", tier: 1, reach: 1, speed: 3, tough: 2, cost: "Low", claims: false,
+      role: "Close-in flak platform.", atk: { flesh: 1, void: 2, clutter: 5, mote: 5, ord: 2 },
+      traits: ["Sees and hits clutter craft", "Inside a legion: fires on every attacker, every volley"], strong: "Ringrunners and mote swarms. Cheap insurance.", weak: "Ground assault; high void craft." },
+    { id: "lance", name: "Lance Battery", branch: "sup", hitAs: "plate", line: "rear", tier: 1, reach: 2, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Long-range anti-craft battery.", atk: { void: 4, mote: 1, ord: 3 },
+      traits: ["Own sensors", "Cannot lock clutter craft"], strong: "Strikecraft and torpedoes in open void.", weak: "Ringrunners — blind to them." },
+    { id: "bastionarr", name: "Bastion Array", branch: "sup", hitAs: "plate", line: "rear", tier: 2, reach: 3, speed: 1, tough: 3, cost: "High", claims: false,
+      role: "System-range interception grid.", atk: { void: 3, ord: 5 },
+      traits: ["Longest-range torpedo and rod interception", "Late upgrade reveals cloaked craft", "Blind to clutter"], strong: "Shielding habitats from bombardment.", weak: "Ringrunners; saturation; raids." },
+    { id: "railmortar", name: "Rail Mortar", branch: "sup", hitAs: "flesh", line: "rear", tier: 1, reach: 2, speed: 1, tough: 1, cost: "Low", claims: false,
+      role: "Crewed short-range rail artillery.", atk: { flesh: 4, plate: 2 },
+      traits: ["Stand-off fire", "Slowest unit in the Reach"], strong: "Grinding dug-in legions.", weak: "Anything that reaches it." },
+    { id: "driver", name: "Mass Driver", branch: "sup", hitAs: "plate", line: "middle", tier: 1, reach: 3, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Long-range kinetic artillery walker.", atk: { flesh: 4, plate: 3, hull: 1 },
+      traits: ["Longest ground reach — outranges mortars", "Area damage"], strong: "Kiting slow columns. Counter-battery.", weak: "Strikecraft; two-sided flanks." },
+    { id: "spire", name: "Sensor Spire", branch: "sup", hitAs: "plate", line: "rear", tier: 1, reach: 0, speed: 2, tough: 1, cost: "Low", claims: false,
+      role: "Mobile sensor mast.", atk: {},
+      traits: ["Reads drive signatures at long range; clutter craft only up close"], strong: "Early warning.", weak: "Unarmed." },
+    { id: "orbgun", name: "Orbital Battery", branch: "sup", hitAs: "plate", line: "rear", tier: 1, reach: 2, speed: 1, tough: 3, cost: "Low", claims: false,
+      role: "Fixed surface-to-orbit gun.", atk: { hull: 4, flesh: 1 },
+      traits: ["No research needed", "Immobile"], strong: "Punishing hulls parked over your bodies.", weak: "Strikecraft; torpedoes; landings." },
+
+    { id: "dart", name: "Dart Interceptor", branch: "craft", hitAs: "void", line: "front", tier: 1, reach: 2, speed: 5, tough: 3, cost: "High", claims: false,
+      role: "Void superiority fighter.", atk: { void: 5, clutter: 3, mote: 3, ord: 2 },
+      traits: ["Shield of any wing", "Patrols an area automatically"], strong: "Killing strikecraft; escort; patrol.", weak: "Almost useless against ground or hulls." },
+    { id: "hammerhead", name: "Hammerhead", branch: "craft", hitAs: "void", line: "middle", tier: 1, reach: 2, speed: 5, tough: 2, cost: "High", claims: false,
+      role: "Strike bomber.", atk: { flesh: 3, plate: 4, hull: 2, void: 1 },
+      traits: ["Late upgrade carries a seeker torpedo"], strong: "Deep strikes on walkers and platforms.", weak: "Darts; Aegis tenders; lance batteries." },
+    { id: "scythe", name: "Scythe Ringrunner", branch: "craft", hitAs: "clutter", line: "front", tier: 1, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Anti-infantry clutter craft.", atk: { flesh: 5, plate: 2 },
+      traits: ["Flies below lance lock", "Can base on carriers"], strong: "Massacring legions and mortar crews.", weak: "Flak Spindles, tenders, Darts." },
+    { id: "wasp", name: "Wasp Ringrunner", branch: "craft", hitAs: "clutter", line: "front", tier: 1, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Anti-walker clutter craft.", atk: { plate: 5, flesh: 2, hull: 2 },
+      traits: ["Flies below lance lock", "Can base on carriers"], strong: "Walker columns with no flak.", weak: "One Flak Spindle in the target." },
+    { id: "seeker", name: "Seeker Ringrunner", branch: "craft", hitAs: "clutter", line: "middle", tier: 2, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Anti-Shroud clutter craft.", atk: { shroud: 5, hull: 3 },
+      traits: ["Reveals cloaked hulls", "Outpaces any squadron"], strong: "Hunting Shroud hulls.", weak: "Flak." },
+    { id: "lantern", name: "Lantern", branch: "craft", hitAs: "void", line: "rear", tier: 2, reach: 3, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Sensor command ship.", atk: {},
+      traits: ["Reads void, walker and hull signatures at system range", "Cannot see clutter", "Late upgrade reveals cloaks"], strong: "Knowing everything.", weak: "Unarmed." },
+    { id: "monolith", name: "Monolith", branch: "craft", hitAs: "void", line: "middle", tier: 2, reach: 2, speed: 3, tough: 4, cost: "Very high", claims: false,
+      role: "Heavy bombardment craft.", atk: { flesh: 4, plate: 3, hull: 2 },
+      traits: ["Wrecks structures and cradles", "Late upgrade ignores Deep Vaults", "Carries seeker torpedoes on a long reload"], strong: "Habitats, structures, slow formations.", weak: "Darts, lances, tenders." },
+    { id: "motes", name: "Kill-Motes", branch: "craft", hitAs: "mote", line: "middle", tier: 1, reach: 1, speed: 4, tough: 1, cost: "Low", claims: false,
+      role: "Explosive drone swarm.", atk: { flesh: 3, plate: 3 },
+      traits: ["Cheap attrition"], strong: "Grinding formations without flak.", weak: "Spindles, tenders, Darts." },
+    { id: "glint", name: "Glint", branch: "craft", hitAs: "mote", line: "rear", tier: 1, reach: 2, speed: 4, tough: 1, cost: "Very low", claims: false,
+      role: "Scout mote.", atk: {},
+      traits: ["Resolves unresolved returns", "Entering foreign space does not start a war"], strong: "Cheap eyes.", weak: "Everything." },
+    { id: "shrike", name: "Shrike", branch: "craft", hitAs: "void", line: "rear", tier: 3, reach: 2, speed: 5, tough: 2, cost: "Very high", claims: false,
+      role: "Cloaked strike craft.", atk: { flesh: 3, plate: 4, void: 2, hull: 2 },
+      traits: ["Invisible until it fires", "Entering foreign space does not start a war"], strong: "Killing cradles and launchers at will.", weak: "Late Bastion arrays and Lanterns." },
+
+    { id: "skiff", name: "Cutterskiff", branch: "fleet", hitAs: "hull", line: "front", tier: 1, reach: 1, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Light picket ship.", atk: { hull: 2, shroud: 2, flesh: 1 },
+      traits: ["Strong in gravity wells", "Loses shielding in deep nebula"], strong: "Well patrol, cheap screens.", weak: "Nebula; anything bigger." },
+    { id: "tender", name: "Aegis Tender", branch: "fleet", hitAs: "hull", line: "middle", tier: 1, reach: 2, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "The squadron's flak and anti-torpedo umbrella.", atk: { void: 5, clutter: 3, mote: 4, ord: 5, hull: 1 },
+      traits: ["Inside a squadron: fires on every craft and torpedo, no recharge", "Barely hurts other ships"], strong: "Making a squadron immune to strikecraft and torpedoes.", weak: "Ship-to-ship; Shroud hulls." },
+    { id: "corsair", name: "Corsair", branch: "fleet", hitAs: "hull", line: "front", tier: 1, reach: 2, speed: 4, tough: 4, cost: "Medium", claims: false,
+      role: "Destroyer escort.", atk: { hull: 3, shroud: 4, void: 2, clutter: 1 },
+      traits: ["Gravimetric sensors reveal Shroud hulls", "Lays mines in gravity wells", "Fires seeker torpedoes late"], strong: "Shroud hunting; screening.", weak: "Broadsides in a duel." },
+    { id: "broadside", name: "Broadside", branch: "fleet", hitAs: "hull", line: "middle", tier: 2, reach: 3, speed: 3, tough: 4, cost: "High", claims: false,
+      role: "Heavy gun cruiser.", atk: { hull: 5, flesh: 3, plate: 3 },
+      traits: ["Best orbital bombardment of surface targets", "Vulnerable to Shroud hulls and strikecraft"], strong: "Fleet duels; bombarding bodies.", weak: "Shroud hulls; unescorted strike attacks." },
+    { id: "ark", name: "Ark Carrier", branch: "fleet", hitAs: "hull", line: "rear", tier: 3, reach: 0, speed: 3, tough: 5, cost: "Very high", claims: false,
+      role: "Mobile launch cradle.", atk: { void: 1 },
+      traits: ["Carries naval Darts and all ringrunners", "One per squadron"], strong: "Strikecraft anywhere.", weak: "Everything, once its escort is gone." },
+    { id: "shroudh", name: "Shroud Hunter", branch: "fleet", hitAs: "shroud", line: "middle", tier: 2, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Cloaked attack ship.", atk: { hull: 5, shroud: 4 },
+      traits: ["Cloaked until it fires", "Half shielding and weaker guns in gravity wells", "Cannot fire on surface targets"], strong: "Barges and squadrons in the nebula.", weak: "Seekers, Corsairs; wells." },
+    { id: "silo", name: "Shroud Silo", branch: "fleet", hitAs: "shroud", line: "rear", tier: 3, reach: 3, speed: 3, tough: 3, cost: "Very high", claims: false,
+      role: "Cloaked rod-launcher ship.", atk: { hull: 1 },
+      traits: ["Fires kinetic rods while cloaked", "Very weak in wells"], strong: "A hidden siege gun parked off an enemy system.", weak: "Any Shroud hunter." },
+
+    { id: "torp", name: "Seeker Torpedo", branch: "ord", hitAs: "ord", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Null-salt", claims: false,
+      role: "Tracking torpedo.", atk: { flesh: 3, plate: 4, hull: 4 },
+      traits: ["Targets and follows a moving formation", "Fired by Hammerheads, Monoliths, Corsairs, Broadsides, Shroud Hunters and launchers"], strong: "Killing a specific formation or a docked wing.", weak: "Flak inside the target." },
+    { id: "rod", name: "Kinetic Rod", branch: "ord", hitAs: "ord", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Null-salt", claims: false,
+      role: "Orbital bombardment rod.", atk: { flesh: 4, plate: 3 },
+      traits: ["Only strikes Cores — never moving targets", "Area damage; wrecks structures"], strong: "Cradles, forges, fortified Cores.", weak: "Bastion arrays; anything moving." },
+    { id: "cascade", name: "Cascade Charge", branch: "ord", hitAs: "ord", line: "rear", tier: 3, reach: 3, speed: 5, tough: 1, cost: "Ruinous", claims: false,
+      role: "Reactor-cascade warhead.", atk: { flesh: 5, plate: 5, hull: 4 },
+      traits: ["Huge area; hits your own forces", "Irradiates the habitat", "Every holding you own loses Allegiance for weeks"], strong: "Ending a siege overnight.", weak: "Your own people's loyalty." }
+  ],
+  synergies: [
+    { name: "Juggernaut & Spindle", units: ["jugger", "breacher", "spindle"], why: "The heavy walker kills plate, the Breachers screen it and kill infantry, the Spindle makes ringrunner strikes suicidal." },
+    { name: "Dart over Hammerhead", units: ["dart", "hammerhead"], why: "The Dart in the Shield slot absorbs the defenders' fire; the bombers live to release." },
+    { name: "Picket squadron", units: ["corsair", "tender", "broadside"], why: "Corsair finds Shroud hulls, the tender eats every strike and torpedo, the Broadside wins duels. No blind side." },
+    { name: "Spire & Driver", units: ["spire", "driver"], why: "Mass drivers outrange every ground unit but need someone to see. A Spire or Skitter makes every hour a free volley." },
+    { name: "Three-layer shield", units: ["spindle", "lance", "bastionarr"], why: "Spindle for clutter and motes, Lance for void craft, Bastion for torpedoes and rods. Each covers another's blind spot." },
+    { name: "Boarding action", units: ["voidmarine", "broadside", "corsair"], why: "Broadside shells the body, Corsair keeps Shroud hulls off, Marines board anywhere and seize the dock." },
+    { name: "Silent decapitation", units: ["shade", "shrike", "rod"], why: "Shades and Shrikes find cradles and forges unseen; rods remove them." },
+    { name: "Hunter-killer net", units: ["seeker", "shroudh"], why: "Seekers flush enemy Shroud hulls out of the wells, your own Shroud Hunters wait in the nebula for whatever runs." }
+  ],
+  comps: [
+    { name: "Plains Legion", mode: "FFA · Pact", size: "Legion: 9 / 9", units: [["jugger", 2], ["breacher", 3], ["driver", 1], ["spindle", 1], ["line", 2]],
+      idea: "The complete open-ground force: walkers, a Shield line, one long gun, flak, and seizers.",
+      play: "Fight on the Plains. Let the driver volley first. Drop a Line Legion in every seized habitat.",
+      loses: "Habitat corridors; Mass Driver kiting; bombers when no Lance is near." },
+    { name: "Core Fortress", mode: "FFA", size: "Legion on Core + battery two moons out", units: [["breaker", 3], ["line", 3], ["spindle", 1], ["lance", 1], ["driver", 3], ["spire", 1]],
+      idea: "Absorb on the Core; bleed the attacker from range.",
+      play: "Defenders hold the Core and never move. Drivers slide in, volley, slide out every cycle.",
+      loses: "Shade Cells that ignore the Core; rods; Hammerheads on the drivers." },
+    { name: "Ring Hunt", mode: "FFA · Pact", size: "Wing: 6 / 6", units: [["wasp", 3], ["scythe", 2], ["glint", 1]],
+      idea: "Strike from the clutter where lance batteries can't see.",
+      play: "Glint scouts for formations without flak. Wasps on walkers, Scythes on legions.",
+      loses: "A single Spindle in the target, an Aegis tender, Darts on patrol." },
+    { name: "Picket Squadron", mode: "FFA · Pact", size: "Squadron: 3 / 3", units: [["corsair", 1], ["tender", 1], ["broadside", 1]],
+      idea: "Sensors, shield and guns in three hulls.",
+      play: "Park in your own wells to recover; bombard enemy bodies from stand-off.",
+      loses: "Corsair destroyed → Shroud hulls feast. Torpedo salvos fired faster than the tender can engage." },
+    { name: "Drop Envelopment", mode: "Pact", size: "Two wings + drop legions", units: [["drop", 4], ["dart", 3], ["hammerhead", 3]],
+      idea: "While your ally pins the enemy's main legion, drop behind it onto empty habitats.",
+      play: "Hammerheads clear the drop zone's defenders, Darts escort, drop legions seize an hour later.",
+      loses: "Flak over the drop zone; a counter-attack during the dig-out hour." },
+    { name: "Lumen Void Lock", mode: "FFA (late)", size: "Late-war", units: [["lantern", 1], ["dart", 4], ["monolith", 2], ["bastionarr", 1], ["breaker", 3], ["line", 3]],
+      idea: "Hold the ground with minimal force, own the void, bomb their forges into silence.",
+      play: "Darts on patrol under a Lantern; Monoliths hit forges and cradles; walkers only defend.",
+      loses: "An early Ardent rush before the wing exists." },
+    { name: "Anvil & Canopy", mode: "Pact (2 players)", size: "Split roles", units: [["jugger", 3], ["breacher", 4], ["line", 2], ["dart", 4], ["lance", 2], ["spindle", 2]],
+      idea: "One player builds only ground power, the other only flak and interceptors over it.",
+      play: "Move as one; the canopy player's spindles travel inside the anvil player's legions.",
+      loses: "One partner offline. Kiting still hurts." },
+    { name: "Boarding Leap", mode: "FFA · Pact", size: "Squadron + boarders", units: [["broadside", 1], ["tender", 1], ["corsair", 1], ["voidmarine", 4], ["hoplite", 2]],
+      idea: "Take the dock the enemy thinks is safe behind a lane.",
+      play: "Squadron shells, Marines board a nearby body, heavy units follow through the captured dock.",
+      loses: "Orbital batteries; Shroud hulls; going without the tender." },
+    { name: "Mote Grind", mode: "FFA", size: "Cheap", units: [["motes", 4], ["glint", 1], ["driver", 2], ["line", 4]],
+      idea: "A poor power's war of attrition.",
+      play: "Glints spot, motes and drivers grind, legions seize the remnants.",
+      loses: "Anyone who builds Spindles." },
+    { name: "Shadow Economy War", mode: "FFA (late)", size: "Specialist", units: [["shrike", 2], ["shade", 2], ["silo", 1], ["bastionarr", 1]],
+      idea: "Never fight the army; starve it.",
+      play: "Strike forges, cradles and slipways every night. Keep a Bastion home.",
+      loses: "A rival who wins the ground war first." }
+  ]
+};
+</script>
+<script src="../assets/world.js"></script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Ashen Crowns</title>
+<meta name="description" content="A high-fantasy war world: seven crowns fight for the ashlands after the Dragon-King's fall.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root {
+    --accent: #6b1d1d; --accent-2: #a8402c; --display: "Cinzel", Georgia, serif;
+    --bg: #f5efe4; --bg-2: #ebe2d1; --rule: #d8ccb6;
+    --heat-1: #f3dfd3; --heat-2: #e6b9a3; --heat-3: #d28768; --heat-4: #a8402c; --heat-5: #6b1d1d;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #17110d; --bg-2: #221912; --panel: #261c15; --rule: #3e3024; --ink: #f2e9dc; --ink-2: #cfc0aa; --ink-3: #9a8a74;
+    --accent: #d8694f; --accent-2: #eb937a; --accent-ink: #17110d;
+    --heat-1: #3a1f17; --heat-2: #5b2a1d; --heat-3: #8c3b26; --heat-4: #d8694f; --heat-5: #f6b9a4; --heat-ink-hi: #17110d;
+  } }
+  :root[data-theme="dark"] {
+    --bg: #17110d; --bg-2: #221912; --panel: #261c15; --rule: #3e3024; --ink: #f2e9dc; --ink-2: #cfc0aa; --ink-3: #9a8a74;
+    --accent: #d8694f; --accent-2: #eb937a; --accent-ink: #17110d;
+    --heat-1: #3a1f17; --heat-2: #5b2a1d; --heat-3: #8c3b26; --heat-4: #d8694f; --heat-5: #f6b9a4; --heat-ink-hi: #17110d;
+  }
+  .chron p, .chron blockquote { font-family: "EB Garamond", Georgia, serif; font-size: 20px; }
+  .unit .u-name { font-size: 17px; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="#world">Realm</a><a href="#economy">Treasury</a><a href="#rules">Laws of war</a><a href="#classes-sec">Hit classes</a>
+    <a href="#oaths">Oaths</a><a href="#roster-sec">Muster roll</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
+    <a href="#comps-sec">Hosts</a><a href="#chronicle">Chronicle</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">World III · High fantasy</div>
+  <h1>The Ashen Crowns</h1>
+  <p class="lede">The Dragon-King is dead, and his empire has broken into seven crowns. His ashlands — the burned, impossibly fertile heart of the old realm — belong to no one. Every crown has sworn to take them. Most will not live to see the harvest.</p>
+  <div class="facts">
+    <span class="fact"><b>7</b> crowns</span>
+    <span class="fact"><b>8</b> hit classes</span>
+    <span class="fact"><b>38</b> units</span>
+    <span class="fact">Hosts of <b>8</b> · flights of <b>5</b> · fleets of <b>4</b></span>
+    <span class="fact">A clash every <b>bell</b></span>
+  </div>
+</div></div>
+
+<section id="world"><div class="wrap">
+  <h2>The realm</h2>
+  <p class="sec-sub">Ash, aether, and seven crowns that each believe the old empire is theirs by right.</p>
+  <div class="prose">
+    <p>For three hundred years the <b>Dragon-King Vaelthorn</b> ruled from the Cinder Throne, and his breath kept the heartlands burned black. When he finally died — poisoned, the songs say, by his own seneschal — the fires went out. Within a single spring the ashlands grew green, and the soil proved richer than anything in the known world. Seven of his former vassals crowned themselves within the year.</p>
+    <p>Each crown holds a seat-castle, a handful of walled towns, and a patchwork of <b>shires</b>. To the north rise the Teeth, a mountain range of dwarven holds. To the west lies the Thornwood, an elf-haunted forest. To the south, the Brine Isles sit on warm shoals, and beyond them the black water of the <b>Sunless Deep</b>, where things larger than ships live.</p>
+    <p>Victory is <b>Sovereignty</b>: counted at every new moon, by the towns, shires and three Hallows — the Cinder Throne, the Wellspring of Aether, and the Drowned Abbey — held by a crown or a sworn alliance.</p>
+  </div>
+  <h3>Lands that decide wars</h3>
+  <div class="grid g3">
+    <div class="card"><h4>The Ashlands</h4><p class="small">Flat, open, newly green. Golems and knights fight at full strength; foot caught in the open are ridden down.</p></div>
+    <div class="card"><h4>Walled towns</h4><p class="small">Narrow streets and stone walls. Golems lumber and are blunted; dug-in footmen hold for days.</p></div>
+    <div class="card"><h4>The Teeth</h4><p class="small">Mountains. Hill Clansmen thrive; everything else crawls.</p></div>
+    <div class="card"><h4>The Thornwood</h4><p class="small">Ancient forest. Slow for all, deadly for armour and golems, a gift to defenders.</p></div>
+    <div class="card"><h4>The Shoals</h4><p class="small">Warm, shallow water around the Isles. Sloops are quick and strong; krakens are cramped, half-blinded and weak.</p></div>
+    <div class="card"><h4>The Sunless Deep</h4><p class="small">Open ocean. Krakens are monsters here; small ships are tossed and break.</p></div>
+  </div>
+  <h3>The crowns (rename freely)</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Crown</th><th>Ruler</th><th>Oath</th><th>Temper</th></tr></thead>
+    <tbody>
+      <tr><td>Garrowmoor</td><td>King Ormund the Red</td><td>Iron Oath</td><td>Stone golems from the first moon; few beasts; impatient</td></tr>
+      <tr><td>Elmhallow</td><td>Archmage-Regent Selwyn Tarr</td><td>Skyborn Oath</td><td>Rich, slow, unmatched in wards and winged beasts</td></tr>
+      <tr><td>The Brine Isles</td><td>Sea-Queen Ysolde</td><td>Tideborn Oath</td><td>Fleets and early firedrakes</td></tr>
+      <tr><td>The Duchy of Fennick</td><td>Duke Aldous Fennick</td><td>Iron Oath</td><td>Holds the best of the ashlands, defends it poorly</td></tr>
+      <tr><td>Karrak-under-Teeth</td><td>Thane Brunhild Ironvein</td><td>Iron Oath</td><td>Dwarven hold, impregnable, small</td></tr>
+      <tr><td>The Thorn Court</td><td>Lady Isaveth of the Thorns</td><td>Skyborn Oath</td><td>Elven forest realm; shadowblades and veilwings</td></tr>
+      <tr><td>Port Saint Calder</td><td>Guildmaster Oren Pike</td><td>Tideborn Oath</td><td>Merchant city that hires sellswords</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="economy"><div class="wrap">
+  <h2>The treasury</h2>
+  <p class="sec-sub">Six goods, a tithe that never stops, and the fealty of people who did not ask for you.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Good</th><th>Comes from</th><th>Feeds</th></tr></thead>
+    <tbody>
+      <tr><td><b>Grain</b></td><td>Farming shires — especially the ashlands</td><td>Every footman, every village; most building</td></tr>
+      <tr><td><b>Iron</b></td><td>Mines and smithy towns</td><td>Armour, golem cores, siege engines, war-galleys, all building</td></tr>
+      <tr><td><b>Timber</b></td><td>Forest shires</td><td>Ships, engines, palisades and towers</td></tr>
+      <tr><td><b>Aether</b></td><td>Ley-wells — rare, guarded, holy</td><td>All lore (research), wards, enchanted beasts, spells, krakens</td></tr>
+      <tr><td><b>Levies</b></td><td>Population</td><td>Every unit to muster and to keep. Cannot be sold.</td></tr>
+      <tr><td><b>Crowns</b></td><td>Taxes, tolls, mints</td><td>Everything; building upkeep; the only coin of the markets</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>The tithe.</b> Every unit takes a share of its own cost every day, forever. A king who musters a great host in the first moon spends the rest of the war feeding it — and hungry shires lose <b>Fealty</b>, and Fealty is what makes every shire produce.</div>
+  <h3>Holdings</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Crownlands</h4><p class="small">Your own towns. Full yield. The seat-castle raises Fealty in nearby shires.</p></div>
+    <div class="card"><h4>Conquered towns</h4><p class="small">A quarter yield, Fealty near the floor. These are the towns that unbanner.</p></div>
+    <div class="card"><h4>Sworn towns</h4><p class="small">Conquered towns made to swear on an Oath-stone (costs Levies). Half yield; can muster.</p></div>
+    <div class="card"><h4>Shires</h4><p class="small">Countryside. Little yield unless you raise a Mill or Mine. Never revolt.</p></div>
+  </div>
+  <h3>Fealty and the Unbanner'd</h3>
+  <div class="prose">
+    <p>Each town and shire has <b>Fealty</b> from nothing to full. It climbs or sinks each dawn toward what the town feels it is owed: closeness to your seat, peace, full granaries, no enemy at the gates, no burning, no whisperers in the taverns.</p>
+    <p>A conquered town below a third Fealty may <b>unbanner</b> — tear down your colours. Fresh conquests sit at a quarter. Once a day, at an hour no one can predict, the town chooses. If no soldier stands in it, it simply goes over to the <b>Unbanner'd</b>: free companies and angry peasants who arm themselves and march where they please. A single company in the town's keep usually puts the rising down.</p>
+  </div>
+  <h3>Works</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Work</th><th>Where</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr><td>Guildhall</td><td>Town</td><td>+10% to every good per level, and coin each day. The first thing a wise ruler builds.</td></tr>
+      <tr><td>Mill / Mine</td><td>Shire</td><td>Works the shire's resource.</td></tr>
+      <tr><td>Barracks</td><td>Town</td><td>Musters foot.</td></tr>
+      <tr><td>Foundry-forge</td><td>Town</td><td>Wakes golems, builds engines and armour.</td></tr>
+      <tr><td>Aerie</td><td>Town</td><td>Every winged beast is hatched, stabled and fed at an aerie and must return to it. Burn the aerie and its flight cannot rise.</td></tr>
+      <tr><td>Roost</td><td>Shire</td><td>A forward perch for beasts.</td></tr>
+      <tr><td>Shipwright</td><td>Coastal town</td><td>Builds ships; troops board transports here.</td></tr>
+      <tr><td>Palisade</td><td>Shire</td><td>Fortifies a shire's keep-point.</td></tr>
+      <tr><td>Undercroft</td><td>Town</td><td>Shelters folk from fire and blight; hardens defenders.</td></tr>
+      <tr><td>Hospice</td><td>Town / shire</td><td>Faster healing.</td></tr>
+      <tr><td>King's Road</td><td>Shire</td><td>Much faster marching — for any host.</td></tr>
+      <tr><td>Athenaeum</td><td>Town</td><td>Lore — research.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>Laws of war</h2>
+  <p class="sec-sub">The customs that decide every battle in the ashlands.</p>
+  <div class="grid g2">
+    <div class="card"><h4>Bells</h4><p class="small">When hosts meet, the first clash is immediate; another follows every <b>bell</b> (each hour). Each blow uses the attacker's strength against the defender's <b>hit class</b>. A golem's fist is ruin to a knight and a waste on a griffon it cannot reach.</p></div>
+    <div class="card"><h4>The keep</h4><p class="small">Every town and shire has a <b>keep-point</b>. A host standing on it is dug in: blows glance off and the host does not sally — it only holds. A host camped beside the keep, not on it, trades blows every bell.</p></div>
+    <div class="card"><h4>Host, flight, fleet</h4><p class="small">A host fights at full strength up to <b>8</b> companies, a flight up to <b>5</b> beasts, a fleet up to <b>4</b> ships. More than that and each newcomer adds less, then nothing, then confusion. And a host marches at its slowest company's pace.</p></div>
+    <div class="card"><h4>Vanward, mainward, rearward</h4><p class="small">Blows against a host land mostly on the <b>vanward</b>, less on the <b>mainward</b>, little on the <b>rearward</b>. Which ward a company stands in is decided by what it is.</p></div>
+    <div class="card"><h4>Range</h4><p class="small">Trebuchets, mage circles and great ships strike from afar. A foe that cannot reach back cannot strike back. Loose, withdraw, wait out the bell, loose again.</p></div>
+    <div class="card"><h4>The banner</h4><p class="small">A town or shire is yours only when a <b>banner-bearing</b> company stands on its keep. Golems, knights, beasts, ships, shadowblades and sellswords may win the field; they cannot plant a banner.</p></div>
+    <div class="card"><h4>High sky and treeline</h4><p class="small">Wyverns and dragons fly <b>high</b>, where storm-callers' lightning can strike them. Griffons and harpies hunt at the <b>treeline</b> — below what storm towers can see. Only bows, ward-ships and wyverns can catch a treeline flyer.</p></div>
+    <div class="card"><h4>Within or beside</h4><p class="small">Archers or wards <b>within</b> a host loose at every beast and every bolt that comes for it, without rest. Wards merely <b>beside</b> a host must gather their strength between castings — send enough at once and some get through.</p></div>
+    <div class="card"><h4>Sight, scrying and glamour</h4><p class="small">Watchmen see what is near; a distant host shows only as dust on the road until a scout names it. Seers' pools reveal the movements of large hosts and great beasts. <b>Glamoured</b> things — shadowblades, veilwings, krakens — are unseen until they strike or something of their own kind of sight draws near.</p></div>
+    <div class="card"><h4>Shoal and deep</h4><p class="small">Near land are the <b>shoals</b>; beyond, the <b>deep</b>. Sloops love shoals and break in the deep. Krakens are cramped and weak in shoals and terrible in the deep.</p></div>
+    <div class="card"><h4>Transport hulls</h4><p class="small">Companies crossing water board transports at a shipwright. Transports carry no fighters and sink easily; boarding and landing leave a host helpless for hours. Sea-Raiders beach their own longboats anywhere.</p></div>
+    <div class="card"><h4>The aerie</h4><p class="small">Beasts fly from a home aerie and return to rest. A beast in its stall is meat. Burn the aerie and the whole flight is grounded until it is rebuilt.</p></div>
+  </div>
+</div></section>
+
+<section id="classes-sec"><div class="wrap">
+  <h2>Hit classes</h2>
+  <p class="sec-sub">What a target is struck as decides which of the attacker's strengths matters.</p>
+  <div id="classes"></div>
+</div></section>
+
+<section id="oaths"><div class="wrap">
+  <h2>The three oaths</h2>
+  <p class="sec-sub">Each crown swore one of the old oaths to the Dragon-King. The oath shapes its armies: same roles, different arms.</p>
+  <div class="grid g3">
+    <div class="card"><h4>The Iron Oath</h4><p class="small"><b>Cheap, early, earth-bound.</b> Stone golems and starseer circles from the first moon, cheaply. Companies are lightly made and the oath has few beasts of note — Iron crowns trust storm towers to guard the sky, and storm towers do not see the treeline.</p><p class="small"><span class="tag good">Early golems</span><span class="tag good">Cheap losses</span><span class="tag bad">Few beasts</span></p></div>
+    <div class="card"><h4>The Skyborn Oath</h4><p class="small"><b>Costly, hardy, late, masters of air and ward.</b> Wyverns, griffons, sky-eye rocs and great wards come early and come strong. The Skyborn spend the first moon building and the rest of the war above you.</p><p class="small"><span class="tag good">Beasts &amp; wards</span><span class="tag good">Hardiness</span><span class="tag bad">Slow start</span></p></div>
+    <div class="card"><h4>The Tideborn Oath</h4><p class="small"><b>Balanced, sea-minded.</b> Middling price and hardiness, firedrakes from the first moon, the strongest early fleets.</p><p class="small"><span class="tag good">Early firedrakes</span><span class="tag good">Fleets</span><span class="tag bad">No crushing edge</span></p></div>
+  </div>
+</div></section>
+
+<section id="roster-sec"><div class="wrap">
+  <h2>Muster roll</h2>
+  <p class="sec-sub">Strengths 0–5 against each hit class. "Dies to" is reckoned from the roll.</p>
+  <div class="filters" id="roster-filters"></div>
+  <div class="roster" id="roster"></div>
+</div></section>
+
+<section id="matrix-sec"><div class="wrap">
+  <h2>Counter matrix</h2>
+  <p class="sec-sub">Find the column for the foe; look down it for the darkest cells.</p>
+  <div id="matrix"></div>
+</div></section>
+
+<section id="synergy-sec"><div class="wrap">
+  <h2>Synergies</h2>
+  <p class="sec-sub">Companies that cover each other.</p>
+  <div class="grid g2" id="synergies"></div>
+</div></section>
+
+<section id="comps-sec"><div class="wrap">
+  <h2>Hosts</h2>
+  <p class="sec-sub">Complete armies for free-for-all wars and sworn alliances.</p>
+  <div class="grid g2" id="comps"></div>
+</div></section>
+
+<section id="chronicle"><div class="wrap">
+  <h2>Chronicle: The War of the Green Ash</h2>
+  <p class="sec-sub">As set down by Brother Edric of the Drowned Abbey, who watched most of it from a very high window.</p>
+  <div class="chron">
+    <h3><span class="when">The first moon</span>Of two kings and their patience</h3>
+    <p>King Ormund of Garrowmoor, whom men called the Red for his beard and later for other reasons, did not wait for the ashes to cool. He raised guildhalls on the first day, as every wise ruler does, and on the second he woke his golems. By the end of the week three of them walked the ashland road toward Fennick, each the height of a chapel, and behind them came his spearmen and a creaking string of mage-wagons.</p>
+    <p>In Elmhallow, the Archmage-Regent Selwyn Tarr woke nothing. He raised two guildhalls, an athenaeum and an aerie, and when his marshals came to him with lists of what Garrowmoor was mustering, he thanked them and said the aerie came first. The marshals went away and said things about him in the barracks that I will not set down here.</p>
+    <p>Across the strait, Sea-Queen Ysolde commissioned a serpent-hunter galley and a strange tall carrack with no rams, no boarding nets and no great guns — only a coven of storm-witches and two hundred archers on its castles. She moored them both in her own shoals.</p>
+
+    <h3><span class="when">The second moon</span>The fall of Fennick</h3>
+    <p>The ashlands are flat as a tabletop, and on flat ground nothing stands before a stone golem. Duke Aldous's levies met them in the open and were trodden into the new grass. In five days Ormund took four of Fennick's towns, and in each he raised his red banner over the keep and sent a herald to every crown to say so.</p>
+    <p>And then he marched on. Garrisons, he said, were for timid men. Not one company was left in any of the four towns. The banners flew over empty keeps.</p>
+
+    <h3><span class="when">The ninth day of the second moon</span>The griffons</h3>
+    <p>Tarr's first flight was five griffon-riders of the Talon order, whose beasts can tear the plate from a knight and the stone skin from a golem. They flew out from Elmhallow before dawn, low, at the height of the treetops, following the river.</p>
+    <p>Ormund's foremost host — three golems and two mage-wagons, and nothing else — had halted by the Fennick ford. Two storm-caller circles stood a mile behind it, watching the sky for the dragons and wyverns that storm-callers exist to strike. They watched the sky the whole morning. The griffons never entered it. They came along the river under the willow line, beneath anything a storm-tower can see, and fell on the golems from the reeds.</p>
+    <p>A golem cannot lift its arms above its own head; the old makers never gave them the joint. They stood and were torn. Every bell the griffons rose, circled, and fell again. By noon there was nothing at the ford but rubble and frightened wagon-mules, and the storm-callers swore by every god that the sky had been clear.</p>
+    <blockquote>"The heavens were empty, my lord. We watched them every moment. Nothing flew." — the master of the storm circle, before the king's justice</blockquote>
+
+    <h3><span class="when">The third moon</span>More storms</h3>
+    <p>King Ormund hanged the master of the storm circle and ordered six more circles and a Great Ward over Garrowmoor itself — the costliest ward in his oath. Not one of them could see the treeline. The griffons came again, and again. A single company of skyward bowmen in each host, the cheapest archers in his realm, would have shot the griffons from the air at the first bell. The Iron Oath reckons bowmen beneath the dignity of a golem host.</p>
+    <p>That moon Sea-Queen Ysolde and the Archmage-Regent swore an alliance at the Drowned Abbey. I witnessed the oath myself. Their Sovereignty would be counted together.</p>
+
+    <h3><span class="when">The fourth moon</span>The tall carrack</h3>
+    <p>Ormund had a few beasts after all: five firedrakes, bought dear from the Tideborn before the war, the jewels of his realm. His spies brought word that Ysolde's fleet rode at anchor in the Brine Isles: a serpent-hunter, a great man-o'-war — the most fearsome ship in the south, and helpless, everyone knew, against fire from above — and the tall carrack, which the spies wrote off as "a merchantman, armed."</p>
+    <p>The carrack was <i>in</i> the fleet. Its storm-witches and archers loosed at every drake that came for any of those ships, every bell, without pause to gather breath. The drakes were struck before they could even dive. Two came near enough to see the man-o'-war's colours; one flew home, blinded in one eye.</p>
+    <blockquote>"I sent every dragon I owned against a warship and they were killed by a merchant." — King Ormund, according to his cupbearer</blockquote>
+
+    <h3><span class="when">The fifth moon</span>The banners come down</h3>
+    <p>The four towns of Fennick had been sullen since the day they fell — far from Garrowmoor, at a quarter fealty, and with no soldiers to keep them. On the same night two of them tore down the red banners. There was no company in either keep to stop them, so the towns simply went over to the Unbanner'd. By the new moon a free company was raiding the King's Road behind Ormund's own hosts.</p>
+
+    <h3><span class="when">The sixth moon</span>The siege of Thornwatch</h3>
+    <p>Ormund gathered every golem, every wagon and every spear he had into one vast host — eighteen companies, more than twice what any marshal can command well — and marched it on Thornwatch, the Skyborn fortress at the forest's edge. On the march it moved like a funeral. In battle it fought like half of itself.</p>
+    <p>Tarr put dwarven hammerguard and spearmen on Thornwatch's keep, where they stood and endured. Two shires back he set three starseer circles. Every bell the starseers rode forward, called down their burning stars on the great host, and rode back before it could reach them. The host never struck one of them. By the time it reached Thornwatch it was bloodied and footsore, and it beat itself against defenders who barely bled and never answered.</p>
+
+    <h3><span class="when">The seventh moon</span>The crossing of the Deep</h3>
+    <p>For a second front the king put his last two hosts on transports and sent them across the Sunless Deep to fall on the Brine Isles from the south. His own serpent-hunters were not yet launched; he would not wait. Two of the Sea-Queen's krakens had lain in the Deep for nine days, unseen, waiting for exactly such ships. Transports have no fighters aboard. I am told that the sea there was calm the next morning.</p>
+
+    <h3><span class="when">The eighth moon</span>The aeries burn</h3>
+    <p>The last blow was quiet. Tarr's seeking bolts fell, in one night, on both of Garrowmoor's aeries. Every beast Ormund had bred since the fourth moon was stabled there. With no beasts and storm-towers that could not see a griffon, the remaining hosts of the Iron Oath were hunted along the roads. At the new moon the alliance's Sovereignty passed Garrowmoor's, and the War of the Green Ash was done.</p>
+
+    <div class="postmortem">
+      <h3>The chronicler's reckoning</h3>
+      <ol>
+        <li><b>Golems without bowmen.</b> They cannot strike above their heads. One company of skyward bows per host was all it needed.</li>
+        <li><b>Storm towers against treeline flyers.</b> He bought the costliest answer to a question nobody asked.</li>
+        <li><b>Dragons against a warded fleet.</b> Archers and witches <i>in</i> the fleet loose at every beast, every bell. The plainest ship was the deadliest.</li>
+        <li><b>Empty keeps.</b> Towns at a quarter fealty, ungarrisoned, unbannered and turned on him.</li>
+        <li><b>The eighteen-company host.</b> Too big to fight well, too slow to catch the starseers.</li>
+        <li><b>Storming a held keep.</b> Defenders who hold and do not sally barely bleed.</li>
+        <li><b>Transports across the Deep, unescorted.</b> Krakens were bred for that.</li>
+        <li><b>Beasts in their stalls.</b> A grounded flight is a larder.</li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · The Ashen Crowns · An original setting. <a href="../index.html">All worlds</a></div></footer>
+
+<script>
+window.WORLD = {
+  lines: { front: "Vanward", middle: "Mainward", rear: "Rearward" },
+  tiers: ["First moon", "Mid-war", "Late war"],
+  reach: ["Melee", "Bowshot", "Siege", "Horizon"],
+  classes: [
+    { id: "flesh", name: "Flesh", short: "Flesh", desc: "Foot soldiers, crews, mages, unarmoured beasts on the ground." },
+    { id: "iron", name: "Iron & stone", short: "Iron", desc: "Plate knights, golems, war-engines and armoured wagons." },
+    { id: "sky", name: "High sky", short: "Sky", desc: "Wyverns, dragons and rocs flying high — within storm-callers' reach." },
+    { id: "tree", name: "Treeline", short: "Tree", desc: "Griffons, harpies and other low hunters. Beneath storm towers' sight." },
+    { id: "fam", name: "Familiars", short: "Fam", desc: "Small sendings — scrying ravens, swarms of ember-moths." },
+    { id: "hull", name: "Hull", short: "Hull", desc: "Ships and transports on the water." },
+    { id: "deep", name: "Deep", short: "Deep", desc: "Krakens and sea-oracles beneath the waves. Struck only once revealed." },
+    { id: "spell", name: "Spell", short: "Spell", desc: "Incoming bolts and starfalls. Can be warded." }
+  ],
+  branches: [
+    { id: "foot", name: "Foot" }, { id: "iron", name: "Iron" }, { id: "siege", name: "Siege & ward" },
+    { id: "wing", name: "Winged" }, { id: "sea", name: "Fleet" }, { id: "spell", name: "Sendings" }
+  ],
+  units: [
+    { id: "spear", name: "Spearmen Levy", branch: "foot", hitAs: "flesh", line: "rear", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Low", claims: true,
+      role: "The common footman. Plants banners, holds keeps.", atk: { flesh: 2, iron: 1, tree: 1, fam: 1 },
+      traits: ["Can be carried by roc between friendly aeries"], strong: "Garrisons, keeps, numbers.", weak: "Golems, knights, harpies, starfall." },
+    { id: "huscarl", name: "Shieldwall Huscarls", branch: "foot", hitAs: "flesh", line: "front", tier: 1, reach: 0, speed: 2, tough: 3, cost: "Medium", claims: true,
+      role: "Heavy axemen who walk beside the golems.", atk: { flesh: 3, iron: 3, fam: 1 },
+      traits: ["Vanward — takes blows meant for the host", "Slowed badly in the Thornwood and the Teeth"], strong: "Guarding a host; breaking iron at close quarters.", weak: "Harpies; siege barrages." },
+    { id: "raider", name: "Sea-Raiders", branch: "foot", hitAs: "flesh", line: "middle", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: true,
+      role: "Longboat warriors.", atk: { flesh: 3, iron: 2, tree: 1 },
+      traits: ["Beach anywhere — no shipwright needed", "Can take islands with no harbour"], strong: "Beachheads and coastal raids.", weak: "Golems once ashore." },
+    { id: "wingfoot", name: "Wingborne Foot", branch: "foot", hitAs: "flesh", line: "middle", tier: 2, reach: 0, speed: 4, tough: 2, cost: "Medium", claims: true,
+      role: "Footmen carried into battle by great eagles.", atk: { flesh: 3, iron: 1 },
+      traits: ["Lands anywhere in reach of a friendly aerie or roost", "First clash on landing is fought as Treeline", "Must muster for a bell before it can plant a banner"], strong: "Snatching empty towns far behind the line.", weak: "Bowmen at the landing; a quick counter-charge." },
+    { id: "shadow", name: "Shadowblades", branch: "foot", hitAs: "flesh", line: "rear", tier: 2, reach: 0, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Glamoured elven assassins.", atk: { flesh: 4, iron: 2 },
+      traits: ["Unseen on land until they strike", "See through other land-glamours", "Ignore the protection of keeps and undercrofts"], strong: "Killing siege crews and mages; opening keeps.", weak: "Cannot plant banners. Outriders find them." },
+    { id: "muster", name: "Village Muster", branch: "foot", hitAs: "flesh", line: "middle", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Very low", claims: true,
+      role: "Pitchforks and old swords.", atk: { flesh: 1, iron: 1 },
+      traits: ["Strength follows the town's Fealty", "Crawls in foreign lands"], strong: "Filling an empty keep.", weak: "Any attack." },
+    { id: "sellsword", name: "Sellswords", branch: "foot", hitAs: "flesh", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Crowns only", claims: false,
+      role: "Free companies for hire.", atk: { flesh: 3, iron: 2, tree: 1 },
+      traits: ["Cost no Levies", "Will not plant a banner"], strong: "A merchant city's vanward.", weak: "Never takes ground." },
+    { id: "clansmen", name: "Hill Clansmen", branch: "foot", hitAs: "flesh", line: "rear", tier: 2, reach: 0, speed: 2, tough: 2, cost: "Medium", claims: true,
+      role: "Mountain warriors.", atk: { flesh: 3, iron: 1 },
+      traits: ["Great strength in the Teeth", "Weak on the flat"], strong: "Holding passes.", weak: "The ashlands." },
+
+    { id: "outrider", name: "Outriders", branch: "iron", hitAs: "iron", line: "rear", tier: 1, reach: 0, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Light horse scouts.", atk: { flesh: 2, iron: 1 },
+      traits: ["Name the hosts behind the dust", "See through land-glamours", "Quicken the host they ride with in foreign land"], strong: "Scouting; hunting shadowblades.", weak: "Real battle." },
+    { id: "knight", name: "Knights of the Ash", branch: "iron", hitAs: "iron", line: "front", tier: 1, reach: 0, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Mounted plate — fast, versatile.", atk: { flesh: 3, iron: 2, tree: 1, fam: 1 },
+      traits: ["Ride most lands without penalty"], strong: "Riding down foot.", weak: "Hammerguard; griffons." },
+    { id: "golem", name: "Stone Golem", branch: "iron", hitAs: "iron", line: "front", tier: 1, reach: 0, speed: 3, tough: 5, cost: "High", claims: false,
+      role: "Animated siege-giant.", atk: { flesh: 3, iron: 4 },
+      traits: ["Unstoppable on the ashlands", "Blunted in towns, forest, mountains", "Cannot strike above its own head"], strong: "Open battle; taking blows.", weak: "Griffons. Towns. Hammerguard." },
+    { id: "hammer", name: "Hammerguard", branch: "iron", hitAs: "iron", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Dwarven rune-armoured golem-breakers.", atk: { flesh: 1, iron: 5 },
+      traits: ["The finest iron defender of a town keep"], strong: "Breaking golems and knights.", weak: "Massed foot; harpies; siege." },
+
+    { id: "bows", name: "Skyward Bows", branch: "siege", hitAs: "flesh", line: "middle", tier: 1, reach: 1, speed: 3, tough: 2, cost: "Low", claims: false,
+      role: "Archers trained to shoot flyers.", atk: { flesh: 1, sky: 2, tree: 5, fam: 5, spell: 2 },
+      traits: ["See and strike treeline flyers", "Within a host: loose at every attacker, every bell"], strong: "Griffons, harpies, ember-moths. The cheapest insurance in the realm.", weak: "A charge." },
+    { id: "storm", name: "Storm-caller Circle", branch: "siege", hitAs: "flesh", line: "rear", tier: 1, reach: 2, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Mages who call lightning on high flyers.", atk: { sky: 4, fam: 1, spell: 3 },
+      traits: ["Sense high flyers from afar", "Cannot see the treeline"], strong: "Wyverns, dragons, incoming bolts.", weak: "Griffons and harpies — blind to them." },
+    { id: "ward", name: "Great Ward", branch: "siege", hitAs: "iron", line: "rear", tier: 2, reach: 3, speed: 1, tough: 3, cost: "High", claims: false,
+      role: "A standing dome of protection over a region.", atk: { sky: 3, spell: 5 },
+      traits: ["Turns aside bolts and starfalls at great distance", "Later lore lets it see veilwings", "Blind to the treeline"], strong: "Guarding towns from sendings.", weak: "Treeline flyers; volleys of bolts; raids." },
+    { id: "trebuchet", name: "Trebuchet", branch: "siege", hitAs: "flesh", line: "rear", tier: 1, reach: 2, speed: 1, tough: 1, cost: "Low", claims: false,
+      role: "Crewed siege engine.", atk: { flesh: 4, iron: 2 },
+      traits: ["Strikes from range", "The slowest thing on any road"], strong: "Softening a held keep.", weak: "Anything that reaches it." },
+    { id: "wagon", name: "Mage-Wagon", branch: "siege", hitAs: "iron", line: "middle", tier: 1, reach: 2, speed: 2, tough: 3, cost: "Medium", claims: false,
+      role: "Iron-shod wagon carrying a fire-mage.", atk: { flesh: 3, iron: 3 },
+      traits: ["Strikes from range", "Keeps pace with golems"], strong: "Fire support for an iron host.", weak: "Griffons; firedrakes; a flank." },
+    { id: "starseer", name: "Starseer Circle", branch: "siege", hitAs: "iron", line: "middle", tier: 1, reach: 3, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Astromancers who call down burning stars.", atk: { flesh: 4, iron: 3, hull: 1 },
+      traits: ["Greatest reach of any land company", "Strikes an area"], strong: "Harrying slow hosts from beyond reach.", weak: "Beasts; being caught between two hosts." },
+    { id: "seer", name: "Seer's Pool", branch: "siege", hitAs: "iron", line: "rear", tier: 1, reach: 0, speed: 2, tough: 1, cost: "Low", claims: false,
+      role: "A travelling scrying pool.", atk: {},
+      traits: ["Reveals distant hosts and high flyers; treeline flyers only when near"], strong: "Warning.", weak: "Cannot fight." },
+    { id: "seawall", name: "Seawall Ballista", branch: "siege", hitAs: "iron", line: "rear", tier: 1, reach: 2, speed: 1, tough: 3, cost: "Low", claims: false,
+      role: "Fixed harbour engine.", atk: { hull: 4, flesh: 1 },
+      traits: ["No lore needed", "Cannot move"], strong: "Ships lingering near your coast.", weak: "Beasts; sendings; landings." },
+
+    { id: "wyvern", name: "Wyvern Riders", branch: "wing", hitAs: "sky", line: "front", tier: 1, reach: 2, speed: 5, tough: 3, cost: "High", claims: false,
+      role: "Sky-duellists who hunt other flyers.", atk: { sky: 5, tree: 3, fam: 3, spell: 2 },
+      traits: ["Vanward of any flight", "Can patrol a stretch of sky"], strong: "Killing beasts; escort; patrol.", weak: "Ground and ships: nearly harmless." },
+    { id: "firedrake", name: "Firedrake", branch: "wing", hitAs: "sky", line: "middle", tier: 1, reach: 2, speed: 5, tough: 2, cost: "High", claims: false,
+      role: "Young dragon that burns what it is pointed at.", atk: { flesh: 3, iron: 4, hull: 2, sky: 1 },
+      traits: ["Later lore lets its rider carry a seeking bolt"], strong: "Deep strikes on golems and engines.", weak: "Wyverns; warded ships; storm circles." },
+    { id: "harpy", name: "Harpy Pack", branch: "wing", hitAs: "tree", line: "front", tier: 1, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Treeline hunters of men.", atk: { flesh: 5, iron: 2 },
+      traits: ["Fly under storm-sight", "Can roost on aerie-barges"], strong: "Shredding foot and siege crews.", weak: "Bows, warded ships, wyverns." },
+    { id: "griffon", name: "Griffon Talons", branch: "wing", hitAs: "tree", line: "front", tier: 1, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Treeline hunters of iron.", atk: { iron: 5, flesh: 2, hull: 2 },
+      traits: ["Fly under storm-sight", "Can roost on aerie-barges"], strong: "Golem and knight hosts with no bows.", weak: "One company of bows in the target." },
+    { id: "seahawk", name: "Seahawk Riders", branch: "wing", hitAs: "tree", line: "middle", tier: 2, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Low-flying kraken-hunters.", atk: { deep: 5, hull: 3 },
+      traits: ["See krakens beneath the water", "Faster than any fleet"], strong: "Hunting the deep.", weak: "Bows and wards." },
+    { id: "roc", name: "Sky-Eye Roc", branch: "wing", hitAs: "sky", line: "rear", tier: 2, reach: 3, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "A great roc bearing a seer.", atk: {},
+      traits: ["Sees hosts, ships and high flyers at vast distance", "Cannot see the treeline", "Later lore pierces veils"], strong: "Knowing.", weak: "Unarmed." },
+    { id: "elder", name: "Elder Dragon", branch: "wing", hitAs: "sky", line: "middle", tier: 2, reach: 2, speed: 3, tough: 4, cost: "Very high", claims: false,
+      role: "Ancient fire-wyrm.", atk: { flesh: 4, iron: 3, hull: 2 },
+      traits: ["Burns walls, works and aeries", "Later lore lets it ignore undercrofts", "Can bear seeking bolts, slowly renewed"], strong: "Towns, works, slow hosts.", weak: "Wyverns, storm circles, warded ships. Ruinous to lose." },
+    { id: "moths", name: "Ember-Moth Swarm", branch: "wing", hitAs: "fam", line: "middle", tier: 1, reach: 1, speed: 4, tough: 1, cost: "Low", claims: false,
+      role: "A cloud of fire-sprites.", atk: { flesh: 3, iron: 3 },
+      traits: ["Cheap attrition"], strong: "Wearing down hosts without bows.", weak: "Bows, warded ships, wyverns." },
+    { id: "raven", name: "Raven Familiar", branch: "wing", hitAs: "fam", line: "rear", tier: 1, reach: 2, speed: 4, tough: 1, cost: "Very low", claims: false,
+      role: "Scrying raven.", atk: {},
+      traits: ["Names hosts behind the dust", "Crossing borders gives no offence"], strong: "Cheap eyes.", weak: "Anything." },
+    { id: "veil", name: "Veilwing", branch: "wing", hitAs: "sky", line: "rear", tier: 3, reach: 2, speed: 5, tough: 2, cost: "Very high", claims: false,
+      role: "Shadow-dragon wrapped in glamour.", atk: { flesh: 3, iron: 4, sky: 2, hull: 2 },
+      traits: ["Unseen until it strikes", "Crossing borders gives no offence"], strong: "Burning aeries and siege parks at will.", weak: "Great Wards and rocs with late lore." },
+
+    { id: "sloop", name: "Sloop", branch: "sea", hitAs: "hull", line: "front", tier: 1, reach: 1, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Light shoal ship.", atk: { hull: 2, deep: 2, flesh: 1 },
+      traits: ["Strong in shoals", "Weak and battered in the deep"], strong: "Patrolling shoals.", weak: "The deep; anything bigger." },
+    { id: "carrack", name: "Stormward Carrack", branch: "sea", hitAs: "hull", line: "middle", tier: 1, reach: 2, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "A tall ship of storm-witches and archers.", atk: { sky: 5, tree: 3, fam: 4, spell: 5, hull: 1 },
+      traits: ["Within a fleet: looses at every beast and bolt, every bell, without rest", "Barely harms other ships"], strong: "Making a fleet nearly immune to beasts and sendings.", weak: "Ship-to-ship; krakens." },
+    { id: "galley", name: "Serpent-Hunter Galley", branch: "sea", hitAs: "hull", line: "front", tier: 1, reach: 2, speed: 4, tough: 4, cost: "Medium", claims: false,
+      role: "Escort galley with sea-witches.", atk: { hull: 3, deep: 4, sky: 2, tree: 1 },
+      traits: ["Sea-witches reveal krakens", "Sows drowning-runes in shoals", "Later lore carries seeking bolts"], strong: "Kraken-hunting; screening.", weak: "A man-o'-war broadside." },
+    { id: "manowar", name: "Man-o'-War", branch: "sea", hitAs: "hull", line: "middle", tier: 2, reach: 3, speed: 3, tough: 4, cost: "High", claims: false,
+      role: "Great gun-ship.", atk: { hull: 5, flesh: 3, iron: 3 },
+      traits: ["The finest shore bombardment afloat", "Helpless against krakens and beasts on its own"], strong: "Fleet battle; shelling coasts.", weak: "Krakens; unescorted against beasts." },
+    { id: "aeriebarge", name: "Aerie-Barge", branch: "sea", hitAs: "hull", line: "rear", tier: 3, reach: 0, speed: 3, tough: 5, cost: "Very high", claims: false,
+      role: "Floating aerie.", atk: { sky: 1 },
+      traits: ["Roosts sea-wyverns and every treeline beast", "One per fleet"], strong: "Beasts anywhere at sea.", weak: "All things, once alone." },
+    { id: "kraken", name: "Kraken", branch: "sea", hitAs: "deep", line: "middle", tier: 2, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Bound sea-monster ridden by merfolk.", atk: { hull: 5, deep: 4 },
+      traits: ["Unseen until it strikes", "Cramped and weak in shoals", "Cannot reach the land"], strong: "Transports and fleets in the deep.", weak: "Seahawks, galleys; shoals." },
+    { id: "oracle", name: "Abyssal Oracle", branch: "sea", hitAs: "deep", line: "rear", tier: 3, reach: 3, speed: 3, tough: 3, cost: "Very high", claims: false,
+      role: "A drowned seer who calls starfall from the depths.", atk: { hull: 1 },
+      traits: ["Casts Starfall while unseen", "Very weak in shoals"], strong: "A hidden siege off an enemy coast.", weak: "Any kraken-hunter." },
+
+    { id: "bolt", name: "Seeking Bolt", branch: "spell", hitAs: "spell", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Aether", claims: false,
+      role: "A guided arcane bolt.", atk: { flesh: 3, iron: 4, hull: 4 },
+      traits: ["Follows a moving host", "Cast by firedrake riders, elder dragons, galleys, men-o'-war, krakens and bolt-towers"], strong: "Killing a chosen host, or a stabled flight.", weak: "Bows and wards within the target." },
+    { id: "starfall", name: "Starfall", branch: "spell", hitAs: "spell", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Aether", claims: false,
+      role: "A called-down star.", atk: { flesh: 4, iron: 3 },
+      traits: ["Strikes keep-points only — never a moving host", "Breaks walls and works"], strong: "Aeries, guildhalls, held keeps.", weak: "Great Wards; anything moving." },
+    { id: "blight", name: "The Blight", branch: "spell", hitAs: "spell", line: "rear", tier: 3, reach: 3, speed: 5, tough: 1, cost: "Ruinous", claims: false,
+      role: "A forbidden curse.", atk: { flesh: 5, iron: 5, hull: 4 },
+      traits: ["Strikes friend and foe alike", "Rots the land for a long season", "Every holding you own loses Fealty — the realm remembers"], strong: "Ending a siege in a night.", weak: "Your own people's hearts." }
+  ],
+  synergies: [
+    { name: "Golem & Bow", units: ["golem", "huscarl", "bows"], why: "Golems break iron, Huscarls take the blows and kill foot, the bows make every griffon attack a slaughter." },
+    { name: "Wyvern over Drake", units: ["wyvern", "firedrake"], why: "The wyvern flies vanward and draws the storm; the firedrakes live long enough to burn." },
+    { name: "Warded fleet", units: ["galley", "carrack", "manowar"], why: "Galley finds krakens, carrack swallows beasts and bolts, man-o'-war kills ships. Nothing gets through." },
+    { name: "Eye & Star", units: ["seer", "starseer"], why: "Starseers out-reach every land company but must know where to aim. A pool or outrider makes each bell free." },
+    { name: "Three wards", units: ["bows", "storm", "ward"], why: "Bows for the treeline, storm for the high sky, the Great Ward for sendings. Each sees what the others cannot." },
+    { name: "Longboat landing", units: ["raider", "manowar", "galley"], why: "The man-o'-war shells the strand, the galley keeps krakens away, raiders take the harbour for the heavy hosts." },
+    { name: "Silent knives", units: ["shadow", "veil", "starfall"], why: "Shadowblades and veilwings find aeries and guildhalls unseen; starfall unmakes them." },
+    { name: "Hawk & Kraken", units: ["seahawk", "kraken"], why: "Seahawks flush enemy krakens out of the shoals; your own krakens wait in the deep for anything that runs." }
+  ],
+  comps: [
+    { name: "The Ashland Host", mode: "FFA · Alliance", size: "Host: 8 / 8", units: [["golem", 2], ["huscarl", 2], ["wagon", 1], ["bows", 1], ["spear", 2]],
+      idea: "Everything an open-field war needs: iron, a vanward, fire from range, bows against flyers, and banner-bearers.",
+      play: "Fight on the flat. Let the wagon loose first. Leave a company of spearmen in every taken town.",
+      loses: "Towns and forest; starseer harrying; firedrakes if no storm circle is near." },
+    { name: "Keep & Starfall", mode: "FFA", size: "Host on keep + circle two shires back", units: [["hammer", 3], ["spear", 3], ["bows", 1], ["storm", 1], ["starseer", 2], ["seer", 1]],
+      idea: "The keep endures; the stars do the killing.",
+      play: "Defenders never leave the keep. Starseers ride in, call, ride out every bell.",
+      loses: "Shadowblades who ignore keeps; starfall on the keep; drakes on the starseers." },
+    { name: "Talon Flight", mode: "FFA · Alliance", size: "Flight: 5 / 5", units: [["griffon", 3], ["harpy", 2]],
+      idea: "Treeline killers: griffons for iron, harpies for flesh.",
+      play: "Send a raven first. Strike only hosts with no bows.",
+      loses: "One company of bows, a stormward carrack, wyverns on patrol." },
+    { name: "The Warded Fleet", mode: "FFA · Alliance", size: "Fleet: 4 / 4", units: [["galley", 1], ["carrack", 1], ["manowar", 2]],
+      idea: "Sight, shield and broadside.",
+      play: "Ride in your own shoals to heal; shell the coast from range.",
+      loses: "Galley sunk → krakens. Bolts loosed faster than the witches can answer." },
+    { name: "Eagle-borne Raid", mode: "Alliance", size: "Two flights + wingborne foot", units: [["wingfoot", 4], ["wyvern", 2], ["firedrake", 3]],
+      idea: "While your ally holds the enemy's great host, snatch the towns behind it.",
+      play: "Firedrakes burn the target's defenders, wyverns guard them, wingborne foot land and plant banners a bell later.",
+      loses: "Bows at the landing; a quick counter-charge." },
+    { name: "Skyborn Dominion", mode: "FFA (late)", size: "Late-war", units: [["roc", 1], ["wyvern", 4], ["elder", 2], ["ward", 1], ["hammer", 3], ["spear", 3]],
+      idea: "Hold the ground lightly, own the sky, burn their guildhalls.",
+      play: "Wyverns patrol under a roc; elder dragons burn works and aeries; iron only defends.",
+      loses: "An early Iron rush before the dragons hatch." },
+    { name: "Hammer & Canopy", mode: "Alliance (2 crowns)", size: "Split roles", units: [["golem", 3], ["huscarl", 3], ["spear", 2], ["wyvern", 4], ["storm", 2], ["bows", 2]],
+      idea: "One crown fields only iron and foot; its ally fields only bows, storm and wyverns over them.",
+      play: "March together; the ally's bows walk inside the iron hosts.",
+      loses: "One ally abed. Starseers still hurt." },
+    { name: "Longboat Leap", mode: "FFA · Alliance", size: "Fleet + raiders", units: [["manowar", 1], ["carrack", 1], ["galley", 1], ["raider", 4], ["knight", 2]],
+      idea: "Take the harbour they thought the sea protected.",
+      play: "Fleet shells; raiders beach beside the harbour; heavy hosts follow through it.",
+      loses: "Seawall ballistae; krakens; sailing without the carrack." },
+    { name: "Ember Grind", mode: "FFA", size: "Cheap", units: [["moths", 4], ["raven", 1], ["starseer", 2], ["spear", 4]],
+      idea: "A poor crown's war of slow burning.",
+      play: "Ravens find, moths and stars grind, spearmen take what's left.",
+      loses: "A foe with bowmen." },
+    { name: "Knives in the Dark", mode: "FFA (late)", size: "Specialist", units: [["veil", 2], ["shadow", 2], ["oracle", 1], ["ward", 1]],
+      idea: "Never meet their host. Burn what feeds it.",
+      play: "Strike guildhalls, aeries and shipwrights every night. Keep a Great Ward over your own seat.",
+      loses: "A rival who wins on the field before the fires take hold." }
+  ]
+};
+</script>
+<script src="../assets/world.js"></script>
+</body>
+</html>
