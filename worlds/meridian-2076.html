@@ -27,7 +27,7 @@
 <header class="topbar"><div class="wrap">
   <a class="brand" href="../index.html">Contested Worlds</a>
   <nav class="toc">
-    <a href="#world">World</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#world">World</a><a href="#map-sec">Map</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
     <a href="#blocs">Blocs</a><a href="#roster-sec">Roster</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
     <a href="#comps-sec">Compositions</a><a href="#chronicle">Chronicle</a>
   </nav>
@@ -76,6 +76,12 @@
       <tr><td>The Ostrel Communes</td><td>Speaker Juno Achebe</td><td>Directorate</td><td>Sits on the lithium flats; everyone's first target</td></tr>
     </tbody>
   </table></div>
+</div></section>
+
+<section id="map-sec"><div class="wrap">
+  <h2>War map</h2>
+  <p class="sec-sub">The Kessarine Shelf at the start of the Shelf War, with the war's turning points drawn on it.</p>
+  <div id="map"></div>
 </div></section>
 
 <section id="economy"><div class="wrap">
@@ -252,6 +258,35 @@
 
 <script>
 window.WORLD = {
+  map: {
+    w: 1000, h: 620, link: 150,
+    terrain: { flats: ["Salt flats", "#d8c17a"], urban: ["City", "#8d8a9c"], farm: ["Reclaimed farmland", "#9dbd68"], high: ["Highlands", "#8f735c"], mangrove: ["Mangrove", "#3f8050"], shallow: ["Shallows", "#7cc0dc"], deep: ["Deep water", "#2c5d8c"] },
+    owners: { dir: ["Varn Directorate", "#c0392b"], con: ["Concord of Harrow", "#2f6fb5"], lea: ["Saltmarch League", "#1a9a86"], ost: ["Ostrel Communes", "#c9962a"], cal: ["Free Port of Callisande", "#8e5bb5"], dun: ["Dunmark Protectorate", "#5e6b80"] },
+    nodes: [
+      "dunmark|120|110|urban|dun|Dunmark|C", "sable|90|250|farm|dun|Sable Point Uplink|s",
+      "harrow|150|220|urban|con|Harrow|C", "lisle|290|250|urban|con|Lisle|c", "wrenfield|190|340|farm|con|Wrenfield|",
+      "corranw|330|90|high||Corran Highlands|L", "corrane|560|70|high||", "flatsw|440|240|flats||Salt Flats|L", "flatsc|540|300|flats|ost|",
+      "mangrove|390|370|mangrove||Mangrove Belt|L", "kessin|540|170|urban|ost|Kessin|c", "ostrel|640|220|urban|ost|Ostrel|C",
+      "lith|630|330|flats|ost|Lithium Flats|s", "ferrow|730|310|urban|ost|Ferrow|c", "tarn|710|140|urban|ost|Tarn|c",
+      "dirw|810|240|flats|dir|", "varn|910|200|urban|dir|Varn|C", "dirs|830|340|farm|dir|", "varndock|870|440|urban|dir|Varn Drydock|c",
+      "saltmarch|320|470|urban|lea|Saltmarch|C", "leaguee|440|450|farm|lea|", "halcyon|560|440|farm||Halcyon Works|s",
+      "callisande|150|470|urban|cal|Callisande|C",
+      "anch|300|565|shallow||Saltmarch anchorage|wL", "lagw|160|560|shallow||Lagoon Coast|wL", "lage|460|560|shallow||w",
+      "trench1|660|570|deep||Varn Trench|wL", "trench2|830|550|deep||w"
+    ],
+    extraLinks: [["trench1", "lage"]],
+    noLinks: [],
+    moves: [
+      { n: 1, from: "dirw", to: "ostrel", kind: "attack", text: "Days 4–7 — Directorate armour rolls across the flats and takes four Ostrel cities. It garrisons none of them." },
+      { n: 2, from: "harrow", to: "lith", kind: "air", text: "Day 8 — Mantis hunters fly low along the mangrove riverbeds and destroy a Bastion battlegroup. The Spire batteries see nothing." },
+      { n: 3, from: "varn", to: "anch", kind: "strike", bend: -0.12, text: "Day 12 — the Directorate's strike jets attack the Saltmarch flotilla. The Warden frigate inside it destroys the strike." },
+      { n: 4, from: "kessin", to: "kessin", kind: "revolt", text: "Days 13–15 — Kessin and Ferrow, left empty, rise to the Unbound." },
+      { n: 4, from: "ferrow", to: "ferrow", kind: "revolt", text: "" },
+      { n: 5, from: "ferrow", to: "lisle", kind: "attack", text: "Days 16–19 — a 22-unit battlegroup crawls to Lisle under Hailstorm fire and breaks on the dug-in hold-point." },
+      { n: 6, from: "varndock", to: "trench1", kind: "sea", text: "Day 21 — unescorted transports cross the Varn Trench. Lampreys sink them all." },
+      { n: 7, from: "harrow", to: "varn", kind: "strike", bend: -0.18, text: "Days 22–26 — glide missiles hit the Directorate aerodromes and ground what is left of its air force." }
+    ]
+  },
   lines: { front: "Vanguard", middle: "Mainline", rear: "Rearguard" },
   tiers: ["Opening", "Mid-war", "Late-war"],
   reach: ["Contact", "Short", "Stand-off", "Theatre"],

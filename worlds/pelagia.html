@@ -36,7 +36,7 @@
 <header class="topbar"><div class="wrap">
   <a class="brand" href="../index.html">Contested Worlds</a>
   <nav class="toc">
-    <a href="#world">World</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#world">World</a><a href="#map-sec">Map</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
     <a href="#lineages">Lineages</a><a href="#roster-sec">Roster</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
     <a href="#comps-sec">Compositions</a><a href="#chronicle">Logs</a>
   </nav>
@@ -91,6 +91,12 @@
       <tr><td>The Salvage Combine</td><td>Broker Teo Lindahl</td><td>Abyssal</td><td>Rich scavengers who hire contract divers</td></tr>
     </tbody>
   </table></div>
+</div></section>
+
+<section id="map-sec"><div class="wrap">
+  <h2>War map</h2>
+  <p class="sec-sub">The southern shelf at the start of the Heat War. Depth increases toward the bottom of the map.</p>
+  <div id="map"></div>
 </div></section>
 
 <section id="economy"><div class="wrap">
@@ -260,6 +266,163 @@
 
 <script>
 window.WORLD = {
+  map: {
+ "w": 1000,
+ "h": 620,
+ "link": 150,
+ "terrain": {
+  "flats": [
+   "Sand flats",
+   "#d6c79a"
+  ],
+  "urban": [
+   "Dome",
+   "#8d8a9c"
+  ],
+  "farm": [
+   "Kelp-farm tract",
+   "#6fae7a"
+  ],
+  "high": [
+   "Seamount",
+   "#8f735c"
+  ],
+  "jungle": [
+   "Kelp forest",
+   "#2f6b4c"
+  ],
+  "shallow": [
+   "Shelf water",
+   "#7cc0dc"
+  ],
+  "deep": [
+   "Abyss",
+   "#1f3554"
+  ]
+ },
+ "owners": {
+  "A": [
+   "Trench Dominion of Marrow",
+   "#c0392b"
+  ],
+  "B": [
+   "Lanternfall Consortium",
+   "#2f6fb5"
+  ],
+  "C": [
+   "Shelf Free Cities",
+   "#1a9a86"
+  ],
+  "V": [
+   "Fathom Cooperative",
+   "#c9962a"
+  ],
+  "mb": [
+   "Cathedral Station",
+   "#8e5bb5"
+  ],
+  "mc": [
+   "Salvage Combine",
+   "#5e6b80"
+  ]
+ },
+ "nodes": [
+  "nb|898|122|urban|mb|Cathedral Station|C",
+  "site1|897|251|farm|mb|Cathedral Vent|s",
+  "bcap|848|207|urban|B|Lanternfall|C",
+  "bfort|692|240|urban|B|Lanterndeep|c",
+  "bfarm|822|350|farm|B||",
+  "mtn1|675|86|high||Orca Seamount|L",
+  "mtn2|423|64|high|||",
+  "flats1|573|251|flats||Sand Flats|L",
+  "flats2|454|309|flats|V||",
+  "jungle|618|373|jungle||Kelp Line|L",
+  "v1|476|177|urban|V|Fathom-1|c",
+  "vcap|348|212|urban|V|Fathom|C",
+  "vsite|388|333|flats|V|Black Smoker|s",
+  "v3|268|317|urban|V|Fathom-3|c",
+  "v4|277|153|urban|V|Fathom-4|c",
+  "aw|199|236|flats|A||",
+  "acap|77|197|urban|A|Marrow|C",
+  "as|178|351|farm|A||",
+  "adock|128|440|urban|A|Marrow Hull Yard|c",
+  "ccap|668|480|urban|C|Free Cities|C",
+  "ce|554|458|farm|C||",
+  "site2|440|429|farm||Ember Rift|s",
+  "nc|834|474|urban|mc|Salvage Combine|C",
+  "anch|694|577|shallow||Free Cities shelf|wL",
+  "lagw|845|561|shallow||Combine shelf|wL",
+  "lage|534|562|shallow|||w",
+  "deep1|358|576|deep||The Abyss|wL",
+  "deep2|184|536|deep|||w"
+ ],
+ "extraLinks": [
+  [
+   "deep1",
+   "lage"
+  ]
+ ],
+ "moves": [
+  {
+   "n": 1,
+   "from": "aw",
+   "to": "vcap",
+   "kind": "attack",
+   "text": "Days 4–8 — Leviathan pods cross the Sand Flats and seize four Fathom domes. No divers stay behind."
+  },
+  {
+   "n": 2,
+   "from": "bcap",
+   "to": "vsite",
+   "kind": "air",
+   "text": "Cycle 151 — eel-skimmers run the Kelp Line in the reef clutter and destroy a Leviathan pod the arrays never hear."
+  },
+  {
+   "n": 3,
+   "from": "acap",
+   "to": "anch",
+   "kind": "strike",
+   "bend": 0.12,
+   "text": "Cycle 260 — Manta strikers attack the Free Cities wolfpack. The Needle-Hull destroys them."
+  },
+  {
+   "n": 4,
+   "from": "v1",
+   "to": "v1",
+   "kind": "revolt",
+   "text": "Cycles 300–330 — Fathom-1 and Fathom-3, empty of Dominion divers, breach to the Drift."
+  },
+  {
+   "n": 4,
+   "from": "v3",
+   "to": "v3",
+   "kind": "revolt",
+   "text": ""
+  },
+  {
+   "n": 5,
+   "from": "v3",
+   "to": "bfort",
+   "kind": "attack",
+   "text": "Cycles 340–420 — a twenty-three-unit pod marches on Lanterndeep under torpedo-rack fire and breaks on the sealed lock."
+  },
+  {
+   "n": 6,
+   "from": "adock",
+   "to": "deep1",
+   "kind": "sea",
+   "text": "Cycle 450 — carriers cross the Abyss alone. A silent hull sinks them."
+  },
+  {
+   "n": 7,
+   "from": "bcap",
+   "to": "acap",
+   "kind": "strike",
+   "bend": 0.32,
+   "text": "Cycles 470–560 — supercavitating torpedoes breach Marrow's glider docks."
+  }
+ ]
+},
   lines: { front: "Lead", middle: "Mid", rear: "Trail" },
   tiers: ["Day one", "Mid-war", "Late war"],
   reach: ["Contact", "Close", "Stand-off", "Basin"],

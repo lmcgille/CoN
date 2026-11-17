@@ -32,7 +32,7 @@
 <header class="topbar"><div class="wrap">
   <a class="brand" href="../index.html">Contested Worlds</a>
   <nav class="toc">
-    <a href="#world">Realm</a><a href="#economy">Treasury</a><a href="#rules">Laws of war</a><a href="#classes-sec">Hit classes</a>
+    <a href="#world">Realm</a><a href="#map-sec">Map</a><a href="#economy">Treasury</a><a href="#rules">Laws of war</a><a href="#classes-sec">Hit classes</a>
     <a href="#oaths">Oaths</a><a href="#roster-sec">Muster roll</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
     <a href="#comps-sec">Hosts</a><a href="#chronicle">Chronicle</a>
   </nav>
@@ -82,6 +82,12 @@
       <tr><td>Port Saint Calder</td><td>Guildmaster Oren Pike</td><td>Tideborn Oath</td><td>Merchant city that hires sellswords</td></tr>
     </tbody>
   </table></div>
+</div></section>
+
+<section id="map-sec"><div class="wrap">
+  <h2>War map</h2>
+  <p class="sec-sub">The ashlands and their neighbours at the start of the War of the Green Ash.</p>
+  <div id="map"></div>
 </div></section>
 
 <section id="economy"><div class="wrap">
@@ -252,6 +258,163 @@
 
 <script>
 window.WORLD = {
+  map: {
+ "w": 1000,
+ "h": 620,
+ "link": 150,
+ "terrain": {
+  "flats": [
+   "Ashlands",
+   "#b9b07a"
+  ],
+  "urban": [
+   "Walled town",
+   "#8d8a9c"
+  ],
+  "farm": [
+   "Shire",
+   "#9dbd68"
+  ],
+  "high": [
+   "The Teeth",
+   "#8f735c"
+  ],
+  "jungle": [
+   "Thornwood",
+   "#2f6b3c"
+  ],
+  "shallow": [
+   "Shoals",
+   "#7cc0dc"
+  ],
+  "deep": [
+   "Sunless Deep",
+   "#24476e"
+  ]
+ },
+ "owners": {
+  "A": [
+   "Garrowmoor",
+   "#c0392b"
+  ],
+  "B": [
+   "Elmhallow",
+   "#2f6fb5"
+  ],
+  "C": [
+   "The Brine Isles",
+   "#1a9a86"
+  ],
+  "V": [
+   "Duchy of Fennick",
+   "#c9962a"
+  ],
+  "mb": [
+   "The Thorn Court",
+   "#8e5bb5"
+  ],
+  "mc": [
+   "Port Saint Calder",
+   "#5e6b80"
+  ]
+ },
+ "nodes": [
+  "nb|117|114|urban|mb|Thorn Court|C",
+  "site1|106|240|farm|mb|Wellspring of Aether|s",
+  "bcap|155|225|urban|B|Elmhallow|C",
+  "bfort|302|256|urban|B|Thornwatch|c",
+  "bfarm|176|345|farm|B||",
+  "mtn1|312|102|high||The Teeth|L",
+  "mtn2|572|64|high|||",
+  "flats1|457|233|flats||The Ashlands|L",
+  "flats2|534|308|flats|V||",
+  "jungle|402|373|jungle||Thornwood|L",
+  "v1|557|171|urban|V|Varrow|c",
+  "vcap|647|226|urban|V|Fennick|C",
+  "vsite|621|323|flats|V|Fennick ford|s",
+  "v3|721|323|urban|V|Hollin|c",
+  "v4|725|138|urban|V|Brackmere|c",
+  "aw|792|247|flats|A||",
+  "acap|896|191|urban|A|Garrowmoor|C",
+  "as|814|335|farm|A||",
+  "adock|853|452|urban|A|Garrow Strand|c",
+  "ccap|319|471|urban|C|Brine Isles|C",
+  "ce|446|458|farm|C||",
+  "site2|569|438|farm||Cinder Throne|s",
+  "nc|168|470|urban|mc|Port Saint Calder|C",
+  "anch|290|579|shallow||Brine anchorage|wL",
+  "lagw|165|549|shallow||The Shoals|wL",
+  "lage|444|550|shallow|||w",
+  "deep1|673|562|deep||Sunless Deep|wL",
+  "deep2|828|557|deep|||w"
+ ],
+ "extraLinks": [
+  [
+   "deep1",
+   "lage"
+  ]
+ ],
+ "moves": [
+  {
+   "n": 1,
+   "from": "aw",
+   "to": "vcap",
+   "kind": "attack",
+   "text": "Second moon — stone golems tread down Fennick's levies on the ashlands and take four towns. No company stays behind."
+  },
+  {
+   "n": 2,
+   "from": "bcap",
+   "to": "vsite",
+   "kind": "air",
+   "text": "Ninth day — griffon-riders follow the river beneath the storm-towers' sight and break the golem host at the Fennick ford."
+  },
+  {
+   "n": 3,
+   "from": "acap",
+   "to": "anch",
+   "kind": "strike",
+   "bend": -0.12,
+   "text": "Fourth moon — firedrakes dive on the Sea-Queen's fleet at anchor. The Stormward Carrack kills them."
+  },
+  {
+   "n": 4,
+   "from": "v1",
+   "to": "v1",
+   "kind": "revolt",
+   "text": "Fifth moon — Varrow and Hollin, left empty, tear down the red banners."
+  },
+  {
+   "n": 4,
+   "from": "v3",
+   "to": "v3",
+   "kind": "revolt",
+   "text": ""
+  },
+  {
+   "n": 5,
+   "from": "v3",
+   "to": "bfort",
+   "kind": "attack",
+   "text": "Sixth moon — an eighteen-company host marches on Thornwatch under starfall and breaks on the held keep."
+  },
+  {
+   "n": 6,
+   "from": "adock",
+   "to": "deep1",
+   "kind": "sea",
+   "text": "Seventh moon — transports cross the Sunless Deep without escort. The krakens take them."
+  },
+  {
+   "n": 7,
+   "from": "bcap",
+   "to": "acap",
+   "kind": "strike",
+   "bend": -0.32,
+   "text": "Eighth moon — seeking bolts burn Garrowmoor's aeries with every beast inside."
+  }
+ ]
+},
   lines: { front: "Vanward", middle: "Mainward", rear: "Rearward" },
   tiers: ["First moon", "Mid-war", "Late war"],
   reach: ["Melee", "Bowshot", "Siege", "Horizon"],

@@ -31,7 +31,7 @@
 <header class="topbar"><div class="wrap">
   <a class="brand" href="../index.html">Contested Worlds</a>
   <nav class="toc">
-    <a href="#world">World</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#world">World</a><a href="#map-sec">Map</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
     <a href="#ways">Ways</a><a href="#roster-sec">Castes</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
     <a href="#comps-sec">Compositions</a><a href="#chronicle">Field journal</a>
   </nav>
@@ -80,6 +80,12 @@
       <tr><td>The Aphid Ranchers (black ants)</td><td>Old Mother Treacle</td><td>Water</td><td>Rich in honeydew; pays others to fight</td></tr>
     </tbody>
   </table></div>
+</div></section>
+
+<section id="map-sec"><div class="wrap">
+  <h2>War map</h2>
+  <p class="sec-sub">The conservatory floor at midsummer, as sketched in Dr Halloway's notebook.</p>
+  <div id="map"></div>
 </div></section>
 
 <section id="economy"><div class="wrap">
@@ -247,6 +253,163 @@
 
 <script>
 window.WORLD = {
+  map: {
+ "w": 1000,
+ "h": 620,
+ "link": 150,
+ "terrain": {
+  "flats": [
+   "Paving",
+   "#c9c1b0"
+  ],
+  "urban": [
+   "Nest",
+   "#a07b52"
+  ],
+  "farm": [
+   "Flower bed",
+   "#9dbd68"
+  ],
+  "high": [
+   "Rockery",
+   "#8f8f8f"
+  ],
+  "jungle": [
+   "Fern jungle",
+   "#2f7a3c"
+  ],
+  "shallow": [
+   "Lily shallows",
+   "#8fd0c0"
+  ],
+  "deep": [
+   "Cistern",
+   "#2c5d8c"
+  ]
+ },
+ "owners": {
+  "A": [
+   "Ember Dominion",
+   "#c0392b"
+  ],
+  "B": [
+   "Moth Court",
+   "#2f6fb5"
+  ],
+  "C": [
+   "Waterlily Colonies",
+   "#1a9a86"
+  ],
+  "V": [
+   "Clover Hives",
+   "#c9962a"
+  ],
+  "mb": [
+   "Orchid Mantids",
+   "#8e5bb5"
+  ],
+  "mc": [
+   "Aphid Ranchers",
+   "#5e6b80"
+  ]
+ },
+ "nodes": [
+  "nb|118|119|urban|mb|Orchid house|C",
+  "site1|94|261|farm|mb|Night Orchid|s",
+  "bcap|165|206|urban|B|North wall|C",
+  "bfort|301|260|urban|B|Ivy fortress|c",
+  "bfarm|187|346|farm|B||",
+  "mtn1|315|104|high||The Rockery|L",
+  "mtn2|552|59|high|||",
+  "flats1|445|241|flats||Main paving|L",
+  "flats2|537|298|flats|V||",
+  "jungle|406|359|jungle||Fern jungle|L",
+  "v1|558|163|urban|V|Clover nest II|c",
+  "vcap|622|229|urban|V|Clover hive|C",
+  "vsite|625|329|flats|V|Clover beds|s",
+  "v3|729|301|urban|V|Clover nest IV|c",
+  "v4|716|131|urban|V|Clover nest III|c",
+  "aw|796|230|flats|A||",
+  "acap|920|190|urban|A|Ember mound|C",
+  "as|820|326|farm|A||",
+  "adock|852|432|urban|A|Ember raft dock|c",
+  "ccap|315|461|urban|C|Lily colony|C",
+  "ce|432|445|farm|C||",
+  "site2|562|432|farm||Corpse Lily|s",
+  "nc|166|484|urban|mc|Aphid ranch|C",
+  "anch|295|556|shallow||Lily shallows|wL",
+  "lagw|154|574|shallow||West pond|wL",
+  "lage|466|555|shallow|||w",
+  "deep1|643|567|deep||The Cistern|wL",
+  "deep2|838|541|deep|||w"
+ ],
+ "extraLinks": [
+  [
+   "deep1",
+   "lage"
+  ]
+ ],
+ "moves": [
+  {
+   "n": 1,
+   "from": "aw",
+   "to": "vcap",
+   "kind": "attack",
+   "text": "8–12 June — titan beetles crush the clover workers on the paving; four nests are marked and left empty."
+  },
+  {
+   "n": 2,
+   "from": "bcap",
+   "to": "vsite",
+   "kind": "air",
+   "text": "13 June — jewel-wasps fly through the fern jungle beneath the sentinels and paralyse the titans by the clover beds."
+  },
+  {
+   "n": 3,
+   "from": "acap",
+   "to": "anch",
+   "kind": "strike",
+   "bend": -0.12,
+   "text": "21 June — Ember hornets dive on the lily rafts. The archer raft shoots them down."
+  },
+  {
+   "n": 4,
+   "from": "v1",
+   "to": "v1",
+   "kind": "revolt",
+   "text": "25–27 June — two empty clover nests go feral."
+  },
+  {
+   "n": 4,
+   "from": "v3",
+   "to": "v3",
+   "kind": "revolt",
+   "text": ""
+  },
+  {
+   "n": 5,
+   "from": "v3",
+   "to": "bfort",
+   "kind": "attack",
+   "text": "2–5 July — a thirty-one-caste column marches on the ivy fortress under puffball spores and breaks on the heartchamber."
+  },
+  {
+   "n": 6,
+   "from": "adock",
+   "to": "deep1",
+   "kind": "sea",
+   "text": "9 July — troop rafts cross the Cistern alone. Dragonfly nymphs take them from below."
+  },
+  {
+   "n": 7,
+   "from": "bcap",
+   "to": "acap",
+   "kind": "strike",
+   "bend": -0.32,
+   "text": "14–20 July — homing spores collapse both Ember roosts."
+  }
+ ]
+},
   lines: { front: "Head", middle: "Body", rear: "Tail" },
   tiers: ["Spring", "High summer", "Late summer"],
   reach: ["Jaws", "Spit", "Barrage", "Far barrage"],

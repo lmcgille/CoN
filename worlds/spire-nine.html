@@ -34,7 +34,7 @@
 <header class="topbar"><div class="wrap">
   <a class="brand" href="../index.html">Contested Worlds</a>
   <nav class="toc">
-    <a href="#world">World</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#world">World</a><a href="#map-sec">Map</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
     <a href="#corps">Charters</a><a href="#roster-sec">Assets</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
     <a href="#comps-sec">Compositions</a><a href="#chronicle">Feed</a>
   </nav>
@@ -82,6 +82,12 @@
       <tr><td>The Brokers</td><td>"Mister Glass"</td><td>Canal</td><td>Fixers who hire contractors</td></tr>
     </tbody>
   </table></div>
+</div></section>
+
+<section id="map-sec"><div class="wrap">
+  <h2>War map</h2>
+  <p class="sec-sub">The southern half of Spire Nine at the start of the Desal War.</p>
+  <div id="map"></div>
 </div></section>
 
 <section id="economy"><div class="wrap">
@@ -251,6 +257,163 @@
 
 <script>
 window.WORLD = {
+  map: {
+ "w": 1000,
+ "h": 620,
+ "link": 150,
+ "terrain": {
+  "flats": [
+   "Expressway",
+   "#b0b0b8"
+  ],
+  "urban": [
+   "Block",
+   "#8a6f9c"
+  ],
+  "farm": [
+   "District",
+   "#a4b07a"
+  ],
+  "high": [
+   "The Heights",
+   "#8f735c"
+  ],
+  "jungle": [
+   "Overgrowth",
+   "#3f8050"
+  ],
+  "shallow": [
+   "Canal",
+   "#7cc0dc"
+  ],
+  "deep": [
+   "The Sump",
+   "#2a3550"
+  ]
+ },
+ "owners": {
+  "A": [
+   "Kessler-Volk Industrial",
+   "#c0392b"
+  ],
+  "B": [
+   "Halo Systems",
+   "#2f6fb5"
+  ],
+  "C": [
+   "Tidewater Holdings",
+   "#1a9a86"
+  ],
+  "V": [
+   "Lowmarket Commons",
+   "#c9962a"
+  ],
+  "mb": [
+   "Saint Ambrose Trust",
+   "#8e5bb5"
+  ],
+  "mc": [
+   "The Brokers",
+   "#5e6b80"
+  ]
+ },
+ "nodes": [
+  "nb|122|100|urban|mb|Saint Ambrose|C",
+  "site1|97|256|farm|mb|Elevator ground station|s",
+  "bcap|135|208|urban|B|Halo HQ|C",
+  "bfort|306|239|urban|B|Lumen Tower|c",
+  "bfarm|195|344|farm|B||",
+  "mtn1|315|92|high||The Heights|L",
+  "mtn2|555|57|high|||",
+  "flats1|427|239|flats||Southern Expressway|L",
+  "flats2|548|288|flats|V||",
+  "jungle|387|358|jungle||Market alleys|L",
+  "v1|557|169|urban|V|Lowmarket 2|c",
+  "vcap|625|232|urban|V|Lowmarket|C",
+  "vsite|648|319|flats|V|Desal Stack|s",
+  "v3|726|316|urban|V|Lowmarket 4|c",
+  "v4|695|144|urban|V|Lowmarket 3|c",
+  "aw|817|227|flats|A||",
+  "acap|906|187|urban|A|KV Tower|C",
+  "as|847|353|farm|A||",
+  "adock|860|435|urban|A|KV Boathouse|c",
+  "ccap|328|460|urban|C|Tidewater HQ|C",
+  "ce|456|439|farm|C||",
+  "site2|578|435|farm||Old Exchange|s",
+  "nc|167|482|urban|mc|The Brokers|C",
+  "anch|293|554|shallow||Grand Canal|wL",
+  "lagw|178|566|shallow||West canals|wL",
+  "lage|454|557|shallow|||w",
+  "deep1|648|573|deep||Sump Line 4|wL",
+  "deep2|816|554|deep|||w"
+ ],
+ "extraLinks": [
+  [
+   "deep1",
+   "lage"
+  ]
+ ],
+ "moves": [
+  {
+   "n": 1,
+   "from": "aw",
+   "to": "vcap",
+   "kind": "attack",
+   "text": "Days 4–8 — Rhino hardframes take four Lowmarket blocks on the Southern Expressway. No crews stay."
+  },
+  {
+   "n": 2,
+   "from": "bcap",
+   "to": "vsite",
+   "kind": "air",
+   "text": "Day 9 — hunter-kites fly through the market alleys under the lance grids and destroy a Rhino detail."
+  },
+  {
+   "n": 3,
+   "from": "acap",
+   "to": "anch",
+   "kind": "strike",
+   "bend": -0.12,
+   "text": "Day 13 — KV strike aerodynes dive on the Tidewater flotilla in the Grand Canal. The Hedgehog barge shreds them."
+  },
+  {
+   "n": 4,
+   "from": "v1",
+   "to": "v1",
+   "kind": "revolt",
+   "text": "Days 14–16 — Lowmarket 2 and Lowmarket 4, left without crews, riot and go Unplugged."
+  },
+  {
+   "n": 4,
+   "from": "v3",
+   "to": "v3",
+   "kind": "revolt",
+   "text": ""
+  },
+  {
+   "n": 5,
+   "from": "v3",
+   "to": "bfort",
+   "kind": "attack",
+   "text": "Days 17–20 — a twenty-seven-asset detail grinds toward Lumen Tower under missile-truck fire and breaks on the Junction."
+  },
+  {
+   "n": 6,
+   "from": "adock",
+   "to": "deep1",
+   "kind": "sea",
+   "text": "Day 21 — unescorted ferries enter Sump Line 4. Sump-runners sink them."
+  },
+  {
+   "n": 7,
+   "from": "bcap",
+   "to": "acap",
+   "kind": "strike",
+   "bend": -0.32,
+   "text": "Days 22–26 — smart munitions hit KV's pads and everything parked on them."
+  }
+ ]
+},
   lines: { front: "Point", middle: "Body", rear: "Tail" },
   tiers: ["Day one", "Mid-war", "Late war"],
   reach: ["Close", "Short", "Indirect", "Citywide"],

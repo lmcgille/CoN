@@ -32,7 +32,7 @@
 <header class="topbar"><div class="wrap">
   <a class="brand" href="../index.html">Contested Worlds</a>
   <nav class="toc">
-    <a href="#world">World</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#world">World</a><a href="#map-sec">Map</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
     <a href="#houses">Compacts</a><a href="#roster-sec">Roster</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
     <a href="#comps-sec">Compositions</a><a href="#chronicle">Chronicle</a>
   </nav>
@@ -81,6 +81,12 @@
       <tr><td>The Brokerage</td><td>Factor Remy Szalai</td><td>Freehold</td><td>Merchants who hire Freeblades instead of raising legions</td></tr>
     </tbody>
   </table></div>
+</div></section>
+
+<section id="map-sec"><div class="wrap">
+  <h2>War map</h2>
+  <p class="sec-sub">The Corvin–Kesh region of the Reach at the start of the Ice War. Each node is a habitat or body; dashed lines are lanes.</p>
+  <div id="map"></div>
 </div></section>
 
 <section id="economy"><div class="wrap">
@@ -251,6 +257,163 @@
 
 <script>
 window.WORLD = {
+  map: {
+ "w": 1000,
+ "h": 620,
+ "link": 150,
+ "terrain": {
+  "flats": [
+   "Dust plains",
+   "#d6b98a"
+  ],
+  "urban": [
+   "Habitat",
+   "#8d8a9c"
+  ],
+  "farm": [
+   "Ice moon",
+   "#b9d3e3"
+  ],
+  "high": [
+   "Rock field",
+   "#8f735c"
+  ],
+  "jungle": [
+   "Clutter field",
+   "#7d6e8f"
+  ],
+  "shallow": [
+   "Gravity well",
+   "#8fb0e8"
+  ],
+  "deep": [
+   "Deep nebula",
+   "#5b3f8f"
+  ]
+ },
+ "owners": {
+  "A": [
+   "Ardent Host of Kesh",
+   "#c0392b"
+  ],
+  "B": [
+   "Lumen Accord",
+   "#2f6fb5"
+  ],
+  "C": [
+   "Freeholds of Tessaly",
+   "#1a9a86"
+  ],
+  "V": [
+   "Corvin Mining Collective",
+   "#c9962a"
+  ],
+  "mb": [
+   "Tamsin's Rest",
+   "#8e5bb5"
+  ],
+  "mc": [
+   "The Brokerage",
+   "#5e6b80"
+  ]
+ },
+ "nodes": [
+  "nb|865|98|urban|mb|Tamsin's Rest|C",
+  "site1|897|247|farm|mb|Ossuary Relic|s",
+  "bcap|842|229|urban|B|Lumen Prime|C",
+  "bfort|711|244|urban|B|Lucent|c",
+  "bfarm|805|345|farm|B||",
+  "mtn1|654|94|high||Shard Field|L",
+  "mtn2|432|69|high|||",
+  "flats1|567|251|flats||Dust Plains|L",
+  "flats2|474|297|flats|V||",
+  "jungle|626|370|jungle||Corvin Rings|L",
+  "v1|474|164|urban|V|Corvin Alpha|c",
+  "vcap|344|233|urban|V|Corvin IV|C",
+  "vsite|353|327|flats|V|Null-salt seams|s",
+  "v3|281|306|urban|V|Corvin Gamma|c",
+  "v4|296|139|urban|V|Corvin Delta|c",
+  "aw|205|231|flats|A||",
+  "acap|107|191|urban|A|Kesh|C",
+  "as|167|333|farm|A||",
+  "adock|113|431|urban|A|Kesh Slipways|c",
+  "ccap|682|461|urban|C|Tessaly|C",
+  "ce|550|452|farm|C||",
+  "site2|454|437|farm||Hollow Gate|s",
+  "nc|864|477|urban|mc|The Brokerage|C",
+  "anch|717|556|shallow||Tessaly well|wL",
+  "lagw|850|571|shallow||Brokerage well|wL",
+  "lage|548|569|shallow|||w",
+  "deep1|355|580|deep||Orrin Nebula|wL",
+  "deep2|175|561|deep|||w"
+ ],
+ "extraLinks": [
+  [
+   "deep1",
+   "lage"
+  ]
+ ],
+ "moves": [
+  {
+   "n": 1,
+   "from": "aw",
+   "to": "vcap",
+   "kind": "attack",
+   "text": "Cycles 4–8 — Juggernaut legions walk across the Dust Plains and seize four Corvin habitats. No legion stays aboard."
+  },
+  {
+   "n": 2,
+   "from": "bcap",
+   "to": "vsite",
+   "kind": "air",
+   "text": "Cycle 9 — Wasp ringrunners come out of the Corvin Rings below lance lock and gut a Juggernaut legion."
+  },
+  {
+   "n": 3,
+   "from": "acap",
+   "to": "anch",
+   "kind": "strike",
+   "bend": 0.12,
+   "text": "Cycle 13 — Hammerhead bombers strike the Freehold squadron in the Tessaly well. The Aegis Tender destroys them."
+  },
+  {
+   "n": 4,
+   "from": "v1",
+   "to": "v1",
+   "kind": "revolt",
+   "text": "Cycles 14–16 — Corvin Alpha and Corvin Gamma, left empty, secede to the Unmoored."
+  },
+  {
+   "n": 4,
+   "from": "v3",
+   "to": "v3",
+   "kind": "revolt",
+   "text": ""
+  },
+  {
+   "n": 5,
+   "from": "v3",
+   "to": "bfort",
+   "kind": "attack",
+   "text": "Cycles 17–20 — a nineteen-walker legion marches on Lucent under mass-driver fire and breaks on the held Core."
+  },
+  {
+   "n": 6,
+   "from": "adock",
+   "to": "deep1",
+   "kind": "sea",
+   "text": "Cycle 22 — unescorted barges cross the Orrin Nebula. Shroud Hunters destroy them."
+  },
+  {
+   "n": 7,
+   "from": "bcap",
+   "to": "acap",
+   "kind": "strike",
+   "bend": 0.32,
+   "text": "Cycles 23–28 — seeker torpedoes wreck the Kesh launch cradles and strand the Host's strikecraft."
+  }
+ ]
+},
   lines: { front: "Shield", middle: "Core-line", rear: "Wake" },
   tiers: ["First cycles", "Mid-war", "Late-war"],
   reach: ["Boarding", "Close", "Stand-off", "System"],

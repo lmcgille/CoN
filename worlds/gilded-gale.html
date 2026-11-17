@@ -35,7 +35,7 @@
 <header class="topbar"><div class="wrap">
   <a class="brand" href="../index.html">Contested Worlds</a>
   <nav class="toc">
-    <a href="#world">World</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#world">World</a><a href="#map-sec">Map</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
     <a href="#schools">Schools</a><a href="#roster-sec">Roster</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
     <a href="#comps-sec">Compositions</a><a href="#chronicle">Chronicle</a>
   </nav>
@@ -84,6 +84,12 @@
       <tr><td>The Mountain Cantons</td><td>Landammann Ursula Brenn</td><td>Aerial</td><td>Small, armed, neutral until paid</td></tr>
     </tbody>
   </table></div>
+</div></section>
+
+<section id="map-sec"><div class="wrap">
+  <h2>War map</h2>
+  <p class="sec-sub">The northern Aurelian Sea at the outbreak of the Wellhead War.</p>
+  <div id="map"></div>
 </div></section>
 
 <section id="economy"><div class="wrap">
@@ -252,6 +258,163 @@
 
 <script>
 window.WORLD = {
+  map: {
+ "w": 1000,
+ "h": 620,
+ "link": 150,
+ "terrain": {
+  "flats": [
+   "Steppe",
+   "#d1c27c"
+  ],
+  "urban": [
+   "City",
+   "#8d8a9c"
+  ],
+  "farm": [
+   "Province",
+   "#9dbd68"
+  ],
+  "high": [
+   "Sabre Alps",
+   "#a28c78"
+  ],
+  "jungle": [
+   "Fen country",
+   "#5f8a6a"
+  ],
+  "shallow": [
+   "Coastal water",
+   "#7cc0dc"
+  ],
+  "deep": [
+   "Deepwater Basin",
+   "#2c5d8c"
+  ]
+ },
+ "owners": {
+  "A": [
+   "Ironworks Republic of Halvard",
+   "#c0392b"
+  ],
+  "B": [
+   "Commonwealth of Wyndham",
+   "#2f6fb5"
+  ],
+  "C": [
+   "Serene Republic of Calvessa",
+   "#1a9a86"
+  ],
+  "V": [
+   "Grand Duchy of Lindqvist",
+   "#c9962a"
+  ],
+  "mb": [
+   "Mountain Cantons",
+   "#8e5bb5"
+  ],
+  "mc": [
+   "Free City of Brassmere",
+   "#5e6b80"
+  ]
+ },
+ "nodes": [
+  "nb|877|105|urban|mb|The Cantons|C",
+  "site1|898|259|farm|mb|Saint Orme Wellhead|s",
+  "bcap|857|221|urban|B|Wyndham|C",
+  "bfort|701|238|urban|B|Fort Ashcombe|c",
+  "bfarm|796|326|farm|B||",
+  "mtn1|677|93|high||Sabre Alps|L",
+  "mtn2|440|81|high|||",
+  "flats1|545|233|flats||Steppe Coast|L",
+  "flats2|475|303|flats|V||",
+  "jungle|615|364|jungle||The Fens|L",
+  "v1|453|182|urban|V|Varberg|c",
+  "vcap|348|214|urban|V|Lindqvist|C",
+  "vsite|365|316|flats|V|Lindqvist Wellhead|s",
+  "v3|268|321|urban|V|Holmstad|c",
+  "v4|289|132|urban|V|Skarvik|c",
+  "aw|182|235|flats|A||",
+  "acap|90|206|urban|A|Halvard|C",
+  "as|175|328|farm|A||",
+  "adock|133|447|urban|A|Halvard Yards|c",
+  "ccap|686|472|urban|C|Calvessa|C",
+  "ce|557|441|farm|C||",
+  "site2|437|441|farm||The Embers|s",
+  "nc|849|458|urban|mc|Brassmere|C",
+  "anch|717|577|shallow||Calvessa harbour|wL",
+  "lagw|841|546|shallow||Brassmere roads|wL",
+  "lage|540|564|shallow|||w",
+  "deep1|341|583|deep||Deepwater Basin|wL",
+  "deep2|184|542|deep|||w"
+ ],
+ "extraLinks": [
+  [
+   "deep1",
+   "lage"
+  ]
+ ],
+ "moves": [
+  {
+   "n": 1,
+   "from": "aw",
+   "to": "vcap",
+   "kind": "attack",
+   "text": "Second week — Halvard landships roll through the wheat and take four Lindqvist cities. None are garrisoned."
+  },
+  {
+   "n": 2,
+   "from": "bcap",
+   "to": "vsite",
+   "kind": "air",
+   "text": "Second week — tankbuster ornithopters come up the river at hedgerow height and burn a landship brigade at Varberg ford."
+  },
+  {
+   "n": 3,
+   "from": "acap",
+   "to": "anch",
+   "kind": "strike",
+   "bend": 0.12,
+   "text": "Fourth week — Raider monoplanes dive on the fleet in Calvessa harbour. The Arclight Frigate destroys them."
+  },
+  {
+   "n": 4,
+   "from": "v1",
+   "to": "v1",
+   "kind": "revolt",
+   "text": "Fifth week — Varberg and Holmstad, unquartered, declare Communes."
+  },
+  {
+   "n": 4,
+   "from": "v3",
+   "to": "v3",
+   "kind": "revolt",
+   "text": ""
+  },
+  {
+   "n": 5,
+   "from": "v3",
+   "to": "bfort",
+   "kind": "attack",
+   "text": "Sixth week — a twenty-six-company brigade marches on Fort Ashcombe under Congreve fire and spends itself on the square."
+  },
+  {
+   "n": 6,
+   "from": "adock",
+   "to": "deep1",
+   "kind": "sea",
+   "text": "Seventh week — transports cross the Deepwater Basin alone. Nautilus boats sink them."
+  },
+  {
+   "n": 7,
+   "from": "bcap",
+   "to": "acap",
+   "kind": "strike",
+   "bend": 0.32,
+   "text": "Eighth week — torpedo-rockets fall on Halvard's aerodromes in a single night."
+  }
+ ]
+},
   lines: { front: "Firing line", middle: "Support", rear: "Train" },
   tiers: ["First week", "Mid-war", "Late war"],
   reach: ["Bayonet", "Short", "Indirect", "Strategic"],
