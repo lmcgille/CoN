@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spire Nine</title>
+<meta name="description" content="A cyberpunk war world: corporations fight block by block for a drowned vertical megacity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root {
+    --accent: #8a1457; --accent-2: #c42a7f; --display: "Chakra Petch", system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace;
+    --bg: #f4f1f4; --bg-2: #e9e2e8; --rule: #d6ccd5;
+    --heat-1: #f3dbe8; --heat-2: #e8afcd; --heat-3: #d971a8; --heat-4: #c42a7f; --heat-5: #8a1457;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #0c0a10; --bg-2: #15111c; --panel: #19141f; --rule: #2e2538; --ink: #efe9f5; --ink-2: #c7bcd3; --ink-3: #8f829e;
+    --accent: #ff4fa8; --accent-2: #4ff0ff; --accent-ink: #0c0a10;
+    --heat-1: #2a1530; --heat-2: #4a1a4c; --heat-3: #82206f; --heat-4: #ff4fa8; --heat-5: #ffc0e0; --heat-ink-hi: #0c0a10;
+  } }
+  :root[data-theme="dark"] {
+    --bg: #0c0a10; --bg-2: #15111c; --panel: #19141f; --rule: #2e2538; --ink: #efe9f5; --ink-2: #c7bcd3; --ink-3: #8f829e;
+    --accent: #ff4fa8; --accent-2: #4ff0ff; --accent-ink: #0c0a10;
+    --heat-1: #2a1530; --heat-2: #4a1a4c; --heat-3: #82206f; --heat-4: #ff4fa8; --heat-5: #ffc0e0; --heat-ink-hi: #0c0a10;
+  }
+  .feed { font-family: var(--mono); font-size: 13.5px; line-height: 1.6; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px; margin: 14px 0; }
+  .feed .h { color: var(--accent-2); font-weight: 600; }
+  .feed .t { color: var(--ink-3); }
+  .chron p { font-size: 18px; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="#world">World</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#corps">Charters</a><a href="#roster-sec">Assets</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
+    <a href="#comps-sec">Compositions</a><a href="#chronicle">Feed</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">World VII · Cyberpunk</div>
+  <h1>Spire Nine</h1>
+  <p class="lede">When the city government of Spire Nine went bankrupt in 2131, the court sold it — block by block, to whoever would pay. Twenty million people woke up as assets on a balance sheet. Now the corporations that bought them are settling the rest of the map the old-fashioned way.</p>
+  <div class="facts">
+    <span class="fact"><b>9</b> corporations &amp; holdouts</span>
+    <span class="fact"><b>8</b> hit classes</span>
+    <span class="fact"><b data-count="units">&nbsp;</b> assets</span>
+    <span class="fact">Details of <b>13</b> · wings of <b>4</b> · flotillas of <b>5</b></span>
+    <span class="fact">A firefight cycle every <b>20 min</b></span>
+  </div>
+</div></div>
+
+<section id="world"><div class="wrap">
+  <h2>The world</h2>
+  <p class="sec-sub">A vertical city with its feet in the sea, fought over in four layers.</p>
+  <div class="prose">
+    <p>Spire Nine is two hundred square kilometres of arcology towers, elevated highways, and pre-collapse neighbourhoods jammed into a river delta. The sea came up a long time ago. The bottom four floors of the old city are underwater; the streets there are <b>canals</b>, and the subway beneath them is a drowned maze everyone calls <b>the Sump</b>.</p>
+    <p>The city's land is divided into <b>blocks</b> (dense, valuable — this world's cities) and <b>districts</b> (everything between). Each player is a corporation, or a holdout community, that owns a headquarters tower and a handful of blocks. Victory is <b>Market Share</b>: a quarterly-style valuation, run every 24 hours by the Receivership Court, of the blocks, districts and three <b>Assets of Record</b> — the Desal Stack, the Old Exchange datacentre, and the Orbital Elevator ground station — that a charter or a consortium controls.</p>
+  </div>
+  <h3>Terrain</h3>
+  <div class="grid g3">
+    <div class="card"><h4>The Expressways</h4><p class="small">Elevated multi-lane highways. Wide and flat. Heavy frames run at full strength; infantry on the asphalt dies.</p></div>
+    <div class="card"><h4>The Hives</h4><p class="small">Dense residential stacks. Hardframes can't fit; dug-in street crews hold for days.</p></div>
+    <div class="card"><h4>The Heights</h4><p class="small">Rooftop districts and old cliffside slums. Spiders thrive; everything else climbs.</p></div>
+    <div class="card"><h4>The Overgrowth</h4><p class="small">Abandoned parkland gone wild. Slow and deadly for vehicles.</p></div>
+    <div class="card"><h4>The Canals</h4><p class="small">Shallow drowned streets. Skiffs rule; Sump-runners are cramped, noisy and exposed.</p></div>
+    <div class="card"><h4>The Sump</h4><p class="small">The flooded metro tunnels. Deep, black, perfect for submersibles; skiffs that enter rarely come out.</p></div>
+  </div>
+  <h3>The players (rename freely)</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Charter</th><th>Principal</th><th>Charter type</th><th>Posture</th></tr></thead>
+    <tbody>
+      <tr><td>Kessler-Volk Industrial</td><td>CEO Dmitra Vosk</td><td>Heavy</td><td>Hardframes on day one; poor air; impatient shareholders</td></tr>
+      <tr><td>Halo Systems</td><td>Chair Ada Okoye-Lin</td><td>Sky</td><td>Rich, slow, owns the skyline</td></tr>
+      <tr><td>Tidewater Holdings</td><td>Harbourmaster Rafe Quintero</td><td>Canal</td><td>Boats, Sump-runners, the docks</td></tr>
+      <tr><td>The Lowmarket Commons</td><td>Speaker Bea Ng</td><td>Heavy</td><td>Residents' co-op on the Desal Stack; barely armed</td></tr>
+      <tr><td>Saint Ambrose Hospital Trust</td><td>Director Kofi Mensah</td><td>Sky</td><td>Small, rich, protected</td></tr>
+      <tr><td>The Brokers</td><td>"Mister Glass"</td><td>Canal</td><td>Fixers who hire contractors</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="economy"><div class="wrap">
+  <h2>Economy &amp; the street</h2>
+  <p class="sec-sub">Six inputs, one capacity, and the twenty million people you bought.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Input</th><th>Comes from</th><th>Feeds</th></tr></thead>
+    <tbody>
+      <tr><td><b>Calories</b></td><td>Vat farms, rooftop greenhouses</td><td>Every crew; residents eat it daily; most construction</td></tr>
+      <tr><td><b>Polymer</b></td><td>Printing plants, salvage</td><td>Frames, boats, airframes, all construction</td></tr>
+      <tr><td><b>Silicon</b></td><td>Fabs</td><td>Sensors, drones, turrets, most buildings</td></tr>
+      <tr><td><b>Iridium</b></td><td>Salvage from the Sump, the Elevator's cargo</td><td>All R&amp;D, cloaking, Sump-runners, smart munitions</td></tr>
+      <tr><td><b>Staff</b></td><td>Population</td><td>Every crew and operator. Cannot be traded.</td></tr>
+      <tr><td><b>Equity</b></td><td>Rents, tolls, fabs</td><td>Everything; overheads; the only currency on the Exchange</td></tr>
+      <tr><td><b>Bandwidth</b> <span class="tag">capacity</span></td><td>Data towers</td><td>A ceiling: every drone, turret and remote asset draws on it. Go over and everything lags.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>Overheads kill companies.</b> Every asset keeps costing a share of its price every day. A corp that buys an army in week one has no money for fabs in week three — and residents who go hungry or unpaid lose <b>Compliance</b>, which drags every plant.</div>
+  <h3>Holdings</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Owned blocks</h4><p class="small">Full output. HQ raises Compliance nearby.</p></div>
+    <div class="card"><h4>Acquired blocks</h4><p class="small">Taken by force. A quarter output; Compliance near zero. These riot.</p></div>
+    <div class="card"><h4>Integrated blocks</h4><p class="small">Acquired blocks put through Integration (costs Staff). Half output; can raise crews.</p></div>
+    <div class="card"><h4>Districts</h4><p class="small">The sprawl between. Low output unless you build a plant. Districts don't riot.</p></div>
+  </div>
+  <h3>Compliance and riots</h3>
+  <div class="prose">
+    <p><b>Compliance</b> settles each day toward a target set by distance from HQ, number of active wars, enemy assets nearby, shortages, collateral damage, enemy agitators and your amenities.</p>
+    <p>An acquired block below about a third Compliance may <b>riot</b>. Fresh acquisitions sit at a quarter. Once a day, at a random time, the block either holds or blows. If you have no crew there, it simply goes over to <b>the Unplugged</b> — an off-grid movement that arms itself and spreads. One crew on the block's <b>Junction</b> usually ends a riot.</p>
+  </div>
+  <h3>Facilities</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Facility</th><th>Where</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr><td>Fab Floor</td><td>Block</td><td>+10% to all inputs per floor, plus daily Equity. Always first.</td></tr>
+      <tr><td>Plant</td><td>District</td><td>Works the district's resource.</td></tr>
+      <tr><td>Hiring Hall</td><td>Block</td><td>Raises crews.</td></tr>
+      <tr><td>Frame Shop</td><td>Block</td><td>Builds frames and turrets.</td></tr>
+      <tr><td>Pad</td><td>Block</td><td>Every aircraft and kite launches from and returns to a pad. Hit the pad and everything parked there is stuck.</td></tr>
+      <tr><td>Rooftop Strip</td><td>District</td><td>Forward pad.</td></tr>
+      <tr><td>Boathouse</td><td>Canal block</td><td>Builds boats; crews board ferries here.</td></tr>
+      <tr><td>Barricade</td><td>District</td><td>Fortifies a district's Junction.</td></tr>
+      <tr><td>Panic Floor</td><td>Block</td><td>Shelters residents; hardens defenders.</td></tr>
+      <tr><td>Clinic</td><td>Block / district</td><td>Faster recovery.</td></tr>
+      <tr><td>Express Lane</td><td>District</td><td>Much faster street movement — for anyone.</td></tr>
+      <tr><td>R&amp;D Floor</td><td>Block</td><td>Research.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>Rules of engagement</h2>
+  <div class="grid g2">
+    <div class="card"><h4>Firefight cycles</h4><p class="small">First contact resolves immediately; another cycle every 20 minutes. Each weapon uses its rating against the target's <b>hit class</b>.</p></div>
+    <div class="card"><h4>The Junction</h4><p class="small">Every block and district has a <b>Junction</b>. A detail holding it is dug in: it takes much less damage and doesn't shoot back. A detail outside it trades fire every cycle.</p></div>
+    <div class="card"><h4>Details, wings, flotillas</h4><p class="small">Street <b>details</b> fight at full strength up to <b>13</b>, air <b>wings</b> up to <b>4</b>, canal <b>flotillas</b> up to <b>5</b>. Past that, diminishing, then zero, then negative — and a detail moves at its slowest asset's speed.</p></div>
+    <div class="card"><h4>Point, body, tail</h4><p class="small">Incoming fire lands mostly on the <b>point</b>, less on the <b>body</b>, least on the <b>tail</b>. Asset type decides.</p></div>
+    <div class="card"><h4>Indirect fire</h4><p class="small">Mortar teams, missile trucks and gunboats fire from range. Targets that can't reach back can't hit back. Fire, pull back, wait out the cycle, repeat.</p></div>
+    <div class="card"><h4>Tagging</h4><p class="small">A block or district changes hands only when a <b>tagging</b> crew reaches the Junction. Frames, aircraft, boats, ghosts and contractors can't tag.</p></div>
+    <div class="card"><h4>Skyline and alley</h4><p class="small">Aerodynes fly the <b>skyline</b>, above the towers, where rooftop lance grids track them. Kites fly at <b>alley level</b>, between buildings, below every rooftop grid's line of sight. Only shredder turrets, picket boats and interceptors hit kites.</p></div>
+    <div class="card"><h4>In the detail vs near it</h4><p class="small">Turrets <b>in</b> the targeted detail fire on every attacker and every munition with no reload. Turrets <b>near</b> it fire, then reload — so flood them.</p></div>
+    <div class="card"><h4>Sensors and ghosts</h4><p class="small">Nearby contacts are visible; distant ones are "unknown signal" until a scout IDs them. Sensor masts and Overwatch aerodynes track emissions at range. <b>Ghosted</b> assets are invisible until they fire or a matching sensor gets close.</p></div>
+    <div class="card"><h4>Canal and Sump</h4><p class="small">Skiffs dominate the shallow canals and die in the Sump. Sump-runners are the reverse.</p></div>
+    <div class="card"><h4>Ferries</h4><p class="small">Crews crossing water ride ferries boarded at a boathouse. Ferries are unarmed; boarding and landing leave a crew helpless for a while. Canal Rats and Hover-Haulers cross on their own.</p></div>
+    <div class="card"><h4>The pad</h4><p class="small">Aircraft and kites launch from a home pad and return to recharge. Parked assets are helpless. Hit the pad and everything on it is stuck.</p></div>
+  </div>
+</div></section>
+
+<section id="classes-sec"><div class="wrap">
+  <h2>Hit classes</h2>
+  <div id="classes"></div>
+</div></section>
+
+<section id="corps"><div class="wrap">
+  <h2>The three charter types</h2>
+  <p class="sec-sub">The Receivership Court licensed every buyer under one of three charters. Same asset roles; different models, prices and timelines.</p>
+  <div class="grid g3">
+    <div class="card"><h4>Heavy charter</h4><p class="small"><b>Cheap, early, street-heavy.</b> Hardframes and missile trucks on day one, at a discount. Thin armour; weak air. Heavy charters rely on rooftop lance grids — which can't see alley level.</p><p class="small"><span class="tag good">Early frames</span><span class="tag good">Cheap losses</span><span class="tag bad">Weak air</span></p></div>
+    <div class="card"><h4>Sky charter</h4><p class="small"><b>Expensive, tough, slow, owns the skyline.</b> Interceptors, hunter-kites, Overwatch aerodynes and Aegis domes arrive early with bonuses.</p><p class="small"><span class="tag good">Air &amp; sensors</span><span class="tag good">Toughness</span><span class="tag bad">Slow start</span></p></div>
+    <div class="card"><h4>Canal charter</h4><p class="small"><b>Balanced, water-minded.</b> Strike aerodynes on day one; the best early boats.</p><p class="small"><span class="tag good">Early strike</span><span class="tag good">Boats</span><span class="tag bad">No hard edge</span></p></div>
+  </div>
+</div></section>
+
+<section id="roster-sec"><div class="wrap">
+  <h2>Assets</h2>
+  <p class="sec-sub">Ratings 0–5 per hit class.</p>
+  <div class="filters" id="roster-filters"></div>
+  <div class="roster" id="roster"></div>
+</div></section>
+
+<section id="matrix-sec"><div class="wrap">
+  <h2>Counter matrix</h2>
+  <div id="matrix"></div>
+</div></section>
+
+<section id="synergy-sec"><div class="wrap">
+  <h2>Synergies</h2>
+  <div class="grid g2" id="synergies"></div>
+</div></section>
+
+<section id="comps-sec"><div class="wrap">
+  <h2>Compositions</h2>
+  <div class="grid g2" id="comps"></div>
+</div></section>
+
+<section id="chronicle"><div class="wrap">
+  <h2>Feed: The Desal War</h2>
+  <p class="sec-sub">As it scrolled past on the open feeds, with commentary from Juno "Static" Reyes, a courier who saw most of it from a moped.</p>
+  <div class="chron">
+    <h3><span class="when">Day 1–3</span>Buy, build, wait</h3>
+    <div class="feed"><span class="t">[d1 09:14]</span> <span class="h">@KVIndustrial</span> Proud to announce three new fab floors and the immediate deployment of our Rhino hardframe line. Building the future of Spire Nine. #KVforward</div>
+    <p>Kessler-Volk had Rhinos — four-metre armoured hardframes with a cannon where the right arm should be — walking out of the shop by the second morning. By the third, two full details of them were parked at the edge of Lowmarket, which sits on top of the Desal Stack, which makes all the drinking water in the south city. Everyone knew what that meant.</p>
+    <p>Halo Systems announced a fab floor, an R&amp;D floor and a new pad, and nothing with a gun. Their stock dropped four percent. The Chair did not comment.</p>
+    <p>Tidewater put two boats in the canal outside their HQ: a hunter boat with a sonar dome, and an ugly flat thing with a dozen shredder turrets on it and nothing else. The dockworkers called it the Hedgehog.</p>
+
+    <h3><span class="when">Day 4–8</span>The expressway</h3>
+    <p>Lowmarket's people met the Rhinos on the Southern Expressway, which was the worst place they could have picked. Wide, flat, nowhere to hide. Kessler-Volk tagged four Lowmarket blocks in five days, including the Stack. And then they rolled on to the next one. Every time.</p>
+    <p>I delivered noodles to one of those blocks on day nine. There wasn't a single KV crew in the building. Just the new logo on the lobby screens, and a lot of very quiet people.</p>
+
+    <h3><span class="when">Day 9</span>Under the grid</h3>
+    <p>Halo's first combat assets were four hunter-kites — little tank-killer drones with shaped charges, the kind that fly at alley height and never go above the third floor. They came in through the market streets, under the awnings.</p>
+    <p>KV had two rooftop lance grids covering their lead detail on the expressway. Lance grids watch the skyline. They watched it for an hour and saw nothing — because there was nothing there. The kites were down in the alleys and then under the overpass, and a Rhino's cannon can't elevate past the horizontal.</p>
+    <div class="feed"><span class="t">[d9 13:02]</span> <span class="h">@SouthSideScanner</span> massive explosions on the southern expressway, KV frames burning, NO AIRCRAFT VISIBLE what is happening<br><span class="t">[d9 13:22]</span> <span class="h">@SouthSideScanner</span> another one. still nothing in the sky. this is insane<br><span class="t">[d9 15:40]</span> <span class="h">@KVIndustrial</span> We are aware of reports of an incident on the Southern Expressway. Our air defence systems detected no hostile aircraft.</div>
+    <p>Every twenty minutes, another pass. By evening the detail was a row of scrap.</p>
+
+    <h3><span class="when">Day 10–12</span>More grid</h3>
+    <p>Kessler-Volk's answer was eight more lance grids and an Aegis dome on their HQ tower, the most expensive point-defence system on the market. None of it can see alley level. The kites kept coming. A single shredder turret per detail — a cheap, ugly, short-range thing every courier knows the sound of — would have ended it on the first pass. KV's procurement people had cut shredders from the budget as "low-value."</p>
+    <div class="feed"><span class="t">[d11 18:00]</span> <span class="h">@TidewaterHQ</span> + <span class="h">@HaloSystems</span>: we are pleased to announce a strategic partnership. Valuations to be reported jointly.</div>
+
+    <h3><span class="when">Day 13</span>The Hedgehog</h3>
+    <p>KV still had an air wing: four strike aerodynes. Their spotters found the Tidewater flotilla moored in the Grand Canal: the hunter boat, a big gunboat (scariest thing on the water, and everyone knows gunboats can't defend themselves from the air), and the flat ugly Hedgehog, which KV's analysts logged as a "utility barge."</p>
+    <p>The Hedgehog was <i>in</i> the flotilla. Every one of its turrets fired at every aerodyne that dived on any boat in the group, every cycle, no reload. It sounded like the sky tearing. Two aerodynes got to launch range. One got home.</p>
+    <div class="feed"><span class="t">[d13 03:41]</span> <span class="h">@GrandCanalCam</span> just watched three corp aircraft get shredded by a garbage barge??<br><span class="t">[d13 03:44]</span> <span class="h">@GrandCanalCam</span> correction four</div>
+
+    <h3><span class="when">Day 14–16</span>Riot</h3>
+    <p>Two of the four Lowmarket blocks blew on the same night. They'd been at a quarter Compliance since KV took them — far from KV's tower, short on water (ironic), and not one KV crew inside. When the riots started there was nobody to stop them. By morning the Unplugged held both blocks, and by day sixteen they were jamming KV's supply road to the front.</p>
+
+    <h3><span class="when">Day 17–20</span>The Lumen Tower siege</h3>
+    <p>KV put everything they had left — twenty-seven assets — into one enormous detail and pointed it at Halo's Lumen Tower. Past thirteen, each new asset made the detail worse. At twenty-seven it moved like a traffic jam and fought at about two-thirds strength.</p>
+    <p>Halo put railgun teams and street crews on the tower's Junction, where they dug in and just absorbed. Two districts back they parked three missile trucks. Every twenty minutes the trucks pulled forward, fired a salvo into the KV column from out of its reach, and pulled back before it could close. They never took a hit. KV reached the tower bloodied and slow and threw itself at defenders who barely bled.</p>
+
+    <h3><span class="when">Day 21</span>The Sump</h3>
+    <p>For a second front, KV loaded two details onto ferries and sent them through the Sump tunnels to come up behind Tidewater's docks. KV's own hunter boats weren't built yet, so the ferries went alone. Two Tidewater Sump-runners had been sitting in the dark of the old Line 4 tunnel for nine days. Ferries can't fight back.</p>
+    <div class="feed"><span class="t">[d21 01:12]</span> <span class="h">@SumpWatch</span> big debris field coming up the Line 4 vents. lots of KV orange.</div>
+
+    <h3><span class="when">Day 22–26</span>Grounded</h3>
+    <p>Halo ended it with one night of smart munitions on KV's two pads. Everything KV had rebuilt since day thirteen was parked there. With no air and grids that still couldn't see the alleys, the last KV details were hunted along the expressways by kites. At the next valuation, the Halo–Tidewater partnership's Market Share passed KV's, and the Court closed the case.</p>
+    <p>I still deliver to Lowmarket. The water's back on.</p>
+
+    <div class="postmortem">
+      <h3>Analyst note: why Kessler-Volk lost</h3>
+      <ol>
+        <li><b>Hardframes with no shredders.</b> They can't shoot up. One turret per detail was the answer.</li>
+        <li><b>Skyline grids against alley-level kites.</b> Expensive defence pointed at the wrong altitude.</li>
+        <li><b>Strike wing into the Hedgehog.</b> Turrets inside the flotilla fire on every attacker. The ugliest boat was the deadliest.</li>
+        <li><b>Untended acquisitions.</b> A quarter Compliance, no crews, two riots.</li>
+        <li><b>The twenty-seven-asset detail.</b> Too big to fight, too slow to catch the trucks.</li>
+        <li><b>Assaulting a dug-in Junction.</b> Defenders who don't shoot back barely bleed.</li>
+        <li><b>Unescorted ferries through the Sump.</b> That's what runners wait for.</li>
+        <li><b>Aircraft parked on known pads.</b> Parked is targeted.</li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · Spire Nine · An original setting. <a href="../index.html">All worlds</a></div></footer>
+
+<script>
+window.WORLD = {
+  lines: { front: "Point", middle: "Body", rear: "Tail" },
+  tiers: ["Day one", "Mid-war", "Late war"],
+  reach: ["Close", "Short", "Indirect", "Citywide"],
+  classes: [
+    { id: "meat", name: "Personnel", short: "Pers", desc: "Crews, operators, residents with guns." },
+    { id: "frame", name: "Frame", short: "Frame", desc: "Hardframes, armoured vehicles, turret trucks." },
+    { id: "sky", name: "Skyline", short: "Sky", desc: "Aerodynes above the rooftops — tracked by lance grids." },
+    { id: "alley", name: "Alley", short: "Alley", desc: "Kites flying between buildings below the rooftops. Invisible to lance grids." },
+    { id: "micro", name: "Micro", short: "Micro", desc: "Microdrone swarms and spotter bugs." },
+    { id: "boat", name: "Boat", short: "Boat", desc: "Canal craft and ferries." },
+    { id: "sump", name: "Sump", short: "Sump", desc: "Submersibles in the drowned metro. Hit only once found." },
+    { id: "mun", name: "Munition", short: "Mun", desc: "Incoming smart munitions and orbital spikes. Interceptable." }
+  ],
+  branches: [
+    { id: "crew", name: "Crews" }, { id: "frame", name: "Frames" }, { id: "turret", name: "Turrets & trucks" },
+    { id: "air", name: "Air & kites" }, { id: "canal", name: "Canal" }, { id: "mun", name: "Munitions" }
+  ],
+  units: [
+    { id: "street", name: "Street Crew", branch: "crew", hitAs: "meat", line: "rear", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Low", claims: true,
+      role: "Cheap armed crew. Tags Junctions; holds blocks.", atk: { meat: 2, frame: 1, alley: 1, micro: 1 },
+      traits: ["Can hop between friendly pads by shuttle from day one"], strong: "Holding blocks.", weak: "Frames, mortars, gun-kites." },
+    { id: "exo", name: "Exo Security", branch: "crew", hitAs: "meat", line: "front", tier: 1, reach: 0, speed: 2, tough: 3, cost: "Medium", claims: true,
+      role: "Corp security in powered armour.", atk: { meat: 3, frame: 3, micro: 1 },
+      traits: ["Point position", "Slowed in the Overgrowth and Heights"], strong: "Escorting frames; anti-frame up close.", weak: "Gun-kites; bombardment." },
+    { id: "canalrat", name: "Canal Rats", branch: "crew", hitAs: "meat", line: "middle", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: true,
+      role: "Amphibious crews on jet-skis.", atk: { meat: 3, frame: 2, alley: 1 },
+      traits: ["Land at any canal edge — no boathouse", "Take island blocks"], strong: "Waterfront raids.", weak: "Frames once ashore." },
+    { id: "rappel", name: "Rappel Team", branch: "crew", hitAs: "meat", line: "middle", tier: 2, reach: 0, speed: 4, tough: 2, cost: "Medium", claims: true,
+      role: "Dropped onto rooftops by tiltrotor.", atk: { meat: 3, frame: 1 },
+      traits: ["Insert anywhere in range of a pad or strip", "First cycle on insertion counts as Alley", "Need a cycle to clear stairwells before tagging"], strong: "Grabbing empty blocks behind the line.", weak: "Shredders on the roof; quick counter." },
+    { id: "ghost", name: "Ghost Operators", branch: "crew", hitAs: "meat", line: "rear", tier: 2, reach: 0, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Optically camouflaged black-ops.", atk: { meat: 4, frame: 2 },
+      traits: ["Invisible on the street until they shoot", "Spot other ghosted street assets", "Ignore barricades and panic floors"], strong: "Killing mortar teams; cracking Junctions.", weak: "Can't tag. Scout bikes find them." },
+    { id: "watch", name: "Block Watch", branch: "crew", hitAs: "meat", line: "middle", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Very low", claims: true,
+      role: "Residents with hand-me-down rifles.", atk: { meat: 1, frame: 1 },
+      traits: ["Strength follows the block's Compliance", "Slow outside home turf"], strong: "Emergency garrisons.", weak: "Anything offensive." },
+    { id: "contractor", name: "Contractors", branch: "crew", hitAs: "meat", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Equity only", claims: false,
+      role: "Hired guns.", atk: { meat: 3, frame: 2, alley: 1 },
+      traits: ["Cost no Staff", "Cannot tag"], strong: "A rich holdout's point.", weak: "Never takes ground." },
+    { id: "spider", name: "Rooftop Spiders", branch: "crew", hitAs: "meat", line: "rear", tier: 2, reach: 0, speed: 2, tough: 2, cost: "Medium", claims: true,
+      role: "Free-runners with climbing rigs.", atk: { meat: 3, frame: 1 },
+      traits: ["Strong in the Heights", "Weak on the expressway"], strong: "Holding high ground.", weak: "Open asphalt." },
+
+    { id: "bike", name: "Scout Bike", branch: "frame", hitAs: "frame", line: "rear", tier: 1, reach: 0, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Armoured scout motorbike.", atk: { meat: 2, frame: 1 },
+      traits: ["IDs unknown signals", "Spots ghosted street assets", "Speeds its detail on hostile streets"], strong: "Recon; hunting ghosts.", weak: "Any fight." },
+    { id: "apc", name: "Mantis APC", branch: "frame", hitAs: "frame", line: "front", tier: 1, reach: 0, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Wheeled fighting vehicle.", atk: { meat: 3, frame: 2, alley: 1, micro: 1 },
+      traits: ["Good on most terrain"], strong: "Versatile crew-killer.", weak: "Railgun teams; hunter-kites." },
+    { id: "rhino", name: "Rhino Hardframe", branch: "frame", hitAs: "frame", line: "front", tier: 1, reach: 0, speed: 3, tough: 5, cost: "High", claims: false,
+      role: "Heavy walking frame with an arm-cannon.", atk: { meat: 3, frame: 4 },
+      traits: ["Dominant on the expressways", "Useless in the Hives, Heights and Overgrowth", "Cannon can't elevate — no anti-air"], strong: "Open fights; soaking.", weak: "Hunter-kites. Hives. Railgun teams." },
+    { id: "railteam", name: "Railgun Team", branch: "frame", hitAs: "frame", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Armoured anti-frame rail rig.", atk: { meat: 1, frame: 5 },
+      traits: ["Best armoured defender in a block"], strong: "Killing frames; holding blocks.", weak: "Crew swarms; gun-kites; mortars." },
+    { id: "hover", name: "Hover-Hauler", branch: "frame", hitAs: "frame", line: "middle", tier: 2, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Armoured hovercraft.", atk: { meat: 2, frame: 2 },
+      traits: ["Crosses canals on its own"], strong: "Backing Canal Rats.", weak: "Hardframes." },
+
+    { id: "shredder", name: "Shredder Turret", branch: "turret", hitAs: "frame", line: "middle", tier: 1, reach: 1, speed: 3, tough: 2, cost: "Low", claims: false,
+      role: "Truck-mounted rotary point-defence.", atk: { meat: 1, sky: 2, alley: 5, micro: 5, mun: 2 },
+      traits: ["Sees and hits alley-level kites", "In a detail: fires on every attacker, every cycle"], strong: "Kites and microdrones. The cheapest insurance in the city.", weak: "Street assault; skyline aerodynes." },
+    { id: "lance", name: "Lance Grid", branch: "turret", hitAs: "frame", line: "rear", tier: 1, reach: 2, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Rooftop missile grid.", atk: { sky: 4, micro: 1, mun: 3 },
+      traits: ["Tracks the skyline", "Can't see alley level"], strong: "Aerodynes and munitions.", weak: "Kites — totally blind." },
+    { id: "aegis", name: "Aegis Dome", branch: "turret", hitAs: "frame", line: "rear", tier: 2, reach: 3, speed: 1, tough: 3, cost: "High", claims: false,
+      role: "Citywide interceptor laser array.", atk: { sky: 3, mun: 5 },
+      traits: ["Longest-range munition intercept", "Late upgrade sees ghosted aerodynes", "Blind to alleys"], strong: "Shielding HQ.", weak: "Kites; saturation; raids." },
+    { id: "mortarteam", name: "Mortar Team", branch: "turret", hitAs: "meat", line: "rear", tier: 1, reach: 2, speed: 1, tough: 1, cost: "Low", claims: false,
+      role: "Crewed mortar.", atk: { meat: 4, frame: 2 },
+      traits: ["Indirect fire", "Slowest on the street"], strong: "Softening a held Junction.", weak: "Anything that reaches it." },
+    { id: "howtruck", name: "Howitzer Truck", branch: "turret", hitAs: "frame", line: "middle", tier: 1, reach: 2, speed: 2, tough: 3, cost: "Medium", claims: false,
+      role: "Armoured self-propelled gun.", atk: { meat: 3, frame: 3 },
+      traits: ["Indirect fire", "Keeps up with frames"], strong: "Frame details' artillery.", weak: "Kites; strike aerodynes." },
+    { id: "missiletruck", name: "Missile Truck", branch: "turret", hitAs: "frame", line: "middle", tier: 1, reach: 3, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Rocket launcher truck.", atk: { meat: 4, frame: 3, boat: 1 },
+      traits: ["Longest reach on the street", "Area damage"], strong: "Kiting slow details.", weak: "Air; being caught from two sides." },
+    { id: "mast", name: "Sensor Mast", branch: "turret", hitAs: "frame", line: "rear", tier: 1, reach: 0, speed: 2, tough: 1, cost: "Low", claims: false,
+      role: "Mobile emissions tracker.", atk: {},
+      traits: ["Tracks emissions citywide; alley level only up close"], strong: "Warning.", weak: "Unarmed." },
+    { id: "dockgun", name: "Dock Gun", branch: "turret", hitAs: "frame", line: "rear", tier: 1, reach: 2, speed: 1, tough: 3, cost: "Low", claims: false,
+      role: "Fixed anti-boat cannon.", atk: { boat: 4, meat: 1 },
+      traits: ["No R&D needed", "Fixed"], strong: "Boats loitering in your canals.", weak: "Air; munitions; landings." },
+
+    { id: "interceptor", name: "Falcon Interceptor", branch: "air", hitAs: "sky", line: "front", tier: 1, reach: 2, speed: 5, tough: 3, cost: "High", claims: false,
+      role: "Air-superiority aerodyne.", atk: { sky: 5, alley: 3, micro: 3, mun: 2 },
+      traits: ["Point of any wing", "Flies patrols"], strong: "Killing aircraft; escort.", weak: "Near-useless against street and canal." },
+    { id: "striker", name: "Striker AV", branch: "air", hitAs: "sky", line: "middle", tier: 1, reach: 2, speed: 5, tough: 2, cost: "High", claims: false,
+      role: "Ground-attack aerodyne.", atk: { meat: 3, frame: 4, boat: 2, sky: 1 },
+      traits: ["Late upgrade carries a smart munition"], strong: "Deep strikes on frames and trucks.", weak: "Interceptors; Hedgehog barges; lance grids." },
+    { id: "gunkite", name: "Gun-Kite", branch: "air", hitAs: "alley", line: "front", tier: 1, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Alley-level anti-personnel drone.", atk: { meat: 5, frame: 2 },
+      traits: ["Below the lance grids", "Can operate from carrier barges"], strong: "Shredding crews and mortar teams.", weak: "Shredders; Hedgehogs; interceptors." },
+    { id: "hunterkite", name: "Hunter-Kite", branch: "air", hitAs: "alley", line: "front", tier: 1, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Alley-level anti-frame drone.", atk: { frame: 5, meat: 2, boat: 2 },
+      traits: ["Below the lance grids", "Can operate from carrier barges"], strong: "Frame details without shredders.", weak: "One shredder in the target." },
+    { id: "sonarkite", name: "Sonar Kite", branch: "air", hitAs: "alley", line: "middle", tier: 2, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Low drone with dipping sonar.", atk: { sump: 5, boat: 3 },
+      traits: ["Finds Sump-runners", "Faster than any boat"], strong: "Hunting the Sump.", weak: "Shredders." },
+    { id: "overwatch", name: "Overwatch AV", branch: "air", hitAs: "sky", line: "rear", tier: 2, reach: 3, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Sensor aerodyne.", atk: {},
+      traits: ["Tracks aerodynes, frames and boats citywide", "Can't see alley level", "Late upgrade sees ghosts"], strong: "Information.", weak: "Unarmed." },
+    { id: "gunship", name: "Heavy Gunship", branch: "air", hitAs: "sky", line: "middle", tier: 2, reach: 2, speed: 3, tough: 4, cost: "Very high", claims: false,
+      role: "Flying fortress.", atk: { meat: 4, frame: 3, boat: 2 },
+      traits: ["Levels facilities and pads", "Late upgrade ignores panic floors", "Carries smart munitions on a slow reload"], strong: "Blocks, facilities, slow details.", weak: "Interceptors; grids; Hedgehogs." },
+    { id: "swarm", name: "Microdrone Swarm", branch: "air", hitAs: "micro", line: "middle", tier: 1, reach: 1, speed: 4, tough: 1, cost: "Low", claims: false,
+      role: "Cloud of explosive bugs.", atk: { meat: 3, frame: 3 },
+      traits: ["Cheap attrition"], strong: "Details without shredders.", weak: "Shredders; Hedgehogs; interceptors." },
+    { id: "spotter", name: "Spotter Bug", branch: "air", hitAs: "micro", line: "rear", tier: 1, reach: 2, speed: 4, tough: 1, cost: "Very low", claims: false,
+      role: "Recon microdrone.", atk: {},
+      traits: ["IDs unknown signals", "Crossing borders isn't an act of war"], strong: "Cheap eyes.", weak: "Everything." },
+    { id: "patrolav", name: "Harbour Patrol AV", branch: "air", hitAs: "sky", line: "rear", tier: 2, reach: 2, speed: 3, tough: 3, cost: "High", claims: false,
+      role: "Long-range waterways patrol.", atk: { sump: 4, boat: 3 },
+      traits: ["Finds Sump-runners over a wide area"], strong: "Runner-hunting far from the flotilla.", weak: "Interceptors; Hedgehogs." },
+    { id: "phantom", name: "Ghost AV", branch: "air", hitAs: "sky", line: "rear", tier: 3, reach: 2, speed: 5, tough: 2, cost: "Very high", claims: false,
+      role: "Cloaked strike aerodyne.", atk: { meat: 3, frame: 4, sky: 2, boat: 2 },
+      traits: ["Invisible until it fires", "Crossing borders isn't an act of war"], strong: "Hitting pads and fabs unseen.", weak: "Late Aegis domes and Overwatch." },
+
+    { id: "skiff", name: "Canal Skiff", branch: "canal", hitAs: "boat", line: "front", tier: 1, reach: 1, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Fast canal patrol boat.", atk: { boat: 2, sump: 2, meat: 1 },
+      traits: ["Strong in canals", "Dies in the Sump"], strong: "Canal patrol.", weak: "The Sump; anything bigger." },
+    { id: "hedgehog", name: "Hedgehog Barge", branch: "canal", hitAs: "boat", line: "middle", tier: 1, reach: 2, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Flat barge covered in shredder turrets.", atk: { sky: 5, alley: 3, micro: 4, mun: 5, boat: 1 },
+      traits: ["In a flotilla: fires on every aircraft and munition, no reload", "Barely hurts boats"], strong: "Making a flotilla nearly immune to air attack.", weak: "Boat fights; Sump-runners." },
+    { id: "hunterboat", name: "Hunter Boat", branch: "canal", hitAs: "boat", line: "front", tier: 1, reach: 2, speed: 4, tough: 4, cost: "Medium", claims: false,
+      role: "Escort with a sonar dome.", atk: { boat: 3, sump: 4, sky: 2, alley: 1 },
+      traits: ["Sonar finds Sump-runners", "Drops mines in the canals", "Late upgrade fires smart munitions"], strong: "Runner hunting; screening.", weak: "Gunboats." },
+    { id: "gunboat", name: "Gunboat", branch: "canal", hitAs: "boat", line: "middle", tier: 2, reach: 3, speed: 3, tough: 4, cost: "High", claims: false,
+      role: "Heavy armoured gunboat.", atk: { boat: 5, meat: 3, frame: 3 },
+      traits: ["Best bombardment of waterfront blocks", "Weak against runners and air alone"], strong: "Canal battles; shelling waterfronts.", weak: "Sump-runners; unescorted vs aircraft." },
+    { id: "carrier", name: "Carrier Barge", branch: "canal", hitAs: "boat", line: "rear", tier: 3, reach: 0, speed: 3, tough: 5, cost: "Very high", claims: false,
+      role: "Floating pad.", atk: { sky: 1 },
+      traits: ["Hosts naval AVs and all kites", "One per flotilla"], strong: "Air anywhere on the water.", weak: "Everything, once alone." },
+    { id: "runner", name: "Sump-Runner", branch: "canal", hitAs: "sump", line: "middle", tier: 2, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Attack submersible for the drowned metro.", atk: { boat: 5, sump: 4 },
+      traits: ["Invisible until it fires", "Half strength in shallow canals", "Can't hit the street"], strong: "Ferries and flotillas in the Sump.", weak: "Sonar kites, hunter boats; shallows." },
+    { id: "silo", name: "Silo Runner", branch: "canal", hitAs: "sump", line: "rear", tier: 3, reach: 3, speed: 3, tough: 3, cost: "Very high", claims: false,
+      role: "Submersible launcher.", atk: { boat: 1 },
+      traits: ["Launches orbital-spike designations from cover", "Very weak in shallows"], strong: "Hidden siege under an enemy block.", weak: "Any runner-hunter." },
+
+    { id: "smart", name: "Smart Munition", branch: "mun", hitAs: "mun", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Iridium", claims: false,
+      role: "Self-guiding missile.", atk: { meat: 3, frame: 4, boat: 4 },
+      traits: ["Tracks a moving detail", "Fired by Strikers, Gunships, hunter boats, gunboats, runners and launch trucks"], strong: "Killing a chosen detail or parked wing.", weak: "Shredders in the target." },
+    { id: "spike", name: "Orbital Spike", branch: "mun", hitAs: "mun", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Iridium", claims: false,
+      role: "Tungsten rod from a corp satellite.", atk: { meat: 4, frame: 3 },
+      traits: ["Hits Junctions only — never moving targets", "Wrecks facilities"], strong: "Pads, fabs, held Junctions.", weak: "Aegis domes; anything moving." },
+    { id: "plague", name: "Blackout Plague", branch: "mun", hitAs: "mun", line: "rear", tier: 3, reach: 3, speed: 5, tough: 1, cost: "Ruinous", claims: false,
+      role: "Nanite swarm that eats electronics and lungs.", atk: { meat: 5, frame: 5, boat: 4 },
+      traits: ["Hits friend and foe in a wide area", "Block uninhabitable for weeks", "Every block you own loses Compliance — the feeds never forget"], strong: "Ending a siege overnight.", weak: "Your own reputation." }
+  ],
+  synergies: [
+    { name: "Rhino & Shredder", units: ["rhino", "exo", "shredder"], why: "Rhinos break frames, Exo Security takes the point and kills crews, the shredder makes kite runs suicidal." },
+    { name: "Falcon over Striker", units: ["interceptor", "striker"], why: "The interceptor takes point and absorbs fire; strikers survive to launch." },
+    { name: "Escorted flotilla", units: ["hunterboat", "hedgehog", "gunboat"], why: "Hunter hears runners, Hedgehog eats aircraft and munitions, gunboat wins the fight." },
+    { name: "Mast & Missile Truck", units: ["mast", "missiletruck"], why: "Trucks out-range the street but need eyes. A mast or scout bike makes every salvo free." },
+    { name: "Three layers", units: ["shredder", "lance", "aegis"], why: "Shredder for alleys, lance for skyline, Aegis for munitions." },
+    { name: "Waterfront raid", units: ["canalrat", "hover", "gunboat"], why: "Gunboat shells the waterfront, Rats and haulers land anywhere, then the detail rolls in through the captured boathouse." },
+    { name: "Black-ops decapitation", units: ["ghost", "phantom", "spike"], why: "Ghosts and Ghost AVs find pads and fabs unseen; spikes remove them." },
+    { name: "Sonar kite & runner", units: ["sonarkite", "runner"], why: "Kites flush enemy runners from the canals; your runners wait in the Sump." }
+  ],
+  comps: [
+    { name: "Expressway Detail", mode: "FFA · Partnership", size: "Detail: 13 / 13", units: [["rhino", 3], ["exo", 3], ["howtruck", 2], ["shredder", 2], ["street", 3]],
+      idea: "Frames, a point, guns, point-defence, taggers.", play: "Fight on the expressway; leave a crew in every acquisition.", loses: "Hives; missile-truck kiting; Strikers without a grid near." },
+    { name: "Junction Hold", mode: "FFA", size: "Detail on Junction + trucks two districts back", units: [["railteam", 3], ["street", 4], ["shredder", 1], ["lance", 1], ["missiletruck", 3], ["mast", 1]],
+      idea: "Absorb on the Junction; kill from range.", play: "Defenders never move. Trucks pull in, fire, pull out.", loses: "Ghost operators; orbital spikes; Strikers on the trucks." },
+    { name: "Alley Hunt", mode: "FFA · Partnership", size: "Wing: 4 / 4", units: [["hunterkite", 2], ["gunkite", 2]],
+      idea: "Fly under the grid.", play: "Spotter bug first. Only hit details without shredders.", loses: "One shredder; a Hedgehog; interceptors on patrol." },
+    { name: "Hedgehog Flotilla", mode: "FFA · Partnership", size: "Flotilla: 5 / 5", units: [["hunterboat", 1], ["hedgehog", 1], ["gunboat", 2], ["skiff", 1]],
+      idea: "Sonar, shield, guns.", play: "Hold friendly canals; shell waterfronts.", loses: "Hunter lost → runners. Munitions faster than the Hedgehog can track." },
+    { name: "Rooftop Insertion", mode: "Partnership", size: "Two wings + rappel teams", units: [["rappel", 4], ["interceptor", 2], ["striker", 2]],
+      idea: "Take empty blocks while your partner pins the main detail.", play: "Strikers clear the roof, Falcons escort, rappel teams tag a cycle later.", loses: "Rooftop shredders." },
+    { name: "Sky Charter Endgame", mode: "FFA (late)", size: "Late war", units: [["overwatch", 1], ["interceptor", 3], ["gunship", 2], ["aegis", 1], ["railteam", 3], ["street", 4]],
+      idea: "Hold the street lightly, own the skyline, level their fabs.", play: "Falcons patrol under Overwatch; gunships hit fabs and pads.", loses: "An early Heavy rush." },
+    { name: "Iron & Umbrella", mode: "Partnership (2 charters)", size: "Split roles", units: [["rhino", 4], ["exo", 5], ["street", 4], ["interceptor", 4], ["lance", 2], ["shredder", 3]],
+      idea: "One charter fields the frames; the other fields only the air defence over them.", play: "Move together; the shredders travel inside the frame details.", loses: "One partner asleep. Trucks still hurt." },
+    { name: "Canal Landing", mode: "FFA · Partnership", size: "Flotilla + landing", units: [["gunboat", 2], ["hedgehog", 1], ["hunterboat", 2], ["canalrat", 6], ["hover", 3]],
+      idea: "Take the block they thought the canal protected.", play: "Flotilla shells, Rats land beside the boathouse, the detail follows.", loses: "Dock guns; runners; no Hedgehog." },
+    { name: "Swarm Grind", mode: "FFA", size: "Cheap", units: [["swarm", 6], ["spotter", 2], ["missiletruck", 3], ["street", 6]],
+      idea: "A poor holdout's war of bugs and rockets.", play: "Spotters find, swarms and trucks grind, crews tag the rest.", loses: "Anyone with shredders." },
+    { name: "Black Budget", mode: "FFA (late)", size: "Specialist", units: [["phantom", 2], ["ghost", 3], ["silo", 1], ["aegis", 1]],
+      idea: "Never fight the detail; bankrupt the company.", play: "Hit fabs, pads and boathouses every night; keep an Aegis at HQ.", loses: "A rival who wins the street first." }
+  ]
+};
+</script>
+<script src="../assets/world.js"></script>
+</body>
+</html>
