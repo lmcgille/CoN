@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thunderhide</title>
+<meta name="description" content="A primal war world: clans who ride great beasts fight for a volcanic coast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Alegreya:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root {
+    --accent: #7a3412; --accent-2: #c2601d; --display: "Rubik Dirt", Georgia, serif;
+    --bg: #f5efe6; --bg-2: #ebe1d2; --rule: #dacbb5;
+    --heat-1: #f4dfca; --heat-2: #ebbd95; --heat-3: #dc8f55; --heat-4: #c2601d; --heat-5: #7a3412;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #14100c; --bg-2: #1f1912; --panel: #241c14; --rule: #3e3123; --ink: #f3eadf; --ink-2: #d1c1ad; --ink-3: #9c8a74;
+    --accent: #ec8a46; --accent-2: #f3b07a; --accent-ink: #14100c;
+    --heat-1: #3a2416; --heat-2: #5f3519; --heat-3: #95501f; --heat-4: #ec8a46; --heat-5: #ffd2ab; --heat-ink-hi: #14100c;
+  } }
+  :root[data-theme="dark"] {
+    --bg: #14100c; --bg-2: #1f1912; --panel: #241c14; --rule: #3e3123; --ink: #f3eadf; --ink-2: #d1c1ad; --ink-3: #9c8a74;
+    --accent: #ec8a46; --accent-2: #f3b07a; --accent-ink: #14100c;
+    --heat-1: #3a2416; --heat-2: #5f3519; --heat-3: #95501f; --heat-4: #ec8a46; --heat-5: #ffd2ab; --heat-ink-hi: #14100c;
+  }
+  .hero h1 { font-weight: 400; letter-spacing: .01em; }
+  h2, h3 { font-weight: 400; }
+  .unit .u-name { font-weight: 400; }
+  .chron p, .chron blockquote { font-family: "Alegreya", Georgia, serif; font-size: 20px; }
+  .chron .refrain { font-style: italic; color: var(--accent-2); text-align: center; margin: 22px 0; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="#world">World</a><a href="#map-sec">Map</a><a href="#economy">Hearth</a><a href="#rules">Ways of war</a><a href="#classes-sec">Hit classes</a>
+    <a href="#bloods">Bloods</a><a href="#roster-sec">Beasts &amp; warriors</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
+    <a href="#comps-sec">War-herds</a><a href="#chronicle">The telling</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">World VIII · Primal</div>
+  <h1>Thunderhide</h1>
+  <p class="lede">On the Smoking Coast the great beasts never died out, and the people learned to ride them. When the fire-mountain woke and the old hunting grounds burned, six clans came down to the Grass-Lake country with their herds. There was not room for all of them.</p>
+  <div class="facts">
+    <span class="fact"><b>6</b> clans</span>
+    <span class="fact"><b>8</b> hit classes</span>
+    <span class="fact"><b data-count="units">&nbsp;</b> beasts &amp; warriors</span>
+    <span class="fact">War-herds of <b>15</b> · flocks of <b>6</b> · fleets of <b>4</b></span>
+    <span class="fact">A clash every <b>half-hand</b> of the sun</span>
+  </div>
+</div></div>
+
+<section id="world"><div class="wrap">
+  <h2>The world</h2>
+  <p class="sec-sub">A warm, volcanic coast where people ride the largest animals that ever lived.</p>
+  <div class="prose">
+    <p>The <b>Smoking Coast</b> curves around a warm sea under a ring of volcanoes. Its plains are grass; its valleys are fern-forest; its cliffs are full of rookeries where the great winged beasts nest. In the sea live things longer than any boat.</p>
+    <p>The clans of the coast are herders and riders. Each clan holds a <b>great camp</b> — its capital — some <b>villages</b> and the <b>range</b> between them. They raise beasts from eggs, bind them with songs and salt, and ride them to war. When the fire-mountain Ash-Mother woke last spring and buried the northern ranges, the clans came south, and the war began.</p>
+    <p>Victory is <b>Standing</b>: at each full moon, the elders of all clans meet at the Speaking Stone and count which clan or clan-bond holds the most villages, range and the three <b>Sacred Places</b> — the Hot Springs, the Bone Field and the Speaking Stone itself.</p>
+  </div>
+  <h3>Country</h3>
+  <div class="grid g3">
+    <div class="card"><h4>The Grass Plains</h4><p class="small">Open grass to the horizon. The big horned beasts charge at full strength; warriors on foot are trampled.</p></div>
+    <div class="card"><h4>Villages</h4><p class="small">Stockades, longhouses and narrow lanes. Big beasts cannot turn; warriors dug in behind the stakes are hard to shift.</p></div>
+    <div class="card"><h4>The Fire Hills</h4><p class="small">Broken lava country. Cliff-Climbers move easily; beasts break legs.</p></div>
+    <div class="card"><h4>The Fern Valleys</h4><p class="small">Dense, wet, dark. Slow for all, murderous for the great beasts.</p></div>
+    <div class="card"><h4>The Reef Lagoons</h4><p class="small">Warm shallow water inside the reef. Canoes are quick; the great sea-hunters are cramped and easily seen.</p></div>
+    <div class="card"><h4>The Blue Deep</h4><p class="small">Outside the reef. Mosasaurs rule; small boats are swamped.</p></div>
+  </div>
+  <h3>The clans (rename freely)</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Clan</th><th>Leader</th><th>Blood</th><th>Way</th></tr></thead>
+    <tbody>
+      <tr><td>The Redclaw Clans</td><td>Chieftain Kesra Bloodfern</td><td>Earth-blood</td><td>Horned titans broken to the saddle in the first moon; few flyers; hungry for land</td></tr>
+      <tr><td>The Cloud-Cliff People</td><td>Elder-Speaker Anwe</td><td>Sky-blood</td><td>Patient, rich in rookeries, masters of winged beasts</td></tr>
+      <tr><td>The Reef Folk</td><td>Tide-Mother Ollo</td><td>Sea-blood</td><td>Canoe fleets, sea-beasts, and the lagoons</td></tr>
+      <tr><td>The Grass-Lake Tribes</td><td>Old Hunter Tamsa</td><td>Earth-blood</td><td>Own the best grazing; few warriors</td></tr>
+      <tr><td>The Ember Hill Kin</td><td>Smith-Woman Dura</td><td>Sky-blood</td><td>Small, fierce, hold the Hot Springs</td></tr>
+      <tr><td>The Shell-Traders</td><td>Grandfather Coyle</td><td>Sea-blood</td><td>Rich in shell-money; hire outcasts to fight</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="map-sec"><div class="wrap">
+  <h2>War map</h2>
+  <p class="sec-sub">The Grass-Lake country and the Smoking Coast at the start of the Grass War.</p>
+  <div id="map"></div>
+</div></section>
+
+<section id="economy"><div class="wrap">
+  <h2>The hearth</h2>
+  <p class="sec-sub">What a clan gathers, what its herds eat, and why taken villages break the bond.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Store</th><th>Comes from</th><th>Feeds</th></tr></thead>
+    <tbody>
+      <tr><td><b>Forage</b></td><td>Grazing range, fishing, gathering</td><td>Every warrior, every villager, every beast. Big herds eat more than anything else in the world.</td></tr>
+      <tr><td><b>Stone &amp; Bone</b></td><td>Quarries, bone fields</td><td>Weapons, armour, saddles, canoes, stockades</td></tr>
+      <tr><td><b>Sinew</b></td><td>Hunting, tanning</td><td>Bows, slings, nets, bindings for war-beasts, most longhouses</td></tr>
+      <tr><td><b>Thunderstone</b></td><td>Sky-iron from old meteor falls — rare and holy</td><td>All new knowledge, night-gliders, sea-beasts, fire-spears</td></tr>
+      <tr><td><b>Kin</b></td><td>People</td><td>Every warrior and rider. Cannot be traded.</td></tr>
+      <tr><td><b>Shell</b></td><td>Trade, tribute</td><td>Everything; longhouse upkeep; the only thing the coastal traders take</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>A herd is a mouth.</b> Every beast and warrior eats a share of what it cost, every day. A chieftain who breaks a great herd in the first moon is short of forage by the third — and hungry villages lose <b>Kinship</b>, which makes every village gather less.</div>
+  <h3>Villages and range</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Home villages</h4><p class="small">Full gathering. The great camp strengthens Kinship nearby.</p></div>
+    <div class="card"><h4>Taken villages</h4><p class="small">A quarter gathering; Kinship near nothing. These break the bond.</p></div>
+    <div class="card"><h4>Adopted villages</h4><p class="small">Taken villages brought in by an Adoption feast (costs Kin). Half gathering; can raise warriors.</p></div>
+    <div class="card"><h4>Range</h4><p class="small">Open country. Little gathered unless you set up a camp on it. Range never rebels.</p></div>
+  </div>
+  <h3>Kinship and the Lost</h3>
+  <div class="prose">
+    <p>Every village and range has <b>Kinship</b> — how strongly its people feel they belong to you. It drifts each dawn toward what they feel: how far your great camp is, how many feuds you are in, enemies on the range, hunger, burning, and whisperers sent by other clans. Feasting halls and peaceful neighbours raise it.</p>
+    <p>A taken village below a third Kinship may <b>break the bond</b>. Fresh conquests sit at a quarter. Once a day, at a time no one can say, the bond holds or snaps. If none of your warriors stand by its fire-circle, the village simply joins <b>the Lost</b>, clanless bands who answer to nobody and raid where they like. One band of your warriors at the fire usually ends it.</p>
+  </div>
+  <h3>Works</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Work</th><th>Where</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr><td>Longhouse of Hands</td><td>Village</td><td>+10% to every store per longhouse, and shell each day. Always raised first.</td></tr>
+      <tr><td>Range Camp</td><td>Range</td><td>Works the range's resource.</td></tr>
+      <tr><td>Warrior Lodge</td><td>Village</td><td>Trains warriors.</td></tr>
+      <tr><td>Breaking Pen</td><td>Village</td><td>Breaks great beasts to the saddle.</td></tr>
+      <tr><td>Rookery Cliff</td><td>Village</td><td>Every winged beast hatches, nests and rests at a rookery and must fly home to it. Burn the rookery and its flock is grounded.</td></tr>
+      <tr><td>Perch Stone</td><td>Range</td><td>A forward perch.</td></tr>
+      <tr><td>Canoe Beach</td><td>Shore village</td><td>Builds boats; warriors board here.</td></tr>
+      <tr><td>Stake Wall</td><td>Range</td><td>Fortifies a range's fire-circle.</td></tr>
+      <tr><td>Cave Refuge</td><td>Village</td><td>Shelters the people; hardens defenders.</td></tr>
+      <tr><td>Healing Lodge</td><td>Village / range</td><td>Faster healing.</td></tr>
+      <tr><td>Beaten Trail</td><td>Range</td><td>Much faster travel — for anyone.</td></tr>
+      <tr><td>Story Lodge</td><td>Village</td><td>New knowledge.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>Ways of war</h2>
+  <div class="grid g2">
+    <div class="card"><h4>Clashes</h4><p class="small">The first clash comes when war-herds meet; another every half-hand of the sun (half an hour). Each blow uses its strength against the target's <b>hit class</b>. A bone-breaker's ram shatters a horned beast and barely touches a warrior.</p></div>
+    <div class="card"><h4>The fire-circle</h4><p class="small">Every village and range has a <b>fire-circle</b>. A war-herd standing in it is dug in: it takes far less harm and does not strike back. A herd beside it, not in it, trades blows every clash.</p></div>
+    <div class="card"><h4>Herds, flocks, fleets</h4><p class="small">A <b>war-herd</b> fights at full fury up to <b>15</b>, a <b>flock</b> up to <b>6</b>, a <b>fleet</b> up to <b>4</b>. More than that and newcomers add less, then nothing, then trample their own side. A herd moves at its slowest member's pace.</p></div>
+    <div class="card"><h4>Horn, flank, tail</h4><p class="small">Blows land mostly on a herd's <b>horn</b>, less on its <b>flank</b>, least on its <b>tail</b>. What a beast or warrior is decides where it goes.</p></div>
+    <div class="card"><h4>Throwing range</h4><p class="small">Stone-throwers, spitter-beasts and turtle-ships strike from afar. A target that can't reach back can't strike back. Throw, fall back, wait out the half-hand, throw again.</p></div>
+    <div class="card"><h4>Raising the totem</h4><p class="small">A village or range is yours only when <b>totem-raising</b> warriors stand in its fire-circle. Beasts, flyers, boats, stalkers and outcasts can win the fight but raise nothing.</p></div>
+    <div class="card"><h4>High sky and low sky</h4><p class="small">Sky-lords and fire-wings soar <b>high</b>, where harpoon ballistae can track them. Dart-wings and hook-beaks fly <b>low</b>, weaving through the treetops, too fast and too low for a ballista crew to follow. Only slingers, sling-rafts and sky-lords can bring them down.</p></div>
+    <div class="card"><h4>In the herd or beside it</h4><p class="small">Slingers <b>in</b> the attacked herd sling at every flyer and every fire-spear, without tiring. Slingers merely <b>beside</b> it must gather stones between volleys — send enough at once and some get through.</p></div>
+    <div class="card"><h4>Seeing and hiding</h4><p class="small">Nearby herds are seen; distant ones are only dust until a scout names them. Drum-hill watchers and cloud-seers see far. <b>Hidden</b> things — stalkers, night-gliders, mosasaurs — cannot be seen until they strike or something that hunts their kind comes near.</p></div>
+    <div class="card"><h4>Lagoon and Deep</h4><p class="small">Canoes love the lagoons and drown in the Deep. Mosasaurs are the reverse.</p></div>
+    <div class="card"><h4>War-canoes</h4><p class="small">Warriors crossing water ride war-canoes boarded at a canoe beach. Canoes cannot fight; boarding and landing leave warriors helpless for a while. Canoe-Raiders and swamp-wallowers cross on their own.</p></div>
+    <div class="card"><h4>The rookery</h4><p class="small">Flyers go out from a home rookery and return to rest. A resting flyer is prey. Burn the rookery and its flock is stuck on the ground.</p></div>
+  </div>
+</div></section>
+
+<section id="classes-sec"><div class="wrap">
+  <h2>Hit classes</h2>
+  <div id="classes"></div>
+</div></section>
+
+<section id="bloods"><div class="wrap">
+  <h2>The three bloods</h2>
+  <p class="sec-sub">Every clan is born to one of the three bloods. Same kinds of beasts and warriors; different breeds and different seasons.</p>
+  <div class="grid g3">
+    <div class="card"><h4>Earth-blood</h4><p class="small"><b>Cheap, early, ground-bound.</b> Horned titans and fire-pot slingers in the first moon. Smaller, thinner-hided breeds and few flyers, so Earth-blood clans trust harpoon ballistae against the sky — and ballistae cannot follow a low flyer.</p><p class="small"><span class="tag good">Early titans</span><span class="tag good">Cheap losses</span><span class="tag bad">Few flyers</span></p></div>
+    <div class="card"><h4>Sky-blood</h4><p class="small"><b>Costly, tough, slow, masters of the sky.</b> Sky-lords, hook-beaks, cloud-seers and wind-callers come early and come strong.</p><p class="small"><span class="tag good">Flyers &amp; far-sight</span><span class="tag good">Thick hides</span><span class="tag bad">Slow start</span></p></div>
+    <div class="card"><h4>Sea-blood</h4><p class="small"><b>Balanced, sea-minded.</b> Fire-wings in the first moon and the best early fleets.</p><p class="small"><span class="tag good">Early fire-wings</span><span class="tag good">Fleets</span><span class="tag bad">No crushing edge</span></p></div>
+  </div>
+</div></section>
+
+<section id="roster-sec"><div class="wrap">
+  <h2>Beasts &amp; warriors</h2>
+  <p class="sec-sub">Strength 0–5 against each hit class.</p>
+  <div class="filters" id="roster-filters"></div>
+  <div class="roster" id="roster"></div>
+</div></section>
+
+<section id="matrix-sec"><div class="wrap">
+  <h2>Counter matrix</h2>
+  <div id="matrix"></div>
+</div></section>
+
+<section id="synergy-sec"><div class="wrap">
+  <h2>Synergies</h2>
+  <div class="grid g2" id="synergies"></div>
+</div></section>
+
+<section id="comps-sec"><div class="wrap">
+  <h2>War-herds</h2>
+  <div class="grid g2" id="comps"></div>
+</div></section>
+
+<section id="chronicle"><div class="wrap">
+  <h2>The telling: How the Redclaws Lost the Grass</h2>
+  <p class="sec-sub">As the Reef Folk tell it to their children, with the Cloud-Cliff verses kept in.</p>
+  <div class="chron">
+    <p class="refrain">Sit close. Feed the fire. This is the telling of the Grass War.</p>
+
+    <h3><span class="when">The first moon</span>Two ways to start a war</h3>
+    <p>When the Ash-Mother woke, Kesra Bloodfern of the Redclaws did not mourn. She built longhouses, because a chief who does not build longhouses is soon a chief of nothing. And then she went to the breaking pens. By the end of the first moon she had three horned titans broken to the saddle — beasts as tall as four longhouses, with horns like felled trees — and behind them her spear-clans and her spitter-beasts, and she pointed all of it at the Grass-Lake country.</p>
+    <p>Anwe of the Cloud-Cliff People broke no beasts at all. She built longhouses and a story lodge, and she made the rookery cliffs bigger, and her young warriors went to her and said: Speaker, the Redclaws have titans. And Anwe said: then the rookery is not big enough yet.</p>
+    <p>Down in the lagoons, Tide-Mother Ollo lashed together two new rafts. One carried a plesiosaur-drawn hunter boat. The other was only a wide raft of logs, crowded edge to edge with slingers, every one of them with a bag of round stones. She anchored both inside her own reef.</p>
+
+    <h3><span class="when">The second moon</span>The Grass</h3>
+    <p>The Grass Plains are the titans' country. Old Hunter Tamsa's people stood in the open grass, because that is where their herds were, and the titans went through them like wind through barley. In five days Kesra raised her totem in four Grass-Lake villages. And each time, the titans went on. Each time, the spear-clans followed the titans. No warrior stayed by any of the four fires.</p>
+
+    <h3><span class="when">The ninth day</span>Out of the trees</h3>
+    <p>Then Anwe's rookery opened. Out flew six hook-beaks — small winged beasts with claws that can tear through hide a hand thick. They did not climb into the high sky, where the Redclaw harpoon ballistae were waiting. They flew <i>down</i>, into the Fern Valleys, and along the river under the treetops.</p>
+    <p>Kesra's lead war-herd — three titans and two spitter-beasts, and no one else — was drinking at the river ford. Two great harpoon ballistae stood on a rise behind them, their crews watching the sky. They watched it all afternoon. The sky was empty. The hook-beaks came out of the ferns at the height of a man's head, and the crews never got a harpoon near them.</p>
+    <p>A titan cannot look up. Its neck frill is too heavy. The hook-beaks landed on the titans' backs and tore. Every half-hand they rose into the trees and came again. By sundown there were three great shapes lying in the river, and the ballista crews were still swearing the sky had been empty.</p>
+    <p class="refrain">The sky was empty, they said. The sky was empty.</p>
+
+    <h3><span class="when">The third moon</span>More harpoons</h3>
+    <p>Kesra's answer was more ballistae — eight more — and wind-callers on the hill of her great camp, the most costly thing an Earth-blood clan can raise. None of them could see a low flyer. The hook-beaks came again, and again. One band of slingers walking with each war-herd would have filled the air with stones and knocked the hook-beaks out of it. Earth-blood warriors think slings are for children minding goats.</p>
+    <p>That moon Anwe and Ollo cut their palms and pressed them together at the Speaking Stone. Their Standing would be counted as one.</p>
+
+    <h3><span class="when">The fourth moon</span>The sling-raft</h3>
+    <p>Kesra had a few flyers: six fire-wings, bought from the Reef Folk long before the war, that drop burning pots of pitch. Her scouts found Ollo's fleet anchored in the lagoon: the plesiosaur hunter-boat, a great turtle-ship — a sea-turtle bigger than a longhouse with a war-platform on its back, the most terrible thing in the lagoon and helpless against anything from above — and the raft of logs, which the scouts did not even count as a boat.</p>
+    <p>The raft was tied in among them. When the fire-wings came down on the turtle-ship, every slinger on that raft let fly at every fire-wing, and again, and again, without ever stopping to gather stones. The air over the lagoon was full of stones. Two fire-wings reached the turtle. One flew home.</p>
+    <p class="refrain">Six fire-wings went out. One came home. They were killed by a raft of logs.</p>
+
+    <h3><span class="when">The fifth moon</span>The bond breaks</h3>
+    <p>The four Grass-Lake villages had been sullen since the Redclaws took them, far from Kesra's great camp, hungry, and with no Redclaw warrior by any fire. On one night, two of them broke the bond. There was no one to stop it. By morning their people had joined the Lost, and soon a Lost war-band was raiding the trail that fed Kesra's front.</p>
+
+    <h3><span class="when">The sixth moon</span>The siege of Cloud-Foot</h3>
+    <p>Kesra gathered everything she had left — twenty-eight beasts and bands, nearly twice what any war-chief can hold together — and drove it at Cloud-Foot, the Cloud-Cliff village under the rookeries. It moved like a landslide. It fought like a herd in a panic, half of it trampling the other half.</p>
+    <p>Anwe put bone-breakers and spear-clans in Cloud-Foot's fire-circle, where they stood and endured. Two ranges back, she set three fire-pot slinger crews. Every half-hand they ran forward, hurled burning pots into the great herd from beyond its reach, and ran back before it could close. Not one of them was caught. The herd reached Cloud-Foot burned and slow, and broke itself on warriors who barely bled.</p>
+
+    <h3><span class="when">The seventh moon</span>The Blue Deep</h3>
+    <p>For a second front Kesra put two war-bands into war-canoes and sent them straight across the Blue Deep to come at the Reef Folk from the south. Her own hunter-boats were not finished. The canoes went alone. Two of Ollo's mosasaurs had been lying deep for nine days, waiting for exactly that. Canoes do not fight. The Blue Deep was very calm afterwards.</p>
+
+    <h3><span class="when">The eighth moon</span>The rookeries burn</h3>
+    <p>The last of it was fire-spears — spears that a bound spirit-bird carries to the place you name — falling on both Redclaw rookeries in one night. Every flyer Kesra had raised since the fourth moon was resting there. With no flyers, and ballistae that still could not see a hook-beak, the last Redclaw herds were hunted across the Grass. At the full moon the elders counted, and the Cloud-Cliff and the Reef together stood above the Redclaws, and the Grass War was done.</p>
+    <p class="refrain">And that is why your mother makes you carry a sling.</p>
+
+    <div class="postmortem">
+      <h3>What the elders said</h3>
+      <ol>
+        <li><b>Titans without slingers.</b> A titan cannot look up. One band of slingers per herd was all it needed.</li>
+        <li><b>Harpoons against low flyers.</b> She raised the most costly defence there is, aimed at the wrong sky.</li>
+        <li><b>Fire-wings against the sling-raft.</b> Slingers in a fleet sling at every attacker, every clash. The least of the boats was the deadliest.</li>
+        <li><b>Empty fire-circles.</b> Taken villages at a quarter Kinship, with no warriors, broke the bond behind her.</li>
+        <li><b>The twenty-eight herd.</b> Too big to fight well, too slow to catch the fire-pots.</li>
+        <li><b>Charging a held fire-circle.</b> Warriors who do not strike back barely bleed.</li>
+        <li><b>Canoes across the Deep, alone.</b> That is what mosasaurs wait for.</li>
+        <li><b>Flyers resting where fire-spears can reach.</b> A grounded flock is meat.</li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · Thunderhide · An original setting. <a href="../index.html">All worlds</a></div></footer>
+
+<script>
+window.WORLD = {
+  map: {
+ "w": 1000,
+ "h": 620,
+ "link": 150,
+ "terrain": {
+  "flats": [
+   "Grass plains",
+   "#c9c27a"
+  ],
+  "urban": [
+   "Village",
+   "#a07b52"
+  ],
+  "farm": [
+   "Range",
+   "#9dbd68"
+  ],
+  "high": [
+   "Fire hills",
+   "#7a5f50"
+  ],
+  "jungle": [
+   "Fern valley",
+   "#2f6b3c"
+  ],
+  "shallow": [
+   "Reef lagoon",
+   "#7cc8c8"
+  ],
+  "deep": [
+   "Blue Deep",
+   "#24476e"
+  ]
+ },
+ "owners": {
+  "A": [
+   "Redclaw Clans",
+   "#c0392b"
+  ],
+  "B": [
+   "Cloud-Cliff People",
+   "#2f6fb5"
+  ],
+  "C": [
+   "Reef Folk",
+   "#1a9a86"
+  ],
+  "V": [
+   "Grass-Lake Tribes",
+   "#c9962a"
+  ],
+  "mb": [
+   "Ember Hill Kin",
+   "#8e5bb5"
+  ],
+  "mc": [
+   "Shell-Traders",
+   "#5e6b80"
+  ]
+ },
+ "nodes": [
+  "nb|876|107|urban|mb|Ember Hill|C",
+  "site1|916|240|farm|mb|Hot Springs|s",
+  "bcap|844|228|urban|B|Cloud-Cliff|C",
+  "bfort|694|238|urban|B|Cloud-Foot|c",
+  "bfarm|800|333|farm|B||",
+  "mtn1|684|82|high||Fire Hills|L",
+  "mtn2|447|76|high|||",
+  "flats1|543|240|flats||The Grass|L",
+  "flats2|473|300|flats|V||",
+  "jungle|616|371|jungle||Fern Valley|L",
+  "v1|478|162|urban|V|Reedwater|c",
+  "vcap|367|208|urban|V|Grass-Lake|C",
+  "vsite|383|323|flats|V|River ford|s",
+  "v3|253|318|urban|V|Long Meadow|c",
+  "v4|289|142|urban|V|Tallgrass|c",
+  "aw|198|241|flats|A||",
+  "acap|96|209|urban|A|Redclaw camp|C",
+  "as|159|347|farm|A||",
+  "adock|128|429|urban|A|Redclaw beach|c",
+  "ccap|666|468|urban|C|Reef Folk|C",
+  "ce|566|439|farm|C||",
+  "site2|425|436|farm||Bone Field|s",
+  "nc|847|478|urban|mc|Shell-Traders|C",
+  "anch|687|566|shallow||Reef lagoon|wL",
+  "lagw|855|574|shallow||Trader lagoon|wL",
+  "lage|535|564|shallow|||w",
+  "deep1|331|575|deep||Blue Deep|wL",
+  "deep2|156|553|deep|||w"
+ ],
+ "extraLinks": [
+  [
+   "deep1",
+   "lage"
+  ]
+ ],
+ "moves": [
+  {
+   "n": 1,
+   "from": "aw",
+   "to": "vcap",
+   "kind": "attack",
+   "text": "Second moon — horned titans trample the Grass-Lake warriors and raise totems in four villages. No warrior stays by any fire."
+  },
+  {
+   "n": 2,
+   "from": "bcap",
+   "to": "vsite",
+   "kind": "air",
+   "text": "Ninth day — hook-beaks fly the Fern Valley under the treetops and tear apart the titans at the river ford."
+  },
+  {
+   "n": 3,
+   "from": "acap",
+   "to": "anch",
+   "kind": "strike",
+   "bend": 0.12,
+   "text": "Fourth moon — fire-wings dive on the Reef Folk fleet in the lagoon. The sling-raft knocks them out of the sky."
+  },
+  {
+   "n": 4,
+   "from": "v1",
+   "to": "v1",
+   "kind": "revolt",
+   "text": "Fifth moon — Reedwater and Long Meadow, with no Redclaw warriors, break the bond."
+  },
+  {
+   "n": 4,
+   "from": "v3",
+   "to": "v3",
+   "kind": "revolt",
+   "text": ""
+  },
+  {
+   "n": 5,
+   "from": "v3",
+   "to": "bfort",
+   "kind": "attack",
+   "text": "Sixth moon — a twenty-eight-strong herd drives at Cloud-Foot under fire-pots and breaks on the held fire-circle."
+  },
+  {
+   "n": 6,
+   "from": "adock",
+   "to": "deep1",
+   "kind": "sea",
+   "text": "Seventh moon — war-canoes cross the Blue Deep alone. The mosasaurs take them."
+  },
+  {
+   "n": 7,
+   "from": "bcap",
+   "to": "acap",
+   "kind": "strike",
+   "bend": 0.32,
+   "text": "Eighth moon — fire-spears burn both Redclaw rookeries in one night."
+  }
+ ]
+},
+  lines: { front: "Horn", middle: "Flank", rear: "Tail" },
+  tiers: ["First moon", "Mid-war", "Late war"],
+  reach: ["Spear", "Sling", "Throw", "Far throw"],
+  classes: [
+    { id: "skin", name: "Bare skin", short: "Skin", desc: "Warriors, crews and small unarmoured beasts." },
+    { id: "hide", name: "Thick hide", short: "Hide", desc: "Great horned, armoured and heavy beasts, and the beast-drawn engines." },
+    { id: "high", name: "High sky", short: "High", desc: "Soaring winged beasts — tracked by harpoon ballistae." },
+    { id: "low", name: "Low sky", short: "Low", desc: "Fast winged beasts weaving through the treetops. Too low for ballistae." },
+    { id: "swarm", name: "Swarm", short: "Swarm", desc: "Biting-fly clouds and scout birds." },
+    { id: "boat", name: "Boat", short: "Boat", desc: "Canoes, rafts and beast-drawn boats." },
+    { id: "deep", name: "Deep", short: "Deep", desc: "Mosasaurs and other hunters beneath the water. Struck only once seen." },
+    { id: "spear", name: "Fire-spear", short: "Spear", desc: "Incoming fire-spears and sky-stones. Can be knocked down." }
+  ],
+  branches: [
+    { id: "war", name: "Warriors" }, { id: "beast", name: "Great beasts" }, { id: "throw", name: "Throwers & watchers" },
+    { id: "wing", name: "Winged" }, { id: "sea", name: "Water" }, { id: "spear", name: "Fire-spears" }
+  ],
+  units: [
+    { id: "spear", name: "Spear-Clan", branch: "war", hitAs: "skin", line: "rear", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Low", claims: true,
+      role: "Ordinary warriors. Raise totems; hold fire-circles.", atk: { skin: 2, hide: 1, low: 1, swarm: 1 },
+      traits: ["Can ride a winged beast between friendly rookeries from the start"], strong: "Holding villages; numbers.", weak: "Titans, stone-throwers, dart-wings." },
+    { id: "boneshield", name: "Bone-Shield Bearers", branch: "war", hitAs: "skin", line: "front", tier: 1, reach: 0, speed: 2, tough: 3, cost: "Medium", claims: true,
+      role: "Big warriors with bone shields and heavy axes.", atk: { skin: 3, hide: 3, swarm: 1 },
+      traits: ["Horn of the herd — takes the blows", "Slowed in fern valleys and fire hills"], strong: "Guarding the herd; hacking hide up close.", weak: "Dart-wings; throwers." },
+    { id: "canoeraider", name: "Canoe-Raiders", branch: "war", hitAs: "skin", line: "middle", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: true,
+      role: "Warriors who paddle their own canoes.", atk: { skin: 3, hide: 2, low: 1 },
+      traits: ["Land on any shore — no canoe beach needed", "Can take islands"], strong: "Raids from the water.", weak: "Titans once ashore." },
+    { id: "glider", name: "Glider-Warriors", branch: "war", hitAs: "skin", line: "middle", tier: 2, reach: 0, speed: 4, tough: 2, cost: "Medium", claims: true,
+      role: "Warriors dropped from the backs of great flyers.", atk: { skin: 3, hide: 1 },
+      traits: ["Drop anywhere in reach of a friendly rookery or perch", "First clash on landing counts as Low sky", "Need a half-hand to gather before raising a totem"], strong: "Taking empty villages behind the fighting.", weak: "Slingers at the landing; a quick counter-charge." },
+    { id: "stalker", name: "Fern Stalkers", branch: "war", hitAs: "skin", line: "rear", tier: 2, reach: 0, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Painted hunters who cannot be seen.", atk: { skin: 4, hide: 2 },
+      traits: ["Unseen on land until they strike", "See other hidden hunters", "Ignore stake walls and cave refuges"], strong: "Killing thrower crews; opening fire-circles.", weak: "Cannot raise a totem. Raptor riders find them." },
+    { id: "kin", name: "Village Kin", branch: "war", hitAs: "skin", line: "middle", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Very low", claims: true,
+      role: "Everyone who can hold a spear.", atk: { skin: 1, hide: 1 },
+      traits: ["Strength follows the village's Kinship", "Slow on foreign range"], strong: "Filling an empty fire-circle.", weak: "Any attack." },
+    { id: "outcast", name: "Outcasts", branch: "war", hitAs: "skin", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Shell only", claims: false,
+      role: "Clanless fighters paid in shell.", atk: { skin: 3, hide: 2, low: 1 },
+      traits: ["Cost no Kin", "Belong to no clan — cannot raise a totem"], strong: "A rich clan's horn.", weak: "Never takes ground." },
+    { id: "climber", name: "Cliff-Climbers", branch: "war", hitAs: "skin", line: "rear", tier: 2, reach: 0, speed: 2, tough: 2, cost: "Medium", claims: true,
+      role: "Fire-hill warriors.", atk: { skin: 3, hide: 1 },
+      traits: ["Strong in the fire hills", "Weak on the grass"], strong: "Holding passes.", weak: "Open plains." },
+
+    { id: "raptor", name: "Raptor Riders", branch: "beast", hitAs: "hide", line: "rear", tier: 1, reach: 0, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Fast scouts on running beasts.", atk: { skin: 2, hide: 1 },
+      traits: ["Name the herds behind the dust", "Smell out hidden hunters", "Hurry their herd on foreign range"], strong: "Scouting; hunting stalkers.", weak: "Any real fight." },
+    { id: "hornback", name: "Horn-Back", branch: "beast", hitAs: "hide", line: "front", tier: 1, reach: 0, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Mid-sized horned beast with riders.", atk: { skin: 3, hide: 2, low: 1, swarm: 1 },
+      traits: ["Handles most country"], strong: "Scattering warriors.", weak: "Bone-breakers; hook-beaks." },
+    { id: "titan", name: "Horned Titan", branch: "beast", hitAs: "hide", line: "front", tier: 1, reach: 0, speed: 3, tough: 5, cost: "High", claims: false,
+      role: "The largest war-beast on the coast.", atk: { skin: 3, hide: 4 },
+      traits: ["Unstoppable on the grass", "Useless in villages, valleys and hills", "Cannot look up — no defence from the sky"], strong: "Open battle; taking blows.", weak: "Hook-beaks. Villages. Bone-breakers." },
+    { id: "bonebreaker", name: "Bone-Breaker", branch: "beast", hitAs: "hide", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Dome-skulled ramming beast.", atk: { skin: 1, hide: 5 },
+      traits: ["The best thick-hided defender of a village"], strong: "Breaking titans; holding villages.", weak: "Warrior swarms; dart-wings; throwers." },
+    { id: "wallower", name: "Swamp-Wallower", branch: "beast", hitAs: "hide", line: "middle", tier: 2, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Duck-billed beast that swims.", atk: { skin: 2, hide: 2 },
+      traits: ["Crosses water on its own"], strong: "Backing canoe-raiders ashore.", weak: "Titans." },
+
+    { id: "slingers", name: "Slingers", branch: "throw", hitAs: "skin", line: "middle", tier: 1, reach: 1, speed: 3, tough: 2, cost: "Low", claims: false,
+      role: "Warriors with slings and bolas.", atk: { skin: 1, high: 2, low: 5, swarm: 5, spear: 2 },
+      traits: ["Hit low flyers", "In a herd: sling at every attacker, every clash"], strong: "Dart-wings, hook-beaks, fly swarms. The cheapest life-saver on the coast.", weak: "A charge; high flyers." },
+    { id: "ballista", name: "Harpoon Ballista", branch: "throw", hitAs: "hide", line: "rear", tier: 1, reach: 2, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Great bone ballista hauled by a beast.", atk: { high: 4, swarm: 1, spear: 3 },
+      traits: ["Tracks high flyers from afar", "Cannot follow low flyers"], strong: "Sky-lords, fire-wings, fire-spears.", weak: "Low flyers — blind to them." },
+    { id: "windcaller", name: "Wind-Callers", branch: "throw", hitAs: "hide", line: "rear", tier: 2, reach: 3, speed: 1, tough: 3, cost: "High", claims: false,
+      role: "Shamans who turn the wind over a whole country.", atk: { high: 3, spear: 5 },
+      traits: ["Turn aside fire-spears and sky-stones at great distance", "Later learn to see night-gliders", "Cannot touch low flyers"], strong: "Guarding the great camp.", weak: "Low flyers; many spears at once; raids." },
+    { id: "stonethrower", name: "Stone-Thrower Crew", branch: "throw", hitAs: "skin", line: "rear", tier: 1, reach: 2, speed: 1, tough: 1, cost: "Low", claims: false,
+      role: "A crew with a great sling-engine.", atk: { skin: 4, hide: 2 },
+      traits: ["Strikes from range", "Slow"], strong: "Softening a held fire-circle.", weak: "Anything that reaches it." },
+    { id: "spitter", name: "Spitter-Beast", branch: "throw", hitAs: "hide", line: "middle", tier: 1, reach: 2, speed: 2, tough: 3, cost: "Medium", claims: false,
+      role: "Crested beast that spits burning venom.", atk: { skin: 3, hide: 3 },
+      traits: ["Strikes from range", "Keeps up with titans"], strong: "A titan herd's long arm.", weak: "Hook-beaks; fire-wings." },
+    { id: "firepot", name: "Fire-Pot Slingers", branch: "throw", hitAs: "hide", line: "middle", tier: 1, reach: 3, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Fast crews hurling burning pitch pots from beast-slings.", atk: { skin: 4, hide: 3, boat: 1 },
+      traits: ["Greatest reach of any land band", "Burns an area"], strong: "Harrying slow herds.", weak: "Flyers; being caught from two sides." },
+    { id: "drumhill", name: "Drum-Hill Watchers", branch: "throw", hitAs: "hide", line: "rear", tier: 1, reach: 0, speed: 2, tough: 1, cost: "Low", claims: false,
+      role: "Lookouts who drum news across the range.", atk: {},
+      traits: ["See distant herds and high flyers; low flyers only when close"], strong: "Warning.", weak: "Cannot fight." },
+    { id: "boulder", name: "Cliff Boulder-Rollers", branch: "throw", hitAs: "hide", line: "rear", tier: 1, reach: 2, speed: 1, tough: 3, cost: "Low", claims: false,
+      role: "Crews who roll boulders onto boats from sea cliffs.", atk: { boat: 4, skin: 1 },
+      traits: ["No new knowledge needed", "Cannot move"], strong: "Boats near your shore.", weak: "Flyers; fire-spears; landings." },
+
+    { id: "skylord", name: "Sky-Lord", branch: "wing", hitAs: "high", line: "front", tier: 1, reach: 2, speed: 5, tough: 3, cost: "High", claims: false,
+      role: "The great soaring hunter of other flyers.", atk: { high: 5, low: 3, swarm: 3, spear: 2 },
+      traits: ["Horn of any flock", "Can circle a stretch of sky"], strong: "Killing flyers; escort.", weak: "Nearly harmless to the ground and the water." },
+    { id: "firewing", name: "Fire-Wing", branch: "wing", hitAs: "high", line: "middle", tier: 1, reach: 2, speed: 5, tough: 2, cost: "High", claims: false,
+      role: "Flyer that drops burning pots.", atk: { skin: 3, hide: 4, boat: 2, high: 1 },
+      traits: ["Later carries a fire-spear"], strong: "Deep strikes on titans and spitters.", weak: "Sky-lords; sling-rafts; ballistae." },
+    { id: "dartwing", name: "Dart-Wing Flock", branch: "wing", hitAs: "low", line: "front", tier: 1, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Small, fast, low flyers that hunt warriors.", atk: { skin: 5, hide: 2 },
+      traits: ["Too low for ballistae", "Can nest on rookery rafts"], strong: "Shredding warriors and thrower crews.", weak: "Slingers; sling-rafts; sky-lords." },
+    { id: "hookbeak", name: "Hook-Beak", branch: "wing", hitAs: "low", line: "front", tier: 1, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Low flyer with claws that tear thick hide.", atk: { hide: 5, skin: 2, boat: 2 },
+      traits: ["Too low for ballistae", "Can nest on rookery rafts"], strong: "Titan herds with no slingers.", weak: "One band of slingers in the target." },
+    { id: "fishhawk", name: "Fish-Hawk Riders", branch: "wing", hitAs: "low", line: "middle", tier: 2, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Low flyers that hunt beneath the waves.", atk: { deep: 5, boat: 3 },
+      traits: ["See mosasaurs under the water", "Faster than any fleet"], strong: "Hunting the deep.", weak: "Slingers." },
+    { id: "cloudseer", name: "Cloud-Seer", branch: "wing", hitAs: "high", line: "rear", tier: 2, reach: 3, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Huge soaring beast carrying a far-sighted elder.", atk: {},
+      traits: ["Sees herds, fleets and high flyers from very far", "Cannot see low flyers", "Later learns to see night-gliders"], strong: "Knowing.", weak: "Unarmed." },
+    { id: "stonedropper", name: "Stone-Dropper", branch: "wing", hitAs: "high", line: "middle", tier: 2, reach: 2, speed: 3, tough: 4, cost: "Very high", claims: false,
+      role: "Giant flyer that drops boulders.", atk: { skin: 4, hide: 3, boat: 2 },
+      traits: ["Smashes longhouses and rookeries", "Later ignores cave refuges", "Carries fire-spears, slow to renew"], strong: "Villages, works, slow herds.", weak: "Sky-lords; ballistae; sling-rafts." },
+    { id: "flies", name: "Biting-Fly Cloud", branch: "wing", hitAs: "swarm", line: "middle", tier: 1, reach: 1, speed: 4, tough: 1, cost: "Low", claims: false,
+      role: "A cloud of stinging flies driven by smoke-shamans.", atk: { skin: 3, hide: 3 },
+      traits: ["Cheap wearing-down"], strong: "Herds without slingers.", weak: "Slingers; sky-lords." },
+    { id: "crow", name: "Scout-Crow", branch: "wing", hitAs: "swarm", line: "rear", tier: 1, reach: 2, speed: 4, tough: 1, cost: "Very low", claims: false,
+      role: "Trained crow.", atk: {},
+      traits: ["Names herds behind the dust", "Flying over foreign range is no insult"], strong: "Cheap eyes.", weak: "Anything." },
+    { id: "seakite", name: "Sea-Kite", branch: "wing", hitAs: "high", line: "rear", tier: 2, reach: 2, speed: 3, tough: 3, cost: "High", claims: false,
+      role: "Long-flying sea-watcher.", atk: { deep: 4, boat: 3 },
+      traits: ["Sees mosasaurs over a wide sea"], strong: "Hunting the deep far from the fleet.", weak: "Sky-lords; sling-rafts." },
+    { id: "nightglider", name: "Night-Glider", branch: "wing", hitAs: "high", line: "rear", tier: 3, reach: 2, speed: 5, tough: 2, cost: "Very high", claims: false,
+      role: "Black flyer that hunts in silence.", atk: { skin: 3, hide: 4, high: 2, boat: 2 },
+      traits: ["Unseen until it strikes", "Flying over foreign range is no insult"], strong: "Burning rookeries and longhouses unseen.", weak: "Wind-callers and cloud-seers who learn its shape." },
+
+    { id: "canoe", name: "Reed Canoe", branch: "sea", hitAs: "boat", line: "front", tier: 1, reach: 1, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Fast lagoon boat.", atk: { boat: 2, deep: 2, skin: 1 },
+      traits: ["Strong in the lagoons", "Swamped in the Deep"], strong: "Lagoon patrol.", weak: "The Deep; anything bigger." },
+    { id: "slingraft", name: "Sling-Raft", branch: "sea", hitAs: "boat", line: "middle", tier: 1, reach: 2, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "A wide log raft packed with slingers.", atk: { high: 5, low: 3, swarm: 4, spear: 5, boat: 1 },
+      traits: ["In a fleet: slings at every flyer and fire-spear, every clash, without tiring", "Barely hurts boats"], strong: "Making a fleet almost safe from the sky.", weak: "Boat fights; mosasaurs." },
+    { id: "plesio", name: "Plesio-Hunter", branch: "sea", hitAs: "boat", line: "front", tier: 1, reach: 2, speed: 4, tough: 4, cost: "Medium", claims: false,
+      role: "Boat drawn by a long-necked sea-beast.", atk: { boat: 3, deep: 4, high: 2, low: 1 },
+      traits: ["Its beast senses mosasaurs", "Lays sharpened-stake traps in lagoons", "Later carries fire-spears"], strong: "Mosasaur hunting; screening.", weak: "Turtle-ships." },
+    { id: "turtle", name: "Turtle-Ship", branch: "sea", hitAs: "boat", line: "middle", tier: 2, reach: 3, speed: 3, tough: 4, cost: "High", claims: false,
+      role: "Giant sea-turtle with a war-platform.", atk: { boat: 5, skin: 3, hide: 3 },
+      traits: ["Best at striking the shore from the water", "Helpless against mosasaurs and flyers alone"], strong: "Sea battles; raiding the shore.", weak: "Mosasaurs; flyers when unescorted." },
+    { id: "rookraft", name: "Rookery Raft", branch: "sea", hitAs: "boat", line: "rear", tier: 3, reach: 0, speed: 3, tough: 5, cost: "Very high", claims: false,
+      role: "Floating nesting ground.", atk: { high: 1 },
+      traits: ["Nests sea-flyers and all low flyers", "One per fleet"], strong: "Flyers anywhere on the water.", weak: "Everything, once alone." },
+    { id: "mosa", name: "Mosasaur", branch: "sea", hitAs: "deep", line: "middle", tier: 2, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Huge sea-lizard ridden by deep-divers.", atk: { boat: 5, deep: 4 },
+      traits: ["Unseen until it strikes", "Cramped and weak in lagoons", "Cannot reach the land"], strong: "Canoes and fleets in the Deep.", weak: "Fish-hawks, plesio-hunters; lagoons." },
+    { id: "ammonite", name: "Ammonite Oracle", branch: "sea", hitAs: "deep", line: "rear", tier: 3, reach: 3, speed: 3, tough: 3, cost: "Very high", claims: false,
+      role: "A giant shell-beast whose oracle calls down sky-stones.", atk: { boat: 1 },
+      traits: ["Calls sky-stones from beneath the waves", "Very weak in lagoons"], strong: "A hidden siege off an enemy shore.", weak: "Any deep-hunter." },
+
+    { id: "firespear", name: "Fire-Spear", branch: "spear", hitAs: "spear", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Thunderstone", claims: false,
+      role: "A burning spear carried by a bound spirit-bird.", atk: { skin: 3, hide: 4, boat: 4 },
+      traits: ["Follows a moving herd", "Sent by fire-wings, stone-droppers, plesio-hunters, turtle-ships, mosasaurs and spear-shamans"], strong: "Killing a chosen herd or a resting flock.", weak: "Slingers in the target." },
+    { id: "skystone", name: "Sky-Stone", branch: "spear", hitAs: "spear", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Thunderstone", claims: false,
+      role: "A stone called down from the sky.", atk: { skin: 4, hide: 3 },
+      traits: ["Falls only on fire-circles — never on a moving herd", "Smashes works"], strong: "Rookeries, longhouses, held fire-circles.", weak: "Wind-callers; anything moving." },
+    { id: "ashcloud", name: "Ash-Mother's Breath", branch: "spear", hitAs: "spear", line: "rear", tier: 3, reach: 3, speed: 5, tough: 1, cost: "Ruinous", claims: false,
+      role: "Calling the volcano's poison cloud down on a valley.", atk: { skin: 5, hide: 5, boat: 4 },
+      traits: ["Chokes friend and foe alike", "The valley is dead for a long season", "Every village you hold loses Kinship — no one forgives it"], strong: "Ending a siege overnight.", weak: "Your own people's love." }
+  ],
+  synergies: [
+    { name: "Titan & Sling", units: ["titan", "boneshield", "slingers"], why: "The titan breaks hide, the bone-shields take the blows and kill warriors, and the slingers make every hook-beak attack a slaughter." },
+    { name: "Sky-Lord over Fire-Wing", units: ["skylord", "firewing"], why: "The sky-lord leads and takes the harpoons; the fire-wings live to drop." },
+    { name: "Sling-raft fleet", units: ["plesio", "slingraft", "turtle"], why: "The plesio senses mosasaurs, the raft swallows flyers and spears, the turtle wins the fight." },
+    { name: "Drum & Fire-Pot", units: ["drumhill", "firepot"], why: "Fire-pots out-throw everything on land but need to know where to throw. A drum-hill or raptor rider makes every throw free." },
+    { name: "Three skies", units: ["slingers", "ballista", "windcaller"], why: "Slings for the low sky, harpoons for the high sky, wind-callers for fire-spears." },
+    { name: "Beach raid", units: ["canoeraider", "wallower", "turtle"], why: "The turtle hammers the beach, raiders and wallowers land anywhere, then the herd comes in through the captured canoe beach." },
+    { name: "Silent hunters", units: ["stalker", "nightglider", "skystone"], why: "Stalkers and night-gliders find rookeries unseen; a sky-stone finishes them." },
+    { name: "Hawk & Mosasaur", units: ["fishhawk", "mosa"], why: "Fish-hawks drive enemy mosasaurs out of the lagoons; yours wait in the Deep." }
+  ],
+  comps: [
+    { name: "Grass Herd", mode: "Free-for-all · Bond", size: "War-herd: 15 / 15", units: [["titan", 3], ["boneshield", 4], ["spitter", 2], ["slingers", 2], ["spear", 4]],
+      idea: "Titans, a horn of bone-shields, spitters, slingers and totem-raisers.", play: "Fight on the grass; leave spear-clans at every taken fire.", loses: "Villages and valleys; fire-pot harrying; fire-wings with no ballista near." },
+    { name: "Held Fire", mode: "Free-for-all", size: "Herd in the circle + fire-pots two ranges back", units: [["bonebreaker", 4], ["spear", 5], ["slingers", 2], ["ballista", 1], ["firepot", 3], ["drumhill", 1]],
+      idea: "Endure in the circle; burn them from range.", play: "Defenders never move. Fire-pots run in, throw, run out.", loses: "Stalkers who ignore stake walls; sky-stones; fire-wings on the fire-pots." },
+    { name: "Treetop Flock", mode: "Free-for-all · Bond", size: "Flock: 6 / 6", units: [["hookbeak", 3], ["dartwing", 2], ["crow", 1]],
+      idea: "Hunt under the harpoons.", play: "Crow scouts for herds without slingers; hook-beaks on titans, dart-wings on warriors.", loses: "Slingers; a sling-raft; sky-lords circling." },
+    { name: "Sling-Raft Fleet", mode: "Free-for-all · Bond", size: "Fleet: 4 / 4", units: [["plesio", 1], ["slingraft", 1], ["turtle", 2]],
+      idea: "Senses, a stone umbrella, and a monster.", play: "Rest in your lagoons; raid the shore.", loses: "Plesio lost → mosasaurs. Fire-spears faster than the slingers can answer." },
+    { name: "Drop from the Sky", mode: "Bond", size: "Flock + glider-warriors", units: [["glider", 6], ["skylord", 3], ["firewing", 3]],
+      idea: "Take villages behind the enemy while your ally holds his great herd.", play: "Fire-wings burn the defenders, sky-lords guard, glider-warriors drop and raise the totem a half-hand later.", loses: "Slingers at the landing." },
+    { name: "Cloud-Cliff Dominion", mode: "Free-for-all (late)", size: "Late war", units: [["cloudseer", 1], ["skylord", 4], ["stonedropper", 2], ["windcaller", 1], ["bonebreaker", 4], ["spear", 5]],
+      idea: "Hold the ground lightly, own the sky, smash their longhouses.", play: "Sky-lords circle under the cloud-seer; stone-droppers break longhouses and rookeries.", loses: "An early Earth-blood rush." },
+    { name: "Horn & Sky", mode: "Bond (2 clans)", size: "Split roles", units: [["titan", 4], ["boneshield", 6], ["spear", 4], ["skylord", 6], ["ballista", 2], ["slingers", 3]],
+      idea: "One clan brings the beasts; the other brings only the sky-guard.", play: "March together; the slingers walk inside the titan herds.", loses: "One clan asleep. Fire-pots still burn." },
+    { name: "Shore Raid", mode: "Free-for-all · Bond", size: "Fleet + raiders", units: [["turtle", 2], ["slingraft", 1], ["plesio", 1], ["canoeraider", 6], ["wallower", 3]],
+      idea: "Take the canoe beach they thought the sea protected.", play: "Turtles hammer, raiders land beside the beach, the herd follows.", loses: "Boulder-rollers; mosasaurs; no sling-raft." },
+    { name: "Fly Grind", mode: "Free-for-all", size: "Cheap", units: [["flies", 6], ["crow", 2], ["firepot", 3], ["spear", 6]],
+      idea: "A poor clan's war of stings and fire.", play: "Crows find, flies and fire-pots grind, spear-clans take the rest.", loses: "Anyone with slingers." },
+    { name: "Night War", mode: "Free-for-all (late)", size: "Specialist", units: [["nightglider", 3], ["stalker", 3], ["ammonite", 1], ["windcaller", 1]],
+      idea: "Never meet the herd; starve the camp.", play: "Burn longhouses, rookeries and canoe beaches every night. Keep wind-callers at home.", loses: "A rival who wins on the grass first." }
+  ]
+};
+</script>
+<script src="../assets/world.js"></script>
+</body>
+</html>
