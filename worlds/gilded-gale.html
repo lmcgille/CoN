@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gilded Gale</title>
+<meta name="description" content="An aetherpunk war world: steam empires fight for the phlogiston wells of the Aurelian Archipelago.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root {
+    --accent: #6e4a0e; --accent-2: #a87118; --display: "Playfair Display", Georgia, serif;
+    --bg: #f6f0e2; --bg-2: #ece2cc; --rule: #d9cba8;
+    --heat-1: #f4e6c7; --heat-2: #e7cc92; --heat-3: #d3a957; --heat-4: #a87118; --heat-5: #6e4a0e;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #15120b; --bg-2: #201b10; --panel: #241e12; --rule: #3d331e; --ink: #f3ead6; --ink-2: #d2c4a3; --ink-3: #9d8f6f;
+    --accent: #d9a441; --accent-2: #edc271; --accent-ink: #15120b;
+    --heat-1: #33280f; --heat-2: #574117; --heat-3: #8a6620; --heat-4: #d9a441; --heat-5: #f7dc9f; --heat-ink-hi: #15120b;
+  } }
+  :root[data-theme="dark"] {
+    --bg: #15120b; --bg-2: #201b10; --panel: #241e12; --rule: #3d331e; --ink: #f3ead6; --ink-2: #d2c4a3; --ink-3: #9d8f6f;
+    --accent: #d9a441; --accent-2: #edc271; --accent-ink: #15120b;
+    --heat-1: #33280f; --heat-2: #574117; --heat-3: #8a6620; --heat-4: #d9a441; --heat-5: #f7dc9f; --heat-ink-hi: #15120b;
+  }
+  .chron p { font-family: "Libre Baskerville", Georgia, serif; font-size: 17px; }
+  .dispatch { border: 1px solid var(--rule); background: var(--panel); border-radius: 6px; padding: 14px 16px; margin: 16px 0; }
+  .dispatch .wire { font: 600 12px/1.4 var(--mono); letter-spacing: .06em; color: var(--accent-2); text-transform: uppercase; margin-bottom: 6px; }
+  .dispatch p { font-family: var(--mono); font-size: 14px; line-height: 1.6; margin: 0; }
+  .headline { font-family: "Playfair Display", Georgia, serif; font-weight: 900; font-size: 26px; line-height: 1.15; margin: 26px 0 6px; text-transform: uppercase; letter-spacing: .01em; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="#world">World</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#schools">Schools</a><a href="#roster-sec">Roster</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
+    <a href="#comps-sec">Compositions</a><a href="#chronicle">Chronicle</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">World IV · Aetherpunk</div>
+  <h1>The Gilded Gale</h1>
+  <p class="lede">In 1887 a drilling crew on Lindqvist Island struck phlogiston — a gas lighter than anything in nature, that burns hotter than coal and lifts iron into the sky. Within a decade every power on the Aurelian Sea had built an air fleet. Within two, they wanted the wells.</p>
+  <div class="facts">
+    <span class="fact"><b>9</b> powers</span>
+    <span class="fact"><b>8</b> hit classes</span>
+    <span class="fact"><b>38</b> units</span>
+    <span class="fact">Brigades of <b>14</b> · squadrons &amp; flotillas of <b>6</b></span>
+    <span class="fact">An engagement every <b>two hours</b></span>
+  </div>
+</div></div>
+
+<section id="world"><div class="wrap">
+  <h2>The world</h2>
+  <p class="sec-sub">An inland sea, a hundred islands, and a gas that changed everything.</p>
+  <div class="prose">
+    <p>The <b>Aurelian Sea</b> is enclosed: a great warm basin ringed by continental powers and studded with islands. Before phlogiston it was a backwater of fishing fleets and wine. After, it became the most valuable water in the world, because the gas only seeps up through the volcanic islands at its centre — Lindqvist, Saint Orme, the Embers — and nowhere else.</p>
+    <p>Phlogiston fills the envelopes of dirigibles, drives the turbines of the new aeroplanes, and is the secret of the rocket. Every power that wants an air fleet needs it, and every power has an air fleet.</p>
+    <p>Each player governs one power: a capital, a few industrial cities, and provinces. Victory is <b>Ascendancy</b>, assessed each Sunday by the Congress of Calvessa: the weighted value of cities, provinces and the three Wellheads.</p>
+  </div>
+  <h3>Ground that decides wars</h3>
+  <div class="grid g3">
+    <div class="card"><h4>The Steppe Coast</h4><p class="small">Wide grassland on the northern shore. Landships at full steam; infantry in the open is cut down.</p></div>
+    <div class="card"><h4>The old cities</h4><p class="small">Cobbles, canals, cathedral squares. Landships grind to a crawl and lose their punch; riflemen in cellars hold for weeks.</p></div>
+    <div class="card"><h4>The Sabre Alps</h4><p class="small">High, snowy, and owned by whoever has Jägers.</p></div>
+    <div class="card"><h4>The Fen Country</h4><p class="small">Marsh and reed. Slow for everyone, impassable for heavy machines.</p></div>
+    <div class="card"><h4>Coastal waters</h4><p class="small">Torpedo launches and picket boats are lords here; submersibles scrape the bottom, run half-blind, and are easily holed.</p></div>
+    <div class="card"><h4>The Deepwater Basin</h4><p class="small">The open centre of the sea. Submersibles hunt; small boats founder in the swell.</p></div>
+  </div>
+  <h3>The powers (rename freely)</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Power</th><th>Head of state</th><th>School</th><th>Character</th></tr></thead>
+    <tbody>
+      <tr><td>The Ironworks Republic of Halvard</td><td>Lord-Marshal Casimir Drave</td><td>Foundry</td><td>Landships off the line in week one; a thin air arm</td></tr>
+      <tr><td>The Commonwealth of Wyndham</td><td>Prime Minister Lavinia Ashcombe</td><td>Aerial</td><td>Rich, cautious, the best air service on the sea</td></tr>
+      <tr><td>The Serene Republic of Calvessa</td><td>Grand Admiral Teodor Marchetti</td><td>Maritime</td><td>A navy with a parliament</td></tr>
+      <tr><td>The Grand Duchy of Lindqvist</td><td>Grand Duchess Elin Lindqvist</td><td>Foundry</td><td>Owns the first wells and little else</td></tr>
+      <tr><td>The Free City of Brassmere</td><td>Lord Mayor Josiah Penhallow</td><td>Maritime</td><td>Bankers; hires Free Companies</td></tr>
+      <tr><td>The Mountain Cantons</td><td>Landammann Ursula Brenn</td><td>Aerial</td><td>Small, armed, neutral until paid</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="economy"><div class="wrap">
+  <h2>Economy &amp; the home front</h2>
+  <p class="sec-sub">Six commodities, the cost of keeping regiments in the field, and why occupied cities rise.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Commodity</th><th>Comes from</th><th>Feeds</th></tr></thead>
+    <tbody>
+      <tr><td><b>Coal</b></td><td>Pits, coaling stations</td><td>Every engine, every hull, every boiler; upkeep for anything that moves under steam. The people burn it too.</td></tr>
+      <tr><td><b>Steel</b></td><td>Mills and foundry towns</td><td>Landships, guns, hulls, airframes, all construction</td></tr>
+      <tr><td><b>Clockwork</b></td><td>Instrument works, watch towns</td><td>Fire-control, gyroscopes, hornets, listening masts, most factories</td></tr>
+      <tr><td><b>Phlogiston</b></td><td>The Wellheads and a few seeps — the prize</td><td>All research, every dirigible, submersibles, rockets</td></tr>
+      <tr><td><b>Hands</b></td><td>Population</td><td>Every regiment, ship's company and air crew. Cannot be bought.</td></tr>
+      <tr><td><b>Marks</b></td><td>Taxes, tariffs, mills</td><td>Everything; wages; the only currency on the Bourse</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>Coal is bread.</b> The people heat with it and the army runs on it. A power that mobilises everything in the first week spends the winter rationing coal — and cold cities lose <b>Public Spirit</b>, which slows every mill and every shipyard.</div>
+  <h3>Territory</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Home cities</h4><p class="small">Full production; can build everything. The capital lifts Public Spirit in its region.</p></div>
+    <div class="card"><h4>Occupied cities</h4><p class="small">A quarter production, Public Spirit near the floor. These are the cities that declare a Commune.</p></div>
+    <div class="card"><h4>Annexed cities</h4><p class="small">Occupied cities brought in by an Act of Union (costs Hands). Half production; can raise regiments.</p></div>
+    <div class="card"><h4>Provinces</h4><p class="small">Countryside. Little output unless you sink a mine or well. Provinces do not rise.</p></div>
+  </div>
+  <h3>Public Spirit and the Commune</h3>
+  <div class="prose">
+    <p>Every city and province has <b>Public Spirit</b>. It drifts each morning toward a level set by distance from the capital, the number of wars, enemy regiments near, shortages of coal or Marks, shelling casualties and foreign agitators — and the hospitals, barracks and shelters you build.</p>
+    <p>An occupied city below a third Public Spirit may <b>declare a Commune</b>. Newly taken cities start at a quarter. Each day, at an hour no one can predict, the barricades go up or they don't. If no regiment is quartered there, the city simply joins <b>the Commune</b> — the sea-wide revolutionary movement, which raises its own militia and marches where it likes. One quartered regiment usually clears the barricades.</p>
+  </div>
+  <h3>Works</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Work</th><th>Where</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr><td>Manufactory</td><td>City</td><td>+10% to all commodities per storey and a daily Marks dividend. Always the first build.</td></tr>
+      <tr><td>Pithead / Wellhead</td><td>Province</td><td>Works the province's deposit.</td></tr>
+      <tr><td>Depot</td><td>City</td><td>Raises infantry.</td></tr>
+      <tr><td>Works Yard</td><td>City</td><td>Raises landships, walkers and guns.</td></tr>
+      <tr><td>Aerodrome &amp; Mast</td><td>City</td><td>Every aircraft and airship is built at, moored to, and returns to an aerodrome. Wreck it and its fleet cannot rise.</td></tr>
+      <tr><td>Landing Field</td><td>Province</td><td>Forward mooring.</td></tr>
+      <tr><td>Naval Yard</td><td>Port</td><td>Builds hulls; regiments embark on transports here.</td></tr>
+      <tr><td>Redoubt</td><td>Province</td><td>Fortifies a province's square.</td></tr>
+      <tr><td>Bombproof</td><td>City</td><td>Shelters the population; hardens defenders.</td></tr>
+      <tr><td>Hospital</td><td>City / province</td><td>Faster recovery.</td></tr>
+      <tr><td>Railhead</td><td>Province</td><td>Ground units move far faster through it — anyone's.</td></tr>
+      <tr><td>Polytechnic</td><td>City</td><td>Research.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>Rules of battle</h2>
+  <p class="sec-sub">The regulations of war on the Aurelian Sea.</p>
+  <div class="grid g2">
+    <div class="card"><h4>Engagements</h4><p class="small">The first exchange of fire comes the moment forces meet; another every two hours after. Each weapon's effect depends on the target's <b>hit class</b>: an anti-landship ram-gun barely troubles riflemen.</p></div>
+    <div class="card"><h4>The square</h4><p class="small">Every city and province has a <b>square</b> — the town hall, the crossroads. A regiment holding it is entrenched: it takes far less fire and does not return any. A regiment beside the square, not on it, trades volleys every engagement.</p></div>
+    <div class="card"><h4>Brigades, squadrons, flotillas</h4><p class="small">A brigade fights at full effect up to <b>14</b> companies; an air squadron or flotilla up to <b>6</b>. Above that, each addition is worth less, then nothing, then less than nothing. A formation travels at its slowest member's pace.</p></div>
+    <div class="card"><h4>Firing line, support, train</h4><p class="small">Fire on a formation falls hardest on the <b>firing line</b>, less on <b>support</b>, least on the <b>train</b>. The unit's type decides where it marches.</p></div>
+    <div class="card"><h4>Indirect fire</h4><p class="small">Field guns, rocket batteries and battleships fire from range. A target that can't reach back can't fire back. Fire, withdraw, wait two hours, fire again.</p></div>
+    <div class="card"><h4>Raising the flag</h4><p class="small">A city or province changes hands only when <b>flag-raising</b> infantry reaches the square. Landships, guns, aircraft, ships, Saboteurs and Free Companies cannot raise a flag.</p></div>
+    <div class="card"><h4>Altitude and the hedgerow</h4><p class="small">Aeroplanes and dirigibles fly <b>high</b>, inside the arc of searchlight-rocket batteries. Autogyros and ornithopters fly at <b>hedgerow height</b> — below the batteries' arc entirely. Only quick-firing pom-poms, arclight frigates and fighters can touch them.</p></div>
+    <div class="card"><h4>Guns in the brigade vs guns nearby</h4><p class="small">Anti-aircraft guns <b>in</b> the targeted formation fire on every attacker and rocket, without pause. Guns <b>near</b> it fire, then reload — so a big enough raid swamps them.</p></div>
+    <div class="card"><h4>Reconnaissance and camouflage</h4><p class="small">Pickets see what's near; distant formations are only "dust on the road" until a scout identifies them. Listening masts and observation dirigibles track engine noise at range. <b>Camouflaged</b> units — saboteurs, ghost zeppelins, submersibles — are unseen until they fire or a matching detector approaches.</p></div>
+    <div class="card"><h4>Coastal and deep water</h4><p class="small">Launches and pickets love the coast and founder in the Basin. Submersibles are the reverse: half-blind and fragile near shore, lethal in the deep.</p></div>
+    <div class="card"><h4>Transports</h4><p class="small">Regiments crossing water embark at a naval yard. Transports are unarmed and fragile, and embarking or landing leaves a regiment helpless for hours. Sea Fencibles and amphibian tractors land on any beach.</p></div>
+    <div class="card"><h4>The aerodrome</h4><p class="small">Aircraft fly from a home aerodrome and return to refuel. Moored aircraft are helpless. Wreck the aerodrome and its fleet is grounded until rebuilt.</p></div>
+  </div>
+</div></section>
+
+<section id="classes-sec"><div class="wrap">
+  <h2>Hit classes</h2>
+  <p class="sec-sub">What a target is hit as decides which of the attacker's figures applies.</p>
+  <div id="classes"></div>
+</div></section>
+
+<section id="schools"><div class="wrap">
+  <h2>The three schools</h2>
+  <p class="sec-sub">Every general staff on the sea follows one of three schools of war.</p>
+  <div class="grid g3">
+    <div class="card"><h4>The Foundry School</h4><p class="small"><b>Cheap, early, steel-heavy.</b> Landships and Congreve arrays in the first week, cheaply built and lightly armoured. Foundry air arms are thin, so Foundry powers trust searchlight-rocket batteries for air defence — which cannot see a gyro at hedgerow height.</p><p class="small"><span class="tag good">Early landships</span><span class="tag good">Cheap losses</span><span class="tag bad">Thin air arm</span></p></div>
+    <div class="card"><h4>The Aerial School</h4><p class="small"><b>Expensive, sturdy, slow to start, rules the sky.</b> Sky-Hussars, tankbuster ornithopters, observation dirigibles and arc towers arrive early. The Aerial powers build industry first and fight from above.</p><p class="small"><span class="tag good">Air &amp; reconnaissance</span><span class="tag good">Sturdy</span><span class="tag bad">Slow start</span></p></div>
+    <div class="card"><h4>The Maritime School</h4><p class="small"><b>Balanced, navy-minded.</b> Middling costs, Raider monoplanes in the first week, the best early hulls.</p><p class="small"><span class="tag good">Early raiders</span><span class="tag good">Navy</span><span class="tag bad">No decisive edge</span></p></div>
+  </div>
+</div></section>
+
+<section id="roster-sec"><div class="wrap">
+  <h2>Order of battle</h2>
+  <p class="sec-sub">Figures 0–5 against each hit class. "Dies to" is computed from the roster.</p>
+  <div class="filters" id="roster-filters"></div>
+  <div class="roster" id="roster"></div>
+</div></section>
+
+<section id="matrix-sec"><div class="wrap">
+  <h2>Counter matrix</h2>
+  <p class="sec-sub">Find the column for the threat and read down it.</p>
+  <div id="matrix"></div>
+</div></section>
+
+<section id="synergy-sec"><div class="wrap">
+  <h2>Synergies</h2>
+  <div class="grid g2" id="synergies"></div>
+</div></section>
+
+<section id="comps-sec"><div class="wrap">
+  <h2>Compositions</h2>
+  <p class="sec-sub">Complete forces for open war and for alliances.</p>
+  <div class="grid g2" id="comps"></div>
+</div></section>
+
+<section id="chronicle"><div class="wrap">
+  <h2>Chronicle: The Wellhead War</h2>
+  <p class="sec-sub">From the dispatches of Miss Harriet Quayle, war correspondent of the <i>Calvessa Courier</i>, with the occasional intercepted telegram.</p>
+  <div class="chron">
+    <div class="headline">Halvard mobilises; Wyndham builds factories</div>
+    <p>CALVESSA, FIRST WEEK. — The Lord-Marshal of Halvard does not believe in waiting. Within two days of the Lindqvist crisis his works yards were turning out landships — great riveted fortresses on caterpillar treads, each carrying four guns and a crew of forty — and by Saturday two full brigades of them stood on the Lindqvist frontier with steam up.</p>
+    <p>The Commonwealth of Wyndham, by contrast, has mobilised precisely nothing. The Prime Minister has laid the foundation stones of two manufactories and a polytechnic, and opened an aerodrome. Asked in the House when Wyndham would raise regiments, Mrs Ashcombe replied that she would raise them when they had been paid for. The opposition benches howled.</p>
+    <p>Here in Calvessa, the Grand Admiral has commissioned a torpedo-boat destroyer and a peculiar new vessel his officers call an <i>arclight frigate</i>: a narrow grey hull with almost no main battery, bristling with quick-firing pom-poms and searchlights. Both are moored in the harbour.</p>
+
+    <div class="headline">Lindqvist falls in five days</div>
+    <p>LINDQVIST, SECOND WEEK. — The Steppe Coast was made for landships, and the Grand Duchess's militia, drawn up in the open, never had a chance. I watched from a hill above Varberg as the Halvard machines rolled through the wheat. In five days the Lord-Marshal held four cities and the first Wellhead. Each time, a flag went up over the town hall; each time, the landships rolled on.</p>
+    <p>I asked a Halvard staff captain who would hold the towns. He looked at me as though I had asked who would hold the weather. "They are taken," he said. "We are going to the next one."</p>
+
+    <div class="headline">Mystery raiders destroy landship brigade</div>
+    <div class="dispatch"><div class="wire">Intercepted · Halvard 3rd Brigade to General Staff</div><p>UNDER AIR ATTACK STOP NO AIRCRAFT OBSERVED BY BATTERIES STOP TWO LANDSHIPS LOST STOP REQUEST INSTRUCTIONS STOP</p></div>
+    <p>VARBERG FORD, SECOND WEEK. — I was there, and I still find it hard to believe. Six Wyndham ornithopters — the "tankbusters," flapping, insect-like things carrying shaped charges — came up the river valley at hedgerow height, so low their wingtips clipped the poplars. The two searchlight-rocket batteries covering the Halvard brigade swept the sky for an hour and saw nothing, because there was nothing in the sky: the machines were under it.</p>
+    <p>A landship's guns cannot elevate. The crews could only button up and wait. Every two hours the ornithopters returned. By evening the brigade was a line of burning hulls along the ford, and the battery commanders were still reporting the sky clear.</p>
+
+    <div class="headline">Halvard orders a forest of rocket batteries</div>
+    <p>HALVARD, THIRD WEEK. — The Lord-Marshal's answer has been to order eight more searchlight-rocket batteries and a galvanic arc tower, the most costly air defence in the Foundry inventory. Not one of them can see a machine at hedgerow height. A Wyndham pilot, shot down and interned here, told me, laughing, that a single pom-pom gun travelling with each brigade would have ended his squadron's career in an afternoon. Halvard's doctrine, I am told, regards pom-poms as "a nuisance to the march."</p>
+    <p>On Thursday, Calvessa and Wyndham signed the Treaty of the Two Harbours. Their Ascendancy will be assessed jointly.</p>
+
+    <div class="headline">Halvard air raid on Calvessa fleet repulsed — catastrophe for raiders</div>
+    <p>CALVESSA HARBOUR, FOURTH WEEK. — I watched this from the roof of the <i>Courier</i>. At three in the morning six Halvard Raider monoplanes — the Lord-Marshal's entire modern air arm — came over the harbour mole to strike the fleet at anchor: the destroyer, the battleship <i>Serenissima</i>, which everyone knows to be helpless against aircraft, and the arclight frigate, which no one had thought worth mentioning.</p>
+    <p>The frigate was moored <i>among</i> them. Every pom-pom she carried fired on every aeroplane that dived on any ship in the anchorage, and kept firing without a pause. The harbour lit up like a fairground. Two Raiders got close enough to see the battleship's flag. One made it home.</p>
+    <div class="dispatch"><div class="wire">Intercepted · Lord-Marshal Drave to Air Staff</div><p>EXPLAIN HOW SIX AEROPLANES WERE LOST TO A SHIP WITH NO GUNS STOP</p></div>
+
+    <div class="headline">Communes declared in Lindqvist</div>
+    <p>VARBERG, FIFTH WEEK. — Two of the four Lindqvist cities Halvard took in the second week declared Communes on the same night. They had been cold, hungry and far from Halvard for a month, and not one Halvard regiment was quartered in either. The barricades went up at dusk and the red flags by morning. Now a Commune militia sits astride the Halvard railway, and the Lord-Marshal must send a brigade back to clear it.</p>
+
+    <div class="headline">The siege of Fort Ashcombe</div>
+    <p>WYNDHAM FRONTIER, SIXTH WEEK. — Halvard has gathered everything it has into a single enormous brigade — twenty-six companies of landships, walkers, guns and infantry — and thrown it at Fort Ashcombe. On parade it is a terrible sight. On the march it moves like a funeral, and its officers admit, privately, that half of it gets in the way of the other half.</p>
+    <p>Wyndham has put ram-gun carriages and line fusiliers into the fort's square, where they sit and endure. Two provinces back, three Congreve rocket arrays roll forward every two hours, fire one salvo into the great column from beyond the range of any Halvard gun, and roll back before the column can reach them. They have not lost a single crew. When the column arrived at the fort it was mauled and slow, and it spent itself on entrenched men who barely bled.</p>
+
+    <div class="headline">Halvard invasion fleet lost in the Basin</div>
+    <p>CALVESSA, SEVENTH WEEK. — The Lord-Marshal's last reserve, two brigades on transports, put out across the Deepwater Basin to land behind Calvessa. Halvard's own destroyers were still on the slips; the transports sailed alone. Two Calvessan nautilus boats had lain submerged in the Basin for nine days, waiting for precisely that. There are no survivors to interview.</p>
+
+    <div class="headline">Halvard aerodromes burn; the war is over</div>
+    <p>HALVARD, EIGHTH WEEK. — Galvanic torpedo-rockets fell on both Halvard aerodromes in a single night. Every aircraft the Lord-Marshal had rebuilt since the harbour raid was moored there. Without an air arm, and with rocket batteries that still cannot see a gyro, Halvard's last brigades were hunted across the steppe by ornithopters. At Sunday's assessment the Treaty powers' Ascendancy passed Halvard's. The Congress has called a peace conference. I am told the Lord-Marshal will not attend.</p>
+
+    <div class="postmortem">
+      <h3>Miss Quayle's summing-up</h3>
+      <ol>
+        <li><b>Landships with no pom-poms.</b> They cannot fire upward. One quick-firer per brigade was all it needed.</li>
+        <li><b>High-altitude defence against hedgerow raiders.</b> Searchlight batteries and arc towers cannot see under their own arc.</li>
+        <li><b>Raiding an escorted anchorage.</b> Guns <i>in</i> the fleet fire on every attacker. The plainest ship was the deadliest.</li>
+        <li><b>Cities left unquartered.</b> Cold, distant and empty, they declared Communes behind his own lines.</li>
+        <li><b>The twenty-six-company brigade.</b> Too large to fight properly, too slow to catch the rockets.</li>
+        <li><b>Storming an entrenched square.</b> Men who do not fire back also do not bleed.</li>
+        <li><b>Unescorted transports in deep water.</b> That is what submersibles are for.</li>
+        <li><b>Aircraft moored within rocket range.</b> A grounded air arm is a target.</li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · The Gilded Gale · An original setting. <a href="../index.html">All worlds</a></div></footer>
+
+<script>
+window.WORLD = {
+  lines: { front: "Firing line", middle: "Support", rear: "Train" },
+  tiers: ["First week", "Mid-war", "Late war"],
+  reach: ["Bayonet", "Short", "Indirect", "Strategic"],
+  classes: [
+    { id: "soft", name: "Soft", short: "Soft", desc: "Infantry, gun crews, horse, anything without armour plate." },
+    { id: "plate", name: "Plated", short: "Plate", desc: "Landships, walkers, armoured guns and tractors." },
+    { id: "high", name: "High air", short: "High", desc: "Aeroplanes and dirigibles at altitude, within the searchlight batteries' arc." },
+    { id: "hedge", name: "Hedgerow", short: "Hedge", desc: "Autogyros and ornithopters flying low. Below the batteries' arc." },
+    { id: "swarm", name: "Clockwork", short: "Clock", desc: "Clockwork hornets and camera-pigeons." },
+    { id: "hull", name: "Hull", short: "Hull", desc: "Surface ships and transports." },
+    { id: "sub", name: "Submersible", short: "Sub", desc: "Nautilus boats. Hit only once found." },
+    { id: "rocket", name: "Rocket", short: "Rkt", desc: "Incoming torpedo-rockets and siege rockets." }
+  ],
+  branches: [
+    { id: "inf", name: "Infantry" }, { id: "steel", name: "Landships" }, { id: "gun", name: "Guns & batteries" },
+    { id: "air", name: "Air service" }, { id: "navy", name: "Navy" }, { id: "rocket", name: "Rockets" }
+  ],
+  units: [
+    { id: "fusilier", name: "Line Fusiliers", branch: "inf", hitAs: "soft", line: "rear", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Low", claims: true,
+      role: "The ordinary rifleman. Raises flags, holds squares.", atk: { soft: 2, plate: 1, hedge: 1, swarm: 1 },
+      traits: ["Can be flown between friendly aerodromes by transport dirigible from the start"], strong: "Garrisons, squares, numbers.", weak: "Landships, guns, gyro gunships." },
+    { id: "grenadier", name: "Grenadier Guards", branch: "inf", hitAs: "soft", line: "front", tier: 1, reach: 0, speed: 2, tough: 3, cost: "Medium", claims: true,
+      role: "Heavy infantry with satchel charges.", atk: { soft: 3, plate: 3, swarm: 1 },
+      traits: ["Firing line — takes the fire meant for the brigade", "Bogged down in fens and mountains"], strong: "Escorting landships; killing them at close quarters.", weak: "Gyro gunships; artillery." },
+    { id: "fencible", name: "Sea Fencibles", branch: "inf", hitAs: "soft", line: "middle", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: true,
+      role: "Amphibious infantry.", atk: { soft: 3, plate: 2, hedge: 1 },
+      traits: ["Land on any beach from their own boats", "Can take islands with no harbour"], strong: "Beachheads.", weak: "Landships once ashore." },
+    { id: "gyrorifle", name: "Gyro-Borne Rifles", branch: "inf", hitAs: "soft", line: "middle", tier: 2, reach: 0, speed: 4, tough: 2, cost: "Medium", claims: true,
+      role: "Riflemen dropped by autogyro.", atk: { soft: 3, plate: 1 },
+      traits: ["Land anywhere in range of a friendly aerodrome or field", "First engagement on landing counts as Hedgerow", "Need two hours on the ground before raising a flag"], strong: "Seizing empty towns behind the line.", weak: "Pom-poms at the landing; an immediate counter-attack." },
+    { id: "saboteur", name: "Saboteurs", branch: "inf", hitAs: "soft", line: "rear", tier: 2, reach: 0, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Camouflaged demolition men.", atk: { soft: 4, plate: 2 },
+      traits: ["Unseen on land until they strike", "Spot other camouflaged ground units", "Ignore redoubts and bombproofs"], strong: "Killing gun crews; cracking squares.", weak: "Cannot raise a flag. Motor Hussars find them." },
+    { id: "yeomanry", name: "Home Guard Yeomanry", branch: "inf", hitAs: "soft", line: "middle", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Very low", claims: true,
+      role: "Local volunteers.", atk: { soft: 1, plate: 1 },
+      traits: ["Strength reflects the city's Public Spirit", "Plod in enemy territory"], strong: "Emergency garrisons.", weak: "Any attack." },
+    { id: "freecompany", name: "Free Company", branch: "inf", hitAs: "soft", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Marks only", claims: false,
+      role: "Mercenary battalion.", atk: { soft: 3, plate: 2, hedge: 1 },
+      traits: ["Cost no Hands", "Will not raise a flag"], strong: "A banking city's firing line.", weak: "Cannot take ground." },
+    { id: "jager", name: "Alpine Jägers", branch: "inf", hitAs: "soft", line: "rear", tier: 2, reach: 0, speed: 2, tough: 2, cost: "Medium", claims: true,
+      role: "Mountain riflemen.", atk: { soft: 3, plate: 1 },
+      traits: ["Excellent in the Alps and snow", "Poor on the steppe"], strong: "Passes.", weak: "Open country." },
+
+    { id: "hussar", name: "Motor Hussars", branch: "steel", hitAs: "plate", line: "rear", tier: 1, reach: 0, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Armoured motor-car scouts.", atk: { soft: 2, plate: 1 },
+      traits: ["Identify distant formations", "Find camouflaged ground units", "Hurry their brigade through enemy country"], strong: "Scouting; hunting saboteurs.", weak: "Any fight." },
+    { id: "walker", name: "Steam Walker", branch: "steel", hitAs: "plate", line: "front", tier: 1, reach: 0, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Two-legged armoured fighting machine.", atk: { soft: 3, plate: 2, hedge: 1, swarm: 1 },
+      traits: ["Handles most ground"], strong: "Versatile infantry-killer.", weak: "Ram-guns; tankbusters." },
+    { id: "landship", name: "Landship", branch: "steel", hitAs: "plate", line: "front", tier: 1, reach: 0, speed: 3, tough: 5, cost: "High", claims: false,
+      role: "Tracked land-fortress.", atk: { soft: 3, plate: 4 },
+      traits: ["Unstoppable on the steppe", "Crippled in cities, fens and mountains", "Guns cannot elevate — no anti-air"], strong: "Open battle; absorbing fire.", weak: "Ornithopters. Cities. Ram-guns." },
+    { id: "ramgun", name: "Ram-Gun Carriage", branch: "steel", hitAs: "plate", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "High-velocity anti-landship gun on an armoured chassis.", atk: { soft: 1, plate: 5 },
+      traits: ["The best plated defender of a city square"], strong: "Killing landships; holding cities.", weak: "Infantry rushes; gyros; shelling." },
+    { id: "tractor", name: "Amphibian Tractor", branch: "steel", hitAs: "plate", line: "middle", tier: 2, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Armoured beach tractor.", atk: { soft: 2, plate: 2 },
+      traits: ["Lands on any beach"], strong: "Supporting the Fencibles ashore.", weak: "Landships." },
+
+    { id: "pompom", name: "Pom-Pom Gun", branch: "gun", hitAs: "plate", line: "middle", tier: 1, reach: 1, speed: 3, tough: 2, cost: "Low", claims: false,
+      role: "Quick-firing anti-aircraft autocannon on a lorry.", atk: { soft: 1, high: 2, hedge: 5, swarm: 5, rocket: 2 },
+      traits: ["Sees and hits hedgerow flyers", "In a brigade: fires on every attacker, every engagement"], strong: "Gyros, ornithopters, clockwork hornets.", weak: "An infantry assault; high aeroplanes." },
+    { id: "searchlight", name: "Searchlight-Rocket Battery", branch: "gun", hitAs: "plate", line: "rear", tier: 1, reach: 2, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Area anti-aircraft rockets with searchlights.", atk: { high: 4, swarm: 1, rocket: 3 },
+      traits: ["Own spotting", "Cannot see below its arc"], strong: "Aeroplanes, dirigibles, rockets.", weak: "Hedgerow flyers — blind to them." },
+    { id: "arctower", name: "Galvanic Arc Tower", branch: "gun", hitAs: "plate", line: "rear", tier: 2, reach: 3, speed: 1, tough: 3, cost: "High", claims: false,
+      role: "Strategic lightning interceptor.", atk: { high: 3, rocket: 5 },
+      traits: ["Longest-range rocket interception", "Late upgrade reveals ghost zeppelins", "Blind below the arc"], strong: "Shielding cities from rockets.", weak: "Gyros; saturation; raids." },
+    { id: "fieldgun", name: "Field Gun", branch: "gun", hitAs: "soft", line: "rear", tier: 1, reach: 2, speed: 1, tough: 1, cost: "Low", claims: false,
+      role: "Horse-drawn field artillery.", atk: { soft: 4, plate: 2 },
+      traits: ["Indirect fire", "The slowest thing on any road"], strong: "Softening a held square.", weak: "Anything that reaches it." },
+    { id: "steamhow", name: "Steam Howitzer", branch: "gun", hitAs: "plate", line: "middle", tier: 1, reach: 2, speed: 2, tough: 3, cost: "Medium", claims: false,
+      role: "Self-propelled armoured howitzer.", atk: { soft: 3, plate: 3 },
+      traits: ["Indirect fire", "Keeps up with landships"], strong: "Landship brigades' artillery.", weak: "Gyros; raiders." },
+    { id: "congreve", name: "Congreve Array", branch: "gun", hitAs: "plate", line: "middle", tier: 1, reach: 3, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Rocket artillery on rails.", atk: { soft: 4, plate: 3, hull: 1 },
+      traits: ["Longest reach on land", "Area fire"], strong: "Kiting slow brigades.", weak: "Aircraft; being caught in two directions." },
+    { id: "mast", name: "Listening Mast", branch: "gun", hitAs: "plate", line: "rear", tier: 1, reach: 0, speed: 2, tough: 1, cost: "Low", claims: false,
+      role: "Wireless direction-finder.", atk: {},
+      traits: ["Hears engines at long range; low flyers only when close"], strong: "Warning.", weak: "Unarmed." },
+    { id: "fortgun", name: "Coast Fort Gun", branch: "gun", hitAs: "plate", line: "rear", tier: 1, reach: 2, speed: 1, tough: 3, cost: "Low", claims: false,
+      role: "Fixed coastal artillery.", atk: { hull: 4, soft: 1 },
+      traits: ["No research", "Immobile"], strong: "Ships lingering offshore.", weak: "Aircraft; rockets; landings." },
+
+    { id: "skyhussar", name: "Sky-Hussar", branch: "air", hitAs: "high", line: "front", tier: 1, reach: 2, speed: 5, tough: 3, cost: "High", claims: false,
+      role: "Fighter aeroplane.", atk: { high: 5, hedge: 3, swarm: 3, rocket: 2 },
+      traits: ["Leads any squadron", "Can fly standing patrols"], strong: "Shooting down aircraft; escort.", weak: "Nearly harmless to ground and ships." },
+    { id: "raider", name: "Raider Monoplane", branch: "air", hitAs: "high", line: "middle", tier: 1, reach: 2, speed: 5, tough: 2, cost: "High", claims: false,
+      role: "Fast strike aeroplane.", atk: { soft: 3, plate: 4, hull: 2, high: 1 },
+      traits: ["Late upgrade carries a torpedo-rocket"], strong: "Deep raids on landships and guns.", weak: "Fighters; arclight frigates; searchlight batteries." },
+    { id: "gunshipgyro", name: "Gyro Gunship", branch: "air", hitAs: "hedge", line: "front", tier: 1, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Low-flying autogyro with Gatling guns.", atk: { soft: 5, plate: 2 },
+      traits: ["Under the batteries' arc", "Can operate from airship tenders"], strong: "Infantry and gun crews.", weak: "Pom-poms, arclights, fighters." },
+    { id: "tankbuster", name: "Tankbuster Ornithopter", branch: "air", hitAs: "hedge", line: "front", tier: 1, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Low-flying shaped-charge flapper.", atk: { plate: 5, soft: 2, hull: 2 },
+      traits: ["Under the batteries' arc", "Can operate from airship tenders"], strong: "Landship brigades with no pom-poms.", weak: "A single pom-pom in the target." },
+    { id: "subgyro", name: "Sub-Hunter Gyro", branch: "air", hitAs: "hedge", line: "middle", tier: 2, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Autogyro with hydrophone and depth charges.", atk: { sub: 5, hull: 3 },
+      traits: ["Finds submersibles", "Faster than any flotilla"], strong: "Submarine hunting.", weak: "Pom-poms." },
+    { id: "obsdiri", name: "Observation Dirigible", branch: "air", hitAs: "high", line: "rear", tier: 2, reach: 3, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "High spotting airship with wireless.", atk: {},
+      traits: ["Sees aircraft, brigades and fleets at great range", "Cannot see hedgerow flyers", "Late upgrade spots ghost zeppelins"], strong: "Information.", weak: "Unarmed; fighters." },
+    { id: "dreadzep", name: "Dreadnought Zeppelin", branch: "air", hitAs: "high", line: "middle", tier: 2, reach: 2, speed: 3, tough: 4, cost: "Very high", claims: false,
+      role: "Heavy bombing airship.", atk: { soft: 4, plate: 3, hull: 2 },
+      traits: ["Levels factories and aerodromes", "Late upgrade ignores bombproofs", "Carries torpedo-rockets, slow to reload"], strong: "Cities, works, slow brigades.", weak: "Fighters; batteries; arclights." },
+    { id: "hornets", name: "Clockwork Hornets", branch: "air", hitAs: "swarm", line: "middle", tier: 1, reach: 1, speed: 4, tough: 1, cost: "Low", claims: false,
+      role: "A cloud of wind-up explosive drones.", atk: { soft: 3, plate: 3 },
+      traits: ["Cheap attrition"], strong: "Units with no pom-poms.", weak: "Pom-poms, arclights, fighters." },
+    { id: "pigeon", name: "Camera Pigeons", branch: "air", hitAs: "swarm", line: "rear", tier: 1, reach: 2, speed: 4, tough: 1, cost: "Very low", claims: false,
+      role: "Trained pigeons with clockwork cameras.", atk: {},
+      traits: ["Identify distant formations", "Crossing borders is no act of war"], strong: "Cheap reconnaissance.", weak: "Everything." },
+    { id: "flyboat", name: "Patrol Flying-Boat", branch: "air", hitAs: "high", line: "rear", tier: 2, reach: 2, speed: 3, tough: 3, cost: "High", claims: false,
+      role: "Long-range maritime patrol.", atk: { sub: 4, hull: 3 },
+      traits: ["Finds submersibles over a wide area", "Late upgrade carries torpedo-rockets"], strong: "Hunting subs far from the fleet.", weak: "Fighters; arclights." },
+    { id: "ghostzep", name: "Ghost Zeppelin", branch: "air", hitAs: "high", line: "rear", tier: 3, reach: 2, speed: 5, tough: 2, cost: "Very high", claims: false,
+      role: "Mirrored-envelope stealth airship.", atk: { soft: 3, plate: 4, high: 2, hull: 2 },
+      traits: ["Invisible until it fires", "Crossing borders is no act of war"], strong: "Wrecking aerodromes and works unseen.", weak: "Late arc towers and observation dirigibles." },
+
+    { id: "launch", name: "Torpedo Launch", branch: "navy", hitAs: "hull", line: "front", tier: 1, reach: 1, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Fast coastal boat.", atk: { hull: 2, sub: 2, soft: 1 },
+      traits: ["Strong near shore", "Founders in the Basin"], strong: "Coastal patrol.", weak: "Deep water; anything bigger." },
+    { id: "arclight", name: "Arclight Frigate", branch: "navy", hitAs: "hull", line: "middle", tier: 1, reach: 2, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Anti-aircraft escort with pom-poms and searchlights.", atk: { high: 5, hedge: 3, swarm: 4, rocket: 5, hull: 1 },
+      traits: ["In a flotilla: fires on every aircraft and rocket, without pause", "Barely harms ships"], strong: "Making a flotilla nearly immune to air attack.", weak: "Gunnery duels; submersibles." },
+    { id: "tbd", name: "Torpedo-Boat Destroyer", branch: "navy", hitAs: "hull", line: "front", tier: 1, reach: 2, speed: 4, tough: 4, cost: "Medium", claims: false,
+      role: "Fleet escort.", atk: { hull: 3, sub: 4, high: 2, hedge: 1 },
+      traits: ["Hydrophones find submersibles", "Lays mines near shore", "Late upgrade fires torpedo-rockets"], strong: "Sub hunting; screening.", weak: "Battleships." },
+    { id: "battleship", name: "Battleship", branch: "navy", hitAs: "hull", line: "middle", tier: 2, reach: 3, speed: 3, tough: 4, cost: "High", claims: false,
+      role: "Heavy-gun capital ship.", atk: { hull: 5, soft: 3, plate: 3 },
+      traits: ["Best shore bombardment", "Helpless against subs and aircraft alone"], strong: "Fleet actions; shelling the coast.", weak: "Submersibles; unescorted against aircraft." },
+    { id: "tender", name: "Airship Tender", branch: "navy", hitAs: "hull", line: "rear", tier: 3, reach: 0, speed: 3, tough: 5, cost: "Very high", claims: false,
+      role: "Seagoing aerodrome and mooring mast.", atk: { high: 1 },
+      traits: ["Moors naval aeroplanes and all gyros", "One per flotilla"], strong: "Air power at sea.", weak: "Anything, once unescorted." },
+    { id: "nautilus", name: "Nautilus Boat", branch: "navy", hitAs: "sub", line: "middle", tier: 2, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Attack submersible.", atk: { hull: 5, sub: 4 },
+      traits: ["Unseen until it fires", "Half strength near shore", "Cannot fire at land"], strong: "Transports and fleets in deep water.", weak: "Sub-hunter gyros, flying-boats, destroyers." },
+    { id: "rocketsub", name: "Rocket Submersible", branch: "navy", hitAs: "sub", line: "rear", tier: 3, reach: 3, speed: 3, tough: 3, cost: "Very high", claims: false,
+      role: "Submarine that launches siege rockets.", atk: { hull: 1 },
+      traits: ["Fires siege rockets while submerged", "Very weak near shore"], strong: "A hidden siege battery off an enemy coast.", weak: "Any sub hunter." },
+
+    { id: "torpedorocket", name: "Galvanic Torpedo-Rocket", branch: "rocket", hitAs: "rocket", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Phlogiston", claims: false,
+      role: "Wire-guided rocket.", atk: { soft: 3, plate: 4, hull: 4 },
+      traits: ["Follows a moving formation", "Fired by raiders, zeppelins, destroyers, battleships, nautilus boats and rocket carriages"], strong: "Killing a chosen formation or moored air fleet.", weak: "Pom-poms in the target." },
+    { id: "siegerocket", name: "Siege Rocket", branch: "rocket", hitAs: "rocket", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Phlogiston", claims: false,
+      role: "Unguided heavy rocket.", atk: { soft: 4, plate: 3 },
+      traits: ["Strikes squares only — never moving formations", "Area damage; wrecks works"], strong: "Aerodromes, manufactories, held squares.", weak: "Arc towers; anything moving." },
+    { id: "miasma", name: "Miasma Bomb", branch: "rocket", hitAs: "rocket", line: "rear", tier: 3, reach: 3, speed: 5, tough: 1, cost: "Ruinous", claims: false,
+      role: "Black-phlogiston gas weapon.", atk: { soft: 5, plate: 5, hull: 4 },
+      traits: ["Poisons friend and foe in a wide area", "Leaves the city uninhabitable for a time", "Every city you own loses Public Spirit — the press will not forgive it"], strong: "Breaking a siege overnight.", weak: "Your own people." }
+  ],
+  synergies: [
+    { name: "Landship & Pom-Pom", units: ["landship", "grenadier", "pompom"], why: "Landships break steel, Grenadiers take fire and kill infantry, a pom-pom makes every gyro raid a massacre." },
+    { name: "Hussar over Raider", units: ["skyhussar", "raider"], why: "The fighter leads and draws the fire; the raiders live to bomb." },
+    { name: "Escorted anchorage", units: ["tbd", "arclight", "battleship"], why: "Destroyer hears subs, arclight eats aircraft and rockets, battleship sinks ships." },
+    { name: "Mast & Congreve", units: ["mast", "congreve"], why: "Rockets out-reach every land gun but need eyes. A mast or Motor Hussars make every salvo free." },
+    { name: "Three-layer sky", units: ["pompom", "searchlight", "arctower"], why: "Pom-pom for the hedgerow, searchlight for altitude, arc tower for rockets." },
+    { name: "Beach landing", units: ["fencible", "tractor", "battleship"], why: "Battleship shells the beach, Fencibles and tractors land anywhere, then the heavy brigade comes through the port." },
+    { name: "Night work", units: ["saboteur", "ghostzep", "siegerocket"], why: "Saboteurs and ghost zeppelins find aerodromes unseen; siege rockets finish them." },
+    { name: "Hunter-killer", units: ["subgyro", "nautilus"], why: "Gyros drive enemy boats out of the shallows; your nautilus waits in the deep." }
+  ],
+  comps: [
+    { name: "Steppe Brigade", mode: "FFA · Alliance", size: "Brigade: 14 / 14", units: [["landship", 3], ["grenadier", 4], ["steamhow", 2], ["pompom", 2], ["fusilier", 3]],
+      idea: "Steel, a firing line, guns, air cover and flag-raisers.",
+      play: "Fight on the steppe; let the howitzers open; quarter a fusilier company in every captured city.",
+      loses: "Cities and fens; Congreve kiting; raiders without a searchlight nearby." },
+    { name: "Square & Salvo", mode: "FFA", size: "Brigade on square + arrays two provinces back", units: [["ramgun", 3], ["fusilier", 4], ["pompom", 1], ["searchlight", 1], ["congreve", 3], ["mast", 1]],
+      idea: "Endure on the square; let the rockets do the killing.",
+      play: "Defenders never move. Arrays roll in, fire, roll out every engagement.",
+      loses: "Saboteurs who ignore redoubts; siege rockets on the square; raiders on the arrays." },
+    { name: "Hedgerow Squadron", mode: "FFA · Alliance", size: "Squadron: 6 / 6", units: [["tankbuster", 3], ["gunshipgyro", 3]],
+      idea: "Low raiders: ornithopters for steel, gunships for men.",
+      play: "Send pigeons first. Hit only formations without pom-poms.",
+      loses: "One pom-pom, an arclight frigate, fighters on patrol." },
+    { name: "Escorted Flotilla", mode: "FFA · Alliance", size: "Flotilla: 6 / 6", units: [["tbd", 2], ["arclight", 1], ["battleship", 2], ["launch", 1]],
+      idea: "Hydrophones, a gun umbrella, and heavy guns.",
+      play: "Lie in friendly coastal water to repair; shell the coast from range.",
+      loses: "Destroyers sunk → nautilus boats. Rockets fired faster than the arclight can engage." },
+    { name: "Gyro Descent", mode: "Alliance", size: "Two squadrons + gyro rifles", units: [["gyrorifle", 4], ["skyhussar", 3], ["raider", 3]],
+      idea: "Take the towns behind the enemy while your ally holds his main brigade.",
+      play: "Raiders clear the target's defenders, fighters escort, gyro rifles land and raise the flag two hours later.",
+      loses: "Pom-poms at the landing; a counter-attack in those two hours." },
+    { name: "Aerial Ascendancy", mode: "FFA (late)", size: "Late war", units: [["obsdiri", 1], ["skyhussar", 5], ["dreadzep", 2], ["arctower", 1], ["ramgun", 3], ["fusilier", 4]],
+      idea: "Hold lightly, own the sky, burn their manufactories.",
+      play: "Fighters patrol under the observation dirigible; zeppelins level works and aerodromes.",
+      loses: "An early Foundry rush." },
+    { name: "Hammer & Umbrella", mode: "Alliance (2 powers)", size: "Split roles", units: [["landship", 4], ["grenadier", 5], ["fusilier", 3], ["skyhussar", 5], ["searchlight", 2], ["pompom", 3]],
+      idea: "One power builds only steel; the ally builds only the air defence and fighters over it.",
+      play: "Advance together; the ally's pom-poms march inside the steel brigades.",
+      loses: "One ally asleep. Rockets still bite." },
+    { name: "Fencible Landing", mode: "FFA · Alliance", size: "Flotilla + landing", units: [["battleship", 2], ["arclight", 1], ["tbd", 2], ["fencible", 6], ["tractor", 3]],
+      idea: "Take the port they thought the sea would guard.",
+      play: "Flotilla shells, Fencibles land beside the port, the heavy brigade follows through it.",
+      loses: "Coast forts; submersibles; no arclight." },
+    { name: "Clockwork Attrition", mode: "FFA", size: "Cheap", units: [["hornets", 6], ["pigeon", 2], ["congreve", 3], ["fusilier", 5]],
+      idea: "A poor power's war of wind-up wasps and rockets.",
+      play: "Pigeons find, hornets and rockets grind, fusiliers take what's left.",
+      loses: "Anyone with pom-poms." },
+    { name: "Ghost Campaign", mode: "FFA (late)", size: "Specialist", units: [["ghostzep", 3], ["saboteur", 3], ["rocketsub", 1], ["arctower", 1]],
+      idea: "Never fight the army. Starve it.",
+      play: "Hit manufactories, aerodromes and yards every night. Keep an arc tower at home.",
+      loses: "A rival who wins on the ground first." }
+  ]
+};
+</script>
+<script src="../assets/world.js"></script>
+</body>
+</html>
