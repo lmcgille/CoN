@@ -67,7 +67,9 @@
     { href: "worlds/gilded-gale.html", eyebrow: "Aetherpunk", name: "The Gilded Gale", band: "linear-gradient(135deg,#3b2a0a,#a87118 50%,#f2d08c)",
       blurb: "Steam empires and a lift-gas that changed everything. Landships, ornithopters, zeppelins and nautilus boats." },
     { href: "worlds/glasshouse.html", eyebrow: "Biological", name: "The Glasshouse", band: "linear-gradient(135deg,#1c3311,#5a8f2c 50%,#d3e8a8)",
-      blurb: "Insect colonies with minds of their own fight one summer-long war inside an abandoned conservatory." }
+      blurb: "Insect colonies with minds of their own fight one summer-long war inside an abandoned conservatory." },
+    { href: "worlds/pelagia.html", eyebrow: "Undersea", name: "Pelagia", band: "linear-gradient(180deg,#7fd3f5,#12709c 35%,#0b3d5c 70%,#071118)",
+      blurb: "The surface is uninhabitable. Forty domed cities fight on the seafloor, in the midwater and in the Abyss, by sound alone." }
   ];
   var extra = window.EXTRA_WORLDS || [];
   worlds = worlds.concat(extra);
@@ -81,23 +83,23 @@
 
   var lessons = [
     ["Heavy armour with no short-range air defence",
-      { m: "Bastions with no Lancet", h: "Juggernauts with no Flak Spindle", a: "Golems with no Skyward Bows", g: "Landships with no Pom-Pom", gl: "Titans with no Archer-Spitters" }],
+      { m: "Bastions with no Lancet", h: "Juggernauts with no Flak Spindle", a: "Golems with no Skyward Bows", g: "Landships with no Pom-Pom", gl: "Titans with no Archer-Spitters", p: "Leviathans with no Flechette Turret" }],
     ["Long-range air defence against low flyers",
-      { m: "Spire &amp; Aegis vs rotorcraft", h: "Lance batteries vs ringrunners", a: "Storm-callers vs griffons", g: "Searchlight batteries vs ornithopters", gl: "Spore-sentinels vs jewel-wasps" }],
+      { m: "Spire &amp; Aegis vs rotorcraft", h: "Lance batteries vs ringrunners", a: "Storm-callers vs griffons", g: "Searchlight batteries vs ornithopters", gl: "Spore-sentinels vs jewel-wasps", p: "Sonar arrays vs eel-skimmers" }],
     ["Air strike into a fleet with an escort inside it",
-      { m: "Kestrels vs a Warden frigate", h: "Hammerheads vs an Aegis Tender", a: "Firedrakes vs a Stormward Carrack", g: "Raiders vs an Arclight Frigate", gl: "Hornets vs an Archer Raft" }],
+      { m: "Kestrels vs a Warden frigate", h: "Hammerheads vs an Aegis Tender", a: "Firedrakes vs a Stormward Carrack", g: "Raiders vs an Arclight Frigate", gl: "Hornets vs an Archer Raft", p: "Mantas vs a Needle-Hull" }],
     ["Conquests left without a garrison",
-      { m: "Cities rise to the Unbound", h: "Habitats secede to the Unmoored", a: "Towns go to the Unbanner'd", g: "Cities declare a Commune", gl: "Nests go feral" }],
+      { m: "Cities rise to the Unbound", h: "Habitats secede to the Unmoored", a: "Towns go to the Unbanner'd", g: "Cities declare a Commune", gl: "Nests go feral", p: "Domes breach to the Drift" }],
     ["One giant army instead of two right-sized ones",
-      { m: "22 in a 12-cap battlegroup", h: "19 in a 9-cap legion", a: "18 in an 8-cap host", g: "26 in a 14-cap brigade", gl: "31 in a 16-cap column" }],
+      { m: "22 in a 12-cap battlegroup", h: "19 in a 9-cap legion", a: "18 in an 8-cap host", g: "26 in a 14-cap brigade", gl: "31 in a 16-cap column", p: "23 in an 11-cap pod" }],
     ["Assaulting dug-in defenders while being shelled from range",
-      { m: "Lisle vs Hailstorm arrays", h: "Lucent vs mass drivers", a: "Thornwatch vs starseers", g: "Fort Ashcombe vs Congreve arrays", gl: "The ivy nest vs puffballs" }],
+      { m: "Lisle vs Hailstorm arrays", h: "Lucent vs mass drivers", a: "Thornwatch vs starseers", g: "Fort Ashcombe vs Congreve arrays", gl: "The ivy nest vs puffballs", p: "Lanterndeep vs torpedo racks" }],
     ["Unescorted transports over deep water",
-      { m: "Lampreys in the Varn Trench", h: "Shroud Hunters in the nebula", a: "Krakens in the Sunless Deep", g: "Nautilus boats in the Basin", gl: "Nymphs in the Cistern" }],
+      { m: "Lampreys in the Varn Trench", h: "Shroud Hunters in the nebula", a: "Krakens in the Sunless Deep", g: "Nautilus boats in the Basin", gl: "Nymphs in the Cistern", p: "Silent hulls over the Abyss" }],
     ["Aircraft parked within missile range",
-      { m: "Aerodromes hit by glide missiles", h: "Cradles hit by seeker torpedoes", a: "Aeries struck by seeking bolts", g: "Aerodromes hit by torpedo-rockets", gl: "Roosts hit by homing spores" }]
+      { m: "Aerodromes hit by glide missiles", h: "Cradles hit by seeker torpedoes", a: "Aeries struck by seeking bolts", g: "Aerodromes hit by torpedo-rockets", gl: "Roosts hit by homing spores", p: "Docks hit by supercavitating torpedoes" }]
   ];
-  var cols = [["m", "Meridian 2076"], ["h", "Hollow Reach"], ["a", "Ashen Crowns"], ["g", "Gilded Gale"], ["gl", "Glasshouse"]].concat(window.EXTRA_LESSON_COLS || []);
+  var cols = [["m", "Meridian 2076"], ["h", "Hollow Reach"], ["a", "Ashen Crowns"], ["g", "Gilded Gale"], ["gl", "Glasshouse"], ["p", "Pelagia"]].concat(window.EXTRA_LESSON_COLS || []);
   var t = "<thead><tr><th>Lesson</th>" + cols.map(function (c) { return "<th>" + c[1] + "</th>"; }).join("") + "</tr></thead><tbody>";
   lessons.forEach(function (l, i) {
     var extraRow = (window.EXTRA_LESSONS || [])[i] || {};
