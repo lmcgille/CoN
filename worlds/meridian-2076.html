@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian 2076</title>
+<meta name="description" content="A near-future war world: twelve successor states fight over the drowned-and-risen Kessarine Shelf in 2076.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root {
+    --accent: #0e5563; --accent-2: #1b8297; --display: "Saira Semi Condensed", system-ui, sans-serif;
+    --heat-1: #dcedf0; --heat-2: #a9d3dc; --heat-3: #64aebd; --heat-4: #1b8297; --heat-5: #0e5563;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --accent: #2aa3ba; --accent-2: #5cc6d9; --accent-ink: #0b1416;
+    --heat-1: #12323a; --heat-2: #17505c; --heat-3: #1d7385; --heat-4: #2aa3ba; --heat-5: #7fdcec;
+  } }
+  :root[data-theme="dark"] {
+    --accent: #2aa3ba; --accent-2: #5cc6d9; --accent-ink: #0b1416;
+    --heat-1: #12323a; --heat-2: #17505c; --heat-3: #1d7385; --heat-4: #2aa3ba; --heat-5: #7fdcec;
+  }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="#world">World</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#blocs">Blocs</a><a href="#roster-sec">Roster</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
+    <a href="#comps-sec">Compositions</a><a href="#chronicle">Chronicle</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">World I · Near future</div>
+  <h1>Meridian 2076</h1>
+  <p class="lede">Fifty years after the Long Drought broke the old alliances, the seabed of the Kessarine Shelf has become dry land, contested farmland and the richest lithium flats on the planet. Twelve successor states want it. Only one of them can write the map.</p>
+  <div class="facts">
+    <span class="fact"><b>12</b> successor states</span>
+    <span class="fact"><b>8</b> hit classes</span>
+    <span class="fact"><b>42</b> units</span>
+    <span class="fact">Battlegroups of <b>12</b> · flights &amp; flotillas of <b>4</b></span>
+    <span class="fact">Exchanges every <b>30 min</b></span>
+  </div>
+</div></div>
+
+<section id="world"><div class="wrap">
+  <h2>The world</h2>
+  <p class="sec-sub">Setting, geography, and the people your characters will be playing.</p>
+  <div class="prose">
+    <p>In the 2040s the rains stopped falling where the old capitals expected them. The Drought lasted eleven years, and by the time it broke, the treaties that had held a continent together were paper. What came after was not one country but a dozen: city-states that kept their water plants running, rump republics, a corporate protectorate, and one disciplined military directorate that never demobilised.</p>
+    <p>The prize is the <b>Kessarine Shelf</b> — a broad continental margin left high and dry when engineered dams and a decade of evaporation pulled the inland sea back two hundred kilometres. The exposed seabed is flat, salt-crusted and absurdly rich: lithium brines, rare-earth nodules, and soil that turns black and fertile once the salt is flushed. Around it sit old coastal cities now stranded inland, a ragged new coastline of shallow lagoons, and to the south the cold, deep <b>Varn Trench</b>, where submarines can disappear for weeks.</p>
+    <p>Each player commands one successor state: a capital, a handful of cities, and a scatter of outland districts. Victory goes to whoever holds enough of the map's <b>Mandate</b> — the weighted value of cities, districts and three strategic sites (the Halcyon Desalination Works, the Ostrel Lithium Flats, and the Sable Point Orbital Uplink) — at a daily count.</p>
+  </div>
+  <h3>Geography that shapes the war</h3>
+  <div class="grid g3">
+    <div class="card"><h4>The Salt Flats</h4><p class="small">Dead-flat open ground across the centre of the Shelf. Heavy armour runs at full speed and full strength here; infantry caught in the open die. This is where tank wars happen.</p></div>
+    <div class="card"><h4>The Sunken Cities</h4><p class="small">Old coastal metropolises left stranded inland. Dense urban terrain that eats armour and protects dug-in infantry. Every major campaign ends in one of them.</p></div>
+    <div class="card"><h4>The Corran Highlands</h4><p class="small">Mountain spine in the north. Vehicles crawl and fight badly; Highland Rangers thrive. A natural wall for whoever owns it.</p></div>
+    <div class="card"><h4>The Lagoon Coast</h4><p class="small">The new coastline: shallow, warm, mined easily. Small warships rule; submersibles are half-blind and fragile here. Ships heal quickly in friendly shallows.</p></div>
+    <div class="card"><h4>The Varn Trench</h4><p class="small">Deep cold water south of the Shelf. Submersibles are at their deadliest; littoral cutters lose most of their strength and hull integrity in the swell.</p></div>
+    <div class="card"><h4>The Mangrove Belt</h4><p class="small">Jungle-thick reclaimed wetland in the east. Slow for everyone, murderous for vehicles, a gift to defenders.</p></div>
+  </div>
+  <h3>The cast (rename freely)</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>State</th><th>Leader</th><th>Bloc</th><th>Starting posture</th></tr></thead>
+    <tbody>
+      <tr><td>The Varn Directorate</td><td>Marshal Ilse Kadrova</td><td>Directorate</td><td>Heavy armour on day one, poor air force, aggressive</td></tr>
+      <tr><td>The Concord of Harrow</td><td>Premier Tobias Wren</td><td>Concord</td><td>Slow, expensive, durable; builds economy first, wins from the sky</td></tr>
+      <tr><td>The Saltmarch League</td><td>Admiral Nkem Odu</td><td>Littoral League</td><td>Balanced; strong coast, early strike jets, a real navy</td></tr>
+      <tr><td>Free Port of Callisande</td><td>Syndic Mara Velez</td><td>Littoral League</td><td>Rich trading city, small army, buys mercenaries</td></tr>
+      <tr><td>Dunmark Protectorate</td><td>Director Aurel Fenn</td><td>Concord</td><td>Corporate state, high tech, tiny population</td></tr>
+      <tr><td>The Ostrel Communes</td><td>Speaker Juno Achebe</td><td>Directorate</td><td>Sits on the lithium flats; everyone's first target</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="economy"><div class="wrap">
+  <h2>Economy &amp; the home front</h2>
+  <p class="sec-sub">What your state produces, what armies cost to keep, and why conquered cities turn on you.</p>
+  <h3>Resources</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Resource</th><th>Comes from</th><th>Feeds</th></tr></thead>
+    <tbody>
+      <tr><td><b>Rations</b></td><td>Farm districts, reclaimed salt-flat agriculture</td><td>Infantry, militia, most construction; your population eats it daily</td></tr>
+      <tr><td><b>Alloy</b></td><td>Foundry cities, ore districts</td><td>Every vehicle, ship and airframe; all construction</td></tr>
+      <tr><td><b>Lattice</b></td><td>Fab cities (photonic &amp; micro-electronic plants)</td><td>Sensors, drones, air defence, any "smart" unit; most buildings</td></tr>
+      <tr><td><b>Exotics</b></td><td>Lithium flats, nodule fields — rare and fought over</td><td>All research, stealth airframes, submersibles, missiles</td></tr>
+      <tr><td><b>Cohort</b></td><td>Population — every city and district</td><td>Every unit to raise and to keep in the field. Cannot be traded.</td></tr>
+      <tr><td><b>Scrip</b></td><td>Taxes, trade, foundries</td><td>Everything; building upkeep; the only currency on the Exchange</td></tr>
+      <tr><td><b>Power</b> <span class="tag">capacity</span></td><td>Grid plants in cities (not stockpiled)</td><td>A ceiling, not a stockpile: every active unit and building draws on grid capacity. Go over and everything builds slower.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>Upkeep is the silent killer.</b> Every unit keeps drawing a slice of what it cost, every day, plus Power capacity. A state that raises a giant army on day two has spent its economy for the rest of the war. Shortages of Rations or Scrip hit <b>Cohesion</b> — and Cohesion multiplies everything.</div>
+  <h3>Territory</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Core cities</h4><p class="small">Your homeland. Full output, full Cohesion, can build anything. The capital boosts Cohesion in nearby districts.</p></div>
+    <div class="card"><h4>Held cities</h4><p class="small">Conquered and occupied. A quarter of normal output. They begin at very low Cohesion and are the cities that rise against you.</p></div>
+    <div class="card"><h4>Chartered cities</h4><p class="small">A held city you have formally integrated by building a Civic Charter (costs Cohort). Half output, can raise units. Only worth it behind the lines.</p></div>
+    <div class="card"><h4>Outland districts</h4><p class="small">The countryside between cities. Low output unless you build an Extractor on a resource deposit. Districts never revolt.</p></div>
+  </div>
+  <h3>Cohesion and unrest</h3>
+  <div class="prose">
+    <p>Every city and district has <b>Cohesion</b> from 0–100. It multiplies output, speeds or slows construction, grows population, and decides whether a city stays yours. Cohesion drifts each day toward a target set by: distance from your capital, the number of wars you are fighting, enemy troops nearby, shortages, civilian casualties, enemy agents, and the buildings you have put there.</p>
+    <p>A <b>held city below about a third Cohesion can rise.</b> A freshly taken city starts near a quarter. Once a day, at an unpredictable hour, each city rolls. If it rises and there are no troops in it, it simply becomes a <b>Free Zone</b> — owned by the rebel faction, the <i>Unbound</i>, who raise militia and wander. If you left even one infantry unit there, your garrison fights the rising with a home advantage and usually wins.</p>
+  </div>
+  <h3>Buildings</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Building</th><th>Where</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr><td>Foundry</td><td>City</td><td>+10% to all output per level and a daily Scrip payout. The standard opening build.</td></tr>
+      <tr><td>Extractor</td><td>District</td><td>Unlocks and multiplies a district's deposit.</td></tr>
+      <tr><td>Garrison Depot</td><td>City</td><td>Raises infantry; higher levels unlock better infantry.</td></tr>
+      <tr><td>Motor Pool</td><td>City</td><td>Raises armour and support vehicles.</td></tr>
+      <tr><td>Aerodrome</td><td>City</td><td>Every aircraft, including rotorcraft, is raised at and flies from an Aerodrome. Destroy it and its planes are grounded.</td></tr>
+      <tr><td>Forward Strip</td><td>District</td><td>Single-level landing strip for basing aircraft closer to the front.</td></tr>
+      <tr><td>Drydock</td><td>Coastal city</td><td>Raises ships and lets non-amphibious troops board transports.</td></tr>
+      <tr><td>Hardpoint</td><td>District</td><td>Fortifies a district's hold-point; troops dug in there take far less damage.</td></tr>
+      <tr><td>Deep Shelter</td><td>City</td><td>Protects population from bombardment and Sunfall strikes; strongly reduces damage to defenders.</td></tr>
+      <tr><td>Medbay</td><td>City / District</td><td>Units heal faster.</td></tr>
+      <tr><td>Transit Corridor</td><td>District</td><td>Ground units (anyone's) move much faster through it.</td></tr>
+      <tr><td>Research Campus</td><td>City</td><td>Unlocks research slots.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>Rules of battle</h2>
+  <p class="sec-sub">The handful of rules that create every surprise in this world.</p>
+  <div class="grid g2">
+    <div class="card"><h4>Exchanges</h4><p class="small">When two forces touch, the first <b>exchange</b> resolves instantly; after that, one every 30 minutes until a side dies, withdraws, or breaks contact. Each exchange compares the attacker's rating against the defender's <b>hit class</b>. A unit with a huge anti-armour rating does almost nothing to infantry.</p></div>
+    <div class="card"><h4>Hold-points and digging in</h4><p class="small">Every city and district has a <b>hold-point</b>. A force parked on it digs in automatically: it takes much less damage and does <i>not</i> shoot back — it just absorbs. A force sitting near the point, not on it, gets no protection and trades blows every exchange.</p></div>
+    <div class="card"><h4>Battlegroups, flights, flotillas</h4><p class="small">Ground battlegroups fight at full strength up to <b>12 units</b>; air flights and naval flotillas up to <b>4</b>. Past that each extra unit is worth less, then nothing, then actively drags the group down. Two groups of 12 beat one group of 24.</p></div>
+    <div class="card"><h4>Lines</h4><p class="small">Inside a group, incoming damage is shared by <b>line</b>. Vanguard units soak most of it, Mainline units some, Rearguard units very little. You cannot choose — the unit type decides. An all-rearguard group (artillery, launchers) melts.</p></div>
+    <div class="card"><h4>Reach and stand-off fire</h4><p class="small">Artillery, rocket arrays and some ships fire from <b>stand-off range</b>. A target without similar reach cannot answer. Fire one exchange, pull back, wait out the half-hour, step in again: the target bleeds and never touches you.</p></div>
+    <div class="card"><h4>Only infantry claims</h4><p class="small">A city or district changes hands only when a <b>claiming</b> unit reaches its hold-point. Tanks, artillery, aircraft, ships, Wraith teams and contract mercenaries can destroy everything and claim nothing.</p></div>
+    <div class="card"><h4>High air and low air</h4><p class="small">Jets fly <b>high</b> and are seen and shot by area missile batteries. Rotorcraft fly <b>low</b>, nap-of-the-earth — <i>under</i> Spire and Aegis coverage entirely. Only short-range point-defence (Lancets, frigates, interceptors) touches them.</p></div>
+    <div class="card"><h4>Point defence vs umbrella</h4><p class="small">Air defence <b>inside</b> the targeted group fires at <i>every</i> incoming aircraft or missile, with no cooldown. Air defence merely <b>covering</b> a nearby group fires once, then recharges — so a salvo can saturate it.</p></div>
+    <div class="card"><h4>Sensors and stealth</h4><p class="small">Line of sight shows that <i>something</i> is there; unidentified formations show as masked until scouted or engaged. Sensor masts and Overwatch aircraft see emissions at range. <b>Stealth</b> units are invisible until they fire or a matching revealer (ground, air or deep) is near.</p></div>
+    <div class="card"><h4>Shallow and deep water</h4><p class="small">The Lagoon Coast is <b>shallows</b>; the Trench and open ocean are <b>deep</b>. Cutters thrive in shallows and wither in deep water. Submersibles are the reverse — fragile and blunted in shallows, lethal in the deep.</p></div>
+    <div class="card"><h4>Transports</h4><p class="small">Ground units crossing water convert into transports at a Drydock. Transports cannot fight and barely float. The boarding and landing windows leave a force helpless for hours. Marines and Striders land on any beach.</p></div>
+    <div class="card"><h4>Aerodromes</h4><p class="small">Every aircraft flies from a home field, returns to rearm, and is a sitting duck on the ground. Destroy an Aerodrome and every plane based there is grounded until repairs finish.</p></div>
+  </div>
+</div></section>
+
+<section id="classes-sec"><div class="wrap">
+  <h2>Hit classes</h2>
+  <p class="sec-sub">What a unit is "hit as" decides which of the attacker's ratings applies. The right-hand column is computed from the roster below.</p>
+  <div id="classes"></div>
+</div></section>
+
+<section id="blocs"><div class="wrap">
+  <h2>The three blocs</h2>
+  <p class="sec-sub">Every state belongs to one bloc. Same unit roles everywhere — different models, toughness, prices and research timings.</p>
+  <div class="grid g3">
+    <div class="card"><h4>The Directorate</h4><p class="small"><b>Cheap, early, ground-heavy.</b> Bastion tanks and Hailstorm arrays from the very first day, at a discount. Units are fragile and the air force is thin, so Directorate players lean on Spire batteries for air defence — which fails against low-flying rotorcraft.</p><p class="small"><span class="tag good">Day-one armour</span><span class="tag good">Cheap losses</span><span class="tag bad">Weak air</span><span class="tag bad">Low toughness</span></p></div>
+    <div class="card"><h4>The Concord</h4><p class="small"><b>Expensive, tough, late, air-dominant.</b> Highest toughness and highest prices. Talons, Mantis hunters, Overwatch and Aegis domes arrive early in the research tree and carry Concord bonuses. Weak in the first week; very hard to beat after the third.</p><p class="small"><span class="tag good">Air &amp; sensors</span><span class="tag good">Toughness</span><span class="tag bad">Slow start</span><span class="tag bad">Costly losses</span></p></div>
+    <div class="card"><h4>The Littoral League</h4><p class="small"><b>Balanced.</b> Middle prices, middle toughness, reliable timings. Kestrel strike jets from day one, strong Siege Crawlers and Lancet point-defence, and the best early navy. Forgiving to play.</p><p class="small"><span class="tag good">Day-one strike jets</span><span class="tag good">Navy</span><span class="tag bad">No single dominant edge</span></p></div>
+  </div>
+</div></section>
+
+<section id="roster-sec"><div class="wrap">
+  <h2>Unit roster</h2>
+  <p class="sec-sub">Ratings are 0–5 against each hit class. "Dies to" is computed: the units with the strongest rating against this unit's hit class.</p>
+  <div class="filters" id="roster-filters"></div>
+  <div class="roster" id="roster"></div>
+</div></section>
+
+<section id="matrix-sec"><div class="wrap">
+  <h2>Counter matrix</h2>
+  <p class="sec-sub">Read across: how hard each unit hits each class. Find the column for what you're facing and look for the dark cells.</p>
+  <div id="matrix"></div>
+</div></section>
+
+<section id="synergy-sec"><div class="wrap">
+  <h2>Synergies</h2>
+  <p class="sec-sub">Pairings that cover each other's blind spots.</p>
+  <div class="grid g2" id="synergies"></div>
+</div></section>
+
+<section id="comps-sec"><div class="wrap">
+  <h2>Compositions</h2>
+  <p class="sec-sub">Complete builds for free-for-all and team play, with how each one wins and how it dies.</p>
+  <div class="grid g2" id="comps"></div>
+</div></section>
+
+<section id="chronicle"><div class="wrap">
+  <h2>Chronicle: The Shelf War</h2>
+  <p class="sec-sub">A complete war, told start to finish. Every defeat in it comes from a rule on this page.</p>
+  <div class="chron">
+    <h3><span class="when">Days 1–3</span>Two kinds of patience</h3>
+    <p>Marshal Ilse Kadrova did what Directorate marshals are trained to do: she spent her first morning on foundries, her first afternoon on tanks, and by the first evening she had two Bastion battlegroups idling on the Ostrel border with their engines warm. The Ostrel Communes had a militia, a lithium flat, and a Speaker who still believed in arbitration.</p>
+    <p>Four hundred kilometres west, Premier Tobias Wren of the Concord of Harrow built nothing that could shoot. He built a second foundry, a research campus, an aerodrome. His generals sent him memos. He did not read them. Concord arms were the best on the continent and the most expensive, and Wren had done the arithmetic: an army raised on day two would eat his economy for a month.</p>
+    <p>On the coast, Admiral Nkem Odu of the Saltmarch League raised a Hunter destroyer and a Warden frigate and parked them in the warm shallows off her capital. They were not exciting ships. That was rather the point.</p>
+
+    <h3><span class="when">Days 4–7</span>The flats</h3>
+    <p>Kadrova's armour crossed the Ostrel border on the salt flats, which is exactly where Bastions are meant to fight. The Communes' militia stood on open ground and died there. In three days the Directorate took four cities and the lithium flats. Her staff drew the new border in red on the situation map and the marshal had the map photographed for the evening broadcast.</p>
+    <p>She did not leave garrisons. Garrisons were infantry, infantry was slow, and the Bastions were already rolling toward the next city. Each captured city got the flag and a press release. None of them got a single soldier.</p>
+
+    <h3><span class="when">Day 8</span>Nothing on the scope</h3>
+    <p>Wren's first combat unit was not a tank. It was a flight of four Mantis hunters, rotorcraft built for one job, and Wren's air staff flew them out of the Harrow aerodrome at dawn, low over the Mangrove Belt, following the riverbeds.</p>
+    <p>Kadrova's lead battlegroup — five Bastions, two Siege Crawlers, nothing else — was refuelling on the flats east of Ostrel. Her two Spire batteries were a district behind, covering the column. The Spires' operators watched their scopes the entire time and saw nothing at all, because there was nothing to see: Mantis hunters fly below the horizon that area batteries watch.</p>
+    <p>The first exchange took two Bastions. The column had no answer — Bastions carry nothing that can elevate onto a rotorcraft — and so the hunters simply stayed. Half an hour later, another exchange. Then another. By noon the battlegroup was wreckage on the salt, and the Spire crews filed a report that said, accurately, that no hostile aircraft had entered their coverage.</p>
+    <blockquote>"Five tanks. Two batteries watching them. And they died without firing a shot." — Directorate after-action review, Day 8</blockquote>
+
+    <h3><span class="when">Days 9–11</span>The wrong umbrella</h3>
+    <p>Kadrova's answer was the Directorate answer: more air defence. She ordered six more Spire batteries and an Aegis dome, the best long-range interceptor her bloc could field. Every one of them was blind to low air. Wren's hunters kept killing tanks, and the new batteries kept reporting clear skies. A single Lancet point-defence vehicle in each column — cheap, short-ranged, ugly — would have shredded the Mantis flight. She had none. Her doctrine called them a "rear-area luxury."</p>
+    <p>Meanwhile Admiral Odu signed a compact with Wren. The Saltmarch League and the Concord would count their Mandate together. Kadrova now had two enemies, one on her flank and one on the sea.</p>
+
+    <h3><span class="when">Day 12</span>The flotilla</h3>
+    <p>Kadrova still had an air force — a small one, the Directorate's weakest arm, but real: four Kestrel strike jets and two Atlas bombers. Her intelligence reported Odu's flotilla anchored in the shallows off Saltmarch: a Hunter destroyer, two Monitor cruisers, and a fourth hull the analysts logged as "escort, minor." Monitors were the most dangerous surface ships on the coast and terrible at defending themselves from the air. It looked like the best target of the war.</p>
+    <p>The "minor escort" was the Warden frigate. A Warden is almost nothing as a warship — it barely scratches other ships — but it is a flying-saucer of radar and point-defence missiles, and when it sails <i>inside</i> a flotilla it fires on every single aircraft that attacks that flotilla, with no pause between targets. The Monitors had been bait without anyone intending it.</p>
+    <p>The strike went in at 0300. The first exchange resolved before the Kestrels released. Of six aircraft, two reached their launch point. One returned to base. The Monitors took a scratch.</p>
+    <blockquote>"I sent my entire air force at three ships and lost my entire air force to the fourth." — Marshal Kadrova, private diary</blockquote>
+
+    <h3><span class="when">Days 13–15</span>The cities rise</h3>
+    <p>Behind Kadrova's lines, the four Ostrel cities she had taken in a week had been sitting at a quarter Cohesion ever since — far from her capital, full of people who did not want her, and empty of soldiers. On the night of Day 13 two of them rose in the same hour. There was nothing in them to fight the rising, so the Unbound simply took them. By Day 15 there was a rebel enclave sitting on her main supply corridor, raising militia of its own, and she had to turn a battlegroup around to deal with it.</p>
+
+    <h3><span class="when">Days 16–19</span>The hourglass</h3>
+    <p>Kadrova concentrated. Everything she had left went into a single enormous battlegroup — twenty-two units, tanks, crawlers and infantry together — aimed at the Concord fortress city of Lisle. On the map it was terrifying. In practice, past twelve units every new vehicle made the group fight worse, not better; at twenty-two, it fought at about two-thirds strength and moved at a crawl.</p>
+    <p>Wren put Railjack tank hunters and infantry on Lisle's hold-point, where they dug in and simply absorbed. Two districts back he put three Hailstorm arrays. Every half hour the arrays rolled forward, fired one exchange into the Directorate column from beyond its reach, and rolled back before the column could close. Twelve hours of this. The column never touched them. When it finally reached Lisle at half strength, it hit dug-in defenders who took a fraction of the damage and kept absorbing. The assault broke on the second day.</p>
+
+    <h3><span class="when">Day 21</span>The crossing</h3>
+    <p>Desperate for a second front, Kadrova embarked her last reserve — two battlegroups of infantry and crawlers — at her southern drydock to land behind the Saltmarch coast. To save time she sent them straight across the Varn Trench, deep water, without a destroyer escort, because her destroyers were still being built.</p>
+    <p>Two Saltmarch Lamprey submersibles had been sitting in the Trench for nine days, invisible, waiting for exactly that. Transports do not fight back. The Lampreys surfaced from nothing, the first exchange resolved, and the reserve was gone before the Directorate even saw what had hit it.</p>
+
+    <h3><span class="when">Days 22–26</span>Grounded</h3>
+    <p>Wren's last move was the cheapest. Concord glide missiles hit the Directorate's two remaining aerodromes on the same night. Every replacement aircraft Kadrova had rebuilt since Day 12 was parked on those fields; every one of them was grounded or destroyed. With no air cover at all, her remaining columns became targets for the Mantis flights, and then for Atlas bombers flying unopposed.</p>
+    <p>By Day 26 the Directorate's Mandate had collapsed below the Concord–League compact's, and the war ended at the next daily count.</p>
+
+    <div class="postmortem">
+      <h3>Why Kadrova lost</h3>
+      <ol>
+        <li><b>Armour with no point-defence.</b> Bastions cannot touch rotorcraft. One Lancet per column would have changed Day 8.</li>
+        <li><b>The wrong air defence.</b> Spire batteries and Aegis domes cannot see low air. She bought the expensive answer to a different question.</li>
+        <li><b>Attacking an escorted flotilla from the air.</b> A Warden inside the flotilla fires at every aircraft, every exchange. The target that looked weakest was protected by the hull that looked least important.</li>
+        <li><b>No garrisons.</b> Fast conquests at low Cohesion, left empty, rose and became an enemy behind her own lines.</li>
+        <li><b>The overstuffed battlegroup.</b> Twenty-two units fighting as one at reduced strength, slowly, into stand-off fire it could never answer.</li>
+        <li><b>Assaulting a dug-in hold-point.</b> The defender absorbed; she paid for every exchange.</li>
+        <li><b>Unescorted transports over deep water.</b> Submersibles in their element against targets that cannot shoot back.</li>
+        <li><b>Planes on the ground.</b> Aircraft parked within missile range are not an air force, they are a target list.</li>
+      </ol>
+      <p class="muted small">And why Wren won: he spent the first week on economy, built counters to what his enemy actually fielded, let defence do the absorbing, and only fought in ways his enemy could not answer.</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · Meridian 2076 · An original setting. <a href="../index.html">All worlds</a></div></footer>
+
+<script>
+window.WORLD = {
+  lines: { front: "Vanguard", middle: "Mainline", rear: "Rearguard" },
+  tiers: ["Opening", "Mid-war", "Late-war"],
+  reach: ["Contact", "Short", "Stand-off", "Theatre"],
+  classes: [
+    { id: "inf", name: "Personnel", short: "Pers", desc: "Infantry, crews, militia, towed guns — anything without armour." },
+    { id: "arm", name: "Armour", short: "Arm", desc: "Tanks, fighting vehicles, armoured support and launch vehicles." },
+    { id: "high", name: "High air", short: "High", desc: "Jets, bombers, sky-radar — fast fixed-wing aircraft at altitude." },
+    { id: "low", name: "Low air", short: "Low", desc: "Rotorcraft and tiltrotors flying nap-of-the-earth. Invisible to area missile batteries." },
+    { id: "swarm", name: "Swarm", short: "Swarm", desc: "Small drones: recon gnats and expendable explosive swarms." },
+    { id: "surf", name: "Surface", short: "Surf", desc: "Warships and transports on the water." },
+    { id: "deep", name: "Deep", short: "Deep", desc: "Submersibles. Only hit once revealed." },
+    { id: "ord", name: "Ordnance", short: "Ord", desc: "Incoming missiles. Interceptable." }
+  ],
+  branches: [
+    { id: "inf", name: "Infantry" }, { id: "arm", name: "Armour" }, { id: "sup", name: "Support" },
+    { id: "air", name: "Air" }, { id: "sea", name: "Naval" }, { id: "ord", name: "Ordnance" }
+  ],
+  units: [
+    { id: "cohort", name: "Garrison Cohort", branch: "inf", hitAs: "inf", line: "rear", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Low", claims: true,
+      role: "Cheap line infantry. The default claimer and garrison.", atk: { inf: 2, arm: 1, low: 1, swarm: 1 },
+      traits: ["Can airlift between friendly aerodromes from the start", "Cheapest unit that can claim a city"],
+      strong: "Holding hold-points, garrisoning conquests, filling a battlegroup cheaply.", weak: "Armour, artillery, gunships. Dies fast in open ground." },
+    { id: "exo", name: "Exo-Line", branch: "inf", hitAs: "inf", line: "front", tier: 1, reach: 0, speed: 2, tough: 3, cost: "Medium", claims: true,
+      role: "Powered-exosuit infantry that walks with the tanks.", atk: { inf: 3, arm: 3, low: 1, swarm: 1 },
+      traits: ["Vanguard: soaks damage for the group", "Suits bog down in mangrove and highlands"],
+      strong: "Escorting armour, holding the line, anti-vehicle work.", weak: "Mangrove and mountain terrain; gunships; massed artillery." },
+    { id: "marine", name: "Tide Marines", branch: "inf", hitAs: "inf", line: "middle", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: true,
+      role: "Amphibious assault infantry.", atk: { inf: 3, arm: 2, low: 1 },
+      traits: ["Lands on any coastline — no drydock needed", "Takes harbourless islands"],
+      strong: "Beachheads, coastal raids, seizing a port for the heavy units.", weak: "Heavy armour once ashore; caught at sea without escort." },
+    { id: "vertical", name: "Vertical Assault", branch: "inf", hitAs: "inf", line: "middle", tier: 2, reach: 0, speed: 4, tough: 2, cost: "Medium", claims: true,
+      role: "Tiltrotor-inserted infantry that can land anywhere in range.", atk: { inf: 3, arm: 1, low: 1 },
+      traits: ["First exchange on landing is fought as Low air", "Needs an hour on the ground before it can claim", "Launches only from aerodromes or forward strips"],
+      strong: "Grabbing undefended cities deep in enemy land; striking artillery parks.", weak: "Point-defence during insertion; any real counter-attack during the hour it is settling." },
+    { id: "wraith", name: "Wraith Team", branch: "inf", hitAs: "inf", line: "rear", tier: 2, reach: 0, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Stealthed special operators.", atk: { inf: 4, arm: 2 },
+      traits: ["Invisible on the ground until it fires", "Reveals enemy ground stealth", "Ignores dug-in and shelter bonuses"],
+      strong: "Assassinating artillery and support; spotting; breaking fortified points.", weak: "Cannot claim. Fragile when found. Pathfinders reveal it." },
+    { id: "militia", name: "Civic Militia", branch: "inf", hitAs: "inf", line: "middle", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Very low", claims: true,
+      role: "Emergency home-defence levy.", atk: { inf: 1, arm: 1 },
+      traits: ["Raised with strength scaled to the city's Cohesion", "Crawls at a third speed in enemy territory"],
+      strong: "Plugging garrisons, home defence, emergencies.", weak: "Everything on the offensive." },
+    { id: "merc", name: "Contract Lancers", branch: "inf", hitAs: "inf", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Scrip only", claims: false,
+      role: "Hired brawlers. Bought with money instead of Cohort.", atk: { inf: 3, arm: 2, low: 1 },
+      traits: ["Cannot claim", "Uses no Cohort — lets small states field an army"],
+      strong: "Vanguard soaking for rich, small states.", weak: "Cannot convert victories into territory." },
+    { id: "ranger", name: "Highland Rangers", branch: "inf", hitAs: "inf", line: "rear", tier: 2, reach: 0, speed: 2, tough: 2, cost: "Medium", claims: true,
+      role: "Mountain and cold-terrain specialists.", atk: { inf: 3, arm: 1 },
+      traits: ["Large bonuses in highlands and tundra", "Penalties on flats and urban"],
+      strong: "Owning the Corran Highlands; mountain passes.", weak: "Anywhere flat." },
+
+    { id: "pathfinder", name: "Pathfinder", branch: "arm", hitAs: "arm", line: "rear", tier: 1, reach: 0, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Fast scout car.", atk: { inf: 2, arm: 1 },
+      traits: ["Identifies masked formations", "Reveals ground stealth", "Speeds its whole battlegroup in hostile land"],
+      strong: "Eyes for a column; hunting Wraith teams.", weak: "Real fights of any kind." },
+    { id: "lancer", name: "Lancer IFV", branch: "arm", hitAs: "arm", line: "front", tier: 1, reach: 0, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Infantry fighting vehicle — the all-rounder.", atk: { inf: 3, arm: 2, low: 1, swarm: 1 },
+      traits: ["Handles most terrain without penalty"],
+      strong: "Killing infantry, screening, versatile pushes.", weak: "Railjacks, Mantis hunters." },
+    { id: "bastion", name: "Bastion", branch: "arm", hitAs: "arm", line: "front", tier: 1, reach: 0, speed: 3, tough: 5, cost: "High", claims: false,
+      role: "Heavy main tank. The hammer of the flats.", atk: { inf: 3, arm: 4 },
+      traits: ["Full strength on open ground", "Severe penalties in urban, mountain, mangrove", "No anti-air capability at all"],
+      strong: "Open-ground battles, soaking damage, breaking armour.", weak: "Rotorcraft — it cannot shoot back. Railjacks in cities. Terrain." },
+    { id: "railjack", name: "Railjack", branch: "arm", hitAs: "arm", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Railgun tank hunter.", atk: { inf: 1, arm: 5 },
+      traits: ["Best armoured defender in urban terrain"],
+      strong: "Killing tanks, defending cities.", weak: "Infantry swarms, gunships, artillery." },
+    { id: "strider", name: "Strider", branch: "arm", hitAs: "arm", line: "middle", tier: 2, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Amphibious armoured carrier.", atk: { inf: 2, arm: 2 },
+      traits: ["Lands on any coastline"],
+      strong: "Giving Tide Marines armoured support on the beach.", weak: "Proper tanks." },
+
+    { id: "lancet", name: "Lancet PD", branch: "sup", hitAs: "arm", line: "middle", tier: 1, reach: 1, speed: 3, tough: 2, cost: "Low", claims: false,
+      role: "Short-range laser point-defence vehicle.", atk: { inf: 1, high: 2, low: 5, swarm: 5, ord: 2 },
+      traits: ["Sees and hits Low air", "Inside a battlegroup: fires on every attacker, every exchange"],
+      strong: "Rotorcraft and drone swarms. The single most important cheap unit in the game.", weak: "Ground assault; high-altitude jets." },
+    { id: "spire", name: "Spire Battery", branch: "sup", hitAs: "arm", line: "rear", tier: 1, reach: 2, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Mobile area missile battery.", atk: { high: 4, swarm: 1, ord: 3 },
+      traits: ["Own radar", "Cannot see or engage Low air"],
+      strong: "Jets, bombers and incoming missiles across a wide area.", weak: "Rotorcraft — completely blind. Ground attack." },
+    { id: "aegis", name: "Aegis Dome", branch: "sup", hitAs: "arm", line: "rear", tier: 2, reach: 3, speed: 1, tough: 3, cost: "High", claims: false,
+      role: "Theatre-range interceptor.", atk: { high: 3, ord: 5 },
+      traits: ["Longest-ranged missile interceptor", "Late upgrade reveals stealth aircraft", "Cannot see Low air"],
+      strong: "Shielding cities from missiles; catching stealth jets late-war.", weak: "Rotorcraft, saturation salvos, ground raids." },
+    { id: "howitzer", name: "Field Howitzer", branch: "sup", hitAs: "inf", line: "rear", tier: 1, reach: 2, speed: 1, tough: 1, cost: "Low", claims: false,
+      role: "Towed artillery.", atk: { inf: 4, arm: 2 },
+      traits: ["Stand-off fire", "Slowest unit on the field — drags its group"],
+      strong: "Grinding dug-in infantry before an assault.", weak: "Anything that reaches it. Hailstorms outrange it." },
+    { id: "crawler", name: "Siege Crawler", branch: "sup", hitAs: "arm", line: "middle", tier: 1, reach: 2, speed: 2, tough: 3, cost: "Medium", claims: false,
+      role: "Self-propelled armoured artillery.", atk: { inf: 3, arm: 3 },
+      traits: ["Stand-off fire", "Keeps up with armour"],
+      strong: "The default artillery for any armoured push.", weak: "Rotorcraft, strike jets, flanking." },
+    { id: "hailstorm", name: "Hailstorm Array", branch: "sup", hitAs: "arm", line: "middle", tier: 1, reach: 3, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Rocket artillery.", atk: { inf: 4, arm: 3, surf: 1 },
+      traits: ["Longest ground reach — outranges howitzers and crawlers", "Area damage"],
+      strong: "Shoot-and-scoot against slow columns. Counter-battery.", weak: "Air attack; fast flanks from two directions." },
+    { id: "mast", name: "Sensor Mast", branch: "sup", hitAs: "arm", line: "rear", tier: 1, reach: 0, speed: 2, tough: 1, cost: "Low", claims: false,
+      role: "Mobile radar.", atk: {},
+      traits: ["Detects ground and air emissions at long range, including Low air at short range"],
+      strong: "Early warning; seeing the attack before it lands.", weak: "Cannot fight at all." },
+    { id: "shore", name: "Shore Battery", branch: "sup", hitAs: "arm", line: "rear", tier: 1, reach: 2, speed: 1, tough: 3, cost: "Low", claims: false,
+      role: "Fixed coastal gun.", atk: { surf: 4, inf: 1 },
+      traits: ["Needs no research", "Immobile once placed"],
+      strong: "Punishing ships that loiter near your coast.", weak: "Air, missiles, landward attack." },
+
+    { id: "talon", name: "Talon Interceptor", branch: "air", hitAs: "high", line: "front", tier: 1, reach: 2, speed: 5, tough: 3, cost: "High", claims: false,
+      role: "Air superiority fighter.", atk: { high: 5, low: 3, swarm: 3, ord: 2 },
+      traits: ["Vanguard of any flight — soaks damage for strike aircraft", "Patrols an area automatically"],
+      strong: "Killing aircraft, escorting strikes, patrolling.", weak: "Ground and sea targets: almost useless against them." },
+    { id: "kestrel", name: "Kestrel Strike", branch: "air", hitAs: "high", line: "middle", tier: 1, reach: 2, speed: 5, tough: 2, cost: "High", claims: false,
+      role: "Multi-role strike jet.", atk: { inf: 3, arm: 4, surf: 2, high: 1 },
+      traits: ["Late upgrade carries a glide missile"],
+      strong: "Deep strikes on armour, artillery and launchers.", weak: "Interceptors; frigate point-defence; Spire batteries." },
+    { id: "hornet", name: "Hornet Gunship", branch: "air", hitAs: "low", line: "front", tier: 1, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Low-flying anti-personnel rotorcraft.", atk: { inf: 5, arm: 2 },
+      traits: ["Flies under area missile coverage", "Can base on carriers"],
+      strong: "Shredding infantry and towed guns.", weak: "Lancets; frigates; interceptors." },
+    { id: "mantis", name: "Mantis Hunter", branch: "air", hitAs: "low", line: "front", tier: 1, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Low-flying anti-armour rotorcraft.", atk: { arm: 5, inf: 2, surf: 2 },
+      traits: ["Flies under area missile coverage", "Can base on carriers"],
+      strong: "Unescorted armour columns. The tank-killer.", weak: "A single Lancet in the target group." },
+    { id: "heron", name: "Heron", branch: "air", hitAs: "low", line: "middle", tier: 2, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Low-flying anti-submarine rotorcraft.", atk: { deep: 5, surf: 3 },
+      traits: ["Reveals Deep units", "Outruns any fleet"],
+      strong: "Hunting submersibles.", weak: "Frigates; anything that shoots low air." },
+    { id: "overwatch", name: "Overwatch", branch: "air", hitAs: "high", line: "rear", tier: 2, reach: 3, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Airborne radar.", atk: {},
+      traits: ["Sees high air, armour and ships at huge range", "Does not see Low air", "Late upgrade reveals stealth"],
+      strong: "Information.", weak: "Unarmed. Interceptors." },
+    { id: "atlas", name: "Atlas Bomber", branch: "air", hitAs: "high", line: "middle", tier: 2, reach: 2, speed: 3, tough: 4, cost: "Very high", claims: false,
+      role: "Heavy bomber.", atk: { inf: 4, arm: 3, surf: 2 },
+      traits: ["Smashes buildings and aerodromes", "Late upgrade ignores Deep Shelters", "Carries glide missiles on a long reload"],
+      strong: "Cities, buildings, big slow columns.", weak: "Interceptors, Spires, frigates. Costs a fortune to lose." },
+    { id: "locust", name: "Locust Swarm", branch: "air", hitAs: "swarm", line: "middle", tier: 1, reach: 1, speed: 4, tough: 1, cost: "Low", claims: false,
+      role: "Expendable explosive drone swarm.", atk: { inf: 3, arm: 3 },
+      traits: ["Cheap attrition", "Shot down easily by point-defence"],
+      strong: "Wearing down groups without point-defence.", weak: "Lancets, frigates, interceptors." },
+    { id: "gnat", name: "Gnat Recon", branch: "air", hitAs: "swarm", line: "rear", tier: 1, reach: 2, speed: 4, tough: 1, cost: "Very low", claims: false,
+      role: "Recon drone.", atk: {},
+      traits: ["Identifies masked formations", "Crossing borders does not start a war"],
+      strong: "Cheap eyes.", weak: "Anything." },
+    { id: "albatross", name: "Albatross", branch: "air", hitAs: "high", line: "rear", tier: 2, reach: 2, speed: 3, tough: 3, cost: "High", claims: false,
+      role: "Maritime patrol aircraft.", atk: { deep: 4, surf: 3 },
+      traits: ["Reveals Deep units over a wide area", "Launches glide missiles late"],
+      strong: "Finding and killing submersibles far from your fleet.", weak: "Interceptors; frigates." },
+    { id: "phantom", name: "Phantom", branch: "air", hitAs: "high", line: "rear", tier: 3, reach: 2, speed: 5, tough: 2, cost: "Very high", claims: false,
+      role: "Stealth strike aircraft.", atk: { inf: 3, arm: 4, high: 2, surf: 2 },
+      traits: ["Invisible until it fires", "Does not trigger war crossing borders", "Revealed by late Aegis and Overwatch"],
+      strong: "Killing aerodromes, launchers and command at will.", weak: "Late-war revealers; enormous cost." },
+
+    { id: "cutter", name: "Cutter", branch: "sea", hitAs: "surf", line: "front", tier: 1, reach: 1, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Littoral picket ship.", atk: { surf: 2, deep: 2, inf: 1 },
+      traits: ["Strong in shallows", "Loses most strength and hull in deep water"],
+      strong: "Coastal patrol, cheap screening, lagoon fights.", weak: "Deep water; anything bigger." },
+    { id: "warden", name: "Warden Frigate", branch: "sea", hitAs: "surf", line: "middle", tier: 1, reach: 2, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "The flotilla's air and missile shield.", atk: { high: 5, low: 3, swarm: 4, ord: 5, surf: 1 },
+      traits: ["Inside a flotilla: fires on every aircraft and missile, no cooldown", "Barely threatens other ships"],
+      strong: "Making a flotilla nearly immune to air and missile attack.", weak: "Ship-to-ship combat; submersibles." },
+    { id: "hunter", name: "Hunter Destroyer", branch: "sea", hitAs: "surf", line: "front", tier: 1, reach: 2, speed: 4, tough: 4, cost: "Medium", claims: false,
+      role: "All-round escort.", atk: { surf: 3, deep: 4, high: 2, low: 1 },
+      traits: ["Sonar: reveals Deep units", "Lays sea mines in shallows", "Launches glide missiles late"],
+      strong: "Submarine hunting, screening, flexible.", weak: "Monitors in a gunfight." },
+    { id: "monitor", name: "Monitor Cruiser", branch: "sea", hitAs: "surf", line: "middle", tier: 2, reach: 3, speed: 3, tough: 4, cost: "High", claims: false,
+      role: "Heavy gun and missile cruiser.", atk: { surf: 5, inf: 3, arm: 3 },
+      traits: ["Best shore bombardment in the game", "Weak against submersibles and aircraft"],
+      strong: "Sinking surface fleets, shelling coasts.", weak: "Submersibles; air attack when unescorted." },
+    { id: "leviathan", name: "Leviathan Carrier", branch: "sea", hitAs: "surf", line: "rear", tier: 3, reach: 0, speed: 3, tough: 5, cost: "Very high", claims: false,
+      role: "Floating aerodrome.", atk: { high: 1 },
+      traits: ["Bases naval-capable jets and all rotorcraft", "One per flotilla", "Aircraft aboard heal in shallows"],
+      strong: "Air power anywhere on the sea.", weak: "Everything if its escorts are gone." },
+    { id: "lamprey", name: "Lamprey", branch: "sea", hitAs: "deep", line: "middle", tier: 2, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Attack submersible.", atk: { surf: 5, deep: 4 },
+      traits: ["Stealth until it fires", "Half toughness and reduced damage in shallows", "Cannot attack land"],
+      strong: "Ambushing fleets and transports in deep water.", weak: "Herons, Albatross, Hunters; shallow water." },
+    { id: "trident", name: "Trident", branch: "sea", hitAs: "deep", line: "rear", tier: 3, reach: 3, speed: 3, tough: 3, cost: "Very high", claims: false,
+      role: "Missile submersible.", atk: { surf: 1 },
+      traits: ["Launches Arc missiles while hidden", "Very weak in shallows"],
+      strong: "A hidden strike platform off an enemy coast.", weak: "Any submarine hunter." },
+
+    { id: "glide", name: "Glide Missile", branch: "ord", hitAs: "ord", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Warheads", claims: false,
+      role: "Low-flying guided missile.", atk: { inf: 3, arm: 4, surf: 4 },
+      traits: ["Can target a moving formation and track it", "Launched by Kestrels, Atlas, Hunters, Monitors, Lampreys and ground launchers"],
+      strong: "Killing a specific group or a parked air wing.", weak: "Point-defence inside the target group." },
+    { id: "arc", name: "Arc Missile", branch: "ord", hitAs: "ord", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Warheads", claims: false,
+      role: "Ballistic missile.", atk: { inf: 4, arm: 3 },
+      traits: ["Only strikes hold-points, never moving units", "Area damage — wrecks buildings"],
+      strong: "Breaking cities, aerodromes and fortifications.", weak: "Aegis domes; useless against moving targets." },
+    { id: "sunfall", name: "Sunfall Warhead", branch: "ord", hitAs: "ord", line: "rear", tier: 3, reach: 3, speed: 5, tough: 1, cost: "Ruinous", claims: false,
+      role: "Strategic warhead.", atk: { inf: 5, arm: 5, surf: 4 },
+      traits: ["Huge area; hits your own units too", "Contaminates the area", "Every province you own loses Cohesion for a long time"],
+      strong: "Ending a siege in one night.", weak: "Your own nation's morale; interceptors; diplomacy." }
+  ],
+  synergies: [
+    { name: "Hammer & Lancet", units: ["bastion", "exo", "lancet"], why: "Bastions break armour, Exo-Line soaks and kills infantry, and one Lancet inside the battlegroup makes rotorcraft attacks suicidal." },
+    { name: "Escort & Strike", units: ["talon", "kestrel"], why: "The Talon sits in the vanguard of the flight and takes a large share of incoming fire, so the fragile Kestrels survive to release." },
+    { name: "Shield Flotilla", units: ["hunter", "warden", "monitor"], why: "Hunter finds submersibles, Warden swallows every air and missile attack, Monitor does the killing. No blind spot." },
+    { name: "Eyes & Arrays", units: ["mast", "hailstorm"], why: "Hailstorms outrange everything on the ground but need someone to see the target. A Sensor Mast or Pathfinder turns them into a kill zone." },
+    { name: "Layered sky", units: ["lancet", "spire", "aegis"], why: "Lancet takes low air and swarms, Spire takes jets, Aegis takes missiles and (late) stealth. Each covers another's blind spot." },
+    { name: "Beachhead", units: ["marine", "strider", "monitor"], why: "Monitor shells the beach, Marines and Striders land anywhere, then heavy units ship into the captured port." },
+    { name: "Ghost decapitation", units: ["wraith", "phantom", "arc"], why: "Wraiths and Phantoms find and mark aerodromes and launch sites invisibly; Arc missiles erase them." },
+    { name: "Sub screen", units: ["heron", "lamprey"], why: "Herons sweep shallows for enemy submersibles while your own Lampreys wait in deep water for whatever flees." }
+  ],
+  comps: [
+    { name: "Iron Anvil", mode: "FFA · Team", size: "Battlegroup: 12 / 12",
+      units: [["bastion", 3], ["exo", 3], ["crawler", 2], ["lancet", 2], ["cohort", 2]],
+      idea: "The complete flats army. Armour kills armour, Exo-Line kills infantry and soaks, crawlers soften hold-points, two Lancets make it immune to rotorcraft, and Cohorts claim.",
+      play: "Push across open ground; let crawlers fire first; drop a Cohort in every city you take and move on.",
+      loses: "Dragged into the Sunken Cities or mangroves. Hailstorm kiting. Strike jets if no Spire nearby." },
+    { name: "Hourglass Defence", mode: "FFA", size: "Two groups: 8 on the point, 4 behind",
+      units: [["railjack", 3], ["cohort", 3], ["lancet", 1], ["spire", 1], ["hailstorm", 3], ["mast", 1]],
+      idea: "A dug-in city that absorbs while rocket arrays two districts back bleed the attacker every exchange.",
+      play: "Railjacks, Cohorts and air defence sit on the hold-point. Hailstorms step in, fire, step back. The attacker pays twice.",
+      loses: "Wraith teams that ignore digging in; Arc missiles on the point; enemy strike jets on the arrays." },
+    { name: "Low Hunt", mode: "FFA · Team", size: "Flight: 4 / 4",
+      units: [["mantis", 2], ["hornet", 2]],
+      idea: "Two tank-killers and two infantry-killers flying under area air defence. Devastates any group without point-defence.",
+      play: "Scout first with a Gnat. Hit only groups with no Lancet. Rotate home to rearm.",
+      loses: "One Lancet in the target, Warden frigates, or Talons on patrol." },
+    { name: "Shield Flotilla", mode: "FFA · Team", size: "Flotilla: 4 / 4",
+      units: [["hunter", 1], ["warden", 1], ["monitor", 2]],
+      idea: "Sonar, air shield and guns in one formation. Air strikes and missiles die on the Warden; Monitors win gunfights and shell the coast.",
+      play: "Keep in shallows near friendly coast to heal; shell coastal groups from stand-off.",
+      loses: "Lampreys in deep water if the Hunter dies; massed glide salvos fired from beyond its reach in quick succession." },
+    { name: "Vertical Envelopment", mode: "Team", size: "Two flights + infantry",
+      units: [["vertical", 4], ["talon", 2], ["kestrel", 2]],
+      idea: "Insert infantry deep behind a front that an ally is pinning, with jets clearing the landing zone.",
+      play: "Ally holds the enemy's main army. Kestrels strike the target city's defenders; Talons escort; Vertical Assault lands and claims an hour later.",
+      loses: "Point-defence over the landing zone; a counter-attack during the settling hour." },
+    { name: "Concord Sky Lock", mode: "FFA", size: "Late-war",
+      units: [["overwatch", 1], ["talon", 3], ["atlas", 2], ["aegis", 1], ["railjack", 3], ["cohort", 3]],
+      idea: "Turtle on the ground, win the air entirely, then bomb the enemy economy flat.",
+      play: "Talons on patrol over Overwatch; Atlas bombers hit foundries and aerodromes; ground units only defend.",
+      loses: "An early rush before the air force exists. Lancet-heavy enemies limit the follow-up." },
+    { name: "Hammer & Umbrella", mode: "Team (2 players)", size: "Split roles",
+      units: [["bastion", 4], ["exo", 4], ["cohort", 2], ["talon", 4], ["spire", 2], ["lancet", 2]],
+      idea: "One player fields only ground power; the ally fields only air defence and interceptors over it. Each player's economy goes deeper into one tree.",
+      play: "Move together, with the umbrella player's Spires and Lancets travelling inside or beside the hammer's groups.",
+      loses: "Coordination failures — one partner sleeps, the other dies. Hailstorm kiting still hurts." },
+    { name: "Littoral Leap", mode: "FFA · Team", size: "Flotilla + landing",
+      units: [["monitor", 2], ["warden", 1], ["hunter", 1], ["marine", 4], ["strider", 2]],
+      idea: "Take a port the enemy thinks is safe behind water.",
+      play: "Flotilla clears and shells the coast, Marines and Striders land on a beach next to the port, heavy units follow in.",
+      loses: "Shore batteries and Lampreys; landing without escort." },
+    { name: "Swarm Attrition", mode: "FFA", size: "Cheap",
+      units: [["locust", 4], ["gnat", 1], ["hailstorm", 2], ["cohort", 4]],
+      idea: "A poor state's war: cheap drones and rockets erode enemy groups that lack point-defence.",
+      play: "Gnats find targets, Locusts and Hailstorms grind, Cohorts claim what's left.",
+      loses: "Any opponent who builds Lancets." },
+    { name: "Ghost Economy War", mode: "FFA (late)", size: "Specialist",
+      units: [["phantom", 2], ["wraith", 2], ["trident", 1], ["aegis", 1]],
+      idea: "Never fight the enemy army. Destroy its aerodromes, foundries and launchers until it cannot replace anything.",
+      play: "Strike invisibly, every night, at buildings. Keep an Aegis home for the reply.",
+      loses: "A rival that wins the ground war before your strikes matter; late revealers." }
+  ]
+};
+</script>
+<script src="../assets/world.js"></script>
+</body>
+</html>
