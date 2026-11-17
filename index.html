@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contested Worlds</title>
+<meta name="description" content="One war, told in many worlds: original settings with full rosters, counters, compositions and a complete war chronicle each.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  :root { --display: "Fraunces", Georgia, serif; --accent: #2b2b2b; --accent-2: #8a5a1f; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #e9e2d6; --accent-2: #e0a95c; --accent-ink: #15130f; } }
+  :root[data-theme="dark"] { --accent: #e9e2d6; --accent-2: #e0a95c; --accent-ink: #15130f; }
+  .lessons td:first-child { font-weight: 600; min-width: 220px; }
+  .lessons td { min-width: 150px; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="index.html">Contested Worlds</a>
+  <nav class="toc"><a href="#worlds">Worlds</a><a href="#lessons">The eight lessons</a><a href="#how">How to read</a></nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">An anthology of wars</div>
+  <h1>One war, many worlds</h1>
+  <p class="lede">Each world here is a complete, original setting for a war between rulers: its land, its economy, its rules of battle, every unit with what it beats and what kills it, the armies that work — and one full war, start to finish. The worlds look nothing alike. The mistakes that lose them are the same.</p>
+</div></div>
+
+<section id="worlds"><div class="wrap">
+  <h2>The worlds</h2>
+  <p class="sec-sub">Pick a world. Each page stands on its own.</p>
+  <div class="world-grid" id="world-grid"></div>
+</div></section>
+
+<section id="lessons"><div class="wrap">
+  <h2>The eight lessons</h2>
+  <p class="sec-sub">Every chronicle turns on the same eight blunders. Here is what each one is called in each world.</p>
+  <div class="tbl-wrap"><table class="lessons" id="lessons-table"></table></div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <h2>How to read a world page</h2>
+  <div class="grid g3">
+    <div class="card"><h4>World &amp; economy</h4><p class="small">The map, the people, what they produce, what armies cost to keep, and why conquered places turn against you.</p></div>
+    <div class="card"><h4>Rules of battle</h4><p class="small">The dozen rules that create every surprise: hit classes, formation limits, digging in, range, who can take ground, low flyers, escorts, stealth, transports, bases.</p></div>
+    <div class="card"><h4>Roster &amp; matrix</h4><p class="small">Every unit rated 0–5 against every hit class. The matrix shows at a glance what to bring against what. "Dies to" is computed, not written by hand.</p></div>
+    <div class="card"><h4>Synergies</h4><p class="small">Pairings that cover each other's blind spots.</p></div>
+    <div class="card"><h4>Compositions</h4><p class="small">Ten complete armies per world for free-for-all and team play, with how they win and how they die.</p></div>
+    <div class="card"><h4>Chronicle</h4><p class="small">A whole war, told in that world's own voice, ending with why the loser lost.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · All settings, characters and units are original.</div></footer>
+
+<script>
+(function () {
+  var worlds = [
+    { href: "worlds/meridian-2076.html", eyebrow: "Near future", name: "Meridian 2076", band: "linear-gradient(135deg,#0e5563,#1b8297 55%,#c9d6c4)",
+      blurb: "Fifty years on, twelve successor states fight over a dried-out seabed rich in lithium. Railgun hunters, tiltrotors, laser point-defence." },
+    { href: "worlds/hollow-reach.html", eyebrow: "Space opera", name: "The Hollow Reach", band: "radial-gradient(circle at 70% 30%,#b3a3ff,#3b2d7a 45%,#0d0c16)",
+      blurb: "A star cluster sealed off from humanity. Walkers on dust worlds, ringrunners in planetary rings, cloaked hulls in the nebula." },
+    { href: "worlds/ashen-crowns.html", eyebrow: "High fantasy", name: "The Ashen Crowns", band: "linear-gradient(135deg,#2a0f0b,#6b1d1d 45%,#d8694f)",
+      blurb: "Seven crowns fight over a dead dragon's burned and fertile heartland. Golems, griffons, storm-callers and krakens." },
+    { href: "worlds/gilded-gale.html", eyebrow: "Aetherpunk", name: "The Gilded Gale", band: "linear-gradient(135deg,#3b2a0a,#a87118 50%,#f2d08c)",
+      blurb: "Steam empires and a lift-gas that changed everything. Landships, ornithopters, zeppelins and nautilus boats." },
+    { href: "worlds/glasshouse.html", eyebrow: "Biological", name: "The Glasshouse", band: "linear-gradient(135deg,#1c3311,#5a8f2c 50%,#d3e8a8)",
+      blurb: "Insect colonies with minds of their own fight one summer-long war inside an abandoned conservatory." }
+  ];
+  var extra = window.EXTRA_WORLDS || [];
+  worlds = worlds.concat(extra);
+  var grid = document.getElementById("world-grid");
+  worlds.forEach(function (w) {
+    var a = document.createElement("a");
+    a.className = "card world-card"; a.href = w.href;
+    a.innerHTML = '<div class="band" style="background:' + w.band + '"><span>' + w.eyebrow + '</span></div><div class="body"><h3>' + w.name + "</h3><p>" + w.blurb + "</p></div>";
+    grid.appendChild(a);
+  });
+
+  var lessons = [
+    ["Heavy armour with no short-range air defence",
+      { m: "Bastions with no Lancet", h: "Juggernauts with no Flak Spindle", a: "Golems with no Skyward Bows", g: "Landships with no Pom-Pom", gl: "Titans with no Archer-Spitters" }],
+    ["Long-range air defence against low flyers",
+      { m: "Spire &amp; Aegis vs rotorcraft", h: "Lance batteries vs ringrunners", a: "Storm-callers vs griffons", g: "Searchlight batteries vs ornithopters", gl: "Spore-sentinels vs jewel-wasps" }],
+    ["Air strike into a fleet with an escort inside it",
+      { m: "Kestrels vs a Warden frigate", h: "Hammerheads vs an Aegis Tender", a: "Firedrakes vs a Stormward Carrack", g: "Raiders vs an Arclight Frigate", gl: "Hornets vs an Archer Raft" }],
+    ["Conquests left without a garrison",
+      { m: "Cities rise to the Unbound", h: "Habitats secede to the Unmoored", a: "Towns go to the Unbanner'd", g: "Cities declare a Commune", gl: "Nests go feral" }],
+    ["One giant army instead of two right-sized ones",
+      { m: "22 in a 12-cap battlegroup", h: "19 in a 9-cap legion", a: "18 in an 8-cap host", g: "26 in a 14-cap brigade", gl: "31 in a 16-cap column" }],
+    ["Assaulting dug-in defenders while being shelled from range",
+      { m: "Lisle vs Hailstorm arrays", h: "Lucent vs mass drivers", a: "Thornwatch vs starseers", g: "Fort Ashcombe vs Congreve arrays", gl: "The ivy nest vs puffballs" }],
+    ["Unescorted transports over deep water",
+      { m: "Lampreys in the Varn Trench", h: "Shroud Hunters in the nebula", a: "Krakens in the Sunless Deep", g: "Nautilus boats in the Basin", gl: "Nymphs in the Cistern" }],
+    ["Aircraft parked within missile range",
+      { m: "Aerodromes hit by glide missiles", h: "Cradles hit by seeker torpedoes", a: "Aeries struck by seeking bolts", g: "Aerodromes hit by torpedo-rockets", gl: "Roosts hit by homing spores" }]
+  ];
+  var cols = [["m", "Meridian 2076"], ["h", "Hollow Reach"], ["a", "Ashen Crowns"], ["g", "Gilded Gale"], ["gl", "Glasshouse"]].concat(window.EXTRA_LESSON_COLS || []);
+  var t = "<thead><tr><th>Lesson</th>" + cols.map(function (c) { return "<th>" + c[1] + "</th>"; }).join("") + "</tr></thead><tbody>";
+  lessons.forEach(function (l, i) {
+    var extraRow = (window.EXTRA_LESSONS || [])[i] || {};
+    t += "<tr><td>" + l[0] + "</td>" + cols.map(function (c) { return "<td>" + (l[1][c[0]] || extraRow[c[0]] || "") + "</td>"; }).join("") + "</tr>";
+  });
+  document.getElementById("lessons-table").innerHTML = t + "</tbody>";
+})();
+</script>
+<script src="assets/world.js"></script>
+</body>
+</html>

@@ -177,6 +177,9 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
-    if (window.WORLD) render(window.WORLD);
+    if (window.WORLD) {
+      render(window.WORLD);
+      document.querySelectorAll("[data-count='units']").forEach(function (n) { n.textContent = window.WORLD.units.length; });
+    }
   });
 })();
