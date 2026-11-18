@@ -121,7 +121,7 @@ p { margin: 0 0 14px; }
 .note b { color: var(--ink); }
 
 .grid { display: grid; gap: 14px; }
-.g2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.g2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); }
 .g3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .card {
   background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); padding: 16px;
