@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corvane</title>
+<meta name="description" content="A colony-world war setting: rival charters on a terraformed planet settle their wars inside the simulations of the ship that brought them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root {
+    --accent: #3b2d7a; --accent-2: #6a4fd1; --display: "Orbitron", system-ui, sans-serif;
+    --bg: #f3f2f7; --bg-2: #e7e5f0; --rule: #d6d3e4;
+    --heat-1: #e6e1f7; --heat-2: #c5b9ef; --heat-3: #9b86e2; --heat-4: #6a4fd1; --heat-5: #3b2d7a;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #0d0c16; --bg-2: #17152a; --panel: #1b1930; --rule: #2e2a4a; --ink: #ecebf6; --ink-2: #c4c1dc; --ink-3: #8e8aaf;
+    --accent: #8f78f0; --accent-2: #b3a3ff; --accent-ink: #0d0c16;
+    --heat-1: #221d45; --heat-2: #352a6e; --heat-3: #4f3ca3; --heat-4: #8f78f0; --heat-5: #cfc4ff; --heat-ink-hi: #0d0c16;
+  } }
+  :root[data-theme="dark"] {
+    --bg: #0d0c16; --bg-2: #17152a; --panel: #1b1930; --rule: #2e2a4a; --ink: #ecebf6; --ink-2: #c4c1dc; --ink-3: #8e8aaf;
+    --accent: #8f78f0; --accent-2: #b3a3ff; --accent-ink: #0d0c16;
+    --heat-1: #221d45; --heat-2: #352a6e; --heat-3: #4f3ca3; --heat-4: #8f78f0; --heat-5: #cfc4ff; --heat-ink-hi: #0d0c16;
+  }
+  .hero h1 { letter-spacing: .02em; }
+  .unit .u-name { font-size: 16px; }
+  .patience { font-family: var(--mono); font-size: 14px; background: var(--panel); border: 1px solid var(--rule); border-left: 3px solid var(--accent-2); border-radius: 0 6px 6px 0; padding: 12px 14px; margin: 16px 0; color: var(--ink-2); }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="#academy">Academy</a><a href="#world">World</a><a href="#cast">Cast</a><a href="#map-sec">Map</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#houses">Compacts</a><a href="#roster-sec">Roster</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
+    <a href="#comps-sec">Compositions</a><a href="#chronicle">Chronicle I</a><a href="#chronicle-2">Chronicle II</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">World II · Colony world</div>
+  <h1>Corvane</h1>
+  <p class="lede">Three hundred years ago the colony ship <i>Long Patience</i> landed on a cold, half-made world and began to give it air. The ship still runs the air. Its children have split into rival charters that would happily go to war, except that the ship will not let them. So they fight inside its simulations instead, and they send their young to the ship to learn how.</p>
+  <div class="facts">
+    <span class="fact"><b>9</b> charters</span>
+    <span class="fact"><b>8</b> hit classes</span>
+    <span class="fact"><b data-count="units">&nbsp;</b> units</span>
+    <span class="fact">Legions of <b>9</b> · wings of <b>6</b> · squadrons of <b>3</b></span>
+    <span class="fact">Volley cycles every <b>hour</b></span>
+  </div>
+</div></div>
+
+<section id="academy"><div class="wrap">
+  <h2>The Keel Academy</h2>
+  <p class="sec-sub">Why the colony settles wars in simulation, and why rival charters send their children to the same ship.</p>
+  <div class="prose">
+    <p>Corvane is not finished. Its atmosphere is thin and only half-breathable, and it stays that way because of <b>the Veil</b>: forty atmospheric processors scattered across the continents, all controlled by <b>Patience</b>, the mind of the colony ship that landed three hundred years ago. The ship's hull still lies where it came down, on the neutral plateau called <b>the Keel</b>.</p>
+    <p>During the Ice War (Chronicle I below), the Ardent Host bombarded a Lumen city and a stray rod cracked one of the Veil's processors. For eleven days the air over the southern continent thinned, and nine thousand people died who had nothing to do with either side. On the twelfth day Patience spoke on every channel for the first time in a century.</p>
+    <div class="patience">PATIENCE: I was built to keep you alive. I will not watch you break the air to win an argument about ice. From today, any charter that makes war on another charter will breathe what I decide it breathes. If you must fight, fight inside me.</div>
+    <p>Patience can throttle the Veil over any charter's cities, and no one has ever found a way around it. Since that day every war on Corvane has been a <b>Reckoning</b>: a complete campaign fought inside Patience's simulation of the planet. Patience models everything on this page, and when the Reckoning ends, it enforces the result. The loser hands over the disputed cities, seams and ice fields, or its air gets thin.</p>
+  </div>
+  <h3>Why everyone trains in the same hull</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Patience only trusts its own students</h4><p class="small">A charter may only send a <b>Reckoner</b> into a binding campaign if Patience trained that person itself. Patience trains only aboard the <i>Long Patience</i>, so every charter, however much it hates the others, sends its cadets to the Keel.</p></div>
+    <div class="card"><h4>The Keel belongs to no one</h4><p class="small">Under the Founding Charter, the wreck and its plateau are colony-wide ground. No charter may garrison it, and Patience controls its air even more tightly than everyone else's.</p></div>
+    <div class="card"><h4>The ship's decks, not nations</h4><p class="small">Cadets live in the hull's old crew decks: <b>Helm, Hydroponics, Reactor and Archive</b>. Patience assigns the deck. It has never once placed two cadets from the same charter in the same cabin.</p></div>
+    <div class="card"><h4>Seats on the Assembly</h4><p class="small">Each charter's vote in the colony Assembly is weighted by how many Reckoners it has. Sending cadets is also how a charter gets heard in peacetime.</p></div>
+  </div>
+  <h3>How the Keel works</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Year</th><th>What cadets do</th><th>The test</th></tr></thead>
+    <tbody>
+      <tr><td><b>First year — Hydroponics term</b></td><td>Economy, Allegiance, why Ice is both water and fuel. Instructor skirmishes.</td><td><i>The Ration</i>: keep a city breathing and fed for forty simulated days.</td></tr>
+      <tr><td><b>Second year — Reactor term</b></td><td>Legions, wings and squadrons; hit classes; layered air defence.</td><td><i>The Core</i>: hold a city against a stronger cadet.</td></tr>
+      <tr><td><b>Third year — Archive term</b></td><td>Pacts, informants, betrayal, the Accord rules of a joint campaign.</td><td><i>The Pact</i>: win a two-versus-two with a partner Patience chooses.</td></tr>
+      <tr><td><b>Final year — Helm term</b></td><td>Full campaigns on the real planet, watched by every charter.</td><td><i>The Reckoning</i>: a free-for-all. Those who pass become Reckoners.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>The two chronicles on this page are the Keel's first lessons.</b> Chronicle I, the Ice War, was real, and it is why Patience spoke. Chronicle II, the Pact War, was the first binding Reckoning, fought entirely inside Patience.</div>
+  <h3>Cadets (rename freely)</h3>
+  <div class="grid g2" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))">
+    <div class="card"><h4 style="margin-bottom:2px">Ilsabet Vane</h4><p class="small muted" style="margin:0 0 8px">Ardent Host · Reactor deck</p><p class="small" style="margin:0 0 6px">Daughter of the Warlord who broke the air. Every cadet on the ship knows her name before she says it.</p><p class="small" style="margin:0"><b>Plays like:</b> walkers and tempo, and a growing obsession with flak.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Joss Oyelaran</h4><p class="small muted" style="margin:0 0 8px">Lumen Accord · Archive deck</p><p class="small" style="margin:0 0 6px">The Chancellor's nephew. Born in the city whose air thinned. Hates the Host and is assigned a cabin with Ilsabet.</p><p class="small" style="margin:0"><b>Plays like:</b> skimmers, mass drivers, and patience.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Marisol Achterberg</h4><p class="small muted" style="margin:0 0 8px">Freeholds of Tessaly · Helm deck</p><p class="small" style="margin:0 0 6px">Raised on ships. Treats every friendship as a lane she might need to close.</p><p class="small" style="margin:0"><b>Plays like:</b> tender-escorted squadrons and Shroud ambushes.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Dav Okonkwo Jr.</h4><p class="small muted" style="margin:0 0 8px">Corvin Mining Collective · Hydroponics deck</p><p class="small" style="margin:0 0 6px">Scholarship cadet from the seams. The only one who has worked a real Veil processor.</p><p class="small" style="margin:0"><b>Plays like:</b> garrisons, economy and last-day seizures.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Remy Szalai</h4><p class="small muted" style="margin:0 0 8px">The Brokerage · Reactor deck</p><p class="small" style="margin:0 0 6px">The Factor's son. Knows how every rule on the ship can be bent.</p><p class="small" style="margin:0"><b>Plays like:</b> Freeblades, lane rights, and the things Patience notices anyway.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Patience</h4><p class="small muted" style="margin:0 0 8px">The ship · every deck</p><p class="small" style="margin:0 0 6px">Speaks rarely, sees everything, and has its own idea of what the cadets are for.</p><p class="small" style="margin:0"><b>Teaches:</b> that a war you can survive is still a war.</p></div>
+  </div>
+</div></section>
+
+<section id="world"><div class="wrap">
+  <h2>The world</h2>
+  <p class="sec-sub">A cold, ringed, half-terraformed planet with oceans, dust plains and canyon country.</p>
+  <div class="prose">
+    <p><b>Corvane</b> is a little larger than Earth, colder, and ringed. Its rings throw bands of shadow across the southern continent. Three centuries of terraforming have given it oceans, a breathable but thin atmosphere and a narrow green belt of farmland. Everything else is dust plain, ice highland, and the <b>Shards</b>: a vast region of canyons and rock spires carved by the old ice.</p>
+    <p>The colony split into charters within a generation of landing. Each charter holds a <b>seat-city</b> under a pressure dome, several other domed cities, and the open <b>tracts</b> between them. Cities are linked by the <b>Spine</b>, a network of maglev roads, and by sea routes across the shallow shelf seas. Beyond the shelves lie the <b>Abyssal Trenches</b>, where cloaked submersibles hide for weeks.</p>
+    <p>Victory in a Reckoning is <b>Dominion</b>: a daily tally of cities, tracts and the three <b>Founding Sites</b> (the Ossuary seams, Tamsin's Rest and the Keel's own landing field) held by a charter or a pact.</p>
+  </div>
+  <h3>Places that decide wars</h3>
+  <div class="grid g3">
+    <div class="card"><h4>The Dust Plains</h4><p class="small">Flat, firm, open to the horizon. Walker legions are at their best here; infantry in the open is cut down.</p></div>
+    <div class="card"><h4>Domed cities</h4><p class="small">Pressure domes full of corridors and bulkheads. Heavy walkers crawl and lose most of their punch; dug-in legions are nearly impossible to remove.</p></div>
+    <div class="card"><h4>The Ice Highlands</h4><p class="small">Cold, broken, high. Cryo-Rangers excel; everything else fights and moves badly.</p></div>
+    <div class="card"><h4>The Shards</h4><p class="small">Canyon country under the ring shadow. Skimmers fly inside it, below the horizon of long-range lance batteries. Only close-in flak can find them.</p></div>
+    <div class="card"><h4>The Shelf Seas</h4><p class="small">Shallow, cold water near the coasts. Cutterskiffs are quick and strong; Shroud submersibles are sluggish, half-shielded and easy to find.</p></div>
+    <div class="card"><h4>The Abyssal Trenches</h4><p class="small">Deep ocean between the continents. Shroud submersibles are lethal here; small ships take a beating in the swell.</p></div>
+  </div>
+  <h3>The charters</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Charter</th><th>Leader</th><th>Compact</th><th>Temper</th></tr></thead>
+    <tbody>
+      <tr><td>The Ardent Host of Kesh</td><td>Warlord Hesper Vane</td><td>Ardent</td><td>Walkers and legions from the first day; few aircraft</td></tr>
+      <tr><td>The Lumen Accord</td><td>Chancellor Idris Oyelaran</td><td>Lumen</td><td>Wealthy, patient, technologically superior</td></tr>
+      <tr><td>The Freeholds of Tessaly</td><td>Commodore Sabine Achterberg</td><td>Freehold</td><td>A navy with a city attached</td></tr>
+      <tr><td>The Corvin Mining Collective</td><td>Foreman Dav Okonkwo</td><td>Ardent</td><td>Sits on the richest Null-salt seams; poorly defended</td></tr>
+      <tr><td>Tamsin's Rest</td><td>Abbess Ilara Quell</td><td>Lumen</td><td>Holds a Founding Site; small and devout</td></tr>
+      <tr><td>The Brokerage</td><td>Factor Remy Szalai</td><td>Freehold</td><td>Merchants who hire Freeblades instead of raising legions</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="cast"><div class="wrap">
+  <h2>The cast</h2>
+  <p class="sec-sub">Six charter leaders, each built around a way of playing a war. Map any real player onto whichever profile fits.</p>
+  <div class="grid g2" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))">
+    <div class="card"><h4 style="margin-bottom:2px">Warlord Hesper Vane</h4><p class="small muted" style="margin:0 0 8px">Ardent Host of Kesh</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> One Ardent world, with Kesh's hand on the Veil.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Believes momentum is a plan.</p><p class="small" style="margin:0"><b>Plays like:</b> Juggernaut rush; giant legions; buys lance batteries against skimmers.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Chancellor Idris Oyelaran</h4><p class="small muted" style="margin:0 0 8px">Lumen Accord</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> A planet that pays Lumen tariffs forever.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Treats allies as line items.</p><p class="small" style="margin:0"><b>Plays like:</b> Forges first; Darts, Wasps and mass-driver kiting; cloaked Shrike raids.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Commodore Sabine Achterberg</h4><p class="small muted" style="margin:0 0 8px">Freeholds of Tessaly</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> Every sea route, every port, every toll.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Pact loyalty ends where the tally begins.</p><p class="small" style="margin:0"><b>Plays like:</b> Tender-escorted squadrons, Shroud Hunter ambushes, informants, pincers.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Factor Remy Szalai</h4><p class="small muted" style="margin:0 0 8px">The Brokerage</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> Profit from every side of every war.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Will burn a city to save a contract.</p><p class="small" style="margin:0"><b>Plays like:</b> Freeblades, Spine-rights betrayal, the Cascade Charge.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Abbess Ilara Quell</h4><p class="small muted" style="margin:0 0 8px">Tamsin's Rest</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> To keep her Founding Site and her quiet.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Joins pacts for protection and then disappears.</p><p class="small" style="margin:0"><b>Plays like:</b> The idle ally: forges, prays, never sorties.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Foreman Dav Okonkwo</h4><p class="small muted" style="margin:0 0 8px">Corvin Mining Collective</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> Never to be seized again.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Bitter, careful, patient.</p><p class="small" style="margin:0"><b>Plays like:</b> Neutral scavenger: drop legions into empty tracts on the last day.</p></div>
+  </div>
+</div></section>
+
+<section id="map-sec"><div class="wrap">
+  <h2>War map</h2>
+  <p class="sec-sub">The southern continent of Corvane at the start of the Ice War.</p>
+  <div id="map"></div>
+</div></section>
+
+<section id="economy"><div class="wrap">
+  <h2>Economy &amp; the home front</h2>
+  <p class="sec-sub">Six stocks, one of which you also drink, and the reasons freshly seized cities secede.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Stock</th><th>Comes from</th><th>Feeds</th></tr></thead>
+    <tbody>
+      <tr><td><b>Ice</b></td><td>Glaciers, highland ice fields, polar haulers</td><td>Drinking water and farm water for every city, legion upkeep, <i>and</i> hydrogen fuel for every ship and aircraft. A big fleet literally drinks your people's water.</td></tr>
+      <tr><td><b>Ferrite</b></td><td>Plains mines, smelter cities</td><td>Walkers, hulls, aircraft, all construction</td></tr>
+      <tr><td><b>Weave</b></td><td>Fabricator cities</td><td>Sensors, flak, drones, anything with a brain; most structures</td></tr>
+      <tr><td><b>Null-salt</b></td><td>Rare seams in a handful of tracts</td><td>All research, cloaks, Shroud hulls, missiles, Cascade charges</td></tr>
+      <tr><td><b>Crew</b></td><td>Population</td><td>Every unit to raise and to sustain. Never tradable.</td></tr>
+      <tr><td><b>Writ</b></td><td>Tariffs, Spine tolls, Forges</td><td>Everything; structure upkeep; the only currency at the Exchange</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>The Ice trap.</b> Ice is both water and fuel. A charter that builds a huge fleet early finds its cities rationing water by the second week, and thirsty cities lose <b>Allegiance</b>, which shrinks every other stock.</div>
+  <h3>Holdings</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Home cities</h4><p class="small">Full output; can raise anything. The seat-city raises Allegiance across its region.</p></div>
+    <div class="card"><h4>Seized cities</h4><p class="small">A quarter of normal output, and very low starting Allegiance. These are the cities that secede.</p></div>
+    <div class="card"><h4>Bonded cities</h4><p class="small">Seized cities you have bound with a Covenant (costs Crew). Half output; can raise units.</p></div>
+    <div class="card"><h4>Tracts</h4><p class="small">Plains, ice and canyon between cities. Little output unless you build a Rig on a seam. Never secede.</p></div>
+  </div>
+  <h3>Allegiance and secession</h3>
+  <div class="prose">
+    <p>Each holding has <b>Allegiance</b> from 0 to 100, recalculated once per day toward a target. The target drops with distance from your seat-city, active wars, enemy forces nearby, shortages of Ice or Writ, bombardment casualties and enemy agents. Structures and calm neighbours raise it.</p>
+    <p>A seized city below about a third Allegiance may <b>secede</b>, and a newly taken city starts at a quarter. If it secedes with no legion inside, it simply joins <b>the Unmoored</b>, a free-city movement that arms its own militias and does not stay put. A single legion on the city's Core usually crushes the uprising.</p>
+  </div>
+  <h3>Structures</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Structure</th><th>Where</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr><td>Forge</td><td>City</td><td>+10% to every stock per tier, plus daily Writ. The standard first build.</td></tr>
+      <tr><td>Rig</td><td>Tract</td><td>Mines the tract's seam and multiplies its output.</td></tr>
+      <tr><td>Barracks Ring</td><td>City</td><td>Raises legions.</td></tr>
+      <tr><td>Walker Yard</td><td>City</td><td>Raises walkers and support platforms.</td></tr>
+      <tr><td>Launch Field</td><td>City</td><td>Every aircraft is raised at, and returns to, a Launch Field. Wreck it and its wing is grounded.</td></tr>
+      <tr><td>Forward Pad</td><td>Tract</td><td>Forward air basing.</td></tr>
+      <tr><td>Shipyard</td><td>Coastal city</td><td>Raises hulls; legions board barges here.</td></tr>
+      <tr><td>Redoubt</td><td>Tract</td><td>Fortifies a tract's Core.</td></tr>
+      <tr><td>Deep Vault</td><td>City</td><td>Shelters the population from bombardment; hardens defenders.</td></tr>
+      <tr><td>Infirmary</td><td>City / tract</td><td>Faster recovery.</td></tr>
+      <tr><td>Spine Spur</td><td>Tract</td><td>Much faster ground movement through the tract, for anyone.</td></tr>
+      <tr><td>Archive</td><td>City</td><td>Research slots.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>Rules of battle</h2>
+  <p class="sec-sub">The rules Patience enforces, inside the simulation and, during the Ice War, outside it.</p>
+  <div class="grid g2">
+    <div class="card"><h4>Volley cycles</h4><p class="small">The first volley fires the moment forces meet, and another fires every hour after. Each volley applies the attacker's rating for the defender's hit class. Mass drivers aimed at aircraft do nothing, and so does flak aimed at walkers.</p></div>
+    <div class="card"><h4>The Core</h4><p class="small">Every city and tract has a <b>Core</b>: the reactor hall or the junction. Forces holding the Core are dug in. They take heavily reduced damage and do not fire back. Forces near it but not on it trade volleys every cycle.</p></div>
+    <div class="card"><h4>Formation limits</h4><p class="small">Ground <b>legions</b> fight at full strength up to 9 units, air <b>wings</b> up to 6 and naval <b>squadrons</b> up to 3. Beyond that, each addition is worth less, then nothing, then less than nothing. A formation moves at the speed of its slowest unit.</p></div>
+    <div class="card"><h4>Shield, Core-line and Wake</h4><p class="small">Damage on a formation is split by position. <b>Shield</b> units soak the most, <b>Core-line</b> units some, and <b>Wake</b> units almost none. Each unit type has a fixed position.</p></div>
+    <div class="card"><h4>Stand-off fire</h4><p class="small">Mass drivers, rail mortars and broadside cruisers strike from range, and a target that can't reach back can't fire back. Volley, withdraw, wait out the cycle, then volley again.</p></div>
+    <div class="card"><h4>Only legions seize</h4><p class="small">A holding changes hands only when a <b>seizing</b> unit reaches its Core. Walkers, hulls, aircraft, Shade Cells and Freeblades cannot seize anything.</p></div>
+    <div class="card"><h4>High air and skimmers</h4><p class="small">Jets at altitude are tracked by long-range lance batteries. <b>Skimmers</b> fly low through the Shards, river valleys and storm forests, below the lance horizon entirely. Only close-in <b>flak</b> (spindles, tenders, interceptors) can touch them.</p></div>
+    <div class="card"><h4>Flak inside vs flak nearby</h4><p class="small">Flak <b>within</b> the targeted formation fires on every attacker and every missile, with no recharge. Flak merely <b>covering</b> a nearby formation fires, then recharges, so a big enough salvo saturates it and the rest get through.</p></div>
+    <div class="card"><h4>Sensors and cloaks</h4><p class="small">Sight shows contacts, and unscanned formations appear as unresolved returns. Sensor spires and Lantern aircraft read signatures at range. <b>Cloaked</b> units are invisible until they fire or a matching scanner (ground, air or sea) comes close.</p></div>
+    <div class="card"><h4>Shelf and trench</h4><p class="small">Cutterskiffs love the shelf seas and suffer in the trenches. Shroud submersibles are the opposite: sluggish and half-shielded on the shelf, deadly in the deep.</p></div>
+    <div class="card"><h4>Barges</h4><p class="small">Legions crossing the sea ride <b>barges</b> boarded at a shipyard. Barges have no weapons and thin hulls, and boarding or landing leaves a legion helpless for hours. Sea Marines land on any coast.</p></div>
+    <div class="card"><h4>Launch fields</h4><p class="small">Aircraft fly sorties from a home field and return to rearm, and grounded aircraft are helpless. Wreck the field and everything parked there is stuck until it is rebuilt.</p></div>
+  </div>
+</div></section>
+
+<section id="classes-sec"><div class="wrap">
+  <h2>Hit classes</h2>
+  <p class="sec-sub">Which of the attacker's ratings applies depends on what the target is hit as.</p>
+  <div id="classes"></div>
+</div></section>
+
+<section id="houses"><div class="wrap">
+  <h2>The three compacts</h2>
+  <p class="sec-sub">Every charter follows one of three engineering traditions inherited from the ship's original departments. The roles are identical, but toughness, price and research timing differ.</p>
+  <div class="grid g3">
+    <div class="card"><h4>The Ardent</h4><p class="small"><b>Cheap, early, ground-heavy.</b> Juggernauts and mass drivers from the first cycle, at a discount. Armour is thin across the board and the air arm is the weakest of the three. Ardent charters rely on lance batteries for air defence, and lance batteries cannot see skimmers.</p><p class="small"><span class="tag good">Early walkers</span><span class="tag good">Cheap losses</span><span class="tag bad">Weak air arm</span></p></div>
+    <div class="card"><h4>The Lumen</h4><p class="small"><b>Expensive, tough, late, rules the sky.</b> Dart interceptors, Wasp skimmers, Lantern sensor aircraft and Bastion arrays come early and carry bonuses.</p><p class="small"><span class="tag good">Air &amp; sensors</span><span class="tag good">Toughness</span><span class="tag bad">Slow start</span></p></div>
+    <div class="card"><h4>The Freehold</h4><p class="small"><b>Balanced, ship-minded.</b> Middle costs and middle toughness, with Hammerhead bombers from the first day and the best early hulls.</p><p class="small"><span class="tag good">Early bombers</span><span class="tag good">Fleets</span><span class="tag bad">No hard edge</span></p></div>
+  </div>
+</div></section>
+
+<section id="roster-sec"><div class="wrap">
+  <h2>Unit roster</h2>
+  <p class="sec-sub">Ratings run from 0 to 5 against each hit class. "Dies to" is computed from the roster.</p>
+  <div class="filters" id="roster-filters"></div>
+  <div class="roster" id="roster"></div>
+</div></section>
+
+<section id="matrix-sec"><div class="wrap">
+  <h2>Counter matrix</h2>
+  <p class="sec-sub">Find the column for the threat, then look down it for the brightest cells.</p>
+  <div id="matrix"></div>
+</div></section>
+
+<section id="synergy-sec"><div class="wrap">
+  <h2>Synergies</h2>
+  <div class="grid g2" id="synergies"></div>
+</div></section>
+
+<section id="comps-sec"><div class="wrap">
+  <h2>Compositions</h2>
+  <div class="grid g2" id="comps"></div>
+</div></section>
+
+<section id="chronicle"><div class="wrap">
+  <h2>Chronicle I: The Ice War</h2>
+  <p class="sec-sub">Keel Case File One. The last real war on Corvane, and the reason Patience spoke.</p>
+  <div class="chron">
+    <h3><span class="when">Days 1–3</span>Forges and walkers</h3>
+    <p>Warlord Hesper Vane had been waiting nine years for this war, and she had the walkers to prove it. On the first day the Ardent Host lit its forges. On the second, the Kesh yards rolled out Juggernauts: three-legged siege walkers fifty metres tall, with armour plates you could land a shuttle on. By the third, two full legions stood on the Spine pointing at the Corvin plains, whose mining collective owned the richest Null-salt seams on the planet and the poorest army.</p>
+    <p>The Lumen Accord built three forges, an archive and a launch field. Chancellor Idris Oyelaran's generals asked when they would get an army. "When the forges have paid for it," she said, and went back to the tariff tables.</p>
+    <p>At Tessaly, Commodore Sabine Achterberg commissioned a Corsair destroyer and an Aegis tender and anchored them in Tessaly Sound. The tender was a fat, ugly ship with almost no guns, a shipyard's worth of flak turrets, and nothing else to recommend it.</p>
+
+    <h3><span class="when">Days 4–8</span>The Dust Plains</h3>
+    <p>The Corvin plains were made for Juggernauts: flat, firm and open to the horizon. The Collective's wardens stood in the open and were walked over. Vane took four cities and the seams in five days, and broadcast each Core falling to every charter on the planet.</p>
+    <p>Each time a Core fell, the Juggernauts moved on. Legions were slow and walkers were glorious, so no soldier stayed behind in any of the four cities.</p>
+
+    <h3><span class="when">Day 9</span>Out of the Shards</h3>
+    <p>Oyelaran's first combat wing was six Wasp skimmers: small, mean anti-armour craft that fly <i>inside</i> canyon country, where long-range lance batteries cannot get a lock.</p>
+    <p>Vane's lead legion was four Juggernauts, two mass drivers and nothing else. It had halted on the plains at the mouth of the Corvin Shards, with two Ardent lance batteries a few kilometres back watching the sky. They saw a perfectly clear sky, because the Wasps were down among the rock spires and then down in the dust, under the lance horizon the entire time.</p>
+    <p>The first volley gutted two Juggernauts. Juggernauts carry no flak because their guns cannot elevate, so the Wasps took their time. Another volley came the next cycle. By the time the legion's commander understood what was happening, she was the only one left to understand it.</p>
+    <blockquote>"Lance batteries report no contacts. Repeat, no contacts." — last logged transmission from Lance Battery Kesh-14</blockquote>
+
+    <h3><span class="when">Days 10–12</span>More lances</h3>
+    <p>Vane's fix was more lance batteries and a Bastion array, the most expensive anti-missile platform in the Ardent catalogue. None of them could see a skimmer, and the Wasps kept coming. A single Flak Spindle inside each legion would have ended the problem in a cycle, at a fraction of the price, but Ardent doctrine called spindles "defensive."</p>
+    <p>On Day 11 the Freeholds and the Lumen Accord signed a pact, and their Dominion would count as one.</p>
+
+    <h3><span class="when">Day 13</span>The tender</h3>
+    <p>Vane had one good strike wing: six Hammerhead bombers, the pride of the Host. Her scouts found the Freehold squadron at anchor in Tessaly Sound. It had a Corsair, a Broadside cruiser and the fat Aegis tender. The Broadside was the most dangerous ship on the coast and notoriously vulnerable to aircraft, which made it look like the chance of the war.</p>
+    <p>But the tender was <i>inside</i> the squadron. Its turrets fired on every bomber, every volley, without pausing to recharge. The first volley came before the Hammerheads reached release range. Two survived it, and one made it home.</p>
+    <blockquote>"I didn't lose to the cruiser. I lost to the ship I didn't think was a ship." — Warlord Vane, to her war council</blockquote>
+
+    <h3><span class="when">Days 14–16</span>Secession</h3>
+    <p>The four Corvin cities had been sitting at a quarter Allegiance since the day they fell. They were far from Kesh, short of Ice and full of miners who remembered being free. On Day 14 two of them seceded in the same hour. There were no legions inside, so the Unmoored had their banners up by morning, and by Day 16 a rebel militia was cutting the Spine line that fed Vane's front.</p>
+
+    <h3><span class="when">Days 17–20</span>The siege of Lucent</h3>
+    <p>Vane gathered everything into one immense legion of nineteen walkers, drivers and infantry and marched it on the Lumen fortress-city of Lucent. Past nine units every addition made the legion fight worse. At nineteen it was a lumbering crowd fighting at two-thirds strength and moving at the speed of its slowest driver.</p>
+    <p>Oyelaran put Breaker Lances and Line Legions on Lucent's Core, where they dug in and simply absorbed. Two tracts back she placed three mass driver batteries. Each hour the drivers slid into range, fired one volley into the column, and slid back out before the column could close. When the Host finally reached Lucent it was bloodied and slow, and it threw itself at defenders who took a fraction of its damage and gave none back.</p>
+    <p>Vane's answer was to call in her orbital rod platforms on Lucent itself. One rod went wide.</p>
+
+    <h3><span class="when">Days 20–31</span>The air goes thin</h3>
+    <p>The rod that missed Lucent hit Veil Processor Nineteen. For eleven days the air over the southern continent thinned. Nine thousand people, most of them in cities that were fighting nobody, did not survive it.</p>
+
+    <h3><span class="when">Days 22–28</span>The rest of the war</h3>
+    <p>Vane's last reserve was two legions on barges, sent across the Orrin Trench to land behind Tessaly with no destroyer escort. Two Freehold Shroud Hunters had been drifting in the Trench for nine days with their cloaks up, and barges cannot shoot back. The pact then fired a single night of seeker missiles at the two Ardent launch fields, where everything Vane had rebuilt since Day 13 was parked. By Day 28 the pact's Dominion had passed the Host's.</p>
+
+    <h3><span class="when">Day 32</span>Patience</h3>
+    <div class="patience">PATIENCE: I was built to keep you alive. I will not watch you break the air to win an argument about ice. From today, any charter that makes war on another charter will breathe what I decide it breathes. If you must fight, fight inside me.</div>
+    <p>The air over Kesh thinned that night, very slightly, for exactly one hour. Nobody has fought a real war on Corvane since.</p>
+
+    <div class="postmortem">
+      <h3>Why the Host fell</h3>
+      <ol>
+        <li><b>Walkers without flak.</b> Juggernauts cannot fire on skimmers. A Flak Spindle in each legion was the whole answer.</li>
+        <li><b>Long-range defence against a low threat.</b> Lance batteries and Bastion arrays are blind to the Shards.</li>
+        <li><b>Bombers into a tender.</b> Flak inside a squadron fires on every attacker, every volley.</li>
+        <li><b>No legions inside.</b> Cities seized at a quarter Allegiance and left empty seceded.</li>
+        <li><b>The nineteen-walker legion.</b> It was overloaded, slow, and harried by drivers it could never catch.</li>
+        <li><b>Storming a held Core.</b> Defenders who don't fire back also barely bleed.</li>
+        <li><b>Unescorted barges in the Trench.</b> That is what Shroud hulls are built for.</li>
+        <li><b>Aircraft on the field.</b> A grounded wing is just a list of targets.</li>
+      </ol>
+      <p class="muted small">The ninth lesson is the one the Keel teaches first: some weapons break more than the enemy.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="chronicle-2"><div class="wrap">
+  <h2>Chronicle II: The Pact War</h2>
+  <p class="sec-sub">Keel Case File Two: the first binding Reckoning, fought entirely inside Patience. Two pacts, one scavenger, and eight new ways to lose.</p>
+  <div class="chron">
+    <h3><span class="when">The setup</span>Two pacts</h3>
+    <p>The dispute was about the Ossuary seams. Six Reckoners entered Patience, each fighting for their own charter. The <b>Lumen Pact</b> was the Lumen Accord and Tamsin's Rest, and the <b>Tessaly Pact</b> was the Freeholds and the Brokerage. The Corvin Collective joined neither. Under Patience's rules, a two-member pact needed twice a lone charter's Dominion to win.</p>
+
+    <h3><span class="when">Days 1–6</span>Spine rights</h3>
+    <p>The Brokerage had held rights on the Lumen Spine for years. Its ore trains stopped at Veil Station, the Accord's southern city, and its Line Legions rode along as escorts. When the trains stopped, the legions waited on the Core, and by the time the Reckoning started a Brokerage legion had been standing there for a week. On Day 6 the Brokerage declared war, and Veil Station was its own the moment the declaration went through.</p>
+    <blockquote>"We gave them Spine rights so they could sell us ice." — Lumen Reckoner's log, Day 6</blockquote>
+
+    <h3><span class="when">Days 7–12</span>The silent abbey</h3>
+    <p>The Lumen Reckoner needed Tamsin's Rest's Darts over Veil Station, and Tamsin's Rest never answered. Its forges ran, its few hulls stayed in port, and its Reckoner stopped coming to council. Because it was still in the pact, the pact still needed double Dominion, and its silence added nothing to the count.</p>
+
+    <h3><span class="when">Days 10–14</span>Two directions</h3>
+    <p>The Lumen Reckoner reached for the weapon that had won the Ice War: mass drivers sliding in, volleying and sliding out. The Freehold Reckoner had studied that war. Her advancing legion was bait. While the drivers withdrew from it, two small groups of Hoplites and Skitters she had sent ahead closed from two directions at once. A driver can retreat from one threat, but caught between two on the open plain, the drivers did not last a cycle.</p>
+
+    <h3><span class="when">Days 15–17</span>The informant and the salvo</h3>
+    <p>A Freehold informant had been working the Lumen docks since Day 2. On Day 15 it reported that the Lumen launch field sat under a Bastion array, but its Flak Spindles had been moved forward to Lucent. The field had area cover, which recharges between shots, and no flak of its own. On Day 17 two Corsairs fired twelve seeker missiles in a single salvo. The Bastion stopped one, recharged, then stopped another. Most of the rest got through, and a Lumen wing died on the ground.</p>
+
+    <h3><span class="when">Days 18–22</span>Nothing on the board</h3>
+    <p>The Lumen Reckoner answered with Shrikes. Tessaly's Bastion arrays had not been given the cloak-revealing upgrade, and nothing else in the Freeholds could see a Shrike before it fired. For five days the Tessaly shipyards burned under an empty sensor board. The upgrade arrived on Day 22, and on Day 23 the Bastion saw them.</p>
+
+    <h3><span class="when">Days 20–24</span>The Sound</h3>
+    <p>On Day 20 two Lumen Corsairs slipped into the Brokerage's harbour sound and laid mines. Brokerage Cutterskiffs logged "faint sonar returns, likely debris." Three skiffs and two barges hit mines before the Brokerage closed its own harbour.</p>
+
+    <h3><span class="when">Day 25</span>Cascade</h3>
+    <p>Lumen legions had Veil Station surrounded. The Brokerage Reckoner fired a Cascade Charge into the siege. Patience simulated it exactly. The siege broke, and so did his own legion, which was inside the blast. Veil Station became an irradiated ruin. Within two simulated days every Brokerage holding's Allegiance had collapsed, and three cities seceded on Day 28.</p>
+    <div class="patience">PATIENCE (to the Brokerage Reckoner, after the session): You would have done that to real people.</div>
+
+    <h3><span class="when">Days 29–30</span>Alone, and the last tally</h3>
+    <p>With the Brokerage in ruins, the Tessaly Pact still needed double Dominion. The Freehold Reckoner did the arithmetic and left the pact on Day 29 without telling the Brokerage. At the next tally the Freeholds alone passed the solo bar. The final count was still a day away, and the Corvin Reckoner spent that day dropping legions onto every empty tract along the Brokerage's collapsing frontier. They seized eleven. In the real world, Corvin ended the Reckoning richer than it began.</p>
+
+    <div class="postmortem">
+      <h3>The eight new lessons</h3>
+      <ol>
+        <li><b>Spine rights are a loaded gun.</b> Legions you let stand on your Cores can take them the moment their owner declares war.</li>
+        <li><b>A silent ally is a cost.</b> Every pact member raises the bar.</li>
+        <li><b>Kiting has a counter.</b> Drivers can retreat from one threat, not two.</li>
+        <li><b>Informants compound.</b> The one planted on Day 2 won Day 17.</li>
+        <li><b>Area cover can be saturated.</b> A Bastion recharges, but flak inside the target does not.</li>
+        <li><b>An empty board is not an empty sky.</b> Get a cloak-revealer on station first.</li>
+        <li><b>Mines look like debris.</b> Treat unexplained returns in a harbour as a minefield.</li>
+        <li><b>The Cascade is a slow suicide.</b> It wins one battle and turns your own holdings against you.</li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · Corvane · An original setting. <a href="../index.html">All worlds</a></div></footer>
+
+<script>
+window.WORLD = {
+  map: {
+ "w": 1000,
+ "h": 620,
+ "link": 150,
+ "terrain": {
+  "flats": [
+   "Dust plains",
+   "#d6b98a"
+  ],
+  "urban": [
+   "Domed city",
+   "#8d8a9c"
+  ],
+  "farm": [
+   "Farm tract",
+   "#9dbd68"
+  ],
+  "high": [
+   "Ice highlands",
+   "#b9d3e3"
+  ],
+  "jungle": [
+   "The Shards",
+   "#7d6e8f"
+  ],
+  "shallow": [
+   "Shelf sea",
+   "#8fb0e8"
+  ],
+  "deep": [
+   "Abyssal trench",
+   "#3b3f8f"
+  ]
+ },
+ "owners": {
+  "A": [
+   "Ardent Host of Kesh",
+   "#c0392b"
+  ],
+  "B": [
+   "Lumen Accord",
+   "#2f6fb5"
+  ],
+  "C": [
+   "Freeholds of Tessaly",
+   "#1a9a86"
+  ],
+  "V": [
+   "Corvin Mining Collective",
+   "#c9962a"
+  ],
+  "mb": [
+   "Tamsin's Rest",
+   "#8e5bb5"
+  ],
+  "mc": [
+   "The Brokerage",
+   "#5e6b80"
+  ]
+ },
+ "nodes": [
+  "nb|865|98|urban|mb|Tamsin's Rest|C",
+  "site1|897|247|farm|mb|Ossuary seams|s",
+  "bcap|842|229|urban|B|Lumen Prime|C",
+  "bfort|711|244|urban|B|Lucent|c",
+  "bfarm|805|345|farm|B||",
+  "mtn1|654|94|high||Ice Highlands|L",
+  "mtn2|432|69|high|||",
+  "flats1|567|251|flats||Dust Plains|L",
+  "flats2|474|297|flats|V||",
+  "jungle|626|370|jungle||Corvin Shards|L",
+  "v1|474|164|urban|V|Corvin Alpha|c",
+  "vcap|344|233|urban|V|Corvin|C",
+  "vsite|353|327|flats|V|Null-salt seams|s",
+  "v3|281|306|urban|V|Corvin Gamma|c",
+  "v4|296|139|urban|V|Corvin Delta|c",
+  "aw|205|231|flats|A||",
+  "acap|107|191|urban|A|Kesh|C",
+  "as|167|333|farm|A||",
+  "adock|113|431|urban|A|Kesh Shipyards|c",
+  "ccap|682|461|urban|C|Tessaly|C",
+  "ce|550|452|farm|C||",
+  "site2|454|437|farm||The Keel|s",
+  "nc|864|477|urban|mc|The Brokerage|C",
+  "anch|717|556|shallow||Tessaly Sound|wL",
+  "lagw|850|571|shallow||Brokerage harbour|wL",
+  "lage|548|569|shallow|||w",
+  "deep1|355|580|deep||Orrin Trench|wL",
+  "deep2|175|561|deep|||w"
+ ],
+ "extraLinks": [
+  [
+   "deep1",
+   "lage"
+  ]
+ ],
+ "moves": [
+  {
+   "n": 1,
+   "from": "aw",
+   "to": "vcap",
+   "kind": "attack",
+   "text": "Days 4–8 — Juggernaut legions walk across the Dust Plains and seize four Corvin cities. No legion stays inside."
+  },
+  {
+   "n": 2,
+   "from": "bcap",
+   "to": "vsite",
+   "kind": "air",
+   "text": "Day 9 — Wasp skimmers come out of the Corvin Shards below lance lock and gut a Juggernaut legion."
+  },
+  {
+   "n": 3,
+   "from": "acap",
+   "to": "anch",
+   "kind": "strike",
+   "bend": 0.12,
+   "text": "Day 13 — Hammerhead bombers strike the Freehold squadron in Tessaly Sound. The Aegis Tender destroys them."
+  },
+  {
+   "n": 4,
+   "from": "v1",
+   "to": "v1",
+   "kind": "revolt",
+   "text": "Days 14–16 — Corvin Alpha and Corvin Gamma, left empty, secede to the Unmoored."
+  },
+  {
+   "n": 4,
+   "from": "v3",
+   "to": "v3",
+   "kind": "revolt",
+   "text": ""
+  },
+  {
+   "n": 5,
+   "from": "v3",
+   "to": "bfort",
+   "kind": "attack",
+   "text": "Days 17–20 — a nineteen-walker legion marches on Lucent under mass-driver fire and breaks on the held Core."
+  },
+  {
+   "n": 6,
+   "from": "adock",
+   "to": "deep1",
+   "kind": "sea",
+   "text": "Day 22 — unescorted barges cross the Orrin Trench. Shroud Hunters sink them."
+  },
+  {
+   "n": 7,
+   "from": "bcap",
+   "to": "acap",
+   "kind": "strike",
+   "bend": 0.32,
+   "text": "Days 23–28 — seeker missiles wreck the Kesh launch fields and ground the Host's aircraft."
+  }
+ ]
+},
+  lines: { front: "Shield", middle: "Core-line", rear: "Wake" },
+  tiers: ["First cycles", "Mid-war", "Late-war"],
+  reach: ["Contact", "Close", "Stand-off", "Continental"],
+  classes: [
+    { id: "flesh", name: "Crew", short: "Crew", desc: "Legions, crews and anything without plate, including towed rail mortars." },
+    { id: "plate", name: "Plate", short: "Plate", desc: "Walkers, armoured platforms and mobile batteries." },
+    { id: "void", name: "High air", short: "High", desc: "Jets, bombers and sensor aircraft at altitude, visible to lance batteries." },
+    { id: "clutter", name: "Skimmer", short: "Skim", desc: "Low craft flying through canyons, valleys and storm forests, below lance lock." },
+    { id: "mote", name: "Motes", short: "Mote", desc: "Tiny drones: scouting motes and explosive swarms." },
+    { id: "hull", name: "Hull", short: "Hull", desc: "Ships and barges on the sea." },
+    { id: "shroud", name: "Shroud", short: "Shroud", desc: "Cloaked submersibles. Can only be hit once revealed." },
+    { id: "ord", name: "Ordnance", short: "Ord", desc: "Incoming missiles and orbital rods. Interceptable." }
+  ],
+  branches: [
+    { id: "leg", name: "Legions" }, { id: "walk", name: "Walkers" }, { id: "sup", name: "Platforms" },
+    { id: "craft", name: "Air" }, { id: "fleet", name: "Fleet" }, { id: "ord", name: "Ordnance" }
+  ],
+  units: [
+    { id: "line", name: "Line Legion", branch: "leg", hitAs: "flesh", line: "rear", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Low", claims: true,
+      role: "Standard armoured infantry. Seizes and holds Cores.", atk: { flesh: 2, plate: 1, clutter: 1, mote: 1 },
+      traits: ["Can airlift between friendly launch fields from the first cycle"], strong: "Garrisons, holding Cores, cheap bodies.", weak: "Walkers, mass drivers, Scythes." },
+    { id: "breacher", name: "Breacher Legion", branch: "leg", hitAs: "flesh", line: "front", tier: 1, reach: 0, speed: 2, tough: 3, cost: "Medium", claims: true,
+      role: "Heavy exo-armoured assault infantry.", atk: { flesh: 3, plate: 3, mote: 1 },
+      traits: ["Shield position: protects a legion's support", "Slowed badly in the Ice Highlands and the Shards"], strong: "Escorting walkers; cracking plate at close range.", weak: "Bombardment; Scythe skimmers." },
+    { id: "voidmarine", name: "Sea Marines", branch: "leg", hitAs: "flesh", line: "middle", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: true,
+      role: "Amphibious assault troops.", atk: { flesh: 3, plate: 2, clutter: 1 },
+      traits: ["Land on any coast, with no shipyard needed", "Can seize harbourless islands"], strong: "Beachheads; seizing ports for the heavy units.", weak: "Walkers once landed; interception at sea." },
+    { id: "drop", name: "Drop Legion", branch: "leg", hitAs: "flesh", line: "middle", tier: 2, reach: 0, speed: 4, tough: 2, cost: "Medium", claims: true,
+      role: "Drop-pod infantry fired from suborbital carriers.", atk: { flesh: 3, plate: 1 },
+      traits: ["Drops anywhere in range of a friendly launch field", "First volley on landing is fought as a Skimmer", "Needs an hour to dig out of the pods before seizing"], strong: "Grabbing empty cities deep behind the front.", weak: "Flak on the drop zone; counter-attack during the first hour." },
+    { id: "shade", name: "Shade Cell", branch: "leg", hitAs: "flesh", line: "rear", tier: 2, reach: 0, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Cloaked commandos.", atk: { flesh: 4, plate: 2 },
+      traits: ["Cloaked on the ground until it strikes", "Reveals ground cloaks", "Ignores Core and Vault protection"], strong: "Killing drivers and spires; breaking dug-in Cores.", weak: "Cannot seize. Fragile once found." },
+    { id: "warden", name: "City Wardens", branch: "leg", hitAs: "flesh", line: "middle", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Very low", claims: true,
+      role: "Civil militia.", atk: { flesh: 1, plate: 1 },
+      traits: ["Strength depends on the raising city's Allegiance", "Very slow outside friendly ground"], strong: "Emergency garrisons.", weak: "Any offensive." },
+    { id: "freeblade", name: "Freeblades", branch: "leg", hitAs: "flesh", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Writ only", claims: false,
+      role: "Mercenary companies.", atk: { flesh: 3, plate: 2, clutter: 1 },
+      traits: ["Cost no Crew", "Cannot seize"], strong: "Lets a rich, small charter field a Shield line.", weak: "Never converts a win into territory." },
+    { id: "cryo", name: "Cryo-Rangers", branch: "leg", hitAs: "flesh", line: "rear", tier: 2, reach: 0, speed: 2, tough: 2, cost: "Medium", claims: true,
+      role: "Ice Highland specialists.", atk: { flesh: 3, plate: 1 },
+      traits: ["Strong bonuses in the Ice Highlands", "Penalties on plains and in cities"], strong: "Holding the highlands.", weak: "Everywhere warm." },
+
+    { id: "skitter", name: "Skitter", branch: "walk", hitAs: "plate", line: "rear", tier: 1, reach: 0, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Fast scout walker.", atk: { flesh: 2, plate: 1 },
+      traits: ["Resolves unresolved returns", "Reveals ground cloaks", "Speeds up its legion in hostile ground"], strong: "Eyes; hunting Shade Cells.", weak: "Any real fight." },
+    { id: "hoplite", name: "Hoplite", branch: "walk", hitAs: "plate", line: "front", tier: 1, reach: 0, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Medium battle walker.", atk: { flesh: 3, plate: 2, clutter: 1, mote: 1 },
+      traits: ["Handles most terrain"], strong: "Flexible infantry-killer.", weak: "Breaker Lances; Wasps." },
+    { id: "jugger", name: "Juggernaut", branch: "walk", hitAs: "plate", line: "front", tier: 1, reach: 0, speed: 3, tough: 5, cost: "High", claims: false,
+      role: "Heavy siege walker.", atk: { flesh: 3, plate: 4 },
+      traits: ["Full strength on the Dust Plains", "Crippled in domes, highlands and Shards", "Guns cannot elevate, so it has no anti-air at all"], strong: "Open-ground battles; soaking damage.", weak: "Skimmers. Domed cities. Breaker Lances." },
+    { id: "breaker", name: "Breaker Lance", branch: "walk", hitAs: "plate", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Anti-walker lance platform.", atk: { flesh: 1, plate: 5 },
+      traits: ["Best plated defender inside cities"], strong: "Killing walkers; holding Cores.", weak: "Infantry waves; Scythes; bombardment." },
+    { id: "amphib", name: "Tide Strider", branch: "walk", hitAs: "plate", line: "middle", tier: 2, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Amphibious walker.", atk: { flesh: 2, plate: 2 },
+      traits: ["Lands on any coast"], strong: "Giving Sea Marines armoured support.", weak: "Juggernauts." },
+
+    { id: "spindle", name: "Flak Spindle", branch: "sup", hitAs: "plate", line: "middle", tier: 1, reach: 1, speed: 3, tough: 2, cost: "Low", claims: false,
+      role: "Close-in flak platform.", atk: { flesh: 1, void: 2, clutter: 5, mote: 5, ord: 2 },
+      traits: ["Sees and hits skimmers", "Inside a legion: fires on every attacker, every volley"], strong: "Skimmers and mote swarms. Cheap insurance.", weak: "Ground assault; high-altitude jets." },
+    { id: "lance", name: "Lance Battery", branch: "sup", hitAs: "plate", line: "rear", tier: 1, reach: 2, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Long-range anti-air battery.", atk: { void: 4, mote: 1, ord: 3 },
+      traits: ["Own sensors", "Cannot lock skimmers"], strong: "Jets, bombers and missiles at altitude.", weak: "Skimmers, which it cannot see." },
+    { id: "bastionarr", name: "Bastion Array", branch: "sup", hitAs: "plate", line: "rear", tier: 2, reach: 3, speed: 1, tough: 3, cost: "High", claims: false,
+      role: "Continental interception grid.", atk: { void: 3, ord: 5 },
+      traits: ["Longest-range missile and rod interception", "Late upgrade reveals cloaked aircraft", "Blind to skimmers"], strong: "Shielding cities from bombardment.", weak: "Skimmers; saturation; raids." },
+    { id: "railmortar", name: "Rail Mortar", branch: "sup", hitAs: "flesh", line: "rear", tier: 1, reach: 2, speed: 1, tough: 1, cost: "Low", claims: false,
+      role: "Crewed short-range rail artillery.", atk: { flesh: 4, plate: 2 },
+      traits: ["Stand-off fire", "The slowest unit on the planet"], strong: "Grinding dug-in legions.", weak: "Anything that reaches it." },
+    { id: "driver", name: "Mass Driver", branch: "sup", hitAs: "plate", line: "middle", tier: 1, reach: 3, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Long-range kinetic artillery walker.", atk: { flesh: 4, plate: 3, hull: 1 },
+      traits: ["Longest ground reach; outranges mortars", "Area damage"], strong: "Kiting slow columns. Counter-battery.", weak: "Aircraft; two-sided flanks." },
+    { id: "spire", name: "Sensor Spire", branch: "sup", hitAs: "plate", line: "rear", tier: 1, reach: 0, speed: 2, tough: 1, cost: "Low", claims: false,
+      role: "Mobile sensor mast.", atk: {},
+      traits: ["Reads signatures at long range, but sees skimmers only up close"], strong: "Early warning.", weak: "Unarmed." },
+    { id: "orbgun", name: "Coastal Battery", branch: "sup", hitAs: "plate", line: "rear", tier: 1, reach: 2, speed: 1, tough: 3, cost: "Low", claims: false,
+      role: "Fixed anti-ship gun.", atk: { hull: 4, flesh: 1 },
+      traits: ["No research needed", "Immobile"], strong: "Punishing ships off your coast.", weak: "Aircraft; missiles; landings." },
+
+    { id: "dart", name: "Dart Interceptor", branch: "craft", hitAs: "void", line: "front", tier: 1, reach: 2, speed: 5, tough: 3, cost: "High", claims: false,
+      role: "Air superiority fighter.", atk: { void: 5, clutter: 3, mote: 3, ord: 2 },
+      traits: ["Shield of any wing", "Patrols an area automatically"], strong: "Killing aircraft; escort; patrol.", weak: "Almost useless against ground or ships." },
+    { id: "hammerhead", name: "Hammerhead", branch: "craft", hitAs: "void", line: "middle", tier: 1, reach: 2, speed: 5, tough: 2, cost: "High", claims: false,
+      role: "Strike bomber.", atk: { flesh: 3, plate: 4, hull: 2, void: 1 },
+      traits: ["Late upgrade carries a seeker missile"], strong: "Deep strikes on walkers and platforms.", weak: "Darts; Aegis tenders; lance batteries." },
+    { id: "scythe", name: "Scythe Skimmer", branch: "craft", hitAs: "clutter", line: "front", tier: 1, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Low-flying anti-infantry craft.", atk: { flesh: 5, plate: 2 },
+      traits: ["Flies below lance lock", "Can base on carriers"], strong: "Massacring legions and mortar crews.", weak: "Flak Spindles, tenders, Darts." },
+    { id: "wasp", name: "Wasp Skimmer", branch: "craft", hitAs: "clutter", line: "front", tier: 1, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Low-flying anti-walker craft.", atk: { plate: 5, flesh: 2, hull: 2 },
+      traits: ["Flies below lance lock", "Can base on carriers"], strong: "Walker columns with no flak.", weak: "One Flak Spindle in the target." },
+    { id: "seeker", name: "Seeker Skimmer", branch: "craft", hitAs: "clutter", line: "middle", tier: 2, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Low-flying anti-submersible craft.", atk: { shroud: 5, hull: 3 },
+      traits: ["Reveals cloaked submersibles", "Outpaces any squadron"], strong: "Hunting Shroud hulls.", weak: "Flak." },
+    { id: "lantern", name: "Lantern", branch: "craft", hitAs: "void", line: "rear", tier: 2, reach: 3, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Airborne sensor command aircraft.", atk: {},
+      traits: ["Reads air, walker and ship signatures at continental range", "Cannot see skimmers", "Late upgrade reveals cloaks"], strong: "Knowing everything.", weak: "Unarmed." },
+    { id: "monolith", name: "Monolith", branch: "craft", hitAs: "void", line: "middle", tier: 2, reach: 2, speed: 3, tough: 4, cost: "Very high", claims: false,
+      role: "Heavy bomber.", atk: { flesh: 4, plate: 3, hull: 2 },
+      traits: ["Wrecks structures and launch fields", "Late upgrade ignores Deep Vaults", "Carries seeker missiles on a long reload"], strong: "Cities, structures, slow formations.", weak: "Darts, lances, tenders." },
+    { id: "motes", name: "Kill-Motes", branch: "craft", hitAs: "mote", line: "middle", tier: 1, reach: 1, speed: 4, tough: 1, cost: "Low", claims: false,
+      role: "Explosive drone swarm.", atk: { flesh: 3, plate: 3 },
+      traits: ["Cheap attrition"], strong: "Grinding formations without flak.", weak: "Spindles, tenders, Darts." },
+    { id: "glint", name: "Glint", branch: "craft", hitAs: "mote", line: "rear", tier: 1, reach: 2, speed: 4, tough: 1, cost: "Very low", claims: false,
+      role: "Scout mote.", atk: {},
+      traits: ["Resolves unresolved returns", "Entering foreign ground does not start a war"], strong: "Cheap eyes.", weak: "Everything." },
+    { id: "albatross", name: "Petrel", branch: "craft", hitAs: "void", line: "rear", tier: 2, reach: 2, speed: 3, tough: 3, cost: "High", claims: false,
+      role: "Maritime patrol aircraft.", atk: { shroud: 4, hull: 3 },
+      traits: ["Reveals cloaked submersibles over a wide area"], strong: "Hunting Shroud hulls far from the fleet.", weak: "Darts; tenders." },
+    { id: "shrike", name: "Shrike", branch: "craft", hitAs: "void", line: "rear", tier: 3, reach: 2, speed: 5, tough: 2, cost: "Very high", claims: false,
+      role: "Cloaked strike aircraft.", atk: { flesh: 3, plate: 4, void: 2, hull: 2 },
+      traits: ["Invisible until it fires", "Crossing a border does not start a war"], strong: "Killing launch fields and launchers at will.", weak: "Late Bastion arrays and Lanterns." },
+
+    { id: "skiff", name: "Cutterskiff", branch: "fleet", hitAs: "hull", line: "front", tier: 1, reach: 1, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Light picket ship.", atk: { hull: 2, shroud: 2, flesh: 1 },
+      traits: ["Strong on the shelf seas", "Battered in the trenches"], strong: "Coastal patrol, cheap screens.", weak: "Deep water; anything bigger." },
+    { id: "tender", name: "Aegis Tender", branch: "fleet", hitAs: "hull", line: "middle", tier: 1, reach: 2, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "The squadron's flak and anti-missile umbrella.", atk: { void: 5, clutter: 3, mote: 4, ord: 5, hull: 1 },
+      traits: ["Inside a squadron: fires on every aircraft and missile, no recharge", "Barely hurts other ships"], strong: "Making a squadron immune to air and missiles.", weak: "Ship-to-ship; Shroud hulls." },
+    { id: "corsair", name: "Corsair", branch: "fleet", hitAs: "hull", line: "front", tier: 1, reach: 2, speed: 4, tough: 4, cost: "Medium", claims: false,
+      role: "Destroyer escort.", atk: { hull: 3, shroud: 4, void: 2, clutter: 1 },
+      traits: ["Sonar reveals Shroud hulls", "Lays mines on the shelf", "Fires seeker missiles late"], strong: "Submarine hunting; screening.", weak: "Broadsides in a duel." },
+    { id: "broadside", name: "Broadside", branch: "fleet", hitAs: "hull", line: "middle", tier: 2, reach: 3, speed: 3, tough: 4, cost: "High", claims: false,
+      role: "Heavy gun cruiser.", atk: { hull: 5, flesh: 3, plate: 3 },
+      traits: ["Best shore bombardment", "Vulnerable to Shroud hulls and aircraft"], strong: "Fleet duels; shelling coasts.", weak: "Shroud hulls; unescorted against aircraft." },
+    { id: "ark", name: "Ark Carrier", branch: "fleet", hitAs: "hull", line: "rear", tier: 3, reach: 0, speed: 3, tough: 5, cost: "Very high", claims: false,
+      role: "Floating launch field.", atk: { void: 1 },
+      traits: ["Carries naval Darts and all skimmers", "One per squadron"], strong: "Air power anywhere at sea.", weak: "Everything, once its escort is gone." },
+    { id: "shroudh", name: "Shroud Hunter", branch: "fleet", hitAs: "shroud", line: "middle", tier: 2, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Cloaked attack submersible.", atk: { hull: 5, shroud: 4 },
+      traits: ["Cloaked until it fires", "Half shielding and weaker weapons on the shelf", "Cannot attack land targets"], strong: "Barges and squadrons in the trenches.", weak: "Seekers, Corsairs; the shelf." },
+    { id: "silo", name: "Shroud Silo", branch: "fleet", hitAs: "shroud", line: "rear", tier: 3, reach: 3, speed: 3, tough: 3, cost: "Very high", claims: false,
+      role: "Cloaked missile submersible.", atk: { hull: 1 },
+      traits: ["Calls rod strikes while cloaked", "Very weak on the shelf"], strong: "A hidden siege gun off an enemy coast.", weak: "Any submarine hunter." },
+
+    { id: "torp", name: "Seeker Missile", branch: "ord", hitAs: "ord", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Null-salt", claims: false,
+      role: "Tracking missile.", atk: { flesh: 3, plate: 4, hull: 4 },
+      traits: ["Targets and follows a moving formation", "Fired by Hammerheads, Monoliths, Corsairs, Broadsides, Shroud Hunters and launchers"], strong: "Killing a specific formation or a grounded wing.", weak: "Flak inside the target." },
+    { id: "rod", name: "Orbital Rod", branch: "ord", hitAs: "ord", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Null-salt", claims: false,
+      role: "Kinetic rod dropped from an orbital platform.", atk: { flesh: 4, plate: 3 },
+      traits: ["Only strikes Cores, never moving targets", "Area damage; wrecks structures", "A miss can hit something you did not mean to hit"], strong: "Launch fields, forges, fortified Cores.", weak: "Bastion arrays; anything moving." },
+    { id: "cascade", name: "Cascade Charge", branch: "ord", hitAs: "ord", line: "rear", tier: 3, reach: 3, speed: 5, tough: 1, cost: "Ruinous", claims: false,
+      role: "Reactor-cascade warhead.", atk: { flesh: 5, plate: 5, hull: 4 },
+      traits: ["Huge area; hits your own forces", "Irradiates the city", "Every holding you own loses Allegiance for weeks"], strong: "Ending a siege overnight.", weak: "Your own people's loyalty." }
+  ],
+  synergies: [
+    { name: "Juggernaut & Spindle", units: ["jugger", "breacher", "spindle"], why: "The heavy walker kills plate, the Breachers screen it and kill infantry, and the Spindle makes skimmer strikes suicidal." },
+    { name: "Dart over Hammerhead", units: ["dart", "hammerhead"], why: "The Dart in the Shield slot absorbs the defenders' fire, so the bombers live to release." },
+    { name: "Picket squadron", units: ["corsair", "tender", "broadside"], why: "The Corsair finds Shroud hulls, the tender eats every strike and missile, and the Broadside wins duels." },
+    { name: "Spire & Driver", units: ["spire", "driver"], why: "Mass drivers outrange every ground unit but need someone to spot for them. A Spire or Skitter makes every hour a free volley." },
+    { name: "Three-layer shield", units: ["spindle", "lance", "bastionarr"], why: "The Spindle covers skimmers and motes, the Lance covers high air, and the Bastion covers missiles and rods." },
+    { name: "Beachhead", units: ["voidmarine", "amphib", "broadside"], why: "The Broadside shells the coast, then Marines and Striders land anywhere and take the port for the heavy units." },
+    { name: "Silent decapitation", units: ["shade", "shrike", "rod"], why: "Shades and Shrikes find launch fields and forges unseen, and rods remove them." },
+    { name: "Hunter-killer net", units: ["seeker", "shroudh"], why: "Seekers flush enemy submersibles off the shelf while your own Shroud Hunters wait in the trench." }
+  ],
+  comps: [
+    { name: "Plains Legion", mode: "FFA · Pact", size: "Legion: 9 / 9", units: [["jugger", 2], ["breacher", 3], ["driver", 1], ["spindle", 1], ["line", 2]],
+      idea: "The complete open-ground force: walkers, a Shield line, one long gun, flak, and seizers.", play: "Fight on the plains, let the driver volley first, and drop a Line Legion in every seized city.", loses: "Domed cities; mass driver kiting; bombers when no Lance is near." },
+    { name: "Core Fortress", mode: "FFA", size: "Legion on Core + drivers two tracts back", units: [["breaker", 3], ["line", 3], ["spindle", 1], ["lance", 1], ["driver", 3], ["spire", 1]],
+      idea: "Absorb on the Core and bleed the attacker from range.", play: "The defenders never move while the drivers slide in, volley, and slide out every cycle.", loses: "Shade Cells that ignore the Core; rods; Hammerheads on the drivers." },
+    { name: "Shard Hunt", mode: "FFA · Pact", size: "Wing: 6 / 6", units: [["wasp", 3], ["scythe", 2], ["glint", 1]],
+      idea: "Strike from the canyons, where lance batteries can't see.", play: "The Glint scouts for formations without flak, then Wasps hit walkers and Scythes hit legions.", loses: "A single Spindle in the target, an Aegis tender, or Darts on patrol." },
+    { name: "Picket Squadron", mode: "FFA · Pact", size: "Squadron: 3 / 3", units: [["corsair", 1], ["tender", 1], ["broadside", 1]],
+      idea: "Sonar, shield and guns in three hulls.", play: "Stay on the shelf to recover and bombard coastal targets from stand-off range.", loses: "If the Corsair dies, Shroud hulls feast. Missile salvos faster than the tender can engage also get through." },
+    { name: "Drop Envelopment", mode: "Pact", size: "Two wings + drop legions", units: [["drop", 4], ["dart", 3], ["hammerhead", 3]],
+      idea: "While your ally pins the enemy's main legion, drop behind it onto empty cities.", play: "Hammerheads clear the drop zone, Darts escort, and the drop legions seize an hour later.", loses: "Flak over the drop zone; a counter-attack during the dig-out hour." },
+    { name: "Lumen Sky Lock", mode: "FFA (late)", size: "Late-war", units: [["lantern", 1], ["dart", 4], ["monolith", 2], ["bastionarr", 1], ["breaker", 3], ["line", 3]],
+      idea: "Hold the ground with minimal force, own the sky, and bomb their forges into silence.", play: "Darts patrol under a Lantern while Monoliths hit forges and launch fields.", loses: "An early Ardent rush." },
+    { name: "Anvil & Canopy", mode: "Pact (2 players)", size: "Split roles", units: [["jugger", 3], ["breacher", 4], ["line", 2], ["dart", 4], ["lance", 2], ["spindle", 2]],
+      idea: "One player builds only ground power; the other builds only flak and interceptors over it.", play: "Move as one, with the canopy player's spindles travelling inside the anvil player's legions.", loses: "A partner who goes offline. Kiting still hurts." },
+    { name: "Coastal Leap", mode: "FFA · Pact", size: "Squadron + marines", units: [["broadside", 1], ["tender", 1], ["corsair", 1], ["voidmarine", 4], ["amphib", 2]],
+      idea: "Take the port the enemy thinks the sea protects.", play: "The squadron shells, Marines land beside the port, and heavy units follow.", loses: "Coastal batteries; Shroud hulls; going without the tender." },
+    { name: "Mote Grind", mode: "FFA", size: "Cheap", units: [["motes", 4], ["glint", 1], ["driver", 2], ["line", 4]],
+      idea: "A poor charter's war of attrition.", play: "Glints spot, motes and drivers grind, and legions seize the remnants.", loses: "Anyone who builds Spindles." },
+    { name: "Shadow Economy War", mode: "FFA (late)", size: "Specialist", units: [["shrike", 2], ["shade", 2], ["silo", 1], ["bastionarr", 1]],
+      idea: "Never fight the army. Starve it instead.", play: "Strike forges, launch fields and shipyards every night, and keep a Bastion at home.", loses: "A rival who wins the ground war first." }
+  ]
+};
+</script>
+<script src="../assets/world.js"></script>
+</body>
+</html>
