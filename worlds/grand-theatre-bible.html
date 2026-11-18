@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grand Theatre Story Bible</title>
+<meta name="description" content="The Academy story bible bent to fit Grand Theatre: a sports story about Castellan, the Mask Rule, player-run clubs, the Grand Rig, the Grand Project, Militia, and a ledger of every why-question.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root { --accent: #0f4d2e; --accent-2: #d1461f; --display: "Archivo", system-ui, sans-serif; --bg: #f4f5f1; --bg-2: #e6e9e0; --rule: #d0d6c7; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #0d120f; --bg-2: #151d18; --panel: #18211b; --rule: #2a362d; --ink: #edf2ec; --ink-2: #c3cec3; --ink-3: #8a9a8b;
+    --accent: #4fc488; --accent-2: #ff7a4d; --accent-ink: #0d120f; } }
+  :root[data-theme="dark"] {
+    --bg: #0d120f; --bg-2: #151d18; --panel: #18211b; --rule: #2a362d; --ink: #edf2ec; --ink-2: #c3cec3; --ink-3: #8a9a8b;
+    --accent: #4fc488; --accent-2: #ff7a4d; --accent-ink: #0d120f; }
+  .ledger { counter-reset: q; display: grid; gap: 10px; }
+  .ledger details { background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); padding: 12px 16px; }
+  .ledger summary { cursor: pointer; font-weight: 600; list-style: none; }
+  .ledger summary::before { counter-increment: q; content: counter(q) ". "; color: var(--accent-2); }
+  .ledger summary::-webkit-details-marker { display: none; }
+  .ledger details p { margin: 10px 0 0; color: var(--ink-2); font-size: 15px; }
+  .recon { border-left: 3px solid var(--bad); }
+  td:first-child { font-weight: 600; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="grand-theatre.html">← World page</a><a href="#sport">It's a sport</a><a href="#map">Mapping</a><a href="#setting">Setting</a><a href="#academy">Castellan</a><a href="#identity">Mask &amp; kits</a>
+    <a href="#factions">Clubs</a><a href="#field">The Rig</a><a href="#tournament">Tournament</a><a href="#project">Grand Project</a><a href="#militia">Militia</a>
+    <a href="#cast">Cast</a><a href="#ledger">Why Ledger</a><a href="#flags">Open flags</a><a href="../pitches.html#theatre">Pitch</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Story Bible Adaptation · Grand Theatre</div>
+  <h1>The Academy, as a sports story</h1>
+  <p class="lede">This page bends the major parts of the Story Bible (v15) to fit Grand Theatre: a peaceful world where simulated war is the biggest sport on Earth, and Castellan is the academy that makes its stars. It is a sports story through and through, with players, matches, scrims, the meta, sponsors and a draft. Your plot fits inside it surprisingly well.</p>
+  <div class="facts">
+    <span class="fact">Priority: <b>the world first, the bible bent to fit</b></span>
+    <span class="fact">Register: <b>sport</b></span>
+    <span class="fact">Biggest gain: <b>a public fall, with the name still secret</b></span>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="note recon"><b>The world comes first.</b> Nothing on the Grand Theatre page has been changed. Where your bible disagrees with the world, the bible bends, flagged with a red edge. The main bends: the story is told as <b>sport</b>; there are <b>no flashpoints</b>; <b>nationality is secret</b>; kits follow <b>League rules</b>; cadets range from teenagers up, so Militia is the <b>oldest first-year</b>, not the youngest; and the official <b>Houses</b> stay alongside player-run clubs.</div>
+</div></section>
+
+<section id="sport"><div class="wrap">
+  <h2>It's a sport, and that's the point</h2>
+  <div class="prose">
+    <p>Your bible's 5/2/26 note asks for a professional-military register. This world deliberately goes the other way. Theatre is a sport the way football is a sport: players, matches, seasons, scrims, ladders, the meta, drafts, transfer rumours, sponsors, kit launches, highlight reels and commentators. Use that vocabulary freely, in dialogue and in narration.</p>
+    <p>It still matters for the same reason sports matter: a career is on the line, and so are money, fame, a federation's pride, and a body that the cradle can hurt. The 10/19 ban is not a tantrum over a hobby. It is a pro career ending before it starts. Ask anyone whose football academy released them at sixteen.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card"><h4>What the bible keeps</h4><p class="small">Everything social: the clubs (factions), leaders and access, the ladder, the draft, betrayal, the alts, the Grand Project, the public collapse, the cover story and the homecoming.</p></div>
+    <div class="card"><h4>What the bible loses</h4><p class="small">Flashpoints, deployments and officers. The idea that graduates will one day command real force. The moral weight moves from <i>lives</i> to <i>livelihoods, fame and trust</i>.</p></div>
+  </div>
+</div></section>
+
+<section id="map"><div class="wrap">
+  <h2>Bible to Grand Theatre at a glance</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Bible element</th><th>In Grand Theatre</th></tr></thead>
+    <tbody>
+      <tr><td>Near-future Earth</td><td>Present-day Earth, with real countries and cities. Nobody has fought a war between states in forty years.</td></tr>
+      <tr><td>The academy, in the US</td><td>Castellan Academy on Ilha do Castelo, the only accredited academy. Militia is American.</td></tr>
+      <tr><td>Stability Failures / flashpoints</td><td><b>Gone.</b> Their jobs move to the sport and to the first real war in forty years.</td></tr>
+      <tr><td>"Protoco" / "proxy"</td><td>"Ref": the cadet who reports others' Mask Rule slips. "Ward": a player from a federation run entirely on a foreign sponsor's money.</td></tr>
+      <tr><td>Hawks vs doves</td><td>Kept, as an argument about the real war. A second axis: Dark vs Play, on whether Theatre should go off air while it lasts.</td></tr>
+      <tr><td>Armenia vs Azerbaijan</td><td>The first real war since the long peace. Keep the names or abstract them; this is the only world where real names fit.</td></tr>
+      <tr><td>Identity system</td><td>The Mask Rule. Self-chosen handles; name, face, age and nationality hidden until a cadet goes pro.</td></tr>
+      <tr><td>Suits</td><td>Rig suits with a League-approved kit (no flags, no names, no national colours), a House shoulder colour, a registered crest and a visor glow, plus the bible's chest rank board for club emblems.</td></tr>
+      <tr><td>Factions</td><td>Player-run <b>clubs</b> in sponsor-funded club halls, alongside the official Houses.</td></tr>
+      <tr><td>Faction Challenge League</td><td>The players' own ranked ladder: unofficial, and more respected than the official one.</td></tr>
+      <tr><td>The Field</td><td>The Rig Hall.</td></tr>
+      <tr><td>Grand Tournament</td><td>The first player-run tournament, broadcast live under handles.</td></tr>
+      <tr><td>Alts</td><td>Smurf accounts made possible by "ghost calibrations". The penalty is a lifetime ban.</td></tr>
+      <tr><td>Grand Project</td><td>A scouting dossier on every future pro. Betting syndicates would pay anything for it.</td></tr>
+      <tr><td>Militia</td><td>An American records clerk who got in through the adult open combine at twenty. He is the oldest first-year in his cohort.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="setting"><div class="wrap">
+  <h2>1. World &amp; setting</h2>
+  <h3>Time and place</h3>
+  <div class="prose">
+    <p>An alternate present. Forty years ago the major powers stumbled out of a run of near-misses into the <b>long peace</b>. Full-immersion simulation arrived, someone built a war game good enough to watch, and it became <b>Theatre</b>, the biggest sport on the planet. The bible's 2020–21 dates map onto <b>one season</b>, with the same months and days.</p>
+  </div>
+  <h3>No flashpoints, and what does their work</h3>
+  <div class="prose">
+    <p>The world is ordinary: elections, protests that end, recessions. The bible's flashpoints did three jobs, and each one moves:</p>
+    <ul>
+      <li><b>Why the academy matters.</b> Theatre is the most-watched sport on Earth, and Castellan is the only door into it.</li>
+      <li><b>Why debates run hot.</b> On 27 September, the first real war in forty years starts between two small countries. Everyone has to decide what they think of a sport that plays at war while a real one runs.</li>
+      <li><b>Why numbers matter.</b> Ladder rank, win rate, draft stock and sponsor offers are this world's case counts.</li>
+    </ul>
+  </div>
+  <h3>The foreign conflict</h3>
+  <div class="prose">
+    <p>The bible's positions all survive. Underneath them is the sport's crisis: sponsors pull out of the season, broadcasters ask whether a war sport should be on air, and the League considers going dark. <b>Dark vs Play</b> becomes the second political axis, independent of hawk vs dove, just as your bible wants. Some cadets come from the two countries involved, and nobody is allowed to know who.</p>
+  </div>
+  <h3>Terms</h3>
+  <div class="prose">
+    <p><b>"Ref"</b>: the cadet who reports others' Mask Rule slips to the League. They are hated, and everyone needs one sometimes. <b>"Ward"</b>: a player whose whole federation exists on a foreign sponsor's money. It is a hard line, because it targets where you were born. Since nationality is secret, calling someone "ward" also means <i>I think I know where you're from</i>, which is an attack on the Mask Rule as well as an insult. The bible's debate about whether the two slurs are equivalent survives.</p>
+  </div>
+  <h3>Public perception</h3>
+  <div class="prose">
+    <p>Everyone knows the handles, crests and highlight reels from the House Cup and the Showcase. Almost no one knows what Castellan is like between broadcasts: no cameras, no phones, no visitors. The academy is famous, and life inside it is a mystery, which is exactly the bible's balance.</p>
+  </div>
+</div></section>
+
+<section id="academy"><div class="wrap">
+  <h2>2. Castellan</h2>
+  <div class="grid g2">
+    <div class="card"><h4>What it is for</h4><p class="small">Making professional Theatre players. Graduates who don't make a pro roster go into coaching, analysis and broadcasting.</p></div>
+    <div class="card"><h4>Who runs it</h4><p class="small">The World Theatre League's academy board: former champions, sports scientists and cradle doctors. Most are distant. <b>Opulon</b> is a board member who walks the halls, and Coach Kell is on television.</p></div>
+    <div class="card"><h4>Why it is isolated</h4><p class="small">The cradles need a medical wing, the Mask Rule needs a closed campus, and the island was the only place the League could buy that much quiet.</p></div>
+    <div class="card"><h4>Houses and clubs</h4><p class="small">Every cadet is drafted into a <b>House</b> (Anvil, Lantern, Current or Thorn) for residence and the official House Cup. Their social life is in <b>clubs</b>, the player-run factions. One player can be House Lantern and club Hydra.</p></div>
+  </div>
+  <div class="prose">
+    <p>The <b>Atrium</b> is the Hub: League-moderated, with announcements and club promotion. The <b>Rig Hall</b> is the Field. Cadets sleep in single pods inside their House.</p>
+  </div>
+</div></section>
+
+<section id="identity"><div class="wrap">
+  <h2>3. The Mask Rule, handles &amp; kits</h2>
+  <div class="prose">
+    <p>Until a cadet turns pro, no one may know or publish their real name, face, age or <b>nationality</b>, inside the walls or out (see the world page). Players talk about the war and about home all the time. What they may not say is <i>which</i> home.</p>
+  </div>
+  <div class="note recon"><b>How the bible bends.</b> Every stated nationality in your captured dialogue becomes a <b>slip, a guess or a dare</b>. "An Egyptian's opinion" becomes "you sound like a ward", which is an accusation and a Mask Rule threat. Kowalski's deepest stake in the war becomes something the room works out from how hard he argues. Militia, who cannot keep anything in, gets his first warning for saying "back home in Ohio" during orientation week.</div>
+  <div class="grid g2">
+    <div class="card"><h4>Handles</h4><p class="small">Chosen at intake and approved by the League, as in the world page and the bible. "Militia" passes.</p></div>
+    <div class="card"><h4>Why the suit, all day</h4><p class="small">The Grand Rig needs a full-body haptic suit and neural cowl. Practice campaigns push orders to the visor all day, and suiting up takes forty minutes. The Mask Rule keeps visors dark in every public space. Suits come off only in pods.</p></div>
+    <div class="card"><h4>Kits</h4><p class="small">The world page's system. Every player designs a <b>kit</b> within League rules (no flags, no names, no national colours), and sponsors fund upgrades. Within those rules, the bible's attachments are encouraged: charms, holiday pieces, etched visors and helmet mods. Fans love them, and replica attachments sell.</p></div>
+    <div class="card"><h4>How you tell people apart</h4><p class="small">The world page's layers: <b>House shoulder colour</b>, <b>handle and number</b> on the back, a registered <b>crest</b>, and a <b>visor glow</b>. Plus the bible's <b>chest rank board</b>, with the club emblem centred and role attachments (captain, coach and so on) around it.</p></div>
+  </div>
+  <div class="note recon"><b>How the bible bends.</b> Handles <i>are</i> displayed, on the back, as in the world page. Political decals count as national markers and break kit rules. Militia clips on one anyway the morning after the war starts and gets a League kit warning by lunch, to applause from half the Atrium and booing from the other half.</div>
+</div></section>
+
+<section id="factions"><div class="wrap">
+  <h2>4. Clubs, access, the ladder &amp; MyTeam</h2>
+  <h3>Why player-run clubs exist</h3>
+  <div class="prose">
+    <p>Pro Theatre teams are player-owned organisations. The League wants future pros to practise building a roster, keeping it together and managing egos and sponsors, so Castellan gives any registered club a <b>club hall</b>, usually paid for by a sponsor in exchange for naming rights. The clubs (Hydra, the Wolves, the Eagles, Edge Alliance and the rest) are the bible's factions with logos and merchandise. Scouts read club records as closely as stats: who builds, who keeps people, who burns them.</p>
+  </div>
+  <h3>Access</h3>
+  <div class="prose">
+    <p>Every door reads rig-suit credentials, and a club hall's captain grants and revokes at will. That covers the whole bible system: courtesy access for rival captains, Upbringer's diplomat access, and Slier opening and closing the ladder building to Hydra.</p>
+  </div>
+  <h3>Discipline</h3>
+  <div class="prose">
+    <p>Club constitutions, councils, the Prison room and kicks from a club are all access changes. Castellan enforces none of them and stops none of them. A club can bench you; only the League can ban you.</p>
+  </div>
+  <div class="grid g3">
+    <div class="card"><h4>Faction Challenge League</h4><p class="small">The players' own ranked ladder, founded by Chris and Crang and now run by Upbringer. It is unofficial, and scouts trust it more than the League's because players can't game it.</p></div>
+    <div class="card"><h4>MyTeam</h4><p class="small">Ninja's casual scrim community. It has no ladder and no politics.</p></div>
+    <div class="card"><h4>House Cup</h4><p class="small">The League's official, televised Pairs event between Houses (Chronicle II on the world page). Players care about it in public and about the ladder in private.</p></div>
+  </div>
+</div></section>
+
+<section id="field"><div class="wrap">
+  <h2>5. The Rig Hall</h2>
+  <div class="grid g2">
+    <div class="card"><h4>Restarts and identical units</h4><p class="small">It's a sport. Every match is a new game, everyone has the same League ruleset, and the three kits change numbers only.</p></div>
+    <div class="card"><h4>Why practice lasts days</h4><p class="small">The flagship format is the thirty-day campaign. Practice partitions run slowly while players live their lives, with orders and messages through the visor.</p></div>
+    <div class="card"><h4>Maps</h4><p class="small">Each season has a generated continent (Halvorsund this season), plus a library of real-world maps for scrims. So "Iran falls" scenes still work.</p></div>
+    <div class="card"><h4>Stats, elo and ladder tiers</h4><p class="small">The bible's academy-wide ranks become <b>ladder tiers</b> earned by volume (Rookie, Regular, Veteran and so on), not skill, exactly as in the bible. Club elo comes from the players' ladder. All of it is public, and all of it feeds the draft.</p></div>
+  </div>
+</div></section>
+
+<section id="tournament"><div class="wrap">
+  <h2>6. The Grand Tournament</h2>
+  <div class="prose">
+    <p>This is the first player-run tournament: thirteen teams of five, snake-drafted, last team standing. The League agrees to broadcast it under handles, because sponsors have pulled out over the war and the season needs content. So the collapse happens <b>live, to millions</b>. Millions learn that the captain called Militia built a spy network. Nobody learns who he is, because the Mask Rule protects even the disgraced. The team name <b>Manifest Destiny</b> becomes a meme by morning.</p>
+  </div>
+  <div class="note"><b>Why this is the strongest version of your ending.</b> Your epilogue has his mother asking about his job while the reader knows. Here she may have <i>watched the broadcast</i>. She may mention "that awful Militia kid" over dinner, and he will agree with her.</div>
+</div></section>
+
+<section id="project"><div class="wrap">
+  <h2>7. Ghost calibrations, smurfs &amp; the Grand Project</h2>
+  <div class="grid g2">
+    <div class="card"><h4>How alts are possible</h4><p class="small">Every rig identity is bound to a <b>neural calibration</b>. Rig technicians know that a calibration recorded while a player holds a deliberately different mental posture reads as a second person. That is a ghost calibration: a new handle, kit and stats, and it can be re-skinned without losing stats.</p></div>
+    <div class="card"><h4>Why nobody smurfs at Castellan</h4><p class="small">Your main handle is your draft stock, so a second account dilutes the only thing that matters. And the penalty is a lifetime League ban. Ninja knows the trick from his job as a rig technician before admission.</p></div>
+    <div class="card"><h4>Why the Grand Project is dangerous</h4><p class="small">A full scouting file on every future pro, with tendencies, tells and relationships, would be worth a fortune to betting syndicates and rival organisations. It is also a road map to unmasking players. Militia thinks he is a white hat. The reader can see a gambling syndicate's dream.</p></div>
+    <div class="card"><h4>Why Upbringer blows it up in public</h4><p class="small">Order above mercy, and here order means the Mask Rule. A quiet leak gets someone unmasked. A loud one forces the League to lock everything down.</p></div>
+  </div>
+</div></section>
+
+<section id="militia"><div class="wrap">
+  <h2>8. Militia</h2>
+  <div class="grid g2">
+    <div class="card"><h4>Background</h4><p class="small">American and working-class. He graduated early in history and works as a county archive clerk. He played Theatre casually on cheap shallow rigs and was never on anyone's radar.</p></div>
+    <div class="card"><h4>How he gets in, and why he's an outlier</h4><p class="small">Castellan's cadets usually come through the youth combines in their mid-to-late teens. The League also runs a tiny <b>adult open combine</b> that almost nobody passes. Militia enters it on a whim at twenty and wins it. He arrives as the <b>oldest first-year</b> and the least prepared, among teenagers who have trained since they were twelve. He is socially younger than all of them.</p></div>
+    <div class="card"><h4>How he finds it</h4><p class="small">An adult-combine advertisement plays before a match he is half-watching at his desk.</p></div>
+    <div class="card"><h4>Why he lies to his mother</h4><p class="small">Her brother played a forty-hour campaign on an unlicensed rig years ago and was never quite the same, and she has hated Theatre ever since. The Mask Rule also advises telling no one. So: a job relocation and a promotion. The lie is his, and he decorates it.</p></div>
+  </div>
+  <div class="note recon"><b>How the bible bends.</b> "Youngest ever admitted" becomes "oldest first-year, first ever through the adult combine". The bible's core trait survives and gets sharper: academically able, socially years behind. That is easier to believe when everyone around him is sixteen and better at this than he is.</div>
+  <h3>Politics</h3>
+  <div class="prose">
+    <p>He is a hawk on the real war and a hard Play ("going dark lets them win"). His exceptionalist cluster lands exactly as in the bible.</p>
+  </div>
+</div></section>
+
+<section id="cast"><div class="wrap">
+  <h2>9. Cast</h2>
+  <p class="sec-sub">Real nationalities can stay, and all of them are secret inside Castellan. The reader knows; the characters guess.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Character</th><th>Nationality</th><th>What changes</th></tr></thead>
+    <tbody>
+      <tr><td>Militia, Randy, Connor, Verni, Kat, Junction, Chanka</td><td>USA</td><td>Their accents are the worst-kept secret in the Atrium.</td></tr>
+      <tr><td>Slier</td><td>Egypt</td><td>Egypt's programme is sponsor-funded, so he hears "ward", which is a guess and an accusation.</td></tr>
+      <tr><td>Kowalski</td><td>Georgia</td><td>He has the deepest stake in the war and can't say so.</td></tr>
+      <tr><td>Martin, Dutch, Spoit, Soda</td><td>Netherlands, Australia, Sweden, Canada</td><td>Spoit is a thirty-something who came through the adult combine years ago, and he is Militia's only peer in age.</td></tr>
+      <tr><td>Upbringer</td><td>American-born, Yugoslav heritage</td><td>He carries family memory of a real war in a generation that has none.</td></tr>
+      <tr><td>Opulon</td><td>French</td><td>A League board member who captains a French-speaking club. French is spoken in thirty countries, so the club is legal.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="ledger"><div class="wrap">
+  <h2>10. The Why Ledger</h2>
+  <div class="ledger">
+    <details><summary>Why would a peaceful world love a war sport?</summary><p>For the same reasons peaceful worlds love boxing, chess and war films: conflict with nobody dying. Full immersion made it the most watchable thing ever invented.</p></details>
+    <details><summary>Why only one academy?</summary><p>The Cradle Rules require a licensed Grand Rig and a medical wing, and only Castellan has paid for both.</p></details>
+    <details><summary>Why do rivals live together?</summary><p>There is nowhere else to go, admission is blind, and federations want medals.</p></details>
+    <details><summary>Why the Mask Rule?</summary><p>The Kowal case, plus blind admissions and protection from sponsor and federation pressure.</p></details>
+    <details><summary>How do players argue about a war without saying where they're from?</summary><p>They guess. Spotting someone's origin is a skill, a sport within the sport, and a way to get banned.</p></details>
+    <details><summary>Why wear the suit all day?</summary><p>The rig needs it, practice pushes to the visor, suiting up is slow, and the Mask Rule applies in public.</p></details>
+    <details><summary>Why do kits exist?</summary><p>Fans pick favourites by look, replica kits fund scholarships, and sponsors pay for upgrades.</p></details>
+    <details><summary>Why let players run clubs with power over each other?</summary><p>Pro teams are player-run, so the League wants that practised, and sponsors fund the halls.</p></details>
+    <details><summary>Why is the players' ladder trusted more than the official one?</summary><p>Players built it, players police it, and it can't be gamed for sponsors.</p></details>
+    <details><summary>Why is Militia an outlier?</summary><p>He's the first person ever through the adult open combine, and the oldest first-year in a building full of teenagers.</p></details>
+    <details><summary>Why lie to his mother?</summary><p>She hates Theatre because of her brother, and the Mask Rule advises silence.</p></details>
+    <details><summary>Why doesn't she find out after his public disgrace?</summary><p>The Mask Rule protects expelled cadets too. The world knows the handle "Militia", and nobody knows the man.</p></details>
+    <details><summary>Why is a ghost calibration possible?</summary><p>Neural calibration can be spoofed, and rig technicians know how.</p></details>
+    <details><summary>Why hadn't anyone smurfed?</summary><p>Your main handle is your future, and the penalty is a lifetime ban.</p></details>
+    <details><summary>Why is the Grand Project dangerous?</summary><p>It's worth a fortune to gamblers and it's a road map to unmasking players.</p></details>
+    <details><summary>Why broadcast a player-run tournament?</summary><p>Sponsors pulled out over the war, and the League needed content.</p></details>
+    <details><summary>Why does the real war matter to players?</summary><p>The sport's future depends on whether the public can still stomach it, and some players are from the countries fighting.</p></details>
+    <details><summary>What are "call a random person" phones?</summary><p>A League promotional stunt: free booths in transit stations that connect strangers, under the slogan "meet your coalition".</p></details>
+  </div>
+</div></section>
+
+<section id="flags"><div class="wrap">
+  <h2>11. Bible flags this world helps answer</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Bible flag</th><th>Suggested answer</th></tr></thead>
+    <tbody>
+      <tr><td>Why the academy accepted him</td><td>The adult open combine, which he won on a whim.</td></tr>
+      <tr><td>Why Slier reverses ladder access</td><td>A betting syndicate started posting odds on the players' ladder. Slier pulls Hydra's developing players out before anyone starts throwing matches for money. He never says why.</td></tr>
+      <tr><td>Division's personal history</td><td>Division was a youth-combine star who threw a junior final for a syndicate and was never caught. If the Project links his play tells to that final, he is finished.</td></tr>
+      <tr><td>The Wolf Federation's disbandment</td><td>The sponsor pulled its club-hall money after the dual banishment, and the three wolf clubs split what was left.</td></tr>
+      <tr><td>What happens to the tournament</td><td>The League cuts the broadcast mid-match. It is the first dead air in Theatre's history, and that becomes its own news story.</td></tr>
+    </tbody>
+  </table></div>
+  <h3>What this world costs you</h3>
+  <ul class="prose">
+    <li>No flashpoints, no deployments, no lives at stake: livelihoods, fame and trust instead.</li>
+    <li>The 5/2/26 register note is reversed, and that has to be consistent everywhere.</li>
+    <li>"Youngest ever" becomes "oldest first-year".</li>
+    <li>In return: real places, a public fall, and a protective lie that survives a global broadcast.</li>
+  </ul>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · Grand Theatre · Story Bible Adaptation. <a href="grand-theatre.html">World page</a> · <a href="../pitches.html#theatre">Pitch</a></div></footer>
+<script src="../assets/world.js"></script>
+</body>
+</html>

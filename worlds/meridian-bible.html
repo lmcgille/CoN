@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian Story Bible</title>
+<meta name="description" content="The Academy story bible adapted to Meridian 2076: setting, academy, identity, factions, simulations, the Grand Project, Militia, and a ledger of every why-question.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root {
+    --accent: #0e5563; --accent-2: #1b8297; --display: "Saira Semi Condensed", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #2aa3ba; --accent-2: #5cc6d9; --accent-ink: #0b1416; } }
+  :root[data-theme="dark"] { --accent: #2aa3ba; --accent-2: #5cc6d9; --accent-ink: #0b1416; }
+  .ledger { counter-reset: q; display: grid; gap: 10px; }
+  .ledger details { background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); padding: 12px 16px; }
+  .ledger summary { cursor: pointer; font-weight: 600; list-style: none; }
+  .ledger summary::before { counter-increment: q; content: counter(q) ". "; color: var(--accent-2); }
+  .ledger summary::-webkit-details-marker { display: none; }
+  .ledger details p { margin: 10px 0 0; color: var(--ink-2); font-size: 15px; }
+  .recon { border-left: 3px solid var(--bad); }
+  td:first-child { font-weight: 600; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="meridian-2076.html">← World page</a><a href="#map">Mapping</a><a href="#setting">Setting</a><a href="#academy">Academy</a><a href="#identity">Identity &amp; suits</a>
+    <a href="#factions">Factions</a><a href="#field">The Field</a><a href="#tournament">Tournament</a><a href="#project">Grand Project</a><a href="#militia">Militia</a>
+    <a href="#cast">Cast</a><a href="#ledger">Why Ledger</a><a href="#flags">Open flags</a><a href="../pitches.html#meridian">Pitch</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Story Bible Adaptation · Meridian 2076</div>
+  <h1>The Academy, on the Shelf</h1>
+  <p class="lede">This page takes the major parts of the Story Bible (v15) and rebuilds them inside Meridian 2076. It covers where every institution comes from, who runs it, why it works the way it does, and what a sceptical reader might ask. Unit specs are left on the world page.</p>
+  <div class="facts">
+    <span class="fact">Priority: <b>the world first, the bible bent to fit</b></span>
+    <span class="fact">Biggest change: <b>the sims are binding</b></span>
+    <span class="fact">Keeps: <b>flashpoints, protocols, hawks vs doves</b></span>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="note recon"><b>The world comes first.</b> Nothing on the Meridian 2076 page has been changed. Where the bible and the world disagree, <b>the world wins and the bible bends</b>, and a red-edged note like this one says how. The biggest bends: callsigns are <b>assigned</b>, not chosen; <b>nationality is secret</b>, not spoken; the <b>Livery Board</b> still rules suits; and the four mixed <b>Houses</b> stay. Each of these turns out to create story rather than cost it.</div>
+</div></section>
+
+<section id="map"><div class="wrap">
+  <h2>Bible to Meridian at a glance</h2>
+  <p class="sec-sub">Every major element of the bible and what it becomes here.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Bible element</th><th>In Meridian 2076</th></tr></thead>
+    <tbody>
+      <tr><td>Near-future Earth</td><td>Earth, 2079–2081. The story stays on the Kessarine Shelf, a dried seabed shared by twelve successor states. The rest of the world exists but rarely matters to the plot.</td></tr>
+      <tr><td>The academy, in the United States</td><td>The Arbitration Academy at Sable Point, a neutral island off the Concord coast. The Concord of Harrow is the US analogue and Militia's home nation.</td></tr>
+      <tr><td>Stability Failures / flashpoints</td><td>Kept as-is. The Long Drought's aftershocks: water riots up to armed insurgencies holding whole districts.</td></tr>
+      <tr><td>Protocols, "protoco", "proxy", suppressor-countries</td><td>Kept as-is. Ostrel is the clearest suppressor-state: its stability has been propped up by Concord garrisons since the Shelf War.</td></tr>
+      <tr><td>Hawks vs doves; the election</td><td>Kept. The Concord's 2080 election is fought over how to answer flashpoints, and over whether to stay in the Accord.</td></tr>
+      <tr><td>Armenia vs Azerbaijan</td><td>The Seren Enclave War: Arran and Qadesh, two small signatories. Qadesh won an Arbitration over the enclave, and Arran refused the result. It is the Accord's first real war.</td></tr>
+      <tr><td>Russia / Turkey backers; Georgia</td><td>The Varn Directorate backs Arran and the Saltmarch League backs Qadesh. Kelvane borders both and drinks from Qadesh's water pipeline.</td></tr>
+      <tr><td>Identity system and codenames</td><td>Clause 14 of the Accord. The Arbiter assigns each cadet a callsign, changeable once after first year. Name, face, voice and <b>nationality</b> are all hidden.</td></tr>
+      <tr><td>Suits and customisation</td><td>Interface Suits with a personal livery approved by the Livery Board (nothing national), a House shoulder band, a brow glyph, a year-coloured visor light and one signature piece. The bible's chest rank board carries faction and role emblems.</td></tr>
+      <tr><td>Building access system</td><td>Sable Point's permission grid. Every door checks a suit's grants, and any building holder can grant or revoke.</td></tr>
+      <tr><td>Factions (Hydra, Wolves, Eagles…)</td><td>Cadet-run societies that grew out of the Academy's "study houses". They are tolerated and quietly graded as a leadership practicum.</td></tr>
+      <tr><td>Faction Challenge League; MyTeam; the Hub</td><td>The same institutions, all cadet-built inside the permission grid. The Hub is the Academy's own common hall.</td></tr>
+      <tr><td>The Field</td><td>The Field building, which houses the public practice partitions of the Arbiter. Anyone can launch a sim in any configuration.</td></tr>
+      <tr><td>Grand Tournament</td><td>The first cadet-run tournament on the Arbiter. It is also a scouting event for the states choosing their next Arbiter-Commanders.</td></tr>
+      <tr><td>Suit exploit / alts</td><td>"Re-keying": a leftover maintenance mode in the suit's identity module. It is banned, and the penalty falls on the cadet's whole state as well as the cadet.</td></tr>
+      <tr><td>The Grand Project</td><td>The same thing, with much higher stakes. A profile of every faction and figure at the Academy is also a profile of the next generation of every state's commanders.</td></tr>
+      <tr><td>Militia</td><td>A Concord clerk, fresh out of university, who got in through the Open Lattice exam. He is the youngest cadet the Academy has ever admitted.</td></tr>
+      <tr><td>Prologue and epilogue: the cover story</td><td>The cover story is mandated. Clause 14 requires every cadet's family to be told something else. The lie Militia chooses is still his own.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="setting"><div class="wrap">
+  <h2>1. World &amp; setting</h2>
+  <h3>Time and place</h3>
+  <div class="prose">
+    <p>Earth, 2079 to 2081. Fifty years after the Long Drought broke the old alliances, the Kessarine Shelf is the most valuable land on the continent. It is a dried seabed rich in lithium and farmland, shared by twelve successor states. The Shelf War of 2076 (Case File One on the world page) killed more people in twenty-six days than the Drought did in eleven years. It produced the <b>Halcyon Accord</b>: real armies capped, and disputes settled by binding simulated campaigns on the Arbiter.</p>
+    <p>The bible's timeline (April 2020 to early 2021) maps onto <b>April 2080 to spring 2081</b>. Dates keep their month and day, which keeps every bible date usable.</p>
+  </div>
+  <h3>Stability Failures and flashpoints</h3>
+  <div class="prose">
+    <p>Here the bible's flashpoints have a cause the reader can see. The Drought ended, but the water it left behind is managed, rationed and fought over. The Accord stopped states from fighting each other, but it did nothing about people fighting their own governments. Every state on the Shelf now runs <b>Stability Failure protocols</b> (curfews, water rationing, surveillance, militarised response) and publishes case counts and death tolls the way it once published rainfall.</p>
+    <p>The <b>severity spectrum</b> holds exactly as written. At the low end are ration riots. In the middle, districts fall out of state control. At the high end, armed groups hold territory with armour taken from the old pre-Accord armouries that the treaty forced states to decommission but never managed to destroy. That last detail is why the high end has tanks: the Accord's own disarmament filled warehouses that insurgents raid.</p>
+    <p><b>Fragmentation</b> also holds. The groups are many, rival and predatory. Most fight over water rights, ration routes and recruits. The hawks' "80% of deaths are between groups" figure is a statistic every Concord voter has heard.</p>
+  </div>
+  <div class="note"><b>Why the Accord doesn't cover flashpoints.</b> The Accord governs wars between states, and a flashpoint is inside one. Every state insisted on keeping its <b>Stability Forces</b> uncapped and outside the treaty, because no government would sign away its ability to hold its own capital. Cross-border armies are capped; internal security forces are not. That is the gap the Academy's graduates are commissioned into.</div>
+  <h3>Slurs and terms</h3>
+  <div class="prose">
+    <p>"Protoco" and "proxy" carry over unchanged, and so does "suppressor-state". Ostrel, garrisoned by Concord troops since the Shelf War, is the textbook case, and <b>Slier</b> is Ostrelian in this version. Kelvane, whose high-tier flashpoints are contained by Saltmarch marines, is the other.</p><p>Because nationality is secret at the Academy, "proxy" works differently there. Nobody <i>knows</i> Slier is Ostrelian. People <i>suspect</i> it, from an accent the modulator doesn't quite flatten, from which arguments make him go quiet, or from how carefully neutral he is. Calling a cadet "proxy" is an accusation as well as a slur: it says <i>I know where you're from</i>, which is itself a Clause 14 threat. That makes it heavier than in the bible.</p>
+  </div>
+  <h3>Geopolitics and the home nation</h3>
+  <div class="prose">
+    <p>The <b>Concord of Harrow</b> is the US analogue: the wealthiest signatory, the most powerful air force, the worst flashpoints by an order of magnitude, and the loudest domestic argument. Its 2080 election runs on two separate axes, exactly as the bible wants:</p>
+    <ul>
+      <li><b>Hawks vs doves</b>: how to answer flashpoints, with suppression first or root causes first.</li>
+      <li><b>Accordists vs Withdrawers</b>: whether the Concord, which would probably win a real war, should stay inside a treaty that makes it fight simulated ones. This replaces anti-communism as the second, independent axis. Militia is a hawk and a hard Accordist ("we won the Shelf War and we still signed; that's what strength looks like"). Randy is a dove who wants out of the Accord because he thinks it launders militarism into a spectator ritual. The axes don't track each other, just as the bible wants.</li>
+    </ul>
+  </div>
+  <h3>The foreign conflict: the Seren Enclave War</h3>
+  <div class="prose">
+    <p>On 27 September 2080 the Accord's first real war breaks out. <b>Arran</b> and <b>Qadesh</b>, two small signatories, had taken the Seren Enclave to Arbitration, and Qadesh won the best-of-three. Arran refused to hand the enclave over. When Qadesh moved its Stability Forces in to enforce the result, Arran's forces met them. The Varn Directorate backs Arran (the Russia role) and the Saltmarch League backs Qadesh (the Turkey role). <b>Kelvane</b> borders both and drinks from the Qadesh water pipeline, so Kowalski, who is Kelvanese, has the deepest stake.</p>
+    <p>Because nationality is secret, nobody at the Academy can say "this is my country". Kowalski argues for Qadesh harder than anyone and never says why. Halfway through the crisis the common room works out that he must be Kelvanese, from the pipeline, and that moment of being seen is a scene the bible did not have. This is far bigger for these cadets than Armenia and Azerbaijan were in the bible. If one result can be refused with tanks, then the Academy, the Arbiter, and the careers of everyone in the room may mean nothing. Every bible position survives: Slier's "blame Arran for world war three", Division's analytical call that Arran can take the enclave faster than Qadesh can reinforce it, and Martin's "the Concord and Varn are mediators, not participants". Underneath all of them is a question the bible did not have: <i>does the Accord still exist?</i></p>
+  </div>
+  <h3>Public perception</h3>
+  <div class="prose">
+    <p>Everyone on the Shelf knows the Arbitration Academy exists, and almost no one knows anything about it. That is deliberate (see Clause 14). Admission is the highest honour a young person can earn. Most candidates spend years in Stability Forces, ministries or national service building a record before applying.</p>
+  </div>
+</div></section>
+
+<section id="academy"><div class="wrap">
+  <h2>2. The Academy</h2>
+  <div class="grid g2">
+    <div class="card"><h4>What it is for</h4><p class="small">It trains two kinds of graduate. Most are commissioned into their states' <b>Stability Forces</b> as officers, which is the bible's flashpoint job. A few become <b>Arbiter-Commanders</b>, the only people allowed to fight a binding campaign. The curriculum serves both, because both rely on command under uncertainty, logistics and force composition.</p></div>
+    <div class="card"><h4>Who runs it</h4><p class="small">The <b>Accord Secretariat</b>, a governing body with one seat per signatory. Day to day it is run by a small, distant staff. <b>Opulon</b> is the rare authority with a campus presence. The rest administrate from offices cadets never see.</p></div>
+    <div class="card"><h4>Why it is isolated</h4><p class="small">The Arbiter is the most valuable machine on the Shelf, and the Accord bans copies. Sable Point is an island, the only building on it is the Academy, and supply ships are inspected by four states at once.</p></div>
+    <div class="card"><h4>Why it is secret</h4><p class="small">Clause 14. If the public knew who the cadets were, every state's intelligence service would be working on them. The Academy releases almost nothing, and graduates are named only when they are commissioned.</p></div>
+  </div>
+  <h3>The Hub, the Field and the buildings</h3>
+  <div class="prose">
+    <p>The <b>Hub</b> is the Academy's own common hall. Announcements and faction advertising happen there, and it is moderated by Academy staff, so Randy can be kicked for spamming Hydra. The <b>Field</b> houses the Arbiter's practice partitions. It is neutral, Academy-run, and open to every cadet whatever their faction status. Everything else on campus is a building that some cadet holds. See factions, below.</p>
+  </div>
+  <h3>Living quarters</h3>
+  <div class="prose">
+    <p>Single-occupancy sleep pods inside the four mixed <b>Houses</b> (Tide, Ash, Salt and Lattice). The pod is the only place a suit comes off.</p>
+  </div>
+  <div class="note recon"><b>How the bible bends.</b> The bible has no Houses, only factions. In Meridian a cadet has both. The <b>House</b> is assigned and mixed by Accord rule; it is where you sleep, and it is the shoulder band everyone sees. The <b>faction</b> is chosen; it is where you belong, and it is the emblem on your chest. A Hydra member in House Ash shares a corridor with Eagles and Wolves. That makes every faction feud a neighbour feud.</div>
+</div></section>
+
+<section id="identity"><div class="wrap">
+  <h2>3. Identity, codenames &amp; suits</h2>
+  <h3>Clause 14</h3>
+  <div class="prose">
+    <p>No one at the Academy may know a cadet's legal name, face, voice, biometrics or <b>nationality</b>. Examiners cannot favour a state they cannot identify, rival services cannot reach cadets' families, and reputation attaches only to performance.</p>
+    <p>Cadets talk about the Shelf constantly. What they may not say is <i>which part of it is theirs</i>. They argue about the Seren War as if from nowhere, and every listener tries to work out where each speaker is really from. Your bible's nationality debates survive as <b>debates full of guessing</b>. When a cadet's origin slips out, by a word, a reflex or a grief, it is a real event, and sometimes a Clause 14 violation.</p>
+  </div>
+  <div class="note recon"><b>How the bible bends.</b> In the bible, cadets openly state their nationalities. Here, every stated nationality in your captured dialogue becomes a <b>slip, a rumour or a deliberate risk</b>. Randy's "an Egyptian's opinion" becomes "you sound Ostrelian", which is an accusation. Slier's "it's about a whole group of people" becomes a near-confession. Militia, who cannot keep anything to himself, gets cited for saying he's from the Concord in his first week.</div>
+  <h3>Callsigns</h3>
+  <div class="prose">
+    <p>At intake the Arbiter <b>assigns</b> every cadet a callsign from a neutral word list. A cadet may petition to change it once after first year, and a chosen callsign is a mark of status. "Militia", "Slier", "Division" and "Upbringer" are all Arbiter-issued. Nobody chose them, and everyone makes them mean something anyway.</p>
+  </div>
+  <div class="note recon"><b>How the bible bends.</b> Codenames are no longer self-selected. That makes "Militia" an accident he grows into, and makes any first-year who changes callsign after the year-end exam conspicuous. One of your alts could hide behind a callsign change.</div>
+  <h3>The Interface Suit</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Why everyone wears one all day</h4><p class="small">The Arbiter runs through full-body haptics and a neural cowl. Practice campaigns persist for days and expect answers within the hour. "Snap drills" come without warning, and suiting up takes forty minutes. Clause 14 makes the suit mandatory in public. It comes off only in the sleep pod.</p></div>
+    <div class="card"><h4>Form</h4><p class="small">The bible's form, unchanged: a dark base, plates at the chest, shoulders, forearms and shins, a full-face helmet with a one-way visor, a utility belt, and physical mounting points.</p></div>
+    <div class="card"><h4>Customisation: one rule</h4><p class="small">The <b>Livery Board</b> approves each cadet's personal livery at intake, and it enforces one rule on everything worn afterwards: <b>nothing national, nothing identifying</b>. Within that rule, attachments are free: patches, charms, holiday pieces, etched visors and helmet mods. The Board acts only on complaint, so the floor is as noisy as the bible wants, and the bible's norm of uniqueness for reputation holds.</p></div>
+    <div class="card"><h4>How you tell people apart</h4><p class="small">The world page's five layers: <b>House band</b>, <b>brow glyph</b> (a symbol, not the name), <b>year light</b> on the visor, <b>livery</b> and one <b>signature piece</b>. Plus the bible's <b>rank board</b> on the chest, with the faction emblem centred and role attachments around it, so empty mounts show what someone is not. Callsigns are never written on the suit; you query a building roster.</p></div>
+  </div>
+  <div class="note recon"><b>How the bible bends.</b> Political decals about another state's war count as national markers, so they are banned. Militia clips on a Qadesh decal the day after the war starts anyway, and gets his first Livery citation. It is a perfect early incident for a protagonist who "breaks rules without realising they are rules". The bible's faction <i>trim colour</i> becomes the faction <i>emblem</i> on the rank board, because the shoulder already belongs to the House.</div>
+  <h3>Stats display, messages, roster</h3>
+  <div class="prose">
+    <p>The visor HUD is private. The wrist hologram is public, which is how Division can show off a Faction Challenge win across a room. Building rosters can be queried for the codename and faction of everyone present. All three are features of the identity module, which the Academy controls and cadets cannot touch. Except, it turns out, they can (see the Grand Project).</p>
+  </div>
+</div></section>
+
+<section id="factions"><div class="wrap">
+  <h2>4. Factions, access, the League &amp; MyTeam</h2>
+  <h3>Why cadet-run factions exist at all</h3>
+  <div class="prose">
+    <p>When the Academy opened in 2078 it built forty small <b>study houses</b>: buildings any group of ten cadets could claim for a term to study together. The Accord's drafters had read a great deal about how officers learn to lead. They wanted cadets to practise leading <i>peers</i>, people who could walk away, rather than subordinates who had to obey. So the Academy wrote almost no rules for the study houses. Within three years the study houses had become <b>factions</b>, with names, leaders, constitutions, trim colours and grudges.</p>
+    <p>The Secretariat noticed and decided to <b>leave it alone and watch</b>. Faction conduct is quietly logged, and a leader's record is one of the things states read when choosing Arbiter-Commanders. Nobody tells the cadets this. The bible's theme of institutions being hollower and more arbitrary than they look is built into the place: the Academy's most important assessment is one it pretends not to run.</p>
+  </div>
+  <h3>The building access system</h3>
+  <div class="prose">
+    <p>Every door on Sable Point checks the suit's grants. A faction building's holder (the leader) can grant access to anyone and revoke it at any time. That is the whole system, and it is why roles are felt through doors before they are announced. Cross-faction courtesy access for foreign leaders and diplomats, Upbringer's diplomat access everywhere, Slier opening and then closing Hydra's League access: all of it is exactly the bible, and all of it is simply the grid working as designed.</p>
+  </div>
+  <h3>Tiers, constitutions and discipline</h3>
+  <div class="prose">
+    <p>Tiers are reputation, not regulation. The Academy recognises no tiers, so Tier 1 means "old, selective and feared". Constitutions, councils, the Prison room, demotion to Hydra Blue and expulsion from a faction are all legal for one reason. They are only access changes. A faction cannot fine you, hurt you or remove you from the Academy. It can only close its doors, and on Sable Point that is a great deal.</p>
+  </div>
+  <h3>The Faction Challenge League, MyTeam and the Hub</h3>
+  <div class="grid g3">
+    <div class="card"><h4>Faction Challenge League</h4><p class="small">Founded in 2078 by Chris and Crang as the first organised inter-faction ranking, it runs on Field sims. It transferred to Upbringer in early 2080. It is tolerated because it is the closest thing the Academy has to rehearsing Accord campaigns, and the Secretariat reads its results.</p></div>
+    <div class="card"><h4>MyTeam</h4><p class="small">Ninja's open community for casual sims between people from many factions. It exists because faction politics are exhausting, and the Field lets anyone run anything.</p></div>
+    <div class="card"><h4>The Hub</h4><p class="small">Academy-run and moderated. It is the only space on campus nobody can grant or revoke.</p></div>
+  </div>
+  <h3>Nationally-oriented factions</h3>
+  <div class="prose">
+    <p>Nelva (the bible's French faction) becomes a <b>Callisandrine-speaking faction</b>. Callisandrine is the Shelf's trade language, spoken in half a dozen states, so speaking it reveals nothing, and that is why the faction is legal. Members privately suspect most of them are Callisandrine anyway.</p>
+  </div>
+</div></section>
+
+<section id="field"><div class="wrap">
+  <h2>5. The Field: simulations</h2>
+  <div class="grid g2">
+    <div class="card"><h4>Why the sims model interstate war</h4><p class="small">In the bible this is a beautiful anachronism. Here it is not: interstate war is what Arbitration Campaigns are. The anachronism is inverted. War survives on the Shelf only as a ritual, and the cadets are training to perform it. The same operational art transfers down to flashpoints, which is the bible's pedagogy kept intact.</p></div>
+    <div class="card"><h4>Why practice sims restart from scratch</h4><p class="small">Binding campaigns always start from the <b>Halcyon Baseline</b>, the Shelf as it stood when the Accord was signed (see the world page). Practice sims can use any scenario, but most cadets drill the Baseline because that is the board that matters. There is also a library of historical theatres, including pre-Drought Earth maps, so a sim set in "the Mediterranean" in captured dialogue still works.</p></div>
+    <div class="card"><h4>Why every state has the same units</h4><p class="small">The <b>Standard Order of Battle</b>. The Accord ignores real equipment so that nobody races to build real weapons to win simulated wars. Doctrine packages change numbers, not roles. The bible's unit list (mechanised infantry, railguns, corvettes and so on) is the Standard.</p></div>
+    <div class="card"><h4>Why sims last for days</h4><p class="small">Practice partitions run in <b>slow time</b>, at about one simulated day per two to four real hours. The Arbiter's capacity is shared across four hundred cadets, and commanders are meant to practise living alongside a running war. That is why there are multi-day sims, mid-sim messaging and taunting, and logs that spectators read over breakfast.</p></div>
+    <div class="card"><h4>Coalitions and formats</h4><p class="small">Exactly as in the bible: anything from 1v1 to ten-way free-for-alls, asymmetric or symmetric, with "coalition" as the working term. Binding campaigns have fixed seats. Practice does not.</p></div>
+    <div class="card"><h4>Stats, elo and rank</h4><p class="small">Everything in the bible is real and consequential. Individual stats sit in the Field database. Faction elo comes from League results. The Academy-wide rank (lance corporal, corporal) measures volume of experience, not quality. States read all of it.</p></div>
+  </div>
+  <div class="note"><b>The author's register note holds, and gets stronger here.</b> Nothing in Meridian is a game. A cadet's record feeds their state's seeding in real disputes. Professional-military register throughout; avoid "players", "matches", "meta".</div>
+</div></section>
+
+<section id="tournament"><div class="wrap">
+  <h2>6. The Grand Tournament</h2>
+  <div class="prose">
+    <p>This is the first event of its kind: about thirteen teams of five, drafted from every faction, last team standing. It is run by the League on the Field, and the Secretariat lets it happen for its own reasons. The Seren Enclave War has made every state anxious about who its next Arbiter-Commanders will be, and the tournament is the best scouting event the Academy has ever had. Observers from capitals watch the logs. That is why the collapse lands so hard: Militia is exposed while the whole Shelf is watching.</p>
+    <p>Team leaders spend three to four weeks negotiating country selections and truces before it opens, as in the bible. Here "country selection" means choosing which Baseline state each team commands, so pre-tournament diplomacy is a rehearsal of the Accord itself. Naming his team <b>Manifest Destiny</b> becomes something else as well: a Concord cadet branding his team with a Withdrawer slogan in the middle of the Seren crisis.</p>
+  </div>
+</div></section>
+
+<section id="project"><div class="wrap">
+  <h2>7. The suit exploit, the alts &amp; the Grand Project</h2>
+  <div class="grid g2">
+    <div class="card"><h4>How alts are possible</h4><p class="small">The suit's identity module has a <b>maintenance re-key mode</b>, left over from the Arbiter's commissioning tests. It was used to create test identities so engineers could check that no stats leaked between personas. It was never removed, because removing it would mean re-flashing every suit on the island. Re-keying produces a new codename, appearance profile, stat record and faction affiliation. The module will "reskin" an existing alt without losing its stats, which is how Mangy becomes Aguda.</p></div>
+    <div class="card"><h4>Why nobody had done it</h4><p class="small">There was no reason to, and the price was enormous. A re-keyed identity breaks Clause 14's accountability, so the penalty is <b>expulsion of the cadet and forfeiture of their state's next Arbitration</b>. No cadet wanted to be the person who cost their country a city. Ninja knows the mode exists because he was an engineer's apprentice before the Academy.</p></div>
+    <div class="card"><h4>Why the Grand Project is so dangerous here</h4><p class="small">A complete profile of every faction and prominent cadet, covering their tendencies, histories, relationships and weaknesses, is also a <b>profile of the Shelf's next generation of commanders</b>. If any state's intelligence service got hold of it, Clause 14 would be finished. Militia thinks he is a white hat. In Meridian, the reader can see he is carrying the most valuable document on the Shelf.</p></div>
+    <div class="card"><h4>Why Division and Upbringer act as they do</h4><p class="small">Upbringer prioritises order above mercy, and here order means the Accord. Spreading the news fast is the only way to stop the Project leaking quietly to a state. Division's self-preservation also becomes concrete. If his personal history (see the flags below) is in the Project, any reader of the Project could identify him.</p></div>
+  </div>
+</div></section>
+
+<section id="militia"><div class="wrap">
+  <h2>8. Militia</h2>
+  <div class="grid g2">
+    <div class="card"><h4>Background</h4><p class="small">He is Concord-born, working-class, graduated from the University of Harrow early (history and international relations fit his knowledge), and works as a records clerk at the Harrow water ministry's archive. He handles drought-era files nobody reads. He is bored and restless.</p></div>
+    <div class="card"><h4>Why the Academy took someone so young</h4><p class="small">Concord Stability Forces have lost so many officers to flashpoints that in 2079 the Concord pushed the Secretariat to open the <b>Open Lattice</b>: an anonymous aptitude examination anyone over nineteen can sit, bypassing the usual years of record-building. Almost nobody passes it. Militia did, at twenty, and became the youngest cadet ever admitted. This answers the bible's flag directly: officer demand created a door, and he walked through it before anyone expected someone like him.</p></div>
+    <div class="card"><h4>How he finds it</h4><p class="small">A Stability Forces recruitment poster in a tram station has a line at the bottom: "Officer pathways include the Open Lattice." He researches it, sits it in a rented exam room with forty older candidates, and hears nothing for six weeks.</p></div>
+    <div class="card"><h4>The cover story, prologue and epilogue</h4><p class="small">Clause 14 <b>requires</b> a cover: no cadet's family may be told they are at Sable Point. The Academy offers standard covers, such as a ministry posting or a research secondment. Militia invents his own instead, a promotion and relocation, and embroiders it. The lie is institutional, and the self-mythologising is his. The epilogue mirror holds perfectly: the Academy's silence protects the cover after his expulsion too, so his mother never learns anything.</p></div>
+  </div>
+  <h3>His politics in this version</h3>
+  <div class="prose">
+    <p>He is a hawk, a hard Accordist, and pro-Qadesh. He clips a Qadesh decal onto his suit the day after the war breaks out, mostly because of the energy in the room, and collects a Livery citation by lunch. His anti-communist cluster becomes an anti-Withdrawer cluster: "anyone who wants the Concord out of the Accord should be thrown out of the Concord." Upbringer calls it bigotry, as in the bible. The self-mythologising tic is unchanged.</p>
+  </div>
+</div></section>
+
+<section id="cast"><div class="wrap">
+  <h2>9. Cast in Meridian</h2>
+  <p class="sec-sub">Real-world nationalities from the bible, replaced by Shelf states. Roles are unchanged. Inside the Academy, all of these are secret: the reader knows them, and the characters guess.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Character</th><th>Bible nationality</th><th>In Meridian</th><th>Why it fits</th></tr></thead>
+    <tbody>
+      <tr><td>Militia, Randy, Connor, Verni, Kat, Junction, Chanka</td><td>USA</td><td>Concord of Harrow</td><td>The home nation, with the worst flashpoints and the loudest election.</td></tr>
+      <tr><td>Slier</td><td>Egypt</td><td>Ostrel</td><td>A suppressor-state propped up by Concord garrisons, which is where "proxy" comes from. He hates the Concord government, not its people.</td></tr>
+      <tr><td>Kowalski</td><td>Georgia</td><td>Kelvane</td><td>Borders both Arran and Qadesh and drinks from Qadesh's pipeline.</td></tr>
+      <tr><td>Martin</td><td>Netherlands</td><td>Free Port of Callisande</td><td>A trading state that is blunt, unsentimental and mediates everything.</td></tr>
+      <tr><td>Dutch</td><td>Australia</td><td>Saltmarch League</td><td>A far-coast maritime state that recently eased its protocols.</td></tr>
+      <tr><td>Spoit</td><td>Sweden</td><td>Fjordmark</td><td>A small northern state "ahead" on suppression. He is in his thirties, married, and was a Stability Forces officer before applying.</td></tr>
+      <tr><td>Soda</td><td>Canada</td><td>Wenland</td><td>The Concord's quieter northern neighbour.</td></tr>
+      <tr><td>Upbringer</td><td>American-born, Yugoslav heritage</td><td>Concord-born, Ilyrian heritage</td><td>Ilyria was a state partitioned out of existence in the Shelf War. "They destroyed my country" is literally true. He believes in the Accord because he has seen what happens without one.</td></tr>
+      <tr><td>Opulon</td><td>French (implied)</td><td>Callisandrine-speaking; nationality withheld</td><td>An Academy authority who leads a language faction.</td></tr>
+      <tr><td>Division, Ninja, others</td><td>TBD</td><td>Withheld</td><td>Clause 14 lets you keep them unknown as long as you like.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="ledger"><div class="wrap">
+  <h2>10. The Why Ledger</h2>
+  <p class="sec-sub">Every why-question a sceptical reader might ask, with an answer. Tap to open.</p>
+  <div class="ledger">
+    <details><summary>Why would twelve states that distrust each other let a machine decide their borders?</summary><p>They tried a real war in 2076, and it cost them more in twenty-six days than the Drought cost in eleven years. The Accord is what the frightened survivors could all sign. It also suits the strong: the Concord would probably win a real war, but an Arbiter win costs nothing and keeps the economy intact.</p></details>
+    <details><summary>What stops a state from ignoring a result?</summary><p>Every other signatory's sanctions, plus the cap on its own army: a state that refuses a result faces everyone else's Stability Forces with a capped expeditionary force of its own. The Seren War is the first test of whether that is enough, and it is the background crisis of the book.</p></details>
+    <details><summary>Why is there an academy at all? Couldn't states just pick commanders?</summary><p>Only Academy-certified commanders may fight a binding campaign, and the Accord bans states from training on their own Arbiter copies, so the only place to learn is Sable Point.</p></details>
+    <details><summary>Why do rivals live together?</summary><p>There is one Arbiter, on one neutral island, by treaty. Every state sends cadets or forfeits its campaigns.</p></details>
+    <details><summary>If the Academy trains Arbiter-Commanders, why do most graduates go to flashpoint duty?</summary><p>There are only a few dozen Arbiter-Commander seats on the whole Shelf, and every state needs hundreds of officers for its uncapped Stability Forces. The Academy is the best officer school on the continent, so states use it for both.</p></details>
+    <details><summary>Why aren't flashpoints covered by the Accord?</summary><p>No government would sign away the right to hold its own capital. Internal security was carved out at signing.</p></details>
+    <details><summary>Why do insurgents have tanks?</summary><p>The Accord forced states to decommission most of their pre-Accord armour, and much of it is still sitting in poorly guarded warehouses.</p></details>
+    <details><summary>How can cadets debate a war without saying where they're from?</summary><p>They argue as if from nowhere, and everyone else tries to guess. A slip is a real event. Spotting someone's origin is a skill the Academy never teaches and every cadet learns.</p></details>
+    <details><summary>Why the full-face suits, all day?</summary><p>The Arbiter needs a full-body interface. Practice campaigns run for days and need answers within the hour. And Clause 14 requires it in public.</p></details>
+    <details><summary>Why can suits be customised at all under Clause 14?</summary><p>Four hundred identical suits are unteachable, and each commander's livery is shown inside the Arbiter. The Livery Board enforces one rule (nothing national, nothing identifying), and only on complaint.</p></details>
+    <details><summary>How does anyone know who anyone is?</summary><p>House band, brow glyph, year light, livery, signature piece, and the faction emblem on the rank board. Callsigns are never written on the suit; you query the roster.</p></details>
+    <details><summary>Why does the Academy let cadets run factions with buildings, constitutions and expulsions?</summary><p>The study houses were designed to teach leadership of peers. The Secretariat watched them become factions and chose to observe rather than intervene, because faction records are a hidden part of how states choose commanders.</p></details>
+    <details><summary>Isn't a faction "prison" illegal?</summary><p>It is only an access change: a room the person may not leave without losing their grants. Every punishment a faction can impose is a door closing.</p></details>
+    <details><summary>Why can one leader revoke a whole faction's League access?</summary><p>League access is a building grant, and a faction leader can extend or withdraw grants for their members. The League allows faction-wide invitations so that leaders control their factions' exposure.</p></details>
+    <details><summary>Why is the Field neutral when everything else belongs to someone?</summary><p>It is the Arbiter, and the Arbiter belongs to the Accord. No cadet can hold it.</p></details>
+    <details><summary>Why do sims restart from scratch?</summary><p>Binding campaigns always start from the Baseline so that losses never compound. Practice copies that.</p></details>
+    <details><summary>Why does everyone have the same units?</summary><p>The Standard Order of Battle exists so that real weapons research earns nothing inside the Arbiter.</p></details>
+    <details><summary>Why do sims last days?</summary><p>Practice runs in slow time to share capacity and to train commanders to live alongside a running war.</p></details>
+    <details><summary>Why are sim logs public?</summary><p>The Accord publishes every binding campaign's log so the losing state can see it was fair. The Academy copied the rule for practice.</p></details>
+    <details><summary>Why can a twenty-year-old get in?</summary><p>The Open Lattice exam, created because of officer shortages. It is rarely passed, and he passed it.</p></details>
+    <details><summary>Why does Militia keep getting cited?</summary><p>Clause 14 and the Livery Board make dozens of small rules he doesn't notice until he's broken them, which is the bible's first-phase Militia exactly.</p></details>
+    <details><summary>Why does he lie to his mother?</summary><p>He is required to. Clause 14 mandates a cover story. The specific lie, and the way he decorates it, are his.</p></details>
+    <details><summary>Why doesn't his mother find out after the expulsion?</summary><p>The Academy never names a cadet who is not commissioned, and expelled cadets are bound by the same clause for life.</p></details>
+    <details><summary>Why is the alt exploit possible, and why had no one used it?</summary><p>It is a commissioning-era maintenance mode that was never removed. Nobody used it because the penalty includes your country forfeiting a dispute.</p></details>
+    <details><summary>Why would the Grand Project matter beyond the Academy?</summary><p>It is effectively a dossier on every state's future commanders, which is exactly what Clause 14 exists to prevent.</p></details>
+    <details><summary>Why would the Secretariat allow a cadet-run Grand Tournament?</summary><p>The Seren War has every state desperate to scout commanders. The tournament gives them that without the Secretariat having to admit it is scouting.</p></details>
+    <details><summary>Why is the Academy so opaque?</summary><p>Partly security, and partly design: the Secretariat's most important assessment of cadets is one it never admits to running.</p></details>
+    <details><summary>What are the "call a random person" phones?</summary><p>A Concord public amenity from the Drought years. Free phones connected strangers across rationing zones so people could swap water-ration tips. Some still stand in tram stations, which fits Militia's commute.</p></details>
+    <details><summary>Why is the Academy so hostile to people who adapt slowly?</summary><p>Every cadet who washes out frees a seat that a state wants for someone better. Nobody admits it, but the Academy's culture expects people to quit.</p></details>
+  </div>
+</div></section>
+
+<section id="flags"><div class="wrap">
+  <h2>11. Bible flags this world helps answer</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Bible flag</th><th>Meridian's suggested answer</th></tr></thead>
+    <tbody>
+      <tr><td>Why the academy accepted someone so young</td><td>The Open Lattice exam, created because flashpoints drained the officer corps.</td></tr>
+      <tr><td>Where the home nation sits geopolitically</td><td>The strongest signatory, debating whether to stay in a treaty it could break.</td></tr>
+      <tr><td>Why Slier reverses League access</td><td>The League began running pre-tournament "Seren scenarios" in which Ostrel is always the garrisoned proxy. He pulls Hydra out rather than let his members spend nights playing his country as a puppet. He never says so.</td></tr>
+      <tr><td>Slier's move to neutrality</td><td>He is from a proxy state. Neutrality is the only way he can lead a faction full of cadets from the states that garrison his country.</td></tr>
+      <tr><td>Division's personal history</td><td>Division was a junior officer in the Ostrel garrison during a flashpoint massacre that was never reported. If anyone links his codename to his service record, a state could use it. That is why being truly observed by Militia is a threat.</td></tr>
+      <tr><td>The Wolf Federation's disbandment</td><td>The dual banishment showed the Federation's leaders kept a secret from their own members, and the Secretariat's faction log flagged it. The Gray, Red and White leaders split before anyone could ask them about it.</td></tr>
+      <tr><td>Are national factions common?</td><td>They are impossible. Nationality is secret, so the closest thing is a trade-language faction like Nelva, and everyone wonders who is really in it.</td></tr>
+      <tr><td>What happens to the tournament after the collapse</td><td>The Secretariat suspends it and, for the first time, publicly intervenes in a cadet institution. That tells every cadet the Academy was watching all along.</td></tr>
+    </tbody>
+  </table></div>
+  <h3>What this world costs you</h3>
+  <ul class="prose">
+    <li>Real-world places become fictional Shelf states. That is your planned abstraction pass, done in advance.</li>
+    <li>The anti-communism axis becomes Accordist vs Withdrawer. The Upbringer "destroyed my country" scene keeps its heat, but the target changes.</li>
+    <li>The stakes are higher than in the bible. If you want the Academy to feel like a beautiful anachronism, Meridian makes it the opposite: the most relevant place on the continent.</li>
+  </ul>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · Meridian 2076 · Story Bible Adaptation. <a href="meridian-2076.html">World page</a> · <a href="../pitches.html#meridian">Pitch</a></div></footer>
+<script src="../assets/world.js"></script>
+</body>
+</html>

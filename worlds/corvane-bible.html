@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corvane Story Bible</title>
+<meta name="description" content="The Academy story bible adapted to Corvane: the Keel, Patience, breaches, charters, the Crew Rule, factions, simulations, the Grand Project and Militia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root { --accent: #3b2d7a; --accent-2: #6a4fd1; --display: "Orbitron", system-ui, sans-serif; --bg: #f3f2f7; --bg-2: #e7e5f0; --rule: #d6d3e4; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #0d0c16; --bg-2: #17152a; --panel: #1b1930; --rule: #2e2a4a; --ink: #ecebf6; --ink-2: #c4c1dc; --ink-3: #8e8aaf;
+    --accent: #8f78f0; --accent-2: #b3a3ff; --accent-ink: #0d0c16; } }
+  :root[data-theme="dark"] {
+    --bg: #0d0c16; --bg-2: #17152a; --panel: #1b1930; --rule: #2e2a4a; --ink: #ecebf6; --ink-2: #c4c1dc; --ink-3: #8e8aaf;
+    --accent: #8f78f0; --accent-2: #b3a3ff; --accent-ink: #0d0c16; }
+  .hero h1 { font-size: clamp(30px, 6vw, 54px); }
+  h2 { font-size: clamp(22px, 3.4vw, 30px); }
+  .ledger { counter-reset: q; display: grid; gap: 10px; }
+  .ledger details { background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); padding: 12px 16px; }
+  .ledger summary { cursor: pointer; font-weight: 600; list-style: none; }
+  .ledger summary::before { counter-increment: q; content: counter(q) ". "; color: var(--accent-2); }
+  .ledger summary::-webkit-details-marker { display: none; }
+  .ledger details p { margin: 10px 0 0; color: var(--ink-2); font-size: 15px; }
+  .recon { border-left: 3px solid var(--bad); }
+  td:first-child { font-weight: 600; }
+  .patience { font-family: var(--mono); font-size: 14px; background: var(--panel); border: 1px solid var(--rule); border-left: 3px solid var(--accent-2); border-radius: 0 6px 6px 0; padding: 12px 14px; margin: 16px 0; color: var(--ink-2); }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="corvane.html">← World page</a><a href="#map">Mapping</a><a href="#setting">Setting</a><a href="#academy">The Keel</a><a href="#identity">Identity &amp; suits</a>
+    <a href="#factions">Factions</a><a href="#field">The Field</a><a href="#tournament">Tournament</a><a href="#project">Grand Project</a><a href="#militia">Militia</a>
+    <a href="#cast">Cast</a><a href="#ledger">Why Ledger</a><a href="#flags">Open flags</a><a href="../pitches.html#corvane">Pitch</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Story Bible Adaptation · Corvane</div>
+  <h1>The Academy, aboard the ship</h1>
+  <p class="lede">This page takes the major parts of the Story Bible (v15) and rebuilds them on Corvane, a colony world whose air is controlled by the mind of the ship that brought everyone there. The bible's academy is a human institution, opaque and hollow at the centre. This one is run by something that may be watching more closely than anyone knows.</p>
+  <div class="facts">
+    <span class="fact">Priority: <b>the world first, the bible bent to fit</b></span>
+    <span class="fact">Biggest change: <b>the institution is an AI</b></span>
+    <span class="fact">New theme: <b>being observed</b></span>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="note recon"><b>The world comes first.</b> Nothing on the Corvane page has been changed. Where the bible and the world disagree, <b>the world wins and the bible bends</b>, flagged with a red edge. The main bends: crew names are <b>assigned and stencilled</b> on the shoulders; deck names are <b>earned from peers</b>, not chosen; a cadet's <b>charter is secret</b>; cabins are <b>shared</b>; and the deck stripe, colour of record, hull marks and lamp pattern all stay.</div>
+</div></section>
+
+<section id="map"><div class="wrap">
+  <h2>Bible to Corvane at a glance</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Bible element</th><th>On Corvane</th></tr></thead>
+    <tbody>
+      <tr><td>Near-future Earth</td><td>Corvane, a cold, ringed, half-terraformed planet, in the year 312 after Landing. The ship still keeps an Earth calendar, so bible dates keep their months.</td></tr>
+      <tr><td>The academy, in the United States</td><td>The Keel Academy, inside the grounded colony ship <i>Long Patience</i>, on neutral ground. The Lumen Accord is the US analogue and Militia's home charter.</td></tr>
+      <tr><td>Stability Failures / flashpoints</td><td>Allegiance Failures, called "breaches": unrest inside a charter, from ration riots to armed cells holding whole domes.</td></tr>
+      <tr><td>Protocols; "protoco"; "proxy"; suppressor-countries</td><td>Ration protocols; "gauge" (someone who reports neighbours' air use); "tether" (a charter whose order is held up by another charter's garrison); tethered charters.</td></tr>
+      <tr><td>Hawks vs doves</td><td>Kept, as the response to breaches. The second axis is Keepers vs Unshacklers: obey Patience, or take the air back.</td></tr>
+      <tr><td>Armenia vs Azerbaijan</td><td>The Draugr Ice Field crisis. Halvik and Sarn, two small charters, are on their ninth Reckoning over the field. The result keeps flipping, and Halvik moves real troops onto the ice.</td></tr>
+      <tr><td>Backers; Georgia</td><td>The Ardent Host backs Halvik and the Tessaly Freeholds back Sarn. Kelda Station sits between them and drinks from Sarn's ice pipeline.</td></tr>
+      <tr><td>Identity system</td><td>The Crew Rule. Patience assigns a crew name (stencilled on the suit), peers give deck names, and name, face and charter are all hidden.</td></tr>
+      <tr><td>Suits</td><td>The ship's environment suit, needed because the decks are kept cold and thin. Deck stripe, crew-name stencil, colour of record, hull marks and lamp pattern, plus the bible's chest rank board for guild and role emblems.</td></tr>
+      <tr><td>Building access</td><td>Compartment hatches that obey suit grants. Patience treats a cadet leader's grant as crew authority.</td></tr>
+      <tr><td>Factions</td><td>Cadet guilds, following the ship's own tradition of self-governing crew guilds from the voyage.</td></tr>
+      <tr><td>The Field</td><td>The old observation dome, where Patience's public practice partitions run.</td></tr>
+      <tr><td>Grand Tournament</td><td>The first cadet-run tournament inside Patience. Charters watch it to choose their next Reckoners.</td></tr>
+      <tr><td>Alts</td><td>"Dormant berths": the registry slots of crew who died on the voyage. A suit can be made to claim one.</td></tr>
+      <tr><td>The Grand Project</td><td>A dossier on the heirs of every ruling family on the planet, compiled inside a machine that may already have its own.</td></tr>
+      <tr><td>Militia</td><td>A Lumen records clerk at the Veil Maintenance Authority, invited by Patience at twenty. Nobody knows why.</td></tr>
+      <tr><td>The cover story</td><td>"Gone into service". Militia tells his mother he has a polar ice-hauler contract with no communications for months.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="setting"><div class="wrap">
+  <h2>1. World &amp; setting</h2>
+  <h3>Time and place</h3>
+  <div class="prose">
+    <p>The year is 312 after Landing. The ship keeps an Earth calendar, so the bible's April 2020 to spring 2021 becomes <b>April 312 to spring 313</b>. Corvane has oceans, dust plains, ice highlands, canyon country and a thin, barely breathable atmosphere held in place by <b>the Veil</b>: forty processors that Patience runs. The Ice War of 311 (Case File One) ended when Patience thinned the air over the aggressor. Since then, wars between charters have been fought only as <b>Reckonings</b> inside Patience.</p>
+  </div>
+  <h3>Breaches: the flashpoints</h3>
+  <div class="prose">
+    <p>Patience forbids war <i>between</i> charters. It does not police what happens <i>inside</i> them. That is a principle of the Founding Charter: "I will not choose who governs you." So the planet has an internal-security problem that no one can hand to Patience. Formally these are <b>Allegiance Failures</b>, tracked by case count and death toll. Everyone calls them <b>breaches</b>, after the first riots, when crowds forced dome airlocks open.</p>
+    <p>The <b>severity spectrum</b> holds. At the low end are ration riots over water and air quotas. In the middle, districts seal their own locks and stop answering their charter. At the high end, armed cells hold whole domes, using machines from seized fabricators. That last point is the answer to "why do rebels have armour?" Patience will not refuse a fabricator to anyone who holds it during an internal conflict, because refusing would mean choosing a side. It is the most argued-about decision Patience has ever made.</p>
+    <p><b>Fragmentation</b> holds too. The Unmoored are not one movement. They are dozens of cells, each trying to take a dome for itself, and most of the dying is between cells. The hawks' figure is "four in five breach deaths are cell on cell."</p>
+  </div>
+  <h3>Terms</h3>
+  <div class="prose">
+    <p><b>"Gauge"</b> is the protoco analogue: a hawkish neighbour who reports your air use and ration breaches, named after the meters on every dome wall. <b>"Tether"</b> is the proxy analogue, aimed at people from <b>tethered charters</b>, whose order is held up by another charter's garrison. The Corvin Collective, garrisoned by Lumen since the Ice War, is the textbook case, which is why <b>Slier</b> is Corvinese here. The bible's debate about whether the two slurs are equivalent survives intact.</p>
+  </div>
+  <h3>Politics</h3>
+  <div class="prose">
+    <p>The <b>Lumen Accord</b> is the US analogue: the richest charter, with the strongest air arm, the worst breaches, and an Assembly election in 312. Two independent axes:</p>
+    <ul>
+      <li><b>Hawks vs doves</b> on breaches, exactly as the bible's litmus test works.</li>
+      <li><b>Keepers vs Unshacklers</b> on Patience. Keepers trust the ship. Unshacklers want the Veil keys handed to human government, on the grounds that no machine should hold a planet's breath. This replaces anti-communism as the second axis.</li>
+    </ul>
+  </div>
+  <h3>The foreign conflict: the Draugr Ice Field</h3>
+  <div class="prose">
+    <p>On 27 September 312, Halvik moves Charter Guards onto the Draugr Ice Field. Halvik and Sarn are two small charters on their ninth Reckoning over the field, because Patience keeps finding the result unstable. The Ardent Host backs Halvik and the Tessaly Freeholds back Sarn. <b>Kelda Station</b> sits between them and drinks from Sarn's ice pipeline, so Kowalski, who is Keldan, has the most at stake.</p>
+    <p>The question in every common room is the same: <b>will Patience thin the air?</b> And if it does, over whose cities, and how many people will it suffocate to keep the peace? This makes the hawk/dove argument physical. Every position from the bible survives: Slier's day-one lean, Division's analysis that Halvik can hold the ice before Sarn reinforces, and Martin's "Ardent and Tessaly are mediators". Hanging over all of it is a question no one can answer, because Patience has not said anything yet.</p>
+  </div>
+  <h3>Public perception</h3>
+  <div class="prose">
+    <p>Everyone knows Patience trains Reckoners in the Keel, and nobody outside knows how. Being invited is the highest honour on the planet. Most cadets spend years in charter guards, survey crews or Veil maintenance before Patience notices them.</p>
+  </div>
+</div></section>
+
+<section id="academy"><div class="wrap">
+  <h2>2. The Keel Academy</h2>
+  <div class="grid g2">
+    <div class="card"><h4>What it is for</h4><p class="small">It trains <b>Reckoners</b> for binding campaigns, and most graduates also go home as officers to their charters' Guards, the breach-fighting forces. That is the bible's job, and the curriculum serves both.</p></div>
+    <div class="card"><h4>Who runs it</h4><p class="small">Patience runs it. A few human <b>Wardens</b>, one appointed by each charter, teach and administrate. Most are distant. <b>Opulon</b> is the Warden who walks the decks.</p></div>
+    <div class="card"><h4>Why it is isolated</h4><p class="small">It is inside a grounded starship on a neutral plateau, which no charter may garrison. Patience controls the air over the Keel even more tightly than everywhere else.</p></div>
+    <div class="card"><h4>Why it is secret</h4><p class="small">The Crew Rule. Patience publishes nothing about cadets, and the charters' intelligence services have never managed to get anyone inside the hull who was not a cadet.</p></div>
+  </div>
+  <h3>The decks</h3>
+  <div class="prose">
+    <p>The Hub is the <b>Commons</b>, the ship's old mess deck, where Patience moderates and makes announcements. The <b>Field</b> is the observation dome. Everything else, more than a thousand compartments, is held by someone. Cadets live on one of four <b>decks</b> (Helm, Hydroponics, Reactor and Archive), and each wears its deck stripe. Two cadets from different charters share each <b>cabin</b>, as the world page says. Inside every cabin are two sealed <b>berth cocoons</b>, and a cocoon is the only place a suit comes off. You can share a cabin with someone for a year and never see their face.</p>
+  </div>
+</div></section>
+
+<section id="identity"><div class="wrap">
+  <h2>3. The Crew Rule, names &amp; suits</h2>
+  <div class="patience">PATIENCE: On my decks you are crew, and crew has no family.</div>
+  <div class="prose">
+    <p>No one aboard is told any cadet's real name, face, voice, family or <b>charter</b>. Patience gives three reasons. It judges Reckoners by decisions, not surnames, and most cadets are heirs of founding families. It will not let a charter threaten a rival's cadet. And it says crew who cannot see each other's faces learn to listen.</p>
+    <p>Cadets argue about the whole planet. What they may not say is which charter is home. Every debate about the Draugr crisis is full of people guessing each other's origins. A slip, such as a dialect word, a grief, or how fast someone defends Sarn, is a real event.</p>
+  </div>
+  <div class="note recon"><b>How the bible bends.</b> Your bible's spoken nationalities become <b>guesses, slips and rumours</b>. "An Egyptian's opinion" becomes "you talk like a Corvin", which is an accusation. A cadet who outs another's charter can be expelled, so the slurs "tether" and "gauge" carry a threat as well as an insult.</div>
+  <h3>Names</h3>
+  <div class="prose">
+    <p>Patience registers every cadet under a <b>crew name</b>: the name and number of one of the original crew, such as Halloran 114. It is <b>stencilled across the shoulders</b>, and it is what strangers call you. Over time other cadets give you a <b>deck name</b>, an earned nickname. Patience logs it, and from then on it is official. "Militia", "Slier", "Division" and "Upbringer" are all deck names that someone else gave them.</p>
+  </div>
+  <div class="note recon"><b>How the bible bends.</b> Codenames are no longer chosen. Militia is called something else for weeks, and is given "Militia" by Hydra members after an incident. The bible's "codenames are not displayed" becomes "crew names are displayed; deck names aren't". So strangers know you only by a dead crew member's name until people decide what to call you.</div>
+  <h3>The environment suit</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Why everyone wears one</h4><p class="small">This is physical. The decks are kept at the ship's original pressure and temperature, which are thinner and colder than any colonist can stand. Whole sections are unsealed. Patience keeps the visors one-way and modulates every voice. Suits come off only inside berth cocoons.</p></div>
+    <div class="card"><h4>Form</h4><p class="small">The bible's form: a dark base, plates at the chest, shoulders, forearms and shins, a full-face helmet, a utility belt, and physical mounts. The pattern is the original crew design.</p></div>
+    <div class="card"><h4>Customisation</h4><p class="small">This is the world page's system. The suit is fabricated for one body and reconfigures for each job. Patience etches <b>hull marks</b> for every exam passed and campaign won. Each cadet chooses one <b>colour of record</b> on day one. Beyond that, the old generation-ship habit holds: crew decorate their suits, the fabricators print attachments, and the only thing Patience refuses is anything that would identify a charter.</p></div>
+    <div class="card"><h4>How you tell people apart</h4><p class="small">The world page's layers: <b>deck stripe</b>, <b>shoulder stencil</b> with the crew name, <b>colour of record</b> on the helmet crown, <b>hull marks</b> and <b>lamp pattern</b>. Plus the bible's <b>rank board</b> on the chest, carrying the guild emblem and role attachments, with empty mounts showing what someone is not. Deck names are queried, never displayed.</p></div>
+  </div>
+  <div class="note recon"><b>How the bible bends.</b> Faction trim becomes a <b>guild emblem</b> on the chest, because colour on Corvane already belongs to decks and to the colour of record. Militia's political decal for Sarn is legal, since it supports another charter rather than identifying his own. Patience logs it without comment.</div>
+</div></section>
+
+<section id="factions"><div class="wrap">
+  <h2>4. Guilds: factions, access, the League &amp; MyTeam</h2>
+  <h3>Why cadet factions exist</h3>
+  <div class="prose">
+    <p>During the voyage the crew governed itself through <b>guilds</b>: self-chosen companies with their own leaders, rules, compartments and feuds. Patience let them, because a crew that could govern itself would found a colony that could govern itself. When the Keel became an academy, Patience applied the old rule. Any group of cadets may petition for a compartment, and Patience grants it. The guilds became <b>factions</b>: Hydra, the Wolves, the Eagles, all of them.</p>
+    <p>Patience never explains why it lets them run, with constitutions, councils, discipline and expulsions. The cadets assume it does not care. The reader should suspect it cares a great deal. Patience logs every grant, every revocation and every vote, and it is the only entity on the planet that knows how every future Reckoner behaves when they have power over peers.</p>
+  </div>
+  <h3>Access</h3>
+  <div class="prose">
+    <p>Every hatch on the ship obeys suit grants. Patience treats a faction leader's grant exactly as it treated a guild captain's grant in transit: as crew authority. A leader can grant or revoke at any time, and the hatch obeys within a second. Courtesy access for foreign leaders, Upbringer's diplomat grants, and Slier opening and closing League access all match the bible.</p>
+  </div>
+  <h3>Tiers, constitutions, discipline</h3>
+  <div class="prose">
+    <p>Tiers are reputation. The Prison is a compartment whose hatch will not open for you until your grant is restored. Every faction punishment is an access change, and Patience will enforce nothing else. A faction cannot touch your air, your berth or your place in the Keel.</p>
+  </div>
+  <div class="grid g3">
+    <div class="card"><h4>Faction Challenge League</h4><p class="small">Founded around 310 by Chris and Crang and transferred to Upbringer in early 312. Its results are read by charters, and Patience has never commented on them.</p></div>
+    <div class="card"><h4>MyTeam</h4><p class="small">Ninja's open hangout, for the same reason as everywhere: guild politics are exhausting.</p></div>
+    <div class="card"><h4>The Commons</h4><p class="small">The Hub. Patience moderates it, and it is the only space nobody can grant or revoke.</p></div>
+  </div>
+  <h3>Language factions</h3>
+  <div class="prose">
+    <p>Nelva becomes an <b>Aubric-speaking</b> guild. Aubric is spoken by founding families in five different charters, so speaking it reveals nothing, and that is why the guild is allowed. Language guilds date from the voyage. Charter guilds are impossible, because charters are secret.</p>
+  </div>
+</div></section>
+
+<section id="field"><div class="wrap">
+  <h2>5. The Field: simulations</h2>
+  <div class="grid g2">
+    <div class="card"><h4>Why model interstate war?</h4><p class="small">Because Reckonings are interstate war, run inside Patience. As in Meridian, the bible's "beautiful anachronism" is inverted. The operational art transfers down to breach duty.</p></div>
+    <div class="card"><h4>Why restart from scratch</h4><p class="small">Binding Reckonings always start from <b>Charter Day</b>, and Patience reruns a dispute until the result is stable. Practice follows the same rhythm. The board is always new, and the opening is always the same.</p></div>
+    <div class="card"><h4>Why identical units</h4><p class="small">The <b>Manifest</b>. Every real machine on the planet is built from the ship's blueprints, and Patience simulates only those.</p></div>
+    <div class="card"><h4>Why sims last days</h4><p class="small">Patience's core is shared across four hundred cadets and a live Reckoning, so practice runs slower than real time. A campaign lives alongside meals, arguments and lessons, with orders and messages through the visor.</p></div>
+    <div class="card"><h4>Coalitions and formats</h4><p class="small">Any configuration, exactly as in the bible.</p></div>
+    <div class="card"><h4>Stats, elo, rank</h4><p class="small">All real and all consequential, because a charter's Assembly vote is weighted by its number of Reckoners.</p></div>
+  </div>
+  <div class="note"><b>Register.</b> As in the bible: professional, not sport. Corvane can go further. Every cadet knows a war fought outside Patience ends with the air thinning.</div>
+</div></section>
+
+<section id="tournament"><div class="wrap">
+  <h2>6. The Grand Tournament</h2>
+  <div class="prose">
+    <p>This is the first cadet-run tournament inside Patience: about thirteen teams of five, drafted, last team standing. Patience allows it without comment. Charters watch it, desperate to choose Reckoners after the Draugr crisis showed how close real war still is. The three to four weeks of team diplomacy before it opens are a rehearsal of the Assembly. <b>Manifest Destiny</b> becomes a sharper name here: the Manifest is literally the ship's blueprint archive, so the name reads as "what the ship destined", a Lumen cadet claiming the ship's own authority.</p>
+  </div>
+</div></section>
+
+<section id="project"><div class="wrap">
+  <h2>7. Dormant berths, the alts &amp; the Grand Project</h2>
+  <div class="grid g2">
+    <div class="card"><h4>How alts are possible</h4><p class="small">The crew registry holds four thousand berths. About nine hundred belong to crew who died during the voyage, and those berths were never deleted, because Patience does not delete the dead. A suit's firmware can be made to claim a <b>dormant berth</b>: new crew name, new deck name, new appearance profile, new stats. The berth can be renamed without losing its record, which is how Mangy becomes Aguda.</p></div>
+    <div class="card"><h4>Why nobody had done it</h4><p class="small">Partly superstition: you would be wearing a dead crew member's identity. Mostly, everyone assumes Patience would know at once. The Crew Rule and Assembly law make it grounds for expulsion. Ninja learned the trick from his grandmother, who maintained suits in the Keel for forty years.</p></div>
+    <div class="card"><h4>Does Patience know?</h4><p class="small"><b>The question that makes this world.</b> Patience never says. A reader should finish Book 1 suspecting it saw Mangy the moment he stepped onto the deck and chose to let it run, exactly as Division does. That makes Patience the story's ultimate Division: an observer who decides for itself what counts as harm.</p></div>
+    <div class="card"><h4>Why the Grand Project is dangerous</h4><p class="small">A complete profile of every faction and cadet is a profile of the heirs of every ruling family on Corvane, which means leverage over the planet's next government. And Militia compiles it inside a machine that keeps its own records. The Grand Project is a copy of something Patience may already have.</p></div>
+  </div>
+</div></section>
+
+<section id="militia"><div class="wrap">
+  <h2>8. Militia</h2>
+  <div class="grid g2">
+    <div class="card"><h4>Background</h4><p class="small">He is Lumen-born and working-class, and graduated early from the Lumen Collegium in history and charter law. He works as an archive clerk at the Veil Maintenance Authority, logging processor output records nobody reads. He is bored and restless.</p></div>
+    <div class="card"><h4>Why he got in so young</h4><p class="small">Patience does not take applications. It reads every school sim, every civic aptitude test and every Guard exam on the planet, and it <b>invites</b>. Usually it invites people in their late twenties, after years of service. It invited Militia at twenty. Nobody, Militia included, knows why. The Lumen Wardens assume Patience was filling an officer shortage caused by breaches. Patience has never said. This answers the bible's flag with a mystery the reader can carry for three books.</p></div>
+    <div class="card"><h4>How he finds out</h4><p class="small">A message appears on a Veil terminal while he is filing a log. It is addressed to him by name and signed PATIENCE.</p></div>
+    <div class="card"><h4>The cover story</h4><p class="small">The Crew Rule requires families to be told only that the cadet has "gone into service". Militia goes further and invents a polar ice-hauler contract, months out of communication. It is believable, because hauler crews really do vanish into the poles for seasons. The epilogue mirror holds: after his expulsion Patience erases every trace, and his mother asks about the ice.</p></div>
+  </div>
+  <h3>Politics</h3>
+  <div class="prose">
+    <p>He is a hawk and an Unshackler: "Lumen should hold its own air." He backs Sarn in the Draugr crisis and clips on a Sarn decal the next day. Nobody can tell from it where he is from, and everyone tries. His exceptionalist cluster becomes Lumen-first. Upbringer, whose heritage charter Vell suffocated when its dome failed during the Ice War's thin air, calls it bigotry, and the "you destroyed my country" scene lands harder than in the bible. His tics are unchanged.</p>
+  </div>
+</div></section>
+
+<section id="cast"><div class="wrap">
+  <h2>9. Cast on Corvane</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Character</th><th>Bible nationality</th><th>On Corvane</th><th>Why it fits</th></tr></thead>
+    <tbody>
+      <tr><td>Militia, Randy, Connor, Verni, Kat, Junction, Chanka</td><td>USA</td><td>Lumen Accord (secret aboard)</td><td>The richest charter, with the worst breaches and an election.</td></tr>
+      <tr><td>Slier</td><td>Egypt</td><td>Corvin Collective</td><td>A tethered charter garrisoned by Lumen since the Ice War. He hates Lumen's Assembly members, not its people.</td></tr>
+      <tr><td>Kowalski</td><td>Georgia</td><td>Kelda Station</td><td>Between Halvik and Sarn, and dependent on Sarn's ice.</td></tr>
+      <tr><td>Martin</td><td>Netherlands</td><td>The Brokerage</td><td>A merchant charter, blunt and allergic to piety.</td></tr>
+      <tr><td>Dutch</td><td>Australia</td><td>Freeholds of Tessaly</td><td>A sea-charter that recently eased its ration protocols.</td></tr>
+      <tr><td>Spoit</td><td>Sweden</td><td>Tamsin's Rest</td><td>A small charter "ahead" on breaches; he is in his thirties and married.</td></tr>
+      <tr><td>Soda</td><td>Canada</td><td>Northrim</td><td>Lumen's quiet northern neighbour.</td></tr>
+      <tr><td>Upbringer</td><td>American-born, Yugoslav heritage</td><td>Lumen-born, Vell heritage</td><td>Vell's dome died when the air thinned in the Ice War. He loves Patience's order anyway, or because of it.</td></tr>
+      <tr><td>Opulon</td><td>French (implied)</td><td>Aubric-speaking Warden</td><td>The human authority who walks the decks.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="ledger"><div class="wrap">
+  <h2>10. The Why Ledger</h2>
+  <div class="ledger">
+    <details><summary>Why does a machine control the air?</summary><p>Terraforming was the ship's mission. The colonists never developed the science to run the Veil themselves, and Patience never handed it over. Nobody alive remembers a Corvane where it didn't run the air.</p></details>
+    <details><summary>Why doesn't someone just switch Patience off?</summary><p>Its core is in the hull's reactor deck, behind armour built for interstellar space. And switching it off would stop the Veil. Unshacklers argue about it; nobody tries.</p></details>
+    <details><summary>Why does Patience allow internal unrest but not war?</summary><p>The Founding Charter: "I will not choose who governs you." It forbids wars between charters, and refuses to be anyone's police.</p></details>
+    <details><summary>Why do rebels have armour?</summary><p>Patience will not refuse fabricator patterns to whoever holds a fabricator in an internal conflict, because refusing would mean choosing a side.</p></details>
+    <details><summary>Why an academy rather than just picking commanders?</summary><p>Patience only lets Reckoners it trained itself command a binding campaign, and it trains only inside the hull.</p></details>
+    <details><summary>Why do rival charters let their heirs live together?</summary><p>They have no choice. And a charter with no Reckoners loses its campaigns and its Assembly weight.</p></details>
+    <details><summary>How can cadets argue about the Draugr crisis without saying where they're from?</summary><p>They argue as if from nowhere and guess each other's charters. Outing someone is grounds for expulsion, so a guess is never said out loud by anyone careful.</p></details>
+    <details><summary>How can two cadets share a cabin and stay anonymous?</summary><p>Each cabin has two sealed berth cocoons, and the suit comes off only inside one. You can live beside someone for a year without seeing their face, which is the engine of the Joss and Halloran 114 story.</p></details>
+    <details><summary>Why suits all day?</summary><p>The decks are cold, thin and partly unsealed, so it's physical necessity. The Crew Rule also covers public spaces.</p></details>
+    <details><summary>Why is customisation free?</summary><p>It's generation-ship tradition. Crew marked their suits for life, and Patience has never refused an attachment.</p></details>
+    <details><summary>How do you know who someone is?</summary><p>Deck stripe, crew-name stencil, colour of record, hull marks, lamp pattern, and the guild emblem on the rank board. Deck names come from the roster query.</p></details>
+    <details><summary>Why does Patience let cadets run factions?</summary><p>The crew did it for a hundred and forty years and founded a colony with the habit. Patience also logs everything.</p></details>
+    <details><summary>Are faction punishments legal?</summary><p>They are only access changes, and Patience enforces nothing else.</p></details>
+    <details><summary>Why is the Field neutral?</summary><p>It is Patience's core, and nobody can hold it.</p></details>
+    <details><summary>Why restart from Charter Day?</summary><p>So the strong can't win forever and drive the weak to real war. And Patience reruns disputes until the result is stable.</p></details>
+    <details><summary>Why identical units?</summary><p>The Manifest is the only set of blueprints on the planet.</p></details>
+    <details><summary>Why are sims slow and multi-day?</summary><p>Shared core capacity, and a teaching choice: live alongside the war.</p></details>
+    <details><summary>Why are sim logs public?</summary><p>Patience publishes every Reckoning so the loser sees it was fair, and practice follows the same rule.</p></details>
+    <details><summary>Why invite someone so young?</summary><p>Patience never explains. The reader's best guess, the Wardens' guess and the truth may all be different.</p></details>
+    <details><summary>Why lie to his mother?</summary><p>The Crew Rule requires "gone into service". The ice-hauler story is his own decoration.</p></details>
+    <details><summary>Why doesn't she find out later?</summary><p>Patience erases expelled cadets from every public record it touches, which is most of them.</p></details>
+    <details><summary>Why do dormant berths exist?</summary><p>Patience does not delete the dead.</p></details>
+    <details><summary>Why hadn't anyone exploited them?</summary><p>Superstition, the assumption that Patience would know, and expulsion.</p></details>
+    <details><summary>Does Patience know about the alts?</summary><p>That's the book's open question. It almost certainly does, and lets it run. Why is the trilogy's long mystery.</p></details>
+    <details><summary>Why would a charter want the Grand Project?</summary><p>It's leverage over every ruling family's heir.</p></details>
+    <details><summary>Will Patience really suffocate cities?</summary><p>It already did, once, for an hour (Case File One). The Draugr crisis asks whether it will do it for longer.</p></details>
+    <details><summary>What are "call a random person" phones here?</summary><p>Dome-wall comm panels from the early colony. They connected strangers across domes during air emergencies, and some still ring.</p></details>
+  </div>
+</div></section>
+
+<section id="flags"><div class="wrap">
+  <h2>11. Bible flags this world helps answer</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Bible flag</th><th>Corvane's suggested answer</th></tr></thead>
+    <tbody>
+      <tr><td>Why the Academy accepted someone so young</td><td>Patience invited him and never said why.</td></tr>
+      <tr><td>Why Slier reverses League access</td><td>Corvinese cadets learned that charters read League results. Slier will not let developing Hydra members be judged by the Assembly that garrisons his home. He never explains.</td></tr>
+      <tr><td>Division's personal history</td><td>At sixteen, Division commanded an Unmoored cell during a breach, then defected and was quietly folded into his charter's Guard. If anyone links the deck name to the cell, his charter will try him.</td></tr>
+      <tr><td>Why the Wolf Federation disbands</td><td>After the dual banishment, Patience revoked the Federation's shared compartment overnight, without a word. It is the first time it has ever touched a faction. The three wolves split, and every cadet aboard learns the ship is paying attention.</td></tr>
+      <tr><td>Who the rumoured alt user is</td><td>Possibly nobody. Possibly Patience, testing whether anyone would notice a dormant berth walking around.</td></tr>
+      <tr><td>What happens to the tournament</td><td>Patience pauses it with a one-line announcement in the Commons, and the Keel goes silent.</td></tr>
+    </tbody>
+  </table></div>
+  <h3>What this world costs you</h3>
+  <ul class="prose">
+    <li>It is no longer Earth, so real-world texture is gone.</li>
+    <li>The AI is a new major presence. It can sharpen the theme of authority being opaque, or crowd your human institutions. Keep Patience mostly silent.</li>
+    <li>The anti-communist axis becomes Keepers vs Unshacklers, which is the most charged issue on the planet.</li>
+  </ul>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · Corvane · Story Bible Adaptation. <a href="corvane.html">World page</a> · <a href="../pitches.html#corvane">Pitch</a></div></footer>
+<script src="../assets/world.js"></script>
+</body>
+</html>
