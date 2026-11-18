@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grand Theatre</title>
+<meta name="description" content="A sport-world setting: in a peaceful world, full-immersion simulated war is the biggest sport on the planet, and one academy trains its future stars.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root {
+    --accent: #0f4d2e; --accent-2: #d1461f; --display: "Archivo", system-ui, sans-serif;
+    --bg: #f4f5f1; --bg-2: #e6e9e0; --rule: #d0d6c7;
+    --heat-1: #fbe3d8; --heat-2: #f4b8a0; --heat-3: #e98563; --heat-4: #d1461f; --heat-5: #8f2a0e;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #0d120f; --bg-2: #151d18; --panel: #18211b; --rule: #2a362d; --ink: #edf2ec; --ink-2: #c3cec3; --ink-3: #8a9a8b;
+    --accent: #4fc488; --accent-2: #ff7a4d; --accent-ink: #0d120f;
+    --heat-1: #3a1d12; --heat-2: #5e2a15; --heat-3: #94401c; --heat-4: #ff7a4d; --heat-5: #ffc4ae; --heat-ink-hi: #0d120f;
+  } }
+  :root[data-theme="dark"] {
+    --bg: #0d120f; --bg-2: #151d18; --panel: #18211b; --rule: #2a362d; --ink: #edf2ec; --ink-2: #c3cec3; --ink-3: #8a9a8b;
+    --accent: #4fc488; --accent-2: #ff7a4d; --accent-ink: #0d120f;
+    --heat-1: #3a1d12; --heat-2: #5e2a15; --heat-3: #94401c; --heat-4: #ff7a4d; --heat-5: #ffc4ae; --heat-ink-hi: #0d120f;
+  }
+  .hero h1 { text-transform: uppercase; letter-spacing: -.01em; }
+  .cast-line { font-family: "Archivo Narrow", var(--body); font-size: 18px; line-height: 1.6; margin: 0 0 12px; }
+  .cast-line b { color: var(--accent-2); font-weight: 700; letter-spacing: .02em; }
+  .cast-line i { color: var(--ink-3); }
+  .scorebug { display: inline-block; font: 700 12px/1 var(--body); letter-spacing: .08em; text-transform: uppercase; background: var(--accent); color: var(--accent-ink); padding: 5px 9px; border-radius: 4px; margin: 0 0 10px; }
+  .diary p { font-family: Georgia, serif; font-size: 18px; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">Contested Worlds</a>
+  <nav class="toc">
+    <a href="#academy">Academy</a><a href="#sport">The sport</a><a href="#cast">Players</a><a href="#map-sec">Map</a><a href="#economy">Economy</a><a href="#rules">Rules</a><a href="#classes-sec">Hit classes</a>
+    <a href="#styles">Kits</a><a href="#roster-sec">Roster</a><a href="#matrix-sec">Matrix</a><a href="#synergy-sec">Synergies</a>
+    <a href="#comps-sec">Compositions</a><a href="#chronicle">The Final</a><a href="#chronicle-2">House Cup</a>
+  </nav>
+  <button class="theme-btn" type="button">Theme</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">World III · Sport</div>
+  <h1>Grand Theatre</h1>
+  <p class="lede">Nobody has fought a real war in forty years. But every autumn, three billion people watch eight players fight one inside a simulation, live, for thirty simulated days. The sport is called Theatre. Its stars are the most famous people alive, and nearly all of them learned it at the same academy on the same small island.</p>
+  <div class="facts">
+    <span class="fact"><b>3 billion</b> viewers for the Grand Final</span>
+    <span class="fact"><b>8</b> hit classes</span>
+    <span class="fact"><b data-count="units">&nbsp;</b> units</span>
+    <span class="fact">Squads of <b>11</b> · flights of <b>4</b> · fleets of <b>6</b></span>
+    <span class="fact">A round every <b>sim-hour</b></span>
+  </div>
+</div></div>
+
+<section id="academy"><div class="wrap">
+  <h2>Castellan Academy</h2>
+  <p class="sec-sub">Why a sport needs a single academy, and why rivals from every federation on Earth live in the same dorms.</p>
+  <div class="prose">
+    <p>Theatre is played in the <b>Grand Rig</b>, a full-immersion simulator. Players lie in neural cradles and feel the campaign as much as see it: the weight of the economy, the noise of a front, the shock when a fleet disappears. It is the most demanding sport ever invented, physically as well as mentally.</p>
+    <p>For its first decade anyone could build a rig, and people did. Then came <b>the Ansan Incident</b> of 2039: a sixteen-year-old played a bootleg forty-hour campaign on an unlicensed rig and never fully woke up. The World Theatre League responded with the <b>Cradle Rules</b>. Only accredited academies may put minors in a full-immersion rig, no player may turn professional without completing an accredited programme, and accreditation requires a licensed Grand Rig, a medical wing and the League's own instructors.</p>
+    <p>Building and running a licensed Grand Rig costs more than most national stadiums. One academy has ever managed it.</p>
+  </div>
+  <h3>Why everyone ends up on the same island</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Only one academy is accredited</h4><p class="small"><b>Castellan Academy</b>, on the Atlantic island of Ilha do Castelo, holds the only full accreditation. A second academy has been "two years away" for nine years. If you want to go pro, you go to Castellan.</p></div>
+    <div class="card"><h4>Admission is blind</h4><p class="small">Every year forty national federations run open combines in sim-cafés and schools. The top scorers are invited regardless of country, money or sponsor. A kid from a Lagos sim-café and the heir to a rig manufacturer can arrive on the same ferry.</p></div>
+    <div class="card"><h4>Federations want medals</h4><p class="small">The <b>Federation Cup</b>, Theatre's world cup, is played between national teams of Castellan graduates. Federations that hate each other on the pitch, at the ballot box or at the border still pay for their prodigies to train in the same building as their rivals.</p></div>
+    <div class="card"><h4>Houses, not nations</h4><p class="small">League rules forbid national dorms or national teams inside the academy. Cadets are drafted into four <b>Houses</b>, Anvil, Lantern, Current and Thorn, in a televised draft, and the House Cup is the most-watched amateur event in the sport.</p></div>
+  </div>
+  <h3>The rivalries inside the walls</h3>
+  <div class="grid g3">
+    <div class="card"><h4>Federations</h4><p class="small">Old sporting grudges travel with the cadets. Some federations have not beaten each other in a Federation Cup in a generation, and their cadets know it.</p></div>
+    <div class="card"><h4>Sponsors</h4><p class="small">The two great sponsors, <b>Halvorsen Rigs</b> and <b>Kestrel Energy</b>, scout cadets from first year. A sponsored cadet who loses to a rival's cadet costs somebody money.</p></div>
+    <div class="card"><h4>Money</h4><p class="small">Rig-kids grew up with home simulators. Café-kids learned on public machines with time limits. They play very differently and resent each other accordingly.</p></div>
+  </div>
+  <h3>How Castellan works</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Year</th><th>What cadets do</th><th>The test</th></tr></thead>
+    <tbody>
+      <tr><td><b>Foundation</b></td><td>Cradle acclimatisation, economy, hit classes, the counter matrix. Short skirmishes.</td><td><i>The Ledger</i>: run an economy for thirty sim-days without a shortage.</td></tr>
+      <tr><td><b>Second year</b></td><td>Formations, lines, stand-off fire, air defence layers. One-on-one duels on broadcast.</td><td><i>The Hold</i>: defend a city against a stronger opponent.</td></tr>
+      <tr><td><b>Third year</b></td><td>Pairs play, diplomacy, broadcast etiquette, sponsor obligations.</td><td><i>The House Cup</i> (Chronicle II below).</td></tr>
+      <tr><td><b>Final year</b></td><td>Full Melee campaigns against professionals.</td><td><i>The Showcase</i>: League teams draft from the results.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>Nothing real is at stake, and everything real is at stake.</b> Nobody dies in Theatre. But careers, sponsorships, national pride and a great deal of money depend on every match. A strategy that loses a campaign can also end a career.</div>
+  <h3>Cadets (rename freely)</h3>
+  <div class="grid g2" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))">
+    <div class="card"><h4 style="margin-bottom:2px">Nadia Ferreira</h4><p class="small muted" style="margin:0 0 8px">Café-kid · House Thorn</p><p class="small" style="margin:0 0 6px">Learned on a twenty-minute timer in a São Paulo sim-café, so she plays fast because she never had time to play slow.</p><p class="small" style="margin:0"><b>Plays like:</b> rushes, and is learning that rushes need point-defence.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Henrik Halvorsen</h4><p class="small muted" style="margin:0 0 8px">Rig-kid · House Lantern</p><p class="small" style="margin:0 0 6px">His family makes the Grand Rig. Everyone assumes he bought his place, and he did not.</p><p class="small" style="margin:0"><b>Plays like:</b> builds economy forever, then wins from the air.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Ama Owusu</h4><p class="small muted" style="margin:0 0 8px">Federation scholar · House Current</p><p class="small" style="margin:0 0 6px">Her federation has never won a Cup. She has been told, publicly, that she will be the one.</p><p class="small" style="margin:0"><b>Plays like:</b> fleets, submarines, and scouting everything.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Kenji Arata</h4><p class="small muted" style="margin:0 0 8px">Rig-kid · House Anvil</p><p class="small" style="margin:0 0 6px">Kestrel-sponsored since he was fourteen. Very good at making alliances, and better at leaving them.</p><p class="small" style="margin:0"><b>Plays like:</b> hired guns, passage deals, betrayal on the last day.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Mirela Dobre</h4><p class="small muted" style="margin:0 0 8px">Café-kid · House Current</p><p class="small" style="margin:0 0 6px">Quiet, patient, underestimated. Scores very high on "games won without fighting."</p><p class="small" style="margin:0"><b>Plays like:</b> garrisons, economy and last-day land grabs.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Coach Ambrose Kell</h4><p class="small muted" style="margin:0 0 8px">Former champion · Head of Tactics</p><p class="small" style="margin:0 0 6px">Won two Grand Finals and lost one famously. Also works as a broadcast analyst, which the cadets find mortifying.</p><p class="small" style="margin:0"><b>Teaches:</b> that every loss on this page can be prevented, and almost never is.</p></div>
+  </div>
+</div></section>
+
+<section id="sport"><div class="wrap">
+  <h2>The sport</h2>
+  <p class="sec-sub">How Theatre is played, broadcast and won.</p>
+  <div class="prose">
+    <p>A Theatre <b>campaign</b> is a thirty-day war on a fictional continent generated fresh for each season. The Rig runs at high speed: one sim-day takes about an hour, and the Rig pauses for the players' "nights," so a full campaign plays out over a broadcast week. Each player commands a nation, its economy, its army and its diplomacy, all at once and alone.</p>
+    <p>Fans watch through the <b>Theatre Feed</b>: a god's-eye map, live player cameras inside the cradles, two commentators, and a ticker showing every nation's <b>Standing</b>, the in-sim score. Standing comes from cities, provinces and three <b>Crown Sites</b> on each season's map. The first player or alliance to reach the Standing target at a daily count wins.</p>
+  </div>
+  <h3>Formats</h3>
+  <div class="grid g3">
+    <div class="card"><h4>Melee</h4><p class="small">Eight players, free-for-all. Alliances are legal, are formed live on air, and can be broken at any time. Betrayal is not against the rules. Fans love it, and sponsors pretend not to.</p></div>
+    <div class="card"><h4>Pairs</h4><p class="small">Four teams of two. Each pair's Standing is pooled, and so is its target. A pair whose partner falls asleep at the wheel is in trouble.</p></div>
+    <div class="card"><h4>Federation Cup</h4><p class="small">The world cup: national teams of three in a twelve-player campaign. Held every four years and watched by everyone.</p></div>
+  </div>
+  <h3>The season map: Halvorsund</h3>
+  <div class="prose">
+    <p>This season's generated continent is <b>Halvorsund</b>: salt plains in the centre, a broken mountain spine in the north, a fjord coast in the south with shallow sounds and a deep cold sea beyond, and a strip of storm forest down the east. Its three Crown Sites are the <b>Lighthouse</b>, the <b>Old Observatory</b> and the <b>Deepwater Gate</b>.</p>
+  </div>
+</div></section>
+
+<section id="cast"><div class="wrap">
+  <h2>The players</h2>
+  <p class="sec-sub">Six professionals from this season's Grand Final, each a recognisable way of playing. Map any real player onto whichever profile fits.</p>
+  <div class="grid g2" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))">
+    <div class="card"><h4 style="margin-bottom:2px">Ivo "Anvil" Petrov</h4><p class="small muted" style="margin:0 0 8px">Ironworks kit · Kestrel Energy</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> A third Grand Final win, the record.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Has won so often by rushing that he no longer checks the sky.</p><p class="small" style="margin:0"><b>Plays like:</b> Rook rush, giant squads, buys the wrong air defence.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Hana "Slowburn" Mori</h4><p class="small muted" style="margin:0 0 8px">Highflight kit · Halvorsen Rigs</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> To prove patience is a weapon.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Will let an ally collapse before she spends early.</p><p class="small" style="margin:0"><b>Plays like:</b> Economy first; Stingers, Volley batteries, Shades.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Adaeze "Tidewater" Okafor</h4><p class="small muted" style="margin:0 0 8px">Harbour kit · Independent</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> To win without a sponsor's name on her shirt.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Every alliance is a contract with an exit clause.</p><p class="small" style="margin:0"><b>Plays like:</b> Halo-escorted fleets, Sharks, spies placed on day two, pincers.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Luca "Sly" Marchetti</h4><p class="small muted" style="margin:0 0 8px">Harbour kit · Kestrel Energy</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> Highlight-reel moments and the contract that follows.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Escalates when cornered.</p><p class="small" style="margin:0"><b>Plays like:</b> Hired Guns, passage deals, the Nova.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Tom "Sleeper" Ashby</h4><p class="small muted" style="margin:0 0 8px">Highflight kit · Halvorsen Rigs</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> To get through the season without embarrassing himself.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Freezes under pressure and turtles until it is over.</p><p class="small" style="margin:0"><b>Plays like:</b> The idle ally.</p></div>
+    <div class="card"><h4 style="margin-bottom:2px">Mateus "Vulture" Costa</h4><p class="small muted" style="margin:0 0 8px">Ironworks kit · Independent</p><p class="small" style="margin:0 0 6px"><b>Wants:</b> Top three. Every year. Without ever being the target.</p><p class="small" style="margin:0 0 6px"><b>Flaw:</b> Fans call him boring. He does not care.</p><p class="small" style="margin:0"><b>Plays like:</b> Neutral scavenger who claims empty provinces before the final count.</p></div>
+  </div>
+</div></section>
+
+<section id="map-sec"><div class="wrap">
+  <h2>War map</h2>
+  <p class="sec-sub">Halvorsund, this season's generated continent, at the start of the Grand Final.</p>
+  <div id="map"></div>
+</div></section>
+
+<section id="economy"><div class="wrap">
+  <h2>In-sim economy</h2>
+  <p class="sec-sub">Six resources, the upkeep every unit costs, and why captured cities rebel.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Resource</th><th>Comes from</th><th>Feeds</th></tr></thead>
+    <tbody>
+      <tr><td><b>Grain</b></td><td>Farm provinces</td><td>Infantry, most construction; your population eats it every day</td></tr>
+      <tr><td><b>Steel</b></td><td>Mills and mines</td><td>Vehicles, ships, aircraft, all construction</td></tr>
+      <tr><td><b>Circuits</b></td><td>Fab cities</td><td>Sensors, drones, air defence, most buildings</td></tr>
+      <tr><td><b>Crystal</b></td><td>A few rare provinces each season</td><td>All research, stealth, submarines, missiles, the Nova</td></tr>
+      <tr><td><b>Recruits</b></td><td>Population</td><td>Every unit to raise and to keep. Cannot be traded.</td></tr>
+      <tr><td><b>Gold</b></td><td>Taxes, trade, mills</td><td>Everything; building upkeep; the only currency on the in-sim market</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>The commentators' favourite trap.</b> Every unit keeps costing a share of its price every sim-day. Players who mass an army on day two are broke by day ten, and shortages of Grain or Gold crash <b>Spirit</b>, which slows everything they own.</div>
+  <h3>Territory</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Home cities</h4><p class="small">Full output. The capital boosts Spirit nearby.</p></div>
+    <div class="card"><h4>Captured cities</h4><p class="small">A quarter output, and Spirit near the floor. These are the cities that rebel.</p></div>
+    <div class="card"><h4>Integrated cities</h4><p class="small">Captured cities brought in with an Integration Office (costs Recruits). Half output; can raise units.</p></div>
+    <div class="card"><h4>Provinces</h4><p class="small">Countryside. Low output unless you build a Works. Provinces never rebel.</p></div>
+  </div>
+  <h3>Spirit and the Free Cities</h3>
+  <div class="prose">
+    <p>Every city and province has <b>Spirit</b> from 0 to 100. Each sim-dawn it drifts toward a target set by distance from your capital, the number of wars you are in, enemy units nearby, shortages, collateral damage, enemy spies, and the buildings you have placed.</p>
+    <p>A captured city below about a third Spirit may <b>rebel</b>, and a freshly captured city starts at a quarter. Once per sim-day, at a random time, it rolls. If no unit of yours is inside, it simply joins <b>the Free Cities</b>, an AI faction that raises militia and wanders. Even one garrison unit usually wins the fight. The Feed plays a siren sound for every rebellion. Fans call it "the doorbell."</p>
+  </div>
+  <h3>Buildings</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Building</th><th>Where</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr><td>Factory District</td><td>City</td><td>+10% to every resource per level and daily Gold. The first build in nearly every pro opening.</td></tr>
+      <tr><td>Works</td><td>Province</td><td>Unlocks the province's resource.</td></tr>
+      <tr><td>Barracks</td><td>City</td><td>Raises infantry.</td></tr>
+      <tr><td>Motor Yard</td><td>City</td><td>Raises vehicles and support.</td></tr>
+      <tr><td>Airfield</td><td>City</td><td>Every aircraft is raised at, and returns to, an airfield. Destroy it and its aircraft are grounded.</td></tr>
+      <tr><td>Airstrip</td><td>Province</td><td>Forward air basing.</td></tr>
+      <tr><td>Harbour</td><td>Coastal city</td><td>Builds ships; infantry boards transports here.</td></tr>
+      <tr><td>Bunker Line</td><td>Province</td><td>Fortifies a province's flag-point.</td></tr>
+      <tr><td>Shelter</td><td>City</td><td>Protects population; hardens defenders.</td></tr>
+      <tr><td>Field Hospital</td><td>City / province</td><td>Faster healing.</td></tr>
+      <tr><td>Highway</td><td>Province</td><td>Much faster movement through it, for anyone.</td></tr>
+      <tr><td>Lab</td><td>City</td><td>Research.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>Rules of play</h2>
+  <p class="sec-sub">The Theatre ruleset, as it is printed in every rookie's handbook.</p>
+  <div class="grid g2">
+    <div class="card"><h4>Rounds</h4><p class="small">The first round resolves the instant two forces touch, and another follows every sim-hour. Each round applies the attacker's rating against the defender's <b>hit class</b>.</p></div>
+    <div class="card"><h4>The flag-point</h4><p class="small">Every city and province has a <b>flag-point</b>. Units sitting on it are dug in: they take much less damage and do not hit back. Units near it but not on it trade blows every round.</p></div>
+    <div class="card"><h4>Squads, flights, fleets</h4><p class="small">A ground <b>squad</b> fights at full strength up to <b>11</b> units, like a football team, which is where the name comes from. An air <b>flight</b> fights at full strength up to <b>4</b> and a <b>fleet</b> up to <b>6</b>. Beyond that, each extra unit adds less, then nothing, then actively hurts. A group moves at its slowest unit's speed.</p></div>
+    <div class="card"><h4>Front, middle, back</h4><p class="small">Incoming damage lands mostly on the <b>front</b>, less on the <b>middle</b>, least on the <b>back</b>. The unit type decides where it stands.</p></div>
+    <div class="card"><h4>Range</h4><p class="small">Mortars, Volley batteries and Dreadnoughts fire from range, and a target without similar reach cannot answer. Fire, pull back, wait out the round, fire again. Commentators call it "the yo-yo."</p></div>
+    <div class="card"><h4>Only infantry plants the flag</h4><p class="small">A city or province changes hands only when a <b>flag-planting</b> infantry unit reaches its flag-point. Vehicles, aircraft, ships, Ghosts and Hired Guns cannot plant flags.</p></div>
+    <div class="card"><h4>High and low air</h4><p class="small">Jets fly <b>high</b>, where Umbrella batteries track them. Rotor units fly <b>low</b>, underneath Umbrella and Dome coverage entirely. Only Swatters, Halo frigates and Falcons can touch low air.</p></div>
+    <div class="card"><h4>Inside the group vs nearby</h4><p class="small">Air defence <b>inside</b> the targeted group fires at every attacker and every missile, with no cooldown. Air defence merely <b>covering</b> a nearby group has a cooldown, so a big enough salvo saturates it.</p></div>
+    <div class="card"><h4>Fog, scouting and stealth</h4><p class="small">You see what is near your units. Distant groups show as grey markers until scouted. Beacons and Eye aircraft see further. <b>Stealth</b> units are invisible until they fire or a matching detector comes close.</p></div>
+    <div class="card"><h4>Shallows and deep water</h4><p class="small">Pickets love the fjord sounds and suffer in the deep sea. Submarines are the reverse.</p></div>
+    <div class="card"><h4>Transports</h4><p class="small">Infantry crossing water boards transports at a harbour. Transports cannot fight, and boarding or landing leaves units helpless for hours. Mariners and Otters land on any beach.</p></div>
+    <div class="card"><h4>Airfields</h4><p class="small">Aircraft fly from a home airfield and return to rearm. Parked aircraft are helpless. Destroy the airfield and everything on it is grounded.</p></div>
+  </div>
+</div></section>
+
+<section id="classes-sec"><div class="wrap">
+  <h2>Hit classes</h2>
+  <div id="classes"></div>
+</div></section>
+
+<section id="styles"><div class="wrap">
+  <h2>The three kits</h2>
+  <p class="sec-sub">Each player picks a kit before the season starts. All three have the same unit roles, with different stats, prices and research timings.</p>
+  <div class="grid g3">
+    <div class="card"><h4>Ironworks</h4><p class="small"><b>Cheap, early, ground-heavy.</b> Rooks and Volley batteries on day one, at a discount. Units are fragile and the air force is weak, so Ironworks players lean on Umbrella batteries, which cannot see low air.</p><p class="small"><span class="tag good">Day-one armour</span><span class="tag good">Cheap losses</span><span class="tag bad">Weak air</span></p></div>
+    <div class="card"><h4>Highflight</h4><p class="small"><b>Expensive, tough, late, air-dominant.</b> Falcons, Stingers, Eyes and Domes come early and carry bonuses. It is the hardest kit to play and the one that wins most Grand Finals.</p><p class="small"><span class="tag good">Air &amp; sensors</span><span class="tag good">Toughness</span><span class="tag bad">Slow start</span></p></div>
+    <div class="card"><h4>Harbour</h4><p class="small"><b>Balanced, navy-minded.</b> Strikers on day one and the best early fleets. The kit most rookies start with.</p><p class="small"><span class="tag good">Day-one strikers</span><span class="tag good">Navy</span><span class="tag bad">No single edge</span></p></div>
+  </div>
+</div></section>
+
+<section id="roster-sec"><div class="wrap">
+  <h2>Unit roster</h2>
+  <p class="sec-sub">Ratings run from 0 to 5 against each hit class. "Dies to" is computed from the roster.</p>
+  <div class="filters" id="roster-filters"></div>
+  <div class="roster" id="roster"></div>
+</div></section>
+
+<section id="matrix-sec"><div class="wrap">
+  <h2>Counter matrix</h2>
+  <div id="matrix"></div>
+</div></section>
+
+<section id="synergy-sec"><div class="wrap">
+  <h2>Synergies</h2>
+  <div class="grid g2" id="synergies"></div>
+</div></section>
+
+<section id="comps-sec"><div class="wrap">
+  <h2>Compositions</h2>
+  <p class="sec-sub">The meta, as the commentators describe it.</p>
+  <div class="grid g2" id="comps"></div>
+</div></section>
+
+<section id="chronicle"><div class="wrap">
+  <h2>Chronicle I: The Grand Final</h2>
+  <p class="sec-sub">Highlights of the Theatre Feed broadcast of this season's Grand Final Melee. Play-by-play by Dee Raines, analysis by Coach Ambrose Kell.</p>
+  <div class="chron">
+    <h3><span class="when">Day 1–3</span>"He's going to do it again"</h3>
+    <span class="scorebug">Day 2 · Standing: Anvil 41 · Slowburn 38 · Tidewater 39</span>
+    <p class="cast-line"><b>DEE:</b> Two-time champion Ivo Petrov has a Factory District up on day one, and on day two, look at this: three Rooks off the line already. Anvil is going to Anvil.</p>
+    <p class="cast-line"><b>KELL:</b> It's his whole career, Dee. Ironworks kit, Rooks before breakfast, and he's on the border of the AI nation by day three. Meanwhile look at Hana Mori.</p>
+    <p class="cast-line"><b>DEE:</b> Slowburn has built... nothing. Two factories, a lab, an airfield. Not one combat unit.</p>
+    <p class="cast-line"><b>KELL:</b> Every pundit on this network called that a mistake. I'm saying nothing yet.</p>
+    <p class="cast-line"><b>DEE:</b> And down south, Adaeze Okafor's first two ships: a Sentinel destroyer and a Halo frigate. Parked in her own harbour.</p>
+    <p class="cast-line"><b>KELL:</b> Remember that Halo, folks. Nobody else will.</p>
+
+    <h3><span class="when">Day 4–7</span>The salt plains</h3>
+    <p class="cast-line"><b>DEE:</b> Anvil's Rooks roll over the salt plains, and the bot nation in the centre just melts. Four cities in five days for Petrov!</p>
+    <p class="cast-line"><b>KELL:</b> Watch the cities, though. Flag goes up, Rooks move on. Flag goes up, Rooks move on. He's not leaving a single Pike behind.</p>
+    <p class="cast-line"><b>DEE:</b> Spirit in those cities is at twenty-five.</p>
+    <p class="cast-line"><b>KELL:</b> That's going to ring the doorbell, Dee.</p>
+
+    <h3><span class="when">Day 8</span>"Where are they coming from?"</h3>
+    <span class="scorebug">Day 8 · Live</span>
+    <p class="cast-line"><b>DEE:</b> Slowburn's first combat units are... four Stingers. Low-air anti-armour. They're flying out of her airfield, down the river valley, through the storm forest.</p>
+    <p class="cast-line"><b>KELL:</b> And Anvil has two Umbrella batteries covering that Rook squad. Umbrellas watch the high sky. Stingers are under it. Look at his cradle cam.</p>
+    <p class="cast-line"><b>DEE:</b> He's checking the Umbrella feed. It says clear. The first round lands. Two Rooks down!</p>
+    <p class="cast-line"><b>KELL:</b> And the Rooks can't shoot back. They have no anti-air at all. One Swatter in that squad, one cheap Swatter, and this doesn't happen.</p>
+    <p class="cast-line"><b>DEE:</b> Another round. And another. That's the whole squad, gone, and the Umbrellas are still reporting clear skies.</p>
+    <blockquote>"I had two batteries on them. Two. The sky was empty." — Ivo Petrov, cradle cam audio, Day 8</blockquote>
+
+    <h3><span class="when">Day 9–11</span>Buying the wrong answer</h3>
+    <p class="cast-line"><b>DEE:</b> Anvil's response: six more Umbrella batteries, and he's researching a Dome.</p>
+    <p class="cast-line"><b>KELL:</b> Oh no. Oh, Ivo. None of those can see a Stinger. He's spending his whole Crystal budget on the wrong sky. The chat is losing its mind.</p>
+    <p class="cast-line"><b>DEE:</b> And there it is on the diplomacy ticker: Mori and Okafor have formed an alliance. Their Standing will be pooled.</p>
+
+    <h3><span class="when">Day 12</span>The Halo</h3>
+    <span class="scorebug">Day 12 · Replay of the season</span>
+    <p class="cast-line"><b>DEE:</b> Anvil has four Strikers and two Anvil bombers in the air, and they're heading south. He's going for Tidewater's fleet. Two Dreadnoughts, a Sentinel, and that Halo frigate.</p>
+    <p class="cast-line"><b>KELL:</b> He thinks the Dreadnoughts are exposed. Dreadnoughts are terrible at defending themselves from the air. But the Halo is <i>in</i> the fleet, Dee. In the fleet. It fires at every aircraft, every round, no cooldown.</p>
+    <p class="cast-line"><b>DEE:</b> First round. Two Strikers down. Second round, the bombers. One Striker reaches the Dreadnought. One Striker, out of six aircraft, makes it home.</p>
+    <p class="cast-line"><b>KELL:</b> I told you to remember the Halo.</p>
+    <blockquote>"Six planes. Into a fleet with a Halo in it. On a Grand Final." — Coach Kell, post-match show</blockquote>
+
+    <h3><span class="when">Day 13–15</span>The doorbell</h3>
+    <p class="cast-line"><b>DEE:</b> There's the siren. And another one! Two of Anvil's captured cities have rebelled in the same hour, and there's nobody in them. They've gone straight to the Free Cities.</p>
+    <p class="cast-line"><b>KELL:</b> And the Free Cities are sitting on his highway. He'll have to turn a squad around.</p>
+
+    <h3><span class="when">Day 16–19</span>The yo-yo</h3>
+    <p class="cast-line"><b>DEE:</b> Anvil has merged everything into one squad: twenty-three units heading for Mori's fortress city of Kellmouth.</p>
+    <p class="cast-line"><b>KELL:</b> Eleven is the cap, Dee. At twenty-three he's fighting at about two-thirds strength and moving like a parade.</p>
+    <p class="cast-line"><b>DEE:</b> Mori has Breakers and Pikes dug in on Kellmouth's flag-point, and three Volley batteries two provinces back. Here comes the yo-yo: in, fire, out. In, fire, out.</p>
+    <p class="cast-line"><b>KELL:</b> Twelve hours of this. He never lays a finger on those batteries. And when he gets to Kellmouth the defenders are dug in and he's hitting a wall.</p>
+
+    <h3><span class="when">Day 21</span>The crossing</h3>
+    <p class="cast-line"><b>DEE:</b> Anvil's loading two squads onto transports to land behind Tidewater, straight across the deep sea, and no escort.</p>
+    <p class="cast-line"><b>KELL:</b> Okafor has had two Sharks sitting out there for nine sim-days. She's been waiting for exactly this.</p>
+    <p class="cast-line"><b>DEE:</b> And the transports are gone. Both squads. The crowd at the arena is on its feet.</p>
+
+    <h3><span class="when">Day 22–26</span>The end</h3>
+    <p class="cast-line"><b>DEE:</b> Mori fires Darts at Anvil's two airfields, and every aircraft he's rebuilt is parked on them.</p>
+    <p class="cast-line"><b>KELL:</b> Grounded. All of it. He's got no air force and Umbrellas that still can't see a Stinger.</p>
+    <p class="cast-line"><b>DEE:</b> At the day-26 count, the Mori–Okafor alliance passes the target. Hana Mori and Adaeze Okafor are your Grand Final champions!</p>
+
+    <div class="postmortem">
+      <h3>Coach Kell's post-match breakdown</h3>
+      <ol>
+        <li><b>Rooks with no Swatter.</b> They can't shoot up. One Swatter per squad.</li>
+        <li><b>Umbrellas and Domes against low air.</b> He spent his Crystal on the wrong sky.</li>
+        <li><b>Air strike into a Halo.</b> Air defence inside a fleet fires at every attacker, every round.</li>
+        <li><b>No garrisons.</b> Captured cities at 25 Spirit, empty, rang the doorbell.</li>
+        <li><b>Twenty-three in a squad of eleven.</b> Slow, weak, and yo-yo'd to death.</li>
+        <li><b>Attacking a dug-in flag-point.</b> They don't hit back, and they barely bleed.</li>
+        <li><b>Unescorted transports over deep water.</b> That's what Sharks are for.</li>
+        <li><b>Planes on the airfield.</b> Parked planes are targets.</li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+
+<section id="chronicle-2"><div class="wrap">
+  <h2>Chronicle II: The House Cup</h2>
+  <p class="sec-sub">Third year at Castellan. The Pairs tournament between Houses, from the private journal of cadet Mirela Dobre.</p>
+  <div class="chron diary">
+    <h3><span class="when">Draw night</span>Pairs</h3>
+    <p>The draw put Henrik Halvorsen with Tom Ashby's little brother Sam for House Lantern, and Ama Owusu with Kenji Arata for House Current. I got nobody. Odd-numbered year, so one cadet plays alone as a "free nation." That's me. Nadia Ferreira for Thorn is out with a cradle headache, which she is furious about. Pairs pool their Standing, and their target is doubled. Everybody knows it, and not everybody thinks about it.</p>
+
+    <h3><span class="when">Sim-day 6</span>Kenji's guests</h3>
+    <p>Kenji and Henrik signed a passage deal on day one so Kenji's convoys could cross Lantern land. His Pikes escorted the convoys and sat on the flag-point at Northgate between runs. On day six Kenji declared war on Henrik. He didn't move a single unit. His Pikes were already standing on Northgate's flag-point, and the city changed colour in front of the whole common room. Henrik actually stood up out of his cradle.</p>
+
+    <h3><span class="when">Sim-day 7–12</span>Sam goes quiet</h3>
+    <p>Sam Ashby froze. He built factories, sat in them, and stopped answering Henrik's messages. He's still in Henrik's pair, so Henrik still needs double Standing, and Sam is contributing nothing. Henrik is basically carrying a sandbag up a hill. Coach Kell said nothing during the session, which is worse than if he'd said something.</p>
+
+    <h3><span class="when">Sim-day 10–14</span>Two directions</h3>
+    <p>Henrik tried the yo-yo, of course. He's watched the Grand Final replay a hundred times. Volley batteries in, fire, out. Ama was ready. She sent her main squad at him as bait, and while his batteries were pulling back she closed two small groups of Rangers and Scouts from the north and the south at the same time. A battery can run from one thing, but it can't run from two. Gone in a round.</p>
+
+    <h3><span class="when">Sim-day 15–17</span>The spy and the salvo</h3>
+    <p>Ama put a spy in Henrik's capital on day two. On day fifteen the spy saw that Henrik's main airfield was under a Dome, but he'd moved its Swatters forward. On day seventeen Ama's Sentinels fired twelve Darts in one salvo. The Dome got one, cooled down, got another. Most of the rest landed, and half his air force died on the runway. He's been using the Dome as a security blanket. Apparently domes have cooldowns. Everyone in the common room learned that at the same time.</p>
+
+    <h3><span class="when">Sim-day 18–22</span>Shades</h3>
+    <p>Henrik answered with Shades, the stealth bombers. Ama's Dome hadn't researched stealth detection, and for five sim-days her harbours burned out of an empty sky. She got the upgrade on day twenty-two. On day twenty-three, she saw them.</p>
+
+    <h3><span class="when">Sim-day 20–24</span>Mines</h3>
+    <p>Henrik also sent two Sentinels into Kenji's harbour sound at night and laid mines. Kenji's pickets reported "faint sonar contacts, possibly debris." Three pickets and two transports later, Kenji closed his own harbour.</p>
+
+    <h3><span class="when">Sim-day 25</span>The Nova</h3>
+    <p>Henrik had Northgate surrounded and Kenji was going to lose it. So Kenji used the Nova. It's legal. Everyone thinks it's disgusting. It broke the siege and it also wiped out Kenji's own garrison inside the city, and the Rig marked Northgate as dead ground. Every one of Kenji's cities lost Spirit at once. Three rebelled on day twenty-eight. The whole common room booed, including people from his own House. His sponsor posted something about "bold choices" and then deleted it.</p>
+
+    <h3><span class="when">Sim-day 29–30</span>Ama leaves, and I collect</h3>
+    <p>With Kenji collapsing, Ama's pair still needed double. On day twenty-nine she left the pair. She didn't tell him; she just did it. At the next count she alone cleared the solo target, and House Current won the Cup.</p>
+    <p>The final count wasn't until midnight sim-time, though. I had fought nobody for thirty days. So I spent the last day walking Pikes and Droppers into every empty province on Kenji's collapsing border. Eleven. I finished third overall. Coach Kell put my replay on the screen at breakfast the next morning and said nothing at all, which from him is applause.</p>
+
+    <div class="postmortem">
+      <h3>Coach Kell's notes on the House Cup</h3>
+      <ol>
+        <li><b>A passage deal is a loaded gun.</b> Units on your flag-point can take it the moment their owner declares.</li>
+        <li><b>A frozen partner costs you.</b> Every member raises the pooled target.</li>
+        <li><b>The yo-yo has a counter.</b> Two directions, same round.</li>
+        <li><b>Spies compound.</b> Placed on day two, decisive on day seventeen.</li>
+        <li><b>A Dome can be saturated.</b> It has a cooldown, but Swatters in the target do not.</li>
+        <li><b>An empty sky can still burn your harbour.</b> Research detection before you need it.</li>
+        <li><b>Mines look like debris.</b> Treat any unexplained contact in a harbour as a minefield.</li>
+        <li><b>The Nova costs more than it wins.</b> It wins one siege and crashes your whole nation's Spirit, and your reputation with it.</li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Contested Worlds · Grand Theatre · An original setting. <a href="../index.html">All worlds</a></div></footer>
+
+<script>
+window.WORLD = {
+  map: {
+ "w": 1000,
+ "h": 620,
+ "link": 150,
+ "terrain": {
+  "flats": [
+   "Salt plains",
+   "#d8c17a"
+  ],
+  "urban": [
+   "City",
+   "#8d8a9c"
+  ],
+  "farm": [
+   "Farmland",
+   "#9dbd68"
+  ],
+  "high": [
+   "Mountain spine",
+   "#8f735c"
+  ],
+  "jungle": [
+   "Storm forest",
+   "#3f8050"
+  ],
+  "shallow": [
+   "Fjord sound",
+   "#7cc0dc"
+  ],
+  "deep": [
+   "Deep sea",
+   "#2c5d8c"
+  ]
+ },
+ "owners": {
+  "A": [
+   "Anvil (Petrov)",
+   "#c0392b"
+  ],
+  "B": [
+   "Slowburn (Mori)",
+   "#2f6fb5"
+  ],
+  "C": [
+   "Tidewater (Okafor)",
+   "#1a9a86"
+  ],
+  "V": [
+   "Salt Republic (AI)",
+   "#c9962a"
+  ],
+  "mb": [
+   "Sleeper (Ashby)",
+   "#8e5bb5"
+  ],
+  "mc": [
+   "Sly (Marchetti)",
+   "#5e6b80"
+  ]
+ },
+ "nodes": [
+  "nb|130|123|urban|mb|Ashby's capital|C",
+  "site1|107|263|farm|mb|Old Observatory|s",
+  "bcap|161|220|urban|B|Mori's capital|C",
+  "bfort|304|263|urban|B|Kellmouth|c",
+  "bfarm|184|331|farm|B||",
+  "mtn1|344|91|high||Mountain spine|L",
+  "mtn2|553|59|high|||",
+  "flats1|450|235|flats||Salt plains|L",
+  "flats2|531|288|flats|V||",
+  "jungle|406|381|jungle||Storm forest|L",
+  "v1|524|175|urban|V|Brinewick|c",
+  "vcap|647|220|urban|V|Saltholm|C",
+  "vsite|622|335|flats|V|River fork|s",
+  "v3|712|322|urban|V|Ostervik|c",
+  "v4|725|128|urban|V|Gullhaven|c",
+  "aw|795|227|flats|A||",
+  "acap|904|214|urban|A|Petrov's capital|C",
+  "as|827|345|farm|A||",
+  "adock|853|450|urban|A|Petrov's harbour|c",
+  "ccap|331|466|urban|C|Okafor's capital|C",
+  "ce|450|454|farm|C||",
+  "site2|554|442|farm||The Lighthouse|s",
+  "nc|146|476|urban|mc|Marchetti's capital|C",
+  "anch|300|566|shallow||Okafor's harbour|wL",
+  "lagw|142|567|shallow||Marchetti's sound|wL",
+  "lage|447|560|shallow|||w",
+  "deep1|659|569|deep||Deepwater Gate|wL",
+  "deep2|847|562|deep|||w"
+ ],
+ "extraLinks": [
+  [
+   "deep1",
+   "lage"
+  ]
+ ],
+ "moves": [
+  {
+   "n": 1,
+   "from": "aw",
+   "to": "vcap",
+   "kind": "attack",
+   "text": "Days 4–7 — Anvil's Rooks roll across the salt plains and take four AI cities. No garrisons."
+  },
+  {
+   "n": 2,
+   "from": "bcap",
+   "to": "vsite",
+   "kind": "air",
+   "text": "Day 8 — Slowburn's Stingers fly the storm-forest river under the Umbrellas and wipe out a Rook squad at the river fork."
+  },
+  {
+   "n": 3,
+   "from": "acap",
+   "to": "anch",
+   "kind": "strike",
+   "bend": -0.12,
+   "text": "Day 12 — Anvil's Strikers and bombers hit Tidewater's fleet in harbour. The Halo frigate destroys them."
+  },
+  {
+   "n": 4,
+   "from": "v1",
+   "to": "v1",
+   "kind": "revolt",
+   "text": "Days 13–15 — Brinewick and Ostervik, left empty, ring the doorbell and join the Free Cities."
+  },
+  {
+   "n": 4,
+   "from": "v3",
+   "to": "v3",
+   "kind": "revolt",
+   "text": ""
+  },
+  {
+   "n": 5,
+   "from": "v3",
+   "to": "bfort",
+   "kind": "attack",
+   "text": "Days 16–19 — a twenty-three-unit squad grinds toward Kellmouth under the Volley yo-yo and breaks on the flag-point."
+  },
+  {
+   "n": 6,
+   "from": "adock",
+   "to": "deep1",
+   "kind": "sea",
+   "text": "Day 21 — unescorted transports cross toward the Deepwater Gate. Tidewater's Sharks sink them."
+  },
+  {
+   "n": 7,
+   "from": "bcap",
+   "to": "acap",
+   "kind": "strike",
+   "bend": -0.32,
+   "text": "Days 22–26 — Darts hit Anvil's airfields and ground everything parked there."
+  }
+ ]
+},
+  lines: { front: "Front", middle: "Middle", rear: "Back" },
+  tiers: ["Day one", "Mid-season", "Late"],
+  reach: ["Contact", "Short", "Long", "Map-wide"],
+  classes: [
+    { id: "inf", name: "Infantry", short: "Inf", desc: "Foot soldiers, crews, towed guns: anything unarmoured." },
+    { id: "arm", name: "Armour", short: "Arm", desc: "Tanks, armoured vehicles, mobile batteries." },
+    { id: "high", name: "High air", short: "High", desc: "Jets and bombers at altitude, tracked by Umbrella batteries." },
+    { id: "low", name: "Low air", short: "Low", desc: "Rotor units flying low, underneath Umbrella and Dome coverage." },
+    { id: "drone", name: "Drone", short: "Drone", desc: "Drone swarms and spotter drones." },
+    { id: "ship", name: "Ship", short: "Ship", desc: "Surface ships and transports." },
+    { id: "sub", name: "Submarine", short: "Sub", desc: "Submarines. Can only be hit once detected." },
+    { id: "msl", name: "Missile", short: "Msl", desc: "Incoming missiles. Interceptable." }
+  ],
+  branches: [
+    { id: "inf", name: "Infantry" }, { id: "arm", name: "Armour" }, { id: "sup", name: "Support" },
+    { id: "air", name: "Air" }, { id: "sea", name: "Navy" }, { id: "msl", name: "Missiles" }
+  ],
+  units: [
+    { id: "pike", name: "Pike", branch: "inf", hitAs: "inf", line: "rear", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Low", claims: true,
+      role: "Basic infantry. Plants flags, holds cities.", atk: { inf: 2, arm: 1, low: 1, drone: 1 },
+      traits: ["Can airlift between friendly airfields from day one"], strong: "Garrisons; holding flag-points.", weak: "Rooks, Mortars, Hornets." },
+    { id: "bulwark", name: "Bulwark", branch: "inf", hitAs: "inf", line: "front", tier: 1, reach: 0, speed: 2, tough: 3, cost: "Medium", claims: true,
+      role: "Heavy infantry with anti-armour launchers.", atk: { inf: 3, arm: 3, drone: 1 },
+      traits: ["Front line: soaks damage", "Slow in forest and mountains"], strong: "Escorting Rooks; close-range anti-armour.", weak: "Hornets; massed artillery." },
+    { id: "mariner", name: "Mariner", branch: "inf", hitAs: "inf", line: "middle", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: true,
+      role: "Amphibious infantry.", atk: { inf: 3, arm: 2, low: 1 },
+      traits: ["Lands on any beach, with no harbour needed", "Can take islands"], strong: "Beachheads.", weak: "Rooks once ashore." },
+    { id: "dropper", name: "Dropper", branch: "inf", hitAs: "inf", line: "middle", tier: 2, reach: 0, speed: 4, tough: 2, cost: "Medium", claims: true,
+      role: "Helicopter-inserted infantry.", atk: { inf: 3, arm: 1 },
+      traits: ["Lands anywhere in range of a friendly airfield", "First round on landing counts as Low air", "Must wait an hour before planting a flag"], strong: "Grabbing empty cities behind the front.", weak: "Swatters at the landing; fast counter-attacks." },
+    { id: "ghost", name: "Ghost", branch: "inf", hitAs: "inf", line: "rear", tier: 2, reach: 0, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Stealth special forces.", atk: { inf: 4, arm: 2 },
+      traits: ["Invisible on the ground until it fires", "Spots other ground stealth", "Ignores dug-in and bunker bonuses"], strong: "Sniping artillery; cracking flag-points.", weak: "Cannot plant flags. Scouts find it." },
+    { id: "reserve", name: "Reserve", branch: "inf", hitAs: "inf", line: "middle", tier: 1, reach: 0, speed: 2, tough: 2, cost: "Very low", claims: true,
+      role: "Militia.", atk: { inf: 1, arm: 1 },
+      traits: ["Strength depends on the city's Spirit", "Very slow in enemy land"], strong: "Emergency garrisons.", weak: "Attacking anything." },
+    { id: "hired", name: "Hired Guns", branch: "inf", hitAs: "inf", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Gold only", claims: false,
+      role: "Mercenaries.", atk: { inf: 3, arm: 2, low: 1 },
+      traits: ["Cost no Recruits", "Cannot plant flags"], strong: "A rich nation's front line.", weak: "Never takes ground." },
+    { id: "climber", name: "Climber", branch: "inf", hitAs: "inf", line: "rear", tier: 2, reach: 0, speed: 2, tough: 2, cost: "Medium", claims: true,
+      role: "Mountain infantry.", atk: { inf: 3, arm: 1 },
+      traits: ["Strong in mountains and snow", "Weak on the plains"], strong: "Holding passes.", weak: "Open ground." },
+
+    { id: "scout", name: "Scout", branch: "arm", hitAs: "arm", line: "rear", tier: 1, reach: 0, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Fast recon car.", atk: { inf: 2, arm: 1 },
+      traits: ["Identifies grey markers", "Spots ground stealth", "Speeds up its squad in enemy land"], strong: "Recon; hunting Ghosts.", weak: "Any real fight." },
+    { id: "ranger", name: "Ranger", branch: "arm", hitAs: "arm", line: "front", tier: 1, reach: 0, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Infantry fighting vehicle.", atk: { inf: 3, arm: 2, low: 1, drone: 1 },
+      traits: ["Handles most terrain"], strong: "Versatile infantry-killer; pincers.", weak: "Breakers; Stingers." },
+    { id: "rook", name: "Rook", branch: "arm", hitAs: "arm", line: "front", tier: 1, reach: 0, speed: 3, tough: 5, cost: "High", claims: false,
+      role: "Heavy tank.", atk: { inf: 3, arm: 4 },
+      traits: ["Full strength on open ground", "Weak in cities, forest and mountains", "No anti-air whatsoever"], strong: "Open-ground fights; soaking damage.", weak: "Stingers. Cities. Breakers." },
+    { id: "breaker", name: "Breaker", branch: "arm", hitAs: "arm", line: "front", tier: 1, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Tank destroyer.", atk: { inf: 1, arm: 5 },
+      traits: ["Best armoured defender in a city"], strong: "Killing Rooks; holding cities.", weak: "Infantry swarms; Hornets; artillery." },
+    { id: "otter", name: "Otter", branch: "arm", hitAs: "arm", line: "middle", tier: 2, reach: 0, speed: 3, tough: 3, cost: "Medium", claims: false,
+      role: "Amphibious armoured vehicle.", atk: { inf: 2, arm: 2 },
+      traits: ["Lands on any beach"], strong: "Backing Mariners.", weak: "Rooks." },
+
+    { id: "swatter", name: "Swatter", branch: "sup", hitAs: "arm", line: "middle", tier: 1, reach: 1, speed: 3, tough: 2, cost: "Low", claims: false,
+      role: "Short-range mobile anti-air.", atk: { inf: 1, high: 2, low: 5, drone: 5, msl: 2 },
+      traits: ["Hits low air", "Inside a squad: fires at every attacker, every round"], strong: "Rotor units and drones. The best value unit in the game.", weak: "Ground attack; high jets." },
+    { id: "umbrella", name: "Umbrella", branch: "sup", hitAs: "arm", line: "rear", tier: 1, reach: 2, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Area missile battery.", atk: { high: 4, drone: 1, msl: 3 },
+      traits: ["Own radar", "Cannot see low air"], strong: "Jets, bombers and missiles.", weak: "Low air, which it cannot see at all." },
+    { id: "dome", name: "Dome", branch: "sup", hitAs: "arm", line: "rear", tier: 2, reach: 3, speed: 1, tough: 3, cost: "High", claims: false,
+      role: "Long-range interceptor.", atk: { high: 3, msl: 5 },
+      traits: ["Longest-range missile defence", "Late upgrade detects stealth aircraft", "Has a cooldown between intercepts", "Blind to low air"], strong: "Protecting cities from missiles.", weak: "Low air; saturation salvos; raids." },
+    { id: "mortar", name: "Mortar", branch: "sup", hitAs: "inf", line: "rear", tier: 1, reach: 2, speed: 1, tough: 1, cost: "Low", claims: false,
+      role: "Towed artillery.", atk: { inf: 4, arm: 2 },
+      traits: ["Ranged fire", "Slowest unit in the game"], strong: "Softening dug-in defenders.", weak: "Anything that reaches it." },
+    { id: "howitzer", name: "Howitzer", branch: "sup", hitAs: "arm", line: "middle", tier: 1, reach: 2, speed: 2, tough: 3, cost: "Medium", claims: false,
+      role: "Self-propelled artillery.", atk: { inf: 3, arm: 3 },
+      traits: ["Ranged fire", "Keeps up with Rooks"], strong: "Tank squads' artillery.", weak: "Stingers; Strikers." },
+    { id: "volley", name: "Volley", branch: "sup", hitAs: "arm", line: "middle", tier: 1, reach: 3, speed: 3, tough: 2, cost: "Medium", claims: false,
+      role: "Rocket artillery.", atk: { inf: 4, arm: 3, ship: 1 },
+      traits: ["Longest ground range", "Area damage"], strong: "The yo-yo against slow squads.", weak: "Air; pincers from two directions." },
+    { id: "beacon", name: "Beacon", branch: "sup", hitAs: "arm", line: "rear", tier: 1, reach: 0, speed: 2, tough: 1, cost: "Low", claims: false,
+      role: "Mobile radar.", atk: {},
+      traits: ["Long-range detection; low air only up close"], strong: "Early warning.", weak: "Unarmed." },
+    { id: "shoregun", name: "Shore Gun", branch: "sup", hitAs: "arm", line: "rear", tier: 1, reach: 2, speed: 1, tough: 3, cost: "Low", claims: false,
+      role: "Coastal battery.", atk: { ship: 4, inf: 1 },
+      traits: ["No research needed", "Immobile"], strong: "Ships near your coast.", weak: "Air; missiles; landings." },
+
+    { id: "falcon", name: "Falcon", branch: "air", hitAs: "high", line: "front", tier: 1, reach: 2, speed: 5, tough: 3, cost: "High", claims: false,
+      role: "Air superiority fighter.", atk: { high: 5, low: 3, drone: 3, msl: 2 },
+      traits: ["Front of any flight", "Can patrol"], strong: "Killing aircraft; escort.", weak: "Almost useless against ground and ships." },
+    { id: "striker", name: "Striker", branch: "air", hitAs: "high", line: "middle", tier: 1, reach: 2, speed: 5, tough: 2, cost: "High", claims: false,
+      role: "Strike jet.", atk: { inf: 3, arm: 4, ship: 2, high: 1 },
+      traits: ["Late upgrade carries a Dart"], strong: "Deep strikes on armour and artillery.", weak: "Falcons; Halo frigates; Umbrellas." },
+    { id: "hornet", name: "Hornet", branch: "air", hitAs: "low", line: "front", tier: 1, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Low-air gunship.", atk: { inf: 5, arm: 2 },
+      traits: ["Flies under Umbrella coverage", "Can base on carriers"], strong: "Shredding infantry and artillery crews.", weak: "Swatters; Halos; Falcons." },
+    { id: "stinger", name: "Stinger", branch: "air", hitAs: "low", line: "front", tier: 1, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Low-air tank hunter.", atk: { arm: 5, inf: 2, ship: 2 },
+      traits: ["Flies under Umbrella coverage", "Can base on carriers"], strong: "Rook squads without a Swatter.", weak: "One Swatter in the target." },
+    { id: "kingfisher", name: "Kingfisher", branch: "air", hitAs: "low", line: "middle", tier: 2, reach: 1, speed: 4, tough: 2, cost: "Medium", claims: false,
+      role: "Low-air submarine hunter.", atk: { sub: 5, ship: 3 },
+      traits: ["Detects submarines", "Faster than any fleet"], strong: "Sub hunting.", weak: "Swatters." },
+    { id: "eye", name: "Eye", branch: "air", hitAs: "high", line: "rear", tier: 2, reach: 3, speed: 3, tough: 2, cost: "High", claims: false,
+      role: "Airborne radar.", atk: {},
+      traits: ["Sees aircraft, armour and ships at huge range", "Cannot see low air", "Late upgrade detects stealth"], strong: "Information.", weak: "Unarmed." },
+    { id: "anvil", name: "Anvil", branch: "air", hitAs: "high", line: "middle", tier: 2, reach: 2, speed: 3, tough: 4, cost: "Very high", claims: false,
+      role: "Heavy bomber.", atk: { inf: 4, arm: 3, ship: 2 },
+      traits: ["Wrecks buildings and airfields", "Late upgrade ignores Shelters", "Carries Darts on a slow reload"], strong: "Cities, buildings, slow squads.", weak: "Falcons; Umbrellas; Halos." },
+    { id: "swarm", name: "Swarm", branch: "air", hitAs: "drone", line: "middle", tier: 1, reach: 1, speed: 4, tough: 1, cost: "Low", claims: false,
+      role: "Explosive drone swarm.", atk: { inf: 3, arm: 3 },
+      traits: ["Cheap attrition"], strong: "Squads without Swatters.", weak: "Swatters; Halos; Falcons." },
+    { id: "spotter", name: "Spotter", branch: "air", hitAs: "drone", line: "rear", tier: 1, reach: 2, speed: 4, tough: 1, cost: "Very low", claims: false,
+      role: "Recon drone.", atk: {},
+      traits: ["Identifies grey markers", "Crossing a border does not start a war"], strong: "Cheap eyes.", weak: "Everything." },
+    { id: "gull", name: "Gull", branch: "air", hitAs: "high", line: "rear", tier: 2, reach: 2, speed: 3, tough: 3, cost: "High", claims: false,
+      role: "Maritime patrol aircraft.", atk: { sub: 4, ship: 3 },
+      traits: ["Detects submarines over a wide area"], strong: "Sub hunting far from the fleet.", weak: "Falcons; Halos." },
+    { id: "shade", name: "Shade", branch: "air", hitAs: "high", line: "rear", tier: 3, reach: 2, speed: 5, tough: 2, cost: "Very high", claims: false,
+      role: "Stealth bomber.", atk: { inf: 3, arm: 4, high: 2, ship: 2 },
+      traits: ["Invisible until it fires", "Crossing a border does not start a war"], strong: "Hitting airfields and harbours unseen.", weak: "Late Domes and Eyes." },
+
+    { id: "picket", name: "Picket", branch: "sea", hitAs: "ship", line: "front", tier: 1, reach: 1, speed: 5, tough: 2, cost: "Low", claims: false,
+      role: "Light coastal ship.", atk: { ship: 2, sub: 2, inf: 1 },
+      traits: ["Strong in the sounds", "Weak in the deep sea"], strong: "Coastal patrol.", weak: "Deep water; anything bigger." },
+    { id: "halo", name: "Halo", branch: "sea", hitAs: "ship", line: "middle", tier: 1, reach: 2, speed: 4, tough: 3, cost: "Medium", claims: false,
+      role: "Air-defence frigate.", atk: { high: 5, low: 3, drone: 4, msl: 5, ship: 1 },
+      traits: ["Inside a fleet: fires at every aircraft and missile, no cooldown", "Barely hurts other ships"], strong: "Making a fleet nearly immune to air and missiles.", weak: "Ship duels; submarines." },
+    { id: "sentinel", name: "Sentinel", branch: "sea", hitAs: "ship", line: "front", tier: 1, reach: 2, speed: 4, tough: 4, cost: "Medium", claims: false,
+      role: "Destroyer.", atk: { ship: 3, sub: 4, high: 2, low: 1 },
+      traits: ["Sonar detects submarines", "Lays mines in the sounds", "Fires Darts late"], strong: "Sub hunting; escort.", weak: "Dreadnoughts." },
+    { id: "dread", name: "Dreadnought", branch: "sea", hitAs: "ship", line: "middle", tier: 2, reach: 3, speed: 3, tough: 4, cost: "High", claims: false,
+      role: "Heavy cruiser.", atk: { ship: 5, inf: 3, arm: 3 },
+      traits: ["Best shore bombardment", "Weak against subs and air when alone"], strong: "Sea battles; shelling coasts.", weak: "Sharks; unescorted against air." },
+    { id: "deck", name: "Deck", branch: "sea", hitAs: "ship", line: "rear", tier: 3, reach: 0, speed: 3, tough: 5, cost: "Very high", claims: false,
+      role: "Aircraft carrier.", atk: { high: 1 },
+      traits: ["Carries naval jets and all rotor units", "One per fleet"], strong: "Air power anywhere at sea.", weak: "Everything, once its escort is gone." },
+    { id: "shark", name: "Shark", branch: "sea", hitAs: "sub", line: "middle", tier: 2, reach: 1, speed: 4, tough: 3, cost: "High", claims: false,
+      role: "Attack submarine.", atk: { ship: 5, sub: 4 },
+      traits: ["Invisible until it fires", "Half strength in the sounds", "Cannot attack land"], strong: "Transports and fleets in deep water.", weak: "Kingfishers, Sentinels; shallow water." },
+    { id: "leviathan", name: "Leviathan", branch: "sea", hitAs: "sub", line: "rear", tier: 3, reach: 3, speed: 3, tough: 3, cost: "Very high", claims: false,
+      role: "Missile submarine.", atk: { ship: 1 },
+      traits: ["Fires Hammerfalls while hidden", "Very weak in the sounds"], strong: "A hidden siege off an enemy coast.", weak: "Any sub hunter." },
+
+    { id: "dart", name: "Dart", branch: "msl", hitAs: "msl", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Crystal", claims: false,
+      role: "Guided missile.", atk: { inf: 3, arm: 4, ship: 4 },
+      traits: ["Tracks a moving group", "Fired by Strikers, Anvils, Sentinels, Dreadnoughts, Sharks and launchers"], strong: "Killing a chosen group or parked aircraft.", weak: "Swatters inside the target." },
+    { id: "hammerfall", name: "Hammerfall", branch: "msl", hitAs: "msl", line: "rear", tier: 2, reach: 3, speed: 5, tough: 1, cost: "Crystal", claims: false,
+      role: "Ballistic missile.", atk: { inf: 4, arm: 3 },
+      traits: ["Only hits flag-points, never moving groups", "Wrecks buildings"], strong: "Airfields, factories, dug-in cities.", weak: "Domes; anything moving." },
+    { id: "nova", name: "Nova", branch: "msl", hitAs: "msl", line: "rear", tier: 3, reach: 3, speed: 5, tough: 1, cost: "Ruinous", claims: false,
+      role: "The game's super-weapon. Legal, and despised.", atk: { inf: 5, arm: 5, ship: 4 },
+      traits: ["Huge area; hits your own units too", "Marks the city as dead ground", "Every city you own loses Spirit, and the crowd boos you for the rest of the season"], strong: "Breaking a siege in one move.", weak: "Your nation's Spirit, and your reputation." }
+  ],
+  synergies: [
+    { name: "Rook & Swatter", units: ["rook", "bulwark", "swatter"], why: "Rooks kill armour, Bulwarks soak and kill infantry, and the Swatter makes Stinger raids suicidal. The pro standard." },
+    { name: "Falcon over Striker", units: ["falcon", "striker"], why: "The Falcon takes the front of the flight and absorbs fire so the Strikers live to release." },
+    { name: "Halo fleet", units: ["sentinel", "halo", "dread"], why: "The Sentinel hunts subs, the Halo eats air strikes and missiles, and the Dreadnought does the killing." },
+    { name: "Beacon & Volley", units: ["beacon", "volley"], why: "Volleys outrange everything on the ground but need a spotter. Add a Beacon or Scout and every round is free damage." },
+    { name: "Three-layer sky", units: ["swatter", "umbrella", "dome"], why: "The Swatter covers low air and drones, the Umbrella covers jets, and the Dome covers missiles." },
+    { name: "Beach landing", units: ["mariner", "otter", "dread"], why: "The Dreadnought shells the beach, Mariners and Otters land anywhere, and the heavy squad comes in through the captured harbour." },
+    { name: "Ghost & Shade", units: ["ghost", "shade", "hammerfall"], why: "Ghosts and Shades find airfields unseen, and Hammerfalls delete them." },
+    { name: "Kingfisher & Shark", units: ["kingfisher", "shark"], why: "Kingfishers push enemy subs out of the sounds while your Sharks wait in the deep." }
+  ],
+  comps: [
+    { name: "The Standard Eleven", mode: "Melee · Pairs", size: "Squad: 11 / 11", units: [["rook", 3], ["bulwark", 3], ["howitzer", 2], ["swatter", 1], ["pike", 2]],
+      idea: "The squad every rookie is taught: armour, a front line, artillery, one Swatter and two flag-planters.", play: "Fight on open ground and drop a Pike in every captured city.", loses: "Cities and forest; the yo-yo; Strikers with no Umbrella nearby." },
+    { name: "Fortress & Yo-Yo", mode: "Melee", size: "Squad on flag-point + Volleys behind", units: [["breaker", 3], ["pike", 4], ["swatter", 1], ["umbrella", 1], ["volley", 3], ["beacon", 1]],
+      idea: "Absorb on the flag-point and kill from range.", play: "Defenders never move while Volleys go in, fire, and come out.", loses: "Ghosts; Hammerfalls on the flag-point; Strikers on the Volleys; a two-direction pincer." },
+    { name: "Low Flight", mode: "Melee · Pairs", size: "Flight: 4 / 4", units: [["stinger", 2], ["hornet", 2]],
+      idea: "The highlight-reel flight: two tank hunters and two gunships under the Umbrellas.", play: "Scout first and only hit squads with no Swatter.", loses: "One Swatter, a Halo, or Falcons on patrol." },
+    { name: "Halo Fleet", mode: "Melee · Pairs", size: "Fleet: 6 / 6", units: [["sentinel", 2], ["halo", 1], ["dread", 2], ["picket", 1]],
+      idea: "Sonar, shield and guns.", play: "Stay in your sounds and shell the coast.", loses: "Sentinels sunk, letting Sharks in. Dart salvos faster than the Halo can answer." },
+    { name: "Drop Raid", mode: "Pairs", size: "Two flights + Droppers", units: [["dropper", 4], ["falcon", 2], ["striker", 2]],
+      idea: "Grab empty cities while your partner pins the enemy's main squad.", play: "Strikers clear, Falcons escort, and Droppers plant an hour later.", loses: "Swatters at the landing." },
+    { name: "Highflight Endgame", mode: "Melee (late)", size: "Late", units: [["eye", 1], ["falcon", 3], ["anvil", 2], ["dome", 1], ["breaker", 3], ["pike", 4]],
+      idea: "Hold the ground lightly, own the sky, and flatten their factories.", play: "Falcons patrol under an Eye while Anvils hit factories and airfields.", loses: "An Ironworks rush before the air force exists." },
+    { name: "Hammer & Umbrella", mode: "Pairs", size: "Split roles", units: [["rook", 4], ["bulwark", 4], ["pike", 3], ["falcon", 4], ["umbrella", 2], ["swatter", 2]],
+      idea: "One partner fields only ground units; the other fields only air defence and fighters over them.", play: "Move together, with Swatters inside the Rook squads.", loses: "A partner who freezes. The yo-yo still hurts." },
+    { name: "Beach Party", mode: "Melee · Pairs", size: "Fleet + landing", units: [["dread", 2], ["halo", 1], ["sentinel", 2], ["mariner", 5], ["otter", 3]],
+      idea: "Take the harbour the enemy thinks the sea protects.", play: "The fleet shells, Mariners land beside the harbour, and the squad follows.", loses: "Shore Guns; Sharks; no Halo." },
+    { name: "Swarm Grind", mode: "Melee", size: "Budget", units: [["swarm", 4], ["spotter", 2], ["volley", 3], ["pike", 5]],
+      idea: "The café-kid special: cheap drones and rockets.", play: "Spotters find targets, Swarms and Volleys grind, and Pikes plant on what's left.", loses: "Anyone with Swatters." },
+    { name: "Shadow League", mode: "Melee (late)", size: "Specialist", units: [["shade", 2], ["ghost", 3], ["leviathan", 1], ["dome", 1]],
+      idea: "Never fight their army. Starve their economy.", play: "Hit factories, airfields and harbours every night, and keep a Dome at home.", loses: "A rival who wins the ground war first." }
+  ]
+};
+</script>
+<script src="../assets/world.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contested Worlds</title>
-<meta name="description" content="One war, told in many worlds: original settings with full rosters, counters, compositions and a complete war chronicle each.">
+<meta name="description" content="Three settings for a story about an academy that trains commanders inside full-scale war simulations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -13,128 +13,97 @@
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #e9e2d6; --accent-2: #e0a95c; --accent-ink: #15130f; } }
   :root[data-theme="dark"] { --accent: #e9e2d6; --accent-2: #e0a95c; --accent-ink: #15130f; }
   .lessons td:first-child { font-weight: 600; min-width: 220px; }
-  .lessons td { min-width: 150px; }
+  .lessons td { min-width: 180px; }
 </style>
 </head>
 <body>
 <header class="topbar"><div class="wrap">
   <a class="brand" href="index.html">Contested Worlds</a>
-  <nav class="toc"><a href="#worlds">Worlds</a><a href="#glance">At a glance</a><a href="#lessons">The eight lessons</a><a href="beats.html">Beat Library</a><a href="#how">How to read</a></nav>
+  <nav class="toc"><a href="#worlds">Worlds</a><a href="#academies">The academies</a><a href="#glance">At a glance</a><a href="#lessons">The lessons</a><a href="beats.html">Beat Library</a><a href="#how">How to read</a></nav>
   <button class="theme-btn" type="button">Theme</button>
 </div></header>
 
 <div class="hero"><div class="wrap">
-  <div class="eyebrow">An anthology of wars</div>
-  <h1>One war, many worlds</h1>
-  <p class="lede">Each world here is a complete, original setting for a war between rulers: its land, its economy, its rules of battle, every unit with what it beats and what kills it, the armies that work — and one full war, start to finish. The worlds look nothing alike. The mistakes that lose them are the same.</p>
+  <div class="eyebrow">Three worlds, one academy story</div>
+  <h1>Where wars are learned</h1>
+  <p class="lede">In each of these worlds, young commanders from places that distrust each other are sent to the same academy to learn to fight full-scale wars inside a simulation. In two of the worlds the simulated wars decide real borders. In the third they decide championships. Every world has its own map, economy, rules of battle, units with counters, the armies that work, a cast, and two complete wars told start to finish.</p>
 </div></div>
 
 <section id="worlds"><div class="wrap">
   <h2>The worlds</h2>
   <p class="sec-sub">Pick a world. Each page stands on its own.</p>
-  <div class="world-grid" id="world-grid"></div>
+  <div class="world-grid">
+    <a class="card world-card" href="worlds/meridian-2076.html"><div class="band" style="background:linear-gradient(135deg,#0e5563,#1b8297 55%,#c9d6c4)"><span>Near future · Earth</span></div><div class="body"><h3>Meridian 2076</h3><p>After one war nearly destroyed them, twelve successor states agreed to settle disputes in a binding simulation. They all send their cadets to the one neutral academy that holds it.</p></div></a>
+    <a class="card world-card" href="worlds/corvane.html"><div class="band" style="background:radial-gradient(circle at 70% 30%,#b3a3ff,#3b2d7a 45%,#0d0c16)"><span>Far future · Colony world</span></div><div class="body"><h3>Corvane</h3><p>On a half-terraformed planet, the colony ship's mind controls the air everyone breathes. It forbids real war, so the rival charters fight inside it and send their children aboard to learn how.</p></div></a>
+    <a class="card world-card" href="worlds/grand-theatre.html"><div class="band" style="background:linear-gradient(135deg,#0f4d2e,#2f7d4f 45%,#d1461f)"><span>Present-day · Sport</span></div><div class="body"><h3>Grand Theatre</h3><p>In a peaceful world, simulated war is the biggest sport on the planet. One island academy is licensed to train its future stars, and every federation sends its prodigies there.</p></div></a>
+  </div>
+</div></section>
+
+<section id="academies"><div class="wrap">
+  <h2>The academies</h2>
+  <p class="sec-sub">Each world answers the same two questions differently: why must an academy exist, and why do rivals all attend the same one?</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th></th><th>Meridian 2076</th><th>Corvane</th><th>Grand Theatre</th></tr></thead>
+    <tbody>
+      <tr><td><b>Academy</b></td><td>The Arbitration Academy, Sable Point</td><td>The Keel Academy, aboard the grounded colony ship</td><td>Castellan Academy, Ilha do Castelo</td></tr>
+      <tr><td><b>What the simulation decides</b></td><td>Real territory, water rights and mining quotas</td><td>Real cities, seams and ice fields</td><td>Championships, careers, sponsorships and national pride</td></tr>
+      <tr><td><b>Why the simulation is obeyed</b></td><td>A treaty: refuse a result and every other signatory sanctions you</td><td>An AI that controls the atmosphere: refuse a result and your air gets thin</td><td>It is a sport, and the rules are the rules</td></tr>
+      <tr><td><b>Why an academy is needed</b></td><td>Only certified commanders may fight binding campaigns</td><td>The ship's mind only trusts commanders it trained itself</td><td>After a teenager was injured on a bootleg rig, only accredited academies may train players</td></tr>
+      <tr><td><b>Why rivals share it</b></td><td>The treaty allows only one simulator, on neutral ground</td><td>There is only one ship, and it belongs to everyone</td><td>Only one academy has ever been accredited</td></tr>
+      <tr><td><b>How the academy mixes them</b></td><td>Four mixed Houses; national wings are forbidden</td><td>The ship assigns decks and never rooms two cadets from one charter together</td><td>A televised House draft; national teams are forbidden until graduation</td></tr>
+      <tr><td><b>What a cadet loses by losing</b></td><td>Their country's seeding in real disputes</td><td>Their charter's vote in the colony Assembly</td><td>A professional career</td></tr>
+    </tbody>
+  </table></div>
 </div></section>
 
 <section id="glance"><div class="wrap">
   <h2>At a glance</h2>
-  <p class="sec-sub">Tone, technology and voice, side by side.</p>
   <div class="tbl-wrap"><table>
-    <thead><tr><th>World</th><th>Tone</th><th>What "armour" looks like</th><th>What the low flyers are</th><th>Who tells the story</th><th>Best for</th></tr></thead>
+    <thead><tr><th>World</th><th>Tone</th><th>What "armour" looks like</th><th>What the low flyers are</th><th>Who tells the stories</th><th>Best for</th></tr></thead>
     <tbody>
-      <tr><td><b>Meridian 2076</b></td><td>Grounded, tense, political</td><td>Heavy hover-tanks, exosuits</td><td>Tiltrotor gunships</td><td>Neutral narrator, staff diaries</td><td>Readers who like modern military fiction</td></tr>
-      <tr><td><b>The Hollow Reach</b></td><td>Epic, cold, strategic</td><td>Siege walkers</td><td>Ringrunners hiding in planetary rings</td><td>Reconstructed logs</td><td>Space-opera fans</td></tr>
-      <tr><td><b>The Ashen Crowns</b></td><td>Courtly, grim, mythic</td><td>Stone golems, plate knights</td><td>Griffons and harpies</td><td>A monk-chronicler</td><td>Fantasy readers</td></tr>
-      <tr><td><b>The Gilded Gale</b></td><td>Brassy, witty, period</td><td>Landships</td><td>Ornithopters and autogyros</td><td>A war correspondent's dispatches</td><td>Steampunk and historical-fiction fans</td></tr>
-      <tr><td><b>The Glasshouse</b></td><td>Strange, intimate, eerie</td><td>Titan beetles</td><td>Jewel-wasps and robber-flies</td><td>A naturalist's field journal</td><td>Literary readers; nature writing</td></tr>
-      <tr><td><b>Pelagia</b></td><td>Claustrophobic, technical</td><td>Seafloor walkers</td><td>Skimmers hugging the reef</td><td>Sonar logs and a technician's recorder</td><td>Hard-SF and submarine-thriller fans</td></tr>
-      <tr><td><b>Spire Nine</b></td><td>Fast, cynical, funny</td><td>Hardframes</td><td>Alley-level drones</td><td>Social feeds and a courier</td><td>Cyberpunk readers; younger adults</td></tr>
-      <tr><td><b>Thunderhide</b></td><td>Warm, oral, adventurous</td><td>Horned titans</td><td>Hook-beaks under the treetops</td><td>A storyteller at the fire</td><td>All ages; readers new to war stories</td></tr>
+      <tr><td><b>Meridian 2076</b></td><td>Grounded, tense, political</td><td>Heavy tanks, exosuits</td><td>Tiltrotor gunships</td><td>A historian (case file); a staff narrator</td><td>Readers who like modern military fiction</td></tr>
+      <tr><td><b>Corvane</b></td><td>Epic, cold, uneasy</td><td>Siege walkers</td><td>Skimmers hiding in canyon country</td><td>Reconstructed logs and the ship's own voice</td><td>Science-fiction readers</td></tr>
+      <tr><td><b>Grand Theatre</b></td><td>Bright, competitive, warm</td><td>Rooks</td><td>Stingers and Hornets</td><td>Live commentary; a cadet's journal</td><td>Sports-story and YA readers; anyone uneasy with real war</td></tr>
     </tbody>
   </table></div>
 </div></section>
 
 <section id="lessons"><div class="wrap">
-  <h2>The eight lessons</h2>
-  <p class="sec-sub">Every first chronicle turns on the same eight blunders. Here is what each one is called in each world. The second chronicles cover eight more, and the Beat Library has the rest.</p>
-  <div class="tbl-wrap"><table class="lessons" id="lessons-table"></table></div>
-</div></section>
-
-<section id="library"><div class="wrap">
-  <h2>Beyond the eight</h2>
-  <p class="sec-sub">Wars turn on more than eight mistakes. The <a href="beats.html">Beat Library</a> covers twenty-nine moments, from spies in the capital and allies already inside your walls to the forbidden weapon and the last-day land grab, each translated into every world.</p>
+  <h2>The lessons</h2>
+  <p class="sec-sub">Each world's first chronicle turns on the same eight blunders, and its second chronicle on eight more. Here is what each one is called in each world. The Beat Library has the rest.</p>
+  <div class="tbl-wrap"><table class="lessons">
+    <thead><tr><th>Lesson</th><th>Meridian 2076</th><th>Corvane</th><th>Grand Theatre</th></tr></thead>
+    <tbody>
+      <tr><td>Heavy armour with no short-range air defence</td><td>Bastions with no Lancet</td><td>Juggernauts with no Flak Spindle</td><td>Rooks with no Swatter</td></tr>
+      <tr><td>Long-range air defence against low flyers</td><td>Spires and Aegis against rotorcraft</td><td>Lance batteries against skimmers</td><td>Umbrellas against Stingers</td></tr>
+      <tr><td>Air strike into a fleet with an escort inside it</td><td>Kestrels against a Warden frigate</td><td>Hammerheads against an Aegis Tender</td><td>Strikers against a Halo</td></tr>
+      <tr><td>Conquests left without a garrison</td><td>Cities rise to the Unbound</td><td>Cities secede to the Unmoored</td><td>Cities "ring the doorbell" and join the Free Cities</td></tr>
+      <tr><td>One giant army instead of two right-sized ones</td><td>22 in a battlegroup of 12</td><td>19 in a legion of 9</td><td>23 in a squad of 11</td></tr>
+      <tr><td>Assaulting dug-in defenders while being shelled from range</td><td>Lisle against Hailstorm arrays</td><td>Lucent against mass drivers</td><td>Kellmouth against the Volley yo-yo</td></tr>
+      <tr><td>Unescorted transports over deep water</td><td>Lampreys in the Varn Trench</td><td>Shroud Hunters in the Orrin Trench</td><td>Sharks at the Deepwater Gate</td></tr>
+      <tr><td>Aircraft parked within missile range</td><td>Aerodromes hit by glide missiles</td><td>Launch fields hit by seeker missiles</td><td>Airfields hit by Darts</td></tr>
+      <tr><td>An ally already inside your walls</td><td>Passage rights at Wrenfield</td><td>Spine rights at Veil Station</td><td>Kenji's passage deal at Northgate</td></tr>
+      <tr><td>The partner who never shows up</td><td>Dunmark's silence</td><td>Tamsin's Rest's silence</td><td>Sam Ashby freezes</td></tr>
+      <tr><td>The pincer that beats the kiters</td><td>Lancers and Pathfinders from two sides</td><td>Hoplites and Skitters from two sides</td><td>Rangers and Scouts from two sides</td></tr>
+      <tr><td>Saturating area air defence</td><td>Twelve glide missiles past the Aegis</td><td>Twelve seeker missiles past the Bastion</td><td>Twelve Darts past the Dome</td></tr>
+      <tr><td>The forbidden weapon</td><td>Sunfall</td><td>The Cascade Charge</td><td>The Nova</td></tr>
+    </tbody>
+  </table></div>
 </div></section>
 
 <section id="how"><div class="wrap">
   <h2>How to read a world page</h2>
   <div class="grid g3">
-    <div class="card"><h4>World &amp; economy</h4><p class="small">The map, the people, what they produce, what armies cost to keep, and why conquered places turn against you.</p></div>
-    <div class="card"><h4>Rules of battle</h4><p class="small">The dozen rules that create every surprise: hit classes, formation limits, digging in, range, who can take ground, low flyers, escorts, stealth, transports, bases.</p></div>
-    <div class="card"><h4>Roster &amp; matrix</h4><p class="small">Every unit rated 0–5 against every hit class. The matrix shows at a glance what to bring against what. "Dies to" is computed, not written by hand.</p></div>
-    <div class="card"><h4>Synergies</h4><p class="small">Pairings that cover each other's blind spots.</p></div>
-    <div class="card"><h4>Compositions</h4><p class="small">Ten complete armies per world for free-for-all and team play, with how they win and how they die.</p></div>
-    <div class="card"><h4>Two chronicles</h4><p class="small">Two whole wars per world, told in that world's own voice. The first is a lone aggressor against an alliance; the second is alliance against alliance, with betrayal. Each ends with why the loser lost.</p></div>
+    <div class="card"><h4>The academy</h4><p class="small">Why the academy exists, why rivals attend it, how its years and exams work, and the cadets who could carry a book.</p></div>
+    <div class="card"><h4>World, cast &amp; map</h4><p class="small">The land and the people, six leaders built around six ways of playing a war, and a map with the first war's turning points drawn on it.</p></div>
+    <div class="card"><h4>Economy &amp; rules</h4><p class="small">What a nation produces, what armies cost to keep, why conquests rebel, and the dozen rules that create every surprise.</p></div>
+    <div class="card"><h4>Roster &amp; matrix</h4><p class="small">Every unit rated 0–5 against every hit class. "Dies to" is computed from the ratings, not written by hand.</p></div>
+    <div class="card"><h4>Synergies &amp; compositions</h4><p class="small">Pairings that cover each other's blind spots, and ten complete armies for free-for-all and team play.</p></div>
+    <div class="card"><h4>Two chronicles</h4><p class="small">Two whole wars per world. The first is a lone aggressor against an alliance; the second is alliance against alliance, with betrayal. Each ends with why the loser lost.</p></div>
   </div>
 </div></section>
 
 <footer><div class="wrap">Contested Worlds · All settings, characters and units are original.</div></footer>
-
-<script>
-(function () {
-  var worlds = [
-    { href: "worlds/meridian-2076.html", eyebrow: "Near future", name: "Meridian 2076", band: "linear-gradient(135deg,#0e5563,#1b8297 55%,#c9d6c4)",
-      blurb: "Fifty years on, twelve successor states fight over a dried-out seabed rich in lithium. Railgun hunters, tiltrotors, laser point-defence." },
-    { href: "worlds/hollow-reach.html", eyebrow: "Space opera", name: "The Hollow Reach", band: "radial-gradient(circle at 70% 30%,#b3a3ff,#3b2d7a 45%,#0d0c16)",
-      blurb: "A star cluster sealed off from humanity. Walkers on dust worlds, ringrunners in planetary rings, cloaked hulls in the nebula." },
-    { href: "worlds/ashen-crowns.html", eyebrow: "High fantasy", name: "The Ashen Crowns", band: "linear-gradient(135deg,#2a0f0b,#6b1d1d 45%,#d8694f)",
-      blurb: "Seven crowns fight over a dead dragon's burned and fertile heartland. Golems, griffons, storm-callers and krakens." },
-    { href: "worlds/gilded-gale.html", eyebrow: "Aetherpunk", name: "The Gilded Gale", band: "linear-gradient(135deg,#3b2a0a,#a87118 50%,#f2d08c)",
-      blurb: "Steam empires and a lift-gas that changed everything. Landships, ornithopters, zeppelins and nautilus boats." },
-    { href: "worlds/glasshouse.html", eyebrow: "Biological", name: "The Glasshouse", band: "linear-gradient(135deg,#1c3311,#5a8f2c 50%,#d3e8a8)",
-      blurb: "Insect colonies with minds of their own fight one summer-long war inside an abandoned conservatory." },
-    { href: "worlds/pelagia.html", eyebrow: "Undersea", name: "Pelagia", band: "linear-gradient(180deg,#7fd3f5,#12709c 35%,#0b3d5c 70%,#071118)",
-      blurb: "The surface is uninhabitable. Forty domed cities fight on the seafloor, in the midwater and in the Abyss, by sound alone." },
-    { href: "worlds/spire-nine.html", eyebrow: "Cyberpunk", name: "Spire Nine", band: "linear-gradient(135deg,#0c0a10,#8a1457 50%,#4ff0ff)",
-      blurb: "A bankrupt megacity sold block by block. Corporations fight with hardframes, alley-level kites, canal gunboats and submersibles in the drowned metro." },
-    { href: "worlds/thunderhide.html", eyebrow: "Primal", name: "Thunderhide", band: "linear-gradient(135deg,#3a1a0c,#c2601d 45%,#9dbd68)",
-      blurb: "Clans who ride horned titans and soaring sky-lords fight for the grass country below a waking volcano. Told around a fire." }
-  ];
-  var extra = window.EXTRA_WORLDS || [];
-  worlds = worlds.concat(extra);
-  var grid = document.getElementById("world-grid");
-  worlds.forEach(function (w) {
-    var a = document.createElement("a");
-    a.className = "card world-card"; a.href = w.href;
-    a.innerHTML = '<div class="band" style="background:' + w.band + '"><span>' + w.eyebrow + '</span></div><div class="body"><h3>' + w.name + "</h3><p>" + w.blurb + "</p></div>";
-    grid.appendChild(a);
-  });
-
-  var lessons = [
-    ["Heavy armour with no short-range air defence",
-      { m: "Bastions with no Lancet", h: "Juggernauts with no Flak Spindle", a: "Golems with no Skyward Bows", g: "Landships with no Pom-Pom", gl: "Titans with no Archer-Spitters", p: "Leviathans with no Flechette Turret", s: "Rhinos with no Shredder", t: "Titans with no Slingers" }],
-    ["Long-range air defence against low flyers",
-      { m: "Spire &amp; Aegis vs rotorcraft", h: "Lance batteries vs ringrunners", a: "Storm-callers vs griffons", g: "Searchlight batteries vs ornithopters", gl: "Spore-sentinels vs jewel-wasps", p: "Sonar arrays vs eel-skimmers", s: "Lance grids vs hunter-kites", t: "Harpoon ballistae vs hook-beaks" }],
-    ["Air strike into a fleet with an escort inside it",
-      { m: "Kestrels vs a Warden frigate", h: "Hammerheads vs an Aegis Tender", a: "Firedrakes vs a Stormward Carrack", g: "Raiders vs an Arclight Frigate", gl: "Hornets vs an Archer Raft", p: "Mantas vs a Needle-Hull", s: "Strikers vs the Hedgehog barge", t: "Fire-wings vs a Sling-Raft" }],
-    ["Conquests left without a garrison",
-      { m: "Cities rise to the Unbound", h: "Habitats secede to the Unmoored", a: "Towns go to the Unbanner'd", g: "Cities declare a Commune", gl: "Nests go feral", p: "Domes breach to the Drift", s: "Blocks riot to the Unplugged", t: "Villages break the bond and join the Lost" }],
-    ["One giant army instead of two right-sized ones",
-      { m: "22 in a 12-cap battlegroup", h: "19 in a 9-cap legion", a: "18 in an 8-cap host", g: "26 in a 14-cap brigade", gl: "31 in a 16-cap column", p: "23 in an 11-cap pod", s: "27 in a 13-cap detail", t: "28 in a 15-cap war-herd" }],
-    ["Assaulting dug-in defenders while being shelled from range",
-      { m: "Lisle vs Hailstorm arrays", h: "Lucent vs mass drivers", a: "Thornwatch vs starseers", g: "Fort Ashcombe vs Congreve arrays", gl: "The ivy nest vs puffballs", p: "Lanterndeep vs torpedo racks", s: "Lumen Tower vs missile trucks", t: "Cloud-Foot vs fire-pot slingers" }],
-    ["Unescorted transports over deep water",
-      { m: "Lampreys in the Varn Trench", h: "Shroud Hunters in the nebula", a: "Krakens in the Sunless Deep", g: "Nautilus boats in the Basin", gl: "Nymphs in the Cistern", p: "Silent hulls over the Abyss", s: "Sump-runners in the drowned metro", t: "Mosasaurs in the Blue Deep" }],
-    ["Aircraft parked within missile range",
-      { m: "Aerodromes hit by glide missiles", h: "Cradles hit by seeker torpedoes", a: "Aeries struck by seeking bolts", g: "Aerodromes hit by torpedo-rockets", gl: "Roosts hit by homing spores", p: "Docks hit by supercavitating torpedoes", s: "Pads hit by smart munitions", t: "Rookeries burned by fire-spears" }]
-  ];
-  var cols = [["m", "Meridian 2076"], ["h", "Hollow Reach"], ["a", "Ashen Crowns"], ["g", "Gilded Gale"], ["gl", "Glasshouse"], ["p", "Pelagia"], ["s", "Spire Nine"], ["t", "Thunderhide"]].concat(window.EXTRA_LESSON_COLS || []);
-  var t = "<thead><tr><th>Lesson</th>" + cols.map(function (c) { return "<th>" + c[1] + "</th>"; }).join("") + "</tr></thead><tbody>";
-  lessons.forEach(function (l, i) {
-    var extraRow = (window.EXTRA_LESSONS || [])[i] || {};
-    t += "<tr><td>" + l[0] + "</td>" + cols.map(function (c) { return "<td>" + (l[1][c[0]] || extraRow[c[0]] || "") + "</td>"; }).join("") + "</tr>";
-  });
-  document.getElementById("lessons-table").innerHTML = t + "</tbody>";
-})();
-</script>
 <script src="assets/world.js"></script>
 </body>
 </html>
